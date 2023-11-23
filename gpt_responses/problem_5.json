@@ -1,0 +1,13 @@
+{
+    "id": "problem_5",
+    "description": "",
+    "code": "import collections\n\n# Create a ChainMap to store data\nchainmap = collections.ChainMap()\n\n# Add some data\nchainmap['a'] = 1\nchainmap['b'] = 2\n\n# Create a new ChainMap with new data\nchainmap2 = collections.ChainMap()\nchainmap2['c'] = 3\nchainmap2['d'] = 4\n\n# Update the original ChainMap with the new data\nchainmap.update(chainmap2)\n\n# Print out the data\nprint(chainmap)",
+    "tags": [
+        "ChainMap",
+        "Easy"
+    ],
+    "keywords": [
+        "ChainMap"
+    ],
+    "difficulty": "Easy"
+}

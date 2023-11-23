@@ -1,0 +1,13 @@
+{
+    "id": "problem_45",
+    "description": "",
+    "code": "# Program to clear the console\n\nimport os\n\n# Check the operating system\nif os.name == 'nt':\n    os.system('cls')\nelse:\n    os.system('clear')",
+    "tags": [
+        "clear",
+        "Easy"
+    ],
+    "keywords": [
+        "clear"
+    ],
+    "difficulty": "Easy"
+}

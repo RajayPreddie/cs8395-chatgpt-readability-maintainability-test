@@ -1,0 +1,15 @@
+{
+    "id": "problem_82",
+    "description": "",
+    "code": "#This program will replace and reverse a given string \n\ndef replace_reverse(string): \n    #replace all \"a\" with \"b\"\n    new_string = string.replace(\"a\", \"b\") \n    #reverse the new string\n    reversed_string = new_string[::-1] \n    #return the reversed string\n    return reversed_string\n\n#test the function\nprint(replace_reverse(\"abacadabra\"))",
+    "tags": [
+        "replace",
+        "reverse",
+        "Hard"
+    ],
+    "keywords": [
+        "replace",
+        "reverse"
+    ],
+    "difficulty": "Hard"
+}

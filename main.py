@@ -8,11 +8,11 @@ import tempfile
 import re
 
 # TODO: fix the average tag isssue with linter results.
+# TODO: Reorganize the code in terms of recallable functions to reuse them when iterating through the prompt descriptions. Need to pass in problem description, linter results, gpt_responses, and output.json based on each prompt description. Useful to create classes.
 # TODO: Create new prompt descriptions: General, Radon, Flake8, Pylint, Black, Pydoc. Prompt GPT for better prompt descriptions.
 # TODO: Add keywords related to Software Engineering programs
 # TODO: For each gpt_response add the prompt description used
 # TODO: Add more linters
-# TODO: Reorganize the code in terms of recallable functions to reuse them when iterating through the prompt descriptions. Need to pass in problem description, linter results, gpt_responses, and output.json based on each prompt description.
 # TODO: There may be several output.json. In the output.json, just generate a general solution.
 # TODO: In the general output.json, only show the most important results across the different problem descriptions.
 
@@ -27,11 +27,11 @@ class ViolationData:
       self.violation_frequencies = defaultdict(int)
       self.top_violations = []
     # Function to update the violation data
-    def update_violation_data(self, total_violations, number_of_lines_in_code, total_results):
+    def update_violation_data(self, total_violations, number_of_lines_in_code, number_of_python_programs):
       self.total_violations += total_violations
-      self.average_violations_per_file = self.total_violations / total_results
+      self.average_violations_per_file = self.total_violations / number_of_python_programs
       if self.calculate_average:
-          self.average_violations_per_line += (total_violations / number_of_lines_in_code) / total_results
+          self.average_violations_per_line += (total_violations / number_of_lines_in_code) / number_of_python_programs
     # Function to update the most frequent violation
     def update_most_frequent_violation(self):
         for violation_type, count in self.violation_frequencies.items():
@@ -90,7 +90,7 @@ def extract_json_from_directory(abs_directory_path):
   return json_objects
 
 # Function to create 100 unique problem descriptions
-def create_problem_descriptions(keywords, num_problems=100):
+def create_problem_descriptions(keywords, count_tag_occurences, num_problems=100):
   # Create a list to store the problem descriptions
   problem_descriptions = []
   index = 0
@@ -108,9 +108,12 @@ def create_problem_descriptions(keywords, num_problems=100):
         cur_keywords.append(keywords[(index + 1) % len(keywords)])
       elif (index % 100) >= 80:
         problem_difficulty = "Hard"
+        cur_keywords.append(keywords[(index + 1) % len(keywords)])
         cur_keywords.append(keywords[(index + 2) % len(keywords)])
       tags = cur_keywords.copy()
       tags.append(problem_difficulty)
+      for tag in tags:
+        count_tag_occurences[tag] += 1
       # Create a problem description
       problem_description = {"id": f"problem_{index + 1}", "description": "", "tags": tags,
                               "keywords": cur_keywords, "difficulty": problem_difficulty,
@@ -150,7 +153,7 @@ def get_gpt_responses_to_problem_descriptions(problem_descriptions, response_fol
     full_path = os.path.join(abs_directory_path, filename)
     # Write the JSON object to a file
     problem_object = {"id": problem_description['id'], 
-         "description": problem_description['description'], 
+         "description": chatgpt_prompt, 
          "code": response.choices[0].text.strip(),
          "tags": problem_description['tags'],
          
@@ -166,24 +169,6 @@ def get_gpt_responses_to_problem_descriptions(problem_descriptions, response_fol
     idx += 1
   return coding_problems
 
-
-# List of keywords to use for the problems
-keywords =[
-    'list', 'asyncio', 'bytearray', 'bytes', 'ChainMap', 'Comprehension', 'Concurrency', 
-    'ContextManager', 'Coroutine', 'Counter', 'Decorator', 'DefaultDict', 'DependencyInjection', 
-    'Deque', 'dict', 'frozenset', 'GarbageCollection', 'Generator', 'Global state', 
-    'heapq', 'IdiomaticPython', 'Introspection', 'Keyword expression', 'Lambda',  
-    'Memoization', 'MemoryView', 'Metaclass', 'MonkeyPatching', 'NamedTuple', 'Non-default argument', 
-    'OrderedDict', 'Polymorphism', 'Recursion', 'Reflection', 'Serialization', 
-    'set', 'str', 'tuple', 'TypeHinting', 'UnitTesting', 'VirtualEnvironment', 'add', 'append', 
-    'capitalize', 'clear', 'collections', 'copy', 'count', 'datetime', 'difference', 'discard', 
-    'django', 'endswith', 'extend', 'find', 'flask', 'format', 'fromkeys', 'get', 'index', 'insert', 
-    'intersection', 'issubset', 'issuperset', 'items', 'join', 'json', 'keys', 'lower', 'math', 
-    'matplotlib', 'multiprocessing', 'numpy', 'os', 'pandas', 'pop', 'popitem', 'pytorch', 'random', 
-    're', 'remove', 'replace', 'requests', 'reverse', 'scipy', 'setdefault', 'sklearn', 'socket', 
-    'sort', 'split', 'startswith', 'strip', 'subprocess', 'sys', 
-    'tensorflow', 'threading', 'union', 'upper',
-]
 
 # Function to save the code to a temporary file
 def save_code_to_temp_file(code):
@@ -279,6 +264,26 @@ def count_non_empty_lines(code_str):
     return len(non_empty_lines)
 
 
+# List of keywords to use for the problems
+keywords =[
+    'list', 'asyncio', 'bytearray', 'bytes', 'ChainMap', 'Comprehension', 'Concurrency', 
+    'ContextManager', 'Coroutine', 'Counter', 'Decorator', 'DefaultDict', 'DependencyInjection', 
+    'Deque', 'dict', 'frozenset', 'GarbageCollection', 'Generator', 'Global state', 
+    'heapq', 'IdiomaticPython', 'Introspection', 'Keyword expression', 'Lambda',  
+    'Memoization', 'MemoryView', 'Metaclass', 'MonkeyPatching', 'NamedTuple', 'Non-default argument', 
+    'OrderedDict', 'Polymorphism', 'Recursion', 'Reflection', 'Serialization', 
+    'set', 'str', 'tuple', 'TypeHinting', 'UnitTesting', 'VirtualEnvironment', 'add', 'append', 
+    'capitalize', 'clear', 'collections', 'copy', 'count', 'datetime', 'difference', 'discard', 
+    'django', 'endswith', 'extend', 'find', 'flask', 'format', 'fromkeys', 'get', 'index', 'insert', 
+    'intersection', 'issubset', 'issuperset', 'items', 'join', 'json', 'keys', 'lower', 'math', 
+    'matplotlib', 'multiprocessing', 'numpy', 'os', 'pandas', 'pop', 'popitem', 'pytorch', 'random', 
+    're', 'remove', 'replace', 'requests', 'reverse', 'scipy', 'setdefault', 'sklearn', 'socket', 
+    'sort', 'split', 'startswith', 'strip', 'subprocess', 'sys', 
+    'tensorflow', 'threading', 'union', 'upper',
+]
+
+
+count_tag_occurrences = defaultdict(int)
 
 # Set up argument parsing
 parser = argparse.ArgumentParser(description='Get ChatGPT responses and write to files.')
@@ -287,7 +292,7 @@ parser.add_argument('--generate_responses', action='store_true',
 args = parser.parse_args()
 
 # Create problem descriptions
-problem_descriptions = create_problem_descriptions(keywords)
+problem_descriptions = create_problem_descriptions(keywords, count_tag_occurrences)
 
 
 response_folder = 'gpt_responses'
@@ -347,17 +352,18 @@ for id, problem_results in linter_problem_results.items():
     # Obtain average number of violations for each linter
     number_of_lines_in_code = count_non_empty_lines(prompt_solutions[id]["code"])
     total_violations = problem_result["total_violations"]
-    total_results = len(linter_problem_results)
+    number_of_python_programs = len(linter_problem_results)
 
     # Update overall data for each linter
-    overall_results[linter].overall.update_violation_data(total_violations,  number_of_lines_in_code, total_results)
+    overall_results[linter].overall.update_violation_data(total_violations,  number_of_lines_in_code, number_of_python_programs)
     # Update the violation frequencies
     for violation_type, violation_count in problem_result["violations"].items():
         overall_results[linter].overall.violation_frequencies[violation_type] += violation_count
 
     # Update data for each tag
     for tag in prompt_solutions[id]['tags']:
-        overall_results[linter].by_tag[tag].update_violation_data(total_violations,number_of_lines_in_code, total_results)
+        number_of_python_programs_with_tag = count_tag_occurrences[tag]
+        overall_results[linter].by_tag[tag].update_violation_data(total_violations,number_of_lines_in_code, number_of_python_programs_with_tag)
         for violation_type, violation_count in problem_result["violations"].items():
             #print(violation_type)
             overall_results[linter].by_tag[tag].violation_frequencies[violation_type] += violation_count

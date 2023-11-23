@@ -1,0 +1,13 @@
+{
+    "id": "problem_39",
+    "description": "",
+    "code": "def add_two_numbers(a: int, b: int) -> int:\n  \"\"\"\n  This function adds two numbers and returns the result.\n  \"\"\"\n  return a + b\n\ndef main():\n  # Get two numbers from user\n  num1 = int(input(\"Enter first number: \"))\n  num2 = int(input(\"Enter second number: \"))\n\n  # Calculate the sum of the two numbers\n  result = add_two_numbers(num1, num2)\n\n  # Print the result\n  print(f\"The sum of {num1} and {num2} is {result}\")\n\nif __name__ == \"__main__\":\n  main()",
+    "tags": [
+        "TypeHinting",
+        "Easy"
+    ],
+    "keywords": [
+        "TypeHinting"
+    ],
+    "difficulty": "Easy"
+}

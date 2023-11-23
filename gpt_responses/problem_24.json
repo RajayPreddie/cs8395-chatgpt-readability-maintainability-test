@@ -1,0 +1,13 @@
+{
+    "id": "problem_24",
+    "description": "",
+    "code": "# This program uses Lambda to calculate the sum of two numbers\n\nsum_two_nums = lambda x, y: x + y \n\n# Test the Lambda function\nprint(sum_two_nums(2, 3)) # Outputs 5",
+    "tags": [
+        "Lambda",
+        "Easy"
+    ],
+    "keywords": [
+        "Lambda"
+    ],
+    "difficulty": "Easy"
+}
