@@ -7,6 +7,8 @@ import argparse
 import tempfile
 import re
 
+
+# TODO: edit the clases for later
 # TODO: fix the average tag isssue with linter results.
 # TODO: Reorganize the code in terms of recallable functions to reuse them when iterating through the prompt descriptions. Need to pass in problem description, linter results, gpt_responses, and output.json based on each prompt description. Useful to create classes.
 # TODO: Create new prompt descriptions: General, Radon, Flake8, Pylint, Black, Pydoc. Prompt GPT for better prompt descriptions.
@@ -15,7 +17,105 @@ import re
 # TODO: Add more linters
 # TODO: There may be several output.json. In the output.json, just generate a general solution.
 # TODO: In the general output.json, only show the most important results across the different problem descriptions.
+class ContentGenerator:
+    def __init__(self, keywords, count_tag_occurrences):
+        self.keywords = keywords
+        self.count_tag_occurrences = count_tag_occurrences
 
+    def create_problem_descriptions(self, num_problems=100):
+        problem_descriptions = []
+        for index in range(num_problems):
+            cur_keywords = [self.keywords[index % len(self.keywords)]]
+            
+            # Determine problem difficulty and add keywords
+            problem_difficulty = self.determine_difficulty(index, cur_keywords)
+            
+            # Update tag occurrences
+            tags = self.update_tag_occurrences(cur_keywords, problem_difficulty)
+            
+            # Create problem description
+            problem_description = {
+                "id": f"problem_{index + 1}",
+                "description": "",
+                "tags": tags,
+                "keywords": cur_keywords,
+                "difficulty": problem_difficulty,
+            }
+            problem_descriptions.append(problem_description)
+        return problem_descriptions
+
+    def determine_difficulty(self, index, cur_keywords):
+        difficulty = "Easy"
+        if 50 <= (index % 100) < 80:
+            difficulty = "Medium"
+            cur_keywords.append(self.keywords[(index + 1) % len(self.keywords)])
+        elif (index % 100) >= 80:
+            difficulty = "Hard"
+            cur_keywords.extend(self.keywords[(index + 1) % len(self.keywords):(index + 3) % len(self.keywords)])
+        return difficulty
+
+    def update_tag_occurrences(self, cur_keywords, difficulty):
+        tags = cur_keywords.copy()
+        tags.append(difficulty)
+        for tag in tags:
+            self.count_tag_occurrences[tag] += 1
+        return tags
+      
+
+
+class ChatGPTManager:
+    def __init__(self, response_folder, prompt):
+        self.response_folder = response_folder
+        self.prompt = prompt
+        self.abs_directory_path = os.path.join(os.getcwd(), response_folder)
+        
+        self._ensure_directory_exists(self.abs_directory_path)
+      
+
+    def _ensure_directory_exists(self, path):
+        if not os.path.exists(path):
+            os.makedirs(path)
+
+    def generate_responses(self, problem_descriptions):
+        coding_problems = {}
+        for problem_description in problem_descriptions:
+            response = self._prompt_chatgpt(problem_description)
+            problem_object = self._create_problem_object(problem_description, response)
+            self._save_response(problem_object)
+            coding_problems[problem_description['id']] = problem_object
+        return coding_problems
+
+    def _prompt_chatgpt(self, problem_description):
+        chatgpt_prompt = f"{self.prompt} Use the following keyword(s) in the following list as a start to create an idea for a problem that you would like to solve using python: {','.join(problem_description['keywords'])}. In addition, only return the raw code for the Python program. To ensure that the Python program is valid, act as Command Line Interface (you do not need to execute code) and make sure that the program runs correctly. Generate code for a functional python program as described above."
+        
+        return openai.Completion.create(
+            engine="text-davinci-003",
+            prompt=chatgpt_prompt,
+            max_tokens=2000,
+            n=1,
+            stop=None,
+            temperature=0.5
+        )
+
+    def _create_problem_object(self, problem_description, response):
+        return {
+            "id": problem_description['id'],
+            "description": problem_description,
+            "code": response.choices[0].text.strip(),
+            "tags": problem_description['tags'],
+            "keywords": problem_description["keywords"],
+            "difficulty": problem_description["difficulty"],
+        }
+
+    def _save_response(self, problem_object):
+        full_path = os.path.join(self.abs_directory_path, f"{problem_object['id']}.json")
+        with open(full_path, 'w') as file:
+            json.dump(problem_object, file, indent=4)
+            file.close()
+
+
+
+    # Additional methods related to linting can be added as needed
 class ViolationData:
   # Class to store violation data
     def __init__(self, calculate_average=True):
@@ -67,6 +167,58 @@ class LinterData:
             "overall": self.overall.to_dict(),
             "by_tag": {tag: data.to_dict() for tag, data in self.by_tag.items()}
         }
+class Utility:
+    @staticmethod
+    def count_non_empty_lines(code_str):
+        lines = code_str.splitlines()
+        non_empty_lines = [line for line in lines if line.strip()]
+        return len(non_empty_lines)
+    @staticmethod
+    def save_code_to_temp_file( code):
+        with tempfile.NamedTemporaryFile(delete=False, suffix='.py') as tmp:
+            tmp.write(code.encode('utf-8'))
+            return tmp.name
+    @staticmethod
+    def save_json( data, filename, directory):
+        full_path = os.path.join(directory, filename)
+        with open(full_path, 'w') as file:
+            json.dump(data, file, indent=4)
+    @staticmethod
+    def read_json(filename, directory):
+        full_path = os.path.join(directory, filename)
+        with open(full_path, 'r') as file:
+            return json.load(file)
+
+    # Additional utility methods can be added here
+
+class ExperimentManager:
+    def __init__(self, keywords, response_folder, linter_folder, generate_responses):
+        self.content_generator = ContentGenerator(keywords)
+        self.chatgpt_manager = ChatGPTManager(response_folder)
+        self.utility = Utility()
+        self.linter_folder = linter_folder
+        self.generate_responses = generate_responses
+        self.count_tag_occurrences = defaultdict(int)
+        self.linter_names = ['flake8', 'pylint', 'black']
+
+    def run_experiment(self):
+        # Create problem descriptions
+        problem_descriptions = self.content_generator.create_problem_descriptions(self.count_tag_occurrences)
+
+        # Check for existing responses or generate new ones
+        prompt_solutions = self.handle_chatgpt_responses(problem_descriptions)
+
+        # Handle linting and analysis
+        linter_results, overall_results = self.handle_linting(prompt_solutions)
+
+        # Save final results
+        self.save_results(overall_results)
+
+    # Define other methods for handling ChatGPT responses, linting, and saving results
+    # ...
+
+###################################################################################################################
+
 # Extract JSON from a directory
 def extract_json_from_directory(abs_directory_path):
   # Create a list to store the JSON objects
