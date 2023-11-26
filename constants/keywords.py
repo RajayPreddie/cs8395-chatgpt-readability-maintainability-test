@@ -1,0 +1,16 @@
+KEY_WORDS = [
+    'list', 'asyncio', 'bytearray', 'bytes', 'ChainMap', 'Comprehension', 'Concurrency', 
+    'ContextManager', 'Coroutine', 'Counter', 'Decorator', 'DefaultDict', 'DependencyInjection', 
+    'Deque', 'dict', 'frozenset', 'GarbageCollection', 'Generator', 'Global state', 
+    'heapq', 'IdiomaticPython', 'Introspection', 'Keyword expression', 'Lambda',  
+    'Memoization', 'MemoryView', 'Metaclass', 'MonkeyPatching', 'NamedTuple', 'Non-default argument', 
+    'OrderedDict', 'Polymorphism', 'Recursion', 'Reflection', 'Serialization', 
+    'set', 'str', 'tuple', 'TypeHinting', 'UnitTesting', 'VirtualEnvironment', 'add', 'append', 
+    'capitalize', 'clear', 'collections', 'copy', 'count', 'datetime', 'difference', 'discard', 
+    'django', 'endswith', 'extend', 'find', 'flask', 'format', 'fromkeys', 'get', 'index', 'insert', 
+    'intersection', 'issubset', 'issuperset', 'items', 'join', 'json', 'keys', 'lower', 'math', 
+    'matplotlib', 'multiprocessing', 'numpy', 'os', 'pandas', 'pop', 'popitem', 'pytorch', 'random', 
+    're', 'remove', 'replace', 'requests', 'reverse', 'scipy', 'setdefault', 'sklearn', 'socket', 
+    'sort', 'split', 'startswith', 'strip', 'subprocess', 'sys', 
+    'tensorflow', 'threading', 'union', 'upper',
+]

@@ -1,0 +1,15 @@
+{
+    "id": "problem_93",
+    "description": "",
+    "code": "import subprocess\nimport tensorflow as tf\n\n# Create a TensorFlow session\nsess = tf.Session()\n\n# Initialize the variables\ninit_op = tf.global_variables_initializer()\nsess.run(init_op)\n\n# Run a subprocess\nsubprocess.call(['echo', 'Hello World!'])\n\n# Close the session\nsess.close()",
+    "tags": [
+        "subprocess",
+        "tensorflow",
+        "Hard"
+    ],
+    "keywords": [
+        "subprocess",
+        "tensorflow"
+    ],
+    "difficulty": "Hard"
+}

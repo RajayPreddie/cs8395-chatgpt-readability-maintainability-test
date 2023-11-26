@@ -1,0 +1,15 @@
+{
+    "id": "problem_76",
+    "description": "",
+    "code": "my_dict = {\n    \"apple\": \"fruit\",\n    \"carrot\": \"vegetable\",\n    \"potato\": \"vegetable\"\n}\n\n# pop an item\nmy_dict.pop(\"carrot\")\n\n# pop an item using popitem\nitem = my_dict.popitem()\nprint(item)",
+    "tags": [
+        "pop",
+        "popitem",
+        "Medium"
+    ],
+    "keywords": [
+        "pop",
+        "popitem"
+    ],
+    "difficulty": "Medium"
+}

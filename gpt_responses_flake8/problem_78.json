@@ -1,0 +1,15 @@
+{
+    "id": "problem_78",
+    "description": "",
+    "code": "#import necessary packages\nimport torch \nimport random \n\n#create a list of random numbers\nnums = [random.randint(1, 10) for x in range(10)]\nprint(nums)\n\n#convert list to tensor\nnums_tensor = torch.tensor(nums)\nprint(nums_tensor)\n\n#calculate the mean of the tensor\nmean_tensor = torch.mean(nums_tensor)\nprint(mean_tensor)",
+    "tags": [
+        "pytorch",
+        "random",
+        "Medium"
+    ],
+    "keywords": [
+        "pytorch",
+        "random"
+    ],
+    "difficulty": "Medium"
+}

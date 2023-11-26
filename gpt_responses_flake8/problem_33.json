@@ -1,0 +1,13 @@
+{
+    "id": "problem_33",
+    "description": "",
+    "code": "def factorial(n): \n    # base case \n    if n == 0: \n        return 1\n    # recursive case \n    else: \n        return n * factorial(n-1) \n  \n# Driver Code \nnum = 5\nprint(\"Factorial of\", num, \"is\", factorial(num))",
+    "tags": [
+        "Recursion",
+        "Easy"
+    ],
+    "keywords": [
+        "Recursion"
+    ],
+    "difficulty": "Easy"
+}

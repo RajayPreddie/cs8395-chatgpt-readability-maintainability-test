@@ -1,0 +1,1 @@
+LINTER_NAMES = ['flake8', 'pylint', 'black', 'radon', 'pydocstyle']

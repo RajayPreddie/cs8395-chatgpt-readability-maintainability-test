@@ -1,0 +1,13 @@
+{
+    "id": "problem_3",
+    "description": "",
+    "code": "# Create a bytearray from a string\n\nstr_input = input('Enter a string: ')\n\nbytearray_output = bytearray(str_input, 'utf-8')\n\nprint(bytearray_output)",
+    "tags": [
+        "bytearray",
+        "Easy"
+    ],
+    "keywords": [
+        "bytearray"
+    ],
+    "difficulty": "Easy"
+}

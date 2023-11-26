@@ -1,0 +1,13 @@
+{
+    "id": "problem_14",
+    "description": "",
+    "code": "# Create a deque\n\ndeque = collections.deque()\n\n# Add elements to the deque\n\ndeque.append('a')\ndeque.append('b')\ndeque.append('c')\n\n# Print the deque\n\nprint(deque)\n\n# Remove elements from the deque\n\ndeque.pop()\ndeque.popleft()\n\n# Print the deque\n\nprint(deque)",
+    "tags": [
+        "Deque",
+        "Easy"
+    ],
+    "keywords": [
+        "Deque"
+    ],
+    "difficulty": "Easy"
+}

@@ -1,0 +1,15 @@
+{
+    "id": "problem_69",
+    "description": "",
+    "code": "# Program to compute and print the lower of two numbers\n\n# Ask the user to enter two numbers\nnum1 = int(input(\"Please enter the first number: \"))\nnum2 = int(input(\"Please enter the second number: \"))\n\n# Compute the lower of the two numbers\nlower_num = min(num1, num2)\n\n# Print the lower number\nprint(\"The lower of the two numbers is:\", lower_num)",
+    "tags": [
+        "lower",
+        "math",
+        "Medium"
+    ],
+    "keywords": [
+        "lower",
+        "math"
+    ],
+    "difficulty": "Medium"
+}

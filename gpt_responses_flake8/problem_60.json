@@ -1,0 +1,15 @@
+{
+    "id": "problem_60",
+    "description": "",
+    "code": "# Program to create an index of words and insert new words\n\nwords = []\n\n# Function to create an index of words\ndef createIndex():\n    for word in words:\n        print(\"Word: {}, Index: {}\".format(word, words.index(word)))\n\n# Function to insert a new word\ndef insertWord(word):\n    words.append(word)\n\n# Main function\ndef main():\n    createIndex()\n    insertWord(\"hello\")\n    createIndex()\n\nif __name__ == \"__main__\":\n    main()",
+    "tags": [
+        "index",
+        "insert",
+        "Medium"
+    ],
+    "keywords": [
+        "index",
+        "insert"
+    ],
+    "difficulty": "Medium"
+}

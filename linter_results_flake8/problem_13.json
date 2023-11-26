@@ -1,0 +1,65 @@
+{
+    "flake8": {
+        "violations": {
+            "W291 trailing whitespace": 23,
+            "E302 expected 2 blank lines, found 1": 2,
+            "W191 indentation contains tabs": 9,
+            "E305 expected 2 blank lines after class or function definition, found 1": 1,
+            "W292 no newline at end of file": 1
+        },
+        "total_violations": 36,
+        "most_frequent_violation": {
+            "violation_type": "W291 trailing whitespace",
+            "frequency": 23
+        },
+        "number_of_lines_in_code": 24
+    },
+    "pylint": {
+        "violations": {
+            "Trailing whitespace (trailing-whitespace)": 23,
+            "Bad indentation. Found 1 spaces, expected 4 (bad-indentation)": 4,
+            "Bad indentation. Found 2 spaces, expected 8 (bad-indentation)": 5,
+            "Final newline missing (missing-final-newline)": 1,
+            "Missing module docstring (missing-module-docstring)": 1,
+            "Missing class docstring (missing-class-docstring)": 2,
+            "Missing function or method docstring (missing-function-docstring)": 2,
+            "Too few public methods (1/2) (too-few-public-methods)": 2,
+            "Redefining name 'dice' from outer scope (line 26) (redefined-outer-name)": 1
+        },
+        "total_violations": 41,
+        "most_frequent_violation": {
+            "violation_type": "Trailing whitespace (trailing-whitespace)",
+            "frequency": 23
+        },
+        "number_of_lines_in_code": 24
+    },
+    "black": {
+        "violations": {
+            "Non-compliant": 1
+        },
+        "total_violations": 1,
+        "most_frequent_violation": {
+            "violation_type": "would reformat",
+            "frequency": 1
+        }
+    },
+    "radon": {
+        "class_complexity": 4,
+        "overall_score": 1.3333333333333333,
+        "method_complexity": 1.0
+    },
+    "pydocstyle": {
+        "violations": {
+            "D100: Missing docstring in public module": 1,
+            "D101: Missing docstring in public class": 2,
+            "D107: Missing docstring in __init__": 2,
+            "D102: Missing docstring in public method": 2
+        },
+        "total_violations": 7,
+        "most_frequent_violation": {
+            "violation_type": "D102: Missing docstring in public method",
+            "frequency": 2
+        },
+        "number_of_lines_in_code": 24
+    }
+}

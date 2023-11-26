@@ -1,0 +1,15 @@
+{
+    "id": "problem_98",
+    "description": "",
+    "code": "import asyncio\n\nasync def main():\n    text = input(\"Please enter a string: \")\n    print(text.upper())\n\nasyncio.run(main())",
+    "tags": [
+        "upper",
+        "asyncio",
+        "Hard"
+    ],
+    "keywords": [
+        "upper",
+        "asyncio"
+    ],
+    "difficulty": "Hard"
+}
