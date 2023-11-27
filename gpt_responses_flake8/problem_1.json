@@ -1,13 +1,18 @@
 {
     "id": "problem_1",
-    "description": "",
-    "code": "# This program takes a list of numbers from the user and calculates the average\n\n# Ask user to enter a list of numbers\nlist_of_nums = input(\"Please enter a list of numbers separated by a comma: \")\n\n# Split the list of numbers into a list\nlist_of_nums = list_of_nums.split(\",\")\n\n# Create a variable to store the sum of the numbers in the list\nsum = 0\n\n# Iterate over the numbers in the list\nfor num in list_of_nums:\n    # Convert the string to an integer\n    num = int(num)\n    # Add the number to the sum\n    sum = sum + num\n\n# Calculate the average of the numbers in the list\naverage = sum / len(list_of_nums)\n\n# Print the average\nprint(\"The average of the numbers in the list is:\", average)",
+    "description": "Act as a Python developer and create a Python program that adheres to the flake8 coding standard. Here's an example snippet:\n\n# Example Snippet for Flake8\ndef find_max(numbers):\n    \"\"\"Find the maximum number in a list.\"\"\"\n    return max(numbers) if numbers else None\n\nEnsure your code is clean, readable, and adheres to flake8 standards. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: list,asyncio,bytearray. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "import asyncio\n\nasync def async_bytearray_to_list(byte_array):\n    \"\"\"Convert bytearray to list asynchronously.\"\"\"\n    await asyncio.sleep(0)  # Simulate async I/O operation\n    return list(byte_array)\n\ndef main():\n    # Example bytearray\n    byte_array = bytearray(b'\\x00\\x01\\x02\\x03\\x04')\n\n    # Run the async function and get the result\n    loop = asyncio.get_event_loop()\n    list_from_bytearray = loop.run_until_complete(async_bytearray_to_list(byte_array))\n    loop.close()\n\n    # Print the result\n    print(list_from_bytearray)\n\nif __name__ == \"__main__\":\n    main()\n",
     "tags": [
         "list",
-        "Easy"
+        "asyncio",
+        "bytearray",
+        "Hard"
     ],
     "keywords": [
-        "list"
+        "list",
+        "asyncio",
+        "bytearray"
     ],
-    "difficulty": "Easy"
+    "difficulty": "Hard",
+    "prompt_style_adherence": "flake8"
 }

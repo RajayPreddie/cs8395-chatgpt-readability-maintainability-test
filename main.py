@@ -12,24 +12,29 @@ from utils.chat_gpt_utils import get_gpt_responses_to_problem_descriptions, crea
 from utils.general_utils import extract_json_from_directory
 from constants.linters import LINTER_NAMES
 
-# TODO: parse pydocstyle the same as the pylint, Black, and flake8
-
-# TODO: Create new prompt descriptions: General, Radon, Flake8, Pylint, Black, Pydoc. Prompt GPT for better prompt descriptions.
 # TODO: Add keywords related to Software Engineering programs
+# TODO: Argument Parsing
 # TODO: In the general output.json, only show the most important results across the different problem descriptions.
-# TODO: have some way to test that everything works
 
 parser = argparse.ArgumentParser(description='Get ChatGPT responses and write to files.')
-parser.add_argument('--generate_responses', action='store_true',
-                    help='Force regeneration of ChatGPT responses')
-# TODO: ask chat gpt to help generate a good help section.
-parser.add_argument('--linters',  default='flake8', action='store_true', help='List of prompt types to use for all the linters. The default prompt asks ChatGPT to generate a Python program adhering to the default prompt description. If the prompt type is not specified, then the default prompt is used. If flake8 is used then the flake8 prompt is used. If pylint is used then the pylint prompt is used. If black is used then the black prompt is used. If radon is used then the radon prompt is used. If pydoc is used then the pydoc prompt is used. If all is used then all the prompts are used. If the list is flake8, black, and radon then the flake8, black, and radon prompts are used. Each prompt is used separately.')
+
+# Updated argument for linters/tools
+parser.add_argument('--linters', nargs='*', choices=['flake8', 'pylint', 'black', 'radon', 'pydocstyle', 'default', 'all'],
+                    default=['default'],
+                    help='Specify which linter/tool prompts to regenerate. '
+                         'Options include flake8, pylint, black, radon, pydocstyle, default, or all. '
+                         '"default" uses the default prompt. If not specified, defaults to "default".')
+
 args = parser.parse_args()
+
+# Usage example
+if 'all' in args.linters:
+    args.linters = ['flake8', 'pylint', 'black', 'radon', 'pydocstyle']
 
 # Create problem descriptions
 problem_descriptions = create_problem_descriptions()
 
-linters_for_prompting = [args.linters]
+linters_for_prompting = args.linters
 prompts = createLinterPrompts(linters_for_prompting=linters_for_prompting)
 
 def getPromptSolutions(response_folder, problem_descriptions, prompt, linter):
@@ -38,7 +43,7 @@ def getPromptSolutions(response_folder, problem_descriptions, prompt, linter):
   # If the path already exists, then there is no need to reprompt ChatGPT
   prompt_solutions = {}
   # Check if the directory exists
-  if not os.path.exists(abs_directory_path) or args.generate_responses:
+  if not os.path.exists(abs_directory_path):
     # Prompt Chat GPT to generate the Python Interpreter output
       if not os.path.exists(abs_directory_path):
         os.makedirs(abs_directory_path)
@@ -69,6 +74,7 @@ def createOverallResultsForProblems(linter_results_for_prompt_solutions, prompt_
       file.close()
     # Iterate through each linter
     for linter, problem_result in current_problem_linter_results.items():
+      
       overall_results[linter].overall.update_linter_data(problem_result)
       for tag in prompt_solutions[problem_id]['tags']:
           # number_of_python_programs_with_tag = count_tag_occurrences[tag]

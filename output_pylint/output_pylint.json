@@ -1,12 +1,14 @@
 {
     "flake8": {
         "overall": {
-            "total_violations": 4,
-            "average_violations_per_line": 0.25,
-            "average_violations_per_file": 4.0,
+            "total_violations": 6,
+            "average_violations_per_line": 0.2727272727272727,
+            "average_violations_per_file": 6.0,
             "violation_frequencies": {
+                "E501 line too long (85 > 79 characters)": 1,
+                "E501 line too long (84 > 79 characters)": 1,
                 "E302 expected 2 blank lines, found 1": 2,
-                "E501 line too long (86 > 79 characters)": 1,
+                "E501 line too long (83 > 79 characters)": 1,
                 "E305 expected 2 blank lines after class or function definition, found 1": 1
             },
             "most_frequent_violation": {
@@ -19,23 +21,25 @@
                     2
                 ],
                 [
-                    "E501 line too long (86 > 79 characters)",
+                    "E501 line too long (85 > 79 characters)",
                     1
                 ],
                 [
-                    "E305 expected 2 blank lines after class or function definition, found 1",
+                    "E501 line too long (84 > 79 characters)",
                     1
                 ]
             ]
         },
         "by_tag": {
             "list": {
-                "total_violations": 4,
-                "average_violations_per_line": 0.25,
-                "average_violations_per_file": 4.0,
+                "total_violations": 6,
+                "average_violations_per_line": 0.2727272727272727,
+                "average_violations_per_file": 6.0,
                 "violation_frequencies": {
+                    "E501 line too long (85 > 79 characters)": 1,
+                    "E501 line too long (84 > 79 characters)": 1,
                     "E302 expected 2 blank lines, found 1": 2,
-                    "E501 line too long (86 > 79 characters)": 1,
+                    "E501 line too long (83 > 79 characters)": 1,
                     "E305 expected 2 blank lines after class or function definition, found 1": 1
                 },
                 "most_frequent_violation": {
@@ -48,22 +52,24 @@
                         2
                     ],
                     [
-                        "E501 line too long (86 > 79 characters)",
+                        "E501 line too long (85 > 79 characters)",
                         1
                     ],
                     [
-                        "E305 expected 2 blank lines after class or function definition, found 1",
+                        "E501 line too long (84 > 79 characters)",
                         1
                     ]
                 ]
             },
             "asyncio": {
-                "total_violations": 4,
-                "average_violations_per_line": 0.25,
-                "average_violations_per_file": 4.0,
+                "total_violations": 6,
+                "average_violations_per_line": 0.2727272727272727,
+                "average_violations_per_file": 6.0,
                 "violation_frequencies": {
+                    "E501 line too long (85 > 79 characters)": 1,
+                    "E501 line too long (84 > 79 characters)": 1,
                     "E302 expected 2 blank lines, found 1": 2,
-                    "E501 line too long (86 > 79 characters)": 1,
+                    "E501 line too long (83 > 79 characters)": 1,
                     "E305 expected 2 blank lines after class or function definition, found 1": 1
                 },
                 "most_frequent_violation": {
@@ -76,22 +82,24 @@
                         2
                     ],
                     [
-                        "E501 line too long (86 > 79 characters)",
+                        "E501 line too long (85 > 79 characters)",
                         1
                     ],
                     [
-                        "E305 expected 2 blank lines after class or function definition, found 1",
+                        "E501 line too long (84 > 79 characters)",
                         1
                     ]
                 ]
             },
             "bytearray": {
-                "total_violations": 4,
-                "average_violations_per_line": 0.25,
-                "average_violations_per_file": 4.0,
+                "total_violations": 6,
+                "average_violations_per_line": 0.2727272727272727,
+                "average_violations_per_file": 6.0,
                 "violation_frequencies": {
+                    "E501 line too long (85 > 79 characters)": 1,
+                    "E501 line too long (84 > 79 characters)": 1,
                     "E302 expected 2 blank lines, found 1": 2,
-                    "E501 line too long (86 > 79 characters)": 1,
+                    "E501 line too long (83 > 79 characters)": 1,
                     "E305 expected 2 blank lines after class or function definition, found 1": 1
                 },
                 "most_frequent_violation": {
@@ -104,22 +112,24 @@
                         2
                     ],
                     [
-                        "E501 line too long (86 > 79 characters)",
+                        "E501 line too long (85 > 79 characters)",
                         1
                     ],
                     [
-                        "E305 expected 2 blank lines after class or function definition, found 1",
+                        "E501 line too long (84 > 79 characters)",
                         1
                     ]
                 ]
             },
             "Hard": {
-                "total_violations": 4,
-                "average_violations_per_line": 0.25,
-                "average_violations_per_file": 4.0,
+                "total_violations": 6,
+                "average_violations_per_line": 0.2727272727272727,
+                "average_violations_per_file": 6.0,
                 "violation_frequencies": {
+                    "E501 line too long (85 > 79 characters)": 1,
+                    "E501 line too long (84 > 79 characters)": 1,
                     "E302 expected 2 blank lines, found 1": 2,
-                    "E501 line too long (86 > 79 characters)": 1,
+                    "E501 line too long (83 > 79 characters)": 1,
                     "E305 expected 2 blank lines after class or function definition, found 1": 1
                 },
                 "most_frequent_violation": {
@@ -132,11 +142,11 @@
                         2
                     ],
                     [
-                        "E501 line too long (86 > 79 characters)",
+                        "E501 line too long (85 > 79 characters)",
                         1
                     ],
                     [
-                        "E305 expected 2 blank lines after class or function definition, found 1",
+                        "E501 line too long (84 > 79 characters)",
                         1
                     ]
                 ]
@@ -145,120 +155,60 @@
     },
     "pylint": {
         "overall": {
-            "total_violations": 2,
-            "average_violations_per_line": 0.125,
-            "average_violations_per_file": 2.0,
-            "violation_frequencies": {
-                "Missing module docstring (missing-module-docstring)": 1,
-                "Missing function or method docstring (missing-function-docstring)": 1
-            },
+            "total_violations": 0,
+            "average_violations_per_line": 0.0,
+            "average_violations_per_file": 0.0,
+            "violation_frequencies": {},
             "most_frequent_violation": {
-                "frequency": 1,
-                "violation_type": "Missing module docstring (missing-module-docstring)"
+                "frequency": -1,
+                "violation_type": ""
             },
-            "top_violations": [
-                [
-                    "Missing module docstring (missing-module-docstring)",
-                    1
-                ],
-                [
-                    "Missing function or method docstring (missing-function-docstring)",
-                    1
-                ]
-            ]
+            "top_violations": []
         },
         "by_tag": {
             "list": {
-                "total_violations": 2,
-                "average_violations_per_line": 0.125,
-                "average_violations_per_file": 2.0,
-                "violation_frequencies": {
-                    "Missing module docstring (missing-module-docstring)": 1,
-                    "Missing function or method docstring (missing-function-docstring)": 1
-                },
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
                 "most_frequent_violation": {
-                    "frequency": 1,
-                    "violation_type": "Missing module docstring (missing-module-docstring)"
+                    "frequency": -1,
+                    "violation_type": ""
                 },
-                "top_violations": [
-                    [
-                        "Missing module docstring (missing-module-docstring)",
-                        1
-                    ],
-                    [
-                        "Missing function or method docstring (missing-function-docstring)",
-                        1
-                    ]
-                ]
+                "top_violations": []
             },
             "asyncio": {
-                "total_violations": 2,
-                "average_violations_per_line": 0.125,
-                "average_violations_per_file": 2.0,
-                "violation_frequencies": {
-                    "Missing module docstring (missing-module-docstring)": 1,
-                    "Missing function or method docstring (missing-function-docstring)": 1
-                },
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
                 "most_frequent_violation": {
-                    "frequency": 1,
-                    "violation_type": "Missing module docstring (missing-module-docstring)"
+                    "frequency": -1,
+                    "violation_type": ""
                 },
-                "top_violations": [
-                    [
-                        "Missing module docstring (missing-module-docstring)",
-                        1
-                    ],
-                    [
-                        "Missing function or method docstring (missing-function-docstring)",
-                        1
-                    ]
-                ]
+                "top_violations": []
             },
             "bytearray": {
-                "total_violations": 2,
-                "average_violations_per_line": 0.125,
-                "average_violations_per_file": 2.0,
-                "violation_frequencies": {
-                    "Missing module docstring (missing-module-docstring)": 1,
-                    "Missing function or method docstring (missing-function-docstring)": 1
-                },
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
                 "most_frequent_violation": {
-                    "frequency": 1,
-                    "violation_type": "Missing module docstring (missing-module-docstring)"
+                    "frequency": -1,
+                    "violation_type": ""
                 },
-                "top_violations": [
-                    [
-                        "Missing module docstring (missing-module-docstring)",
-                        1
-                    ],
-                    [
-                        "Missing function or method docstring (missing-function-docstring)",
-                        1
-                    ]
-                ]
+                "top_violations": []
             },
             "Hard": {
-                "total_violations": 2,
-                "average_violations_per_line": 0.125,
-                "average_violations_per_file": 2.0,
-                "violation_frequencies": {
-                    "Missing module docstring (missing-module-docstring)": 1,
-                    "Missing function or method docstring (missing-function-docstring)": 1
-                },
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
                 "most_frequent_violation": {
-                    "frequency": 1,
-                    "violation_type": "Missing module docstring (missing-module-docstring)"
+                    "frequency": -1,
+                    "violation_type": ""
                 },
-                "top_violations": [
-                    [
-                        "Missing module docstring (missing-module-docstring)",
-                        1
-                    ],
-                    [
-                        "Missing function or method docstring (missing-function-docstring)",
-                        1
-                    ]
-                ]
+                "top_violations": []
             }
         }
     },
@@ -387,117 +337,92 @@
     },
     "pydocstyle": {
         "overall": {
-            "total_violations": 2,
-            "average_violations_per_line": 0.125,
-            "average_violations_per_file": 2.0,
+            "total_violations": 1,
+            "average_violations_per_line": 0.045454545454545456,
+            "average_violations_per_file": 1.0,
             "violation_frequencies": {
-                "D100: Missing docstring in public module": 1,
-                "D103: Missing docstring in public function": 1
+                "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
             },
             "most_frequent_violation": {
                 "frequency": 1,
-                "violation_type": "D100: Missing docstring in public module"
+                "violation_type": "D401: First line should be in imperative mood; try rephrasing (found 'Main')"
             },
             "top_violations": [
                 [
-                    "D100: Missing docstring in public module",
-                    1
-                ],
-                [
-                    "D103: Missing docstring in public function",
+                    "D401: First line should be in imperative mood; try rephrasing (found 'Main')",
                     1
                 ]
             ]
         },
         "by_tag": {
             "list": {
-                "total_violations": 2,
-                "average_violations_per_line": 0.125,
-                "average_violations_per_file": 2.0,
+                "total_violations": 1,
+                "average_violations_per_line": 0.045454545454545456,
+                "average_violations_per_file": 1.0,
                 "violation_frequencies": {
-                    "D100: Missing docstring in public module": 1,
-                    "D103: Missing docstring in public function": 1
+                    "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 1,
-                    "violation_type": "D100: Missing docstring in public module"
+                    "violation_type": "D401: First line should be in imperative mood; try rephrasing (found 'Main')"
                 },
                 "top_violations": [
                     [
-                        "D100: Missing docstring in public module",
-                        1
-                    ],
-                    [
-                        "D103: Missing docstring in public function",
+                        "D401: First line should be in imperative mood; try rephrasing (found 'Main')",
                         1
                     ]
                 ]
             },
             "asyncio": {
-                "total_violations": 2,
-                "average_violations_per_line": 0.125,
-                "average_violations_per_file": 2.0,
+                "total_violations": 1,
+                "average_violations_per_line": 0.045454545454545456,
+                "average_violations_per_file": 1.0,
                 "violation_frequencies": {
-                    "D100: Missing docstring in public module": 1,
-                    "D103: Missing docstring in public function": 1
+                    "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 1,
-                    "violation_type": "D100: Missing docstring in public module"
+                    "violation_type": "D401: First line should be in imperative mood; try rephrasing (found 'Main')"
                 },
                 "top_violations": [
                     [
-                        "D100: Missing docstring in public module",
-                        1
-                    ],
-                    [
-                        "D103: Missing docstring in public function",
+                        "D401: First line should be in imperative mood; try rephrasing (found 'Main')",
                         1
                     ]
                 ]
             },
             "bytearray": {
-                "total_violations": 2,
-                "average_violations_per_line": 0.125,
-                "average_violations_per_file": 2.0,
+                "total_violations": 1,
+                "average_violations_per_line": 0.045454545454545456,
+                "average_violations_per_file": 1.0,
                 "violation_frequencies": {
-                    "D100: Missing docstring in public module": 1,
-                    "D103: Missing docstring in public function": 1
+                    "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 1,
-                    "violation_type": "D100: Missing docstring in public module"
+                    "violation_type": "D401: First line should be in imperative mood; try rephrasing (found 'Main')"
                 },
                 "top_violations": [
                     [
-                        "D100: Missing docstring in public module",
-                        1
-                    ],
-                    [
-                        "D103: Missing docstring in public function",
+                        "D401: First line should be in imperative mood; try rephrasing (found 'Main')",
                         1
                     ]
                 ]
             },
             "Hard": {
-                "total_violations": 2,
-                "average_violations_per_line": 0.125,
-                "average_violations_per_file": 2.0,
+                "total_violations": 1,
+                "average_violations_per_line": 0.045454545454545456,
+                "average_violations_per_file": 1.0,
                 "violation_frequencies": {
-                    "D100: Missing docstring in public module": 1,
-                    "D103: Missing docstring in public function": 1
+                    "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 1,
-                    "violation_type": "D100: Missing docstring in public module"
+                    "violation_type": "D401: First line should be in imperative mood; try rephrasing (found 'Main')"
                 },
                 "top_violations": [
                     [
-                        "D100: Missing docstring in public module",
-                        1
-                    ],
-                    [
-                        "D103: Missing docstring in public function",
+                        "D401: First line should be in imperative mood; try rephrasing (found 'Main')",
                         1
                     ]
                 ]
