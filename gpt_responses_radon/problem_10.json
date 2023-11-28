@@ -1,0 +1,14 @@
+{
+    "id": "problem_10",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a more complex example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: Counter. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "from collections import Counter\n\ndef count_elements(lst):\n    \"\"\"Count the occurrences of each element in a list.\"\"\"\n    return Counter(lst)\n\ndef main():\n    # Example list\n    example_list = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\n    \n    # Count elements in the list\n    element_count = count_elements(example_list)\n    \n    # Print the count of each element\n    for element, count in element_count.items():\n        print(f'Element {element}: {count}')\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "Counter",
+        "Easy"
+    ],
+    "keywords": [
+        "Counter"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "radon"
+}

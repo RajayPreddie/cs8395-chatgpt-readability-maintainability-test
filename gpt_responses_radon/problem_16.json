@@ -1,0 +1,16 @@
+{
+    "id": "problem_16",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a more complex example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: frozenset,GarbageCollection. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "# Python program to demonstrate the use of frozenset for maintaining an immutable collection\n# of unique elements and garbage collection by explicitly deleting objects.\n\nimport gc\n\ndef collect_garbage():\n    \"\"\"Force garbage collection.\"\"\"\n    gc.collect()\n\ndef main():\n    # Creating a list of numbers with some duplicates\n    numbers = [1, 2, 3, 4, 5, 2, 3, 4, 1, 6]\n    \n    # Demonstrating the use of frozenset to remove duplicates and maintain immutability\n    unique_numbers = frozenset(numbers)\n    \n    # Printing the unique elements of the list\n    print(\"Unique numbers:\", unique_numbers)\n    \n    # Garbage collection can be invoked to clean up the list if it's no longer needed\n    # This is just an example, in practice, Python's garbage collector manages memory efficiently\n    del numbers\n    collect_garbage()\n\n# Entry point of the program\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "frozenset",
+        "GarbageCollection",
+        "Medium"
+    ],
+    "keywords": [
+        "frozenset",
+        "GarbageCollection"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "radon"
+}

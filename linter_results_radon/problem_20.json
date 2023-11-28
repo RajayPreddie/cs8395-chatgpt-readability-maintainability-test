@@ -1,0 +1,56 @@
+{
+    "flake8": {
+        "violations": {
+            "E302 expected 2 blank lines, found 1": 4,
+            "W293 blank line contains whitespace": 5,
+            "E305 expected 2 blank lines after class or function definition, found 1": 1
+        },
+        "total_violations": 10,
+        "most_frequent_violation": {
+            "violation_type": "W293 blank line contains whitespace",
+            "frequency": 5
+        },
+        "number_of_lines_in_code": 30
+    },
+    "pylint": {
+        "violations": {
+            "Trailing whitespace (trailing-whitespace)": 5,
+            "Missing module docstring (missing-module-docstring)": 1,
+            "Missing function or method docstring (missing-function-docstring)": 1,
+            "Expression \"[add_to_heap(my_heap, num) for num in range(3, 8)]\" is assigned to nothing (expression-not-assigned)": 1
+        },
+        "total_violations": 8,
+        "most_frequent_violation": {
+            "violation_type": "Trailing whitespace (trailing-whitespace)",
+            "frequency": 5
+        },
+        "number_of_lines_in_code": 30
+    },
+    "black": {
+        "violations": {
+            "Non-compliant": 1
+        },
+        "total_violations": 1,
+        "most_frequent_violation": {
+            "violation_type": "would reformat",
+            "frequency": 1
+        }
+    },
+    "radon": {
+        "function_complexity": 1.75,
+        "overall_score": 1.75
+    },
+    "pydocstyle": {
+        "violations": {
+            "D100: Missing docstring in public module": 1,
+            "D401: First line should be in imperative mood (perhaps 'Print', not 'Prints')": 1,
+            "D103: Missing docstring in public function": 1
+        },
+        "total_violations": 3,
+        "most_frequent_violation": {
+            "violation_type": "D103: Missing docstring in public function",
+            "frequency": 1
+        },
+        "number_of_lines_in_code": 30
+    }
+}

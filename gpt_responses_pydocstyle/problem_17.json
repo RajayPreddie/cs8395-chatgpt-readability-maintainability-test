@@ -1,0 +1,18 @@
+{
+    "id": "problem_17",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pydocstyle standard for docstrings. Include a module-level docstring as per pydocstyle guidelines. Here's an example snippet:\n\n\"\"\"Module for demonstrating pydocstyle adherence.\n\nThis module provides examples of how to write docstrings that conform to pydocstyle standards.\n\"\"\"\n\ndef add_numbers(x, y):\n    \"\"\"Add two numbers and return the result.\n\n    :param x: The first number to add.\n    :param y: The second number to add.\n    :return: The sum of x and y.\n    \"\"\"\n    return x + y\n\nFocus on comprehensive and compliant docstring documentation. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: GarbageCollection,Generator,Global state. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "\"\"\"Module for demonstrating pydocstyle adherence with examples.\n\nThis module provides a simple example of how to adhere to pydocstyle standards.\nIt includes a function that demonstrates garbage collection, a generator example,\nand the use of global state within Python.\n\"\"\"\n\nimport gc\n\n\n# Global state variable\n_global_list = []\n\n\ndef add_to_global_list(item):\n    \"\"\"Add an item to the global list and return the updated list.\n\n    This function demonstrates the use of global state within a Python program.\n\n    :param item: The item to be added to the global list.\n    :return: The updated global list containing the new item.\n    \"\"\"\n    _global_list.append(item)\n    return _global_list\n\n\ndef clear_global_list():\n    \"\"\"Clear the global list and manually run garbage collection.\n\n    This function demonstrates how to clear a global list and enforce garbage\n    collection to clean up the memory.\n\n    :return: None\n    \"\"\"\n    global _global_list\n    _global_list = []  # Clear the global list\n    gc.collect()  # Enforce garbage collection\n\n\ndef number_generator(limit):\n    \"\"\"Generate numbers up to a given limit.\n\n    This is an example of a simple generator function that yields numbers\n    from 0 up to the specified limit.\n\n    :param limit: The upper limit for the numbers to generate.\n    :yields: The next number in the sequence.\n    \"\"\"\n    num = 0\n    while num < limit:\n        yield num\n        num += 1\n\n\n# Example usage\nif __name__ == '__main__':\n    # Add items to the global list\n    add_to_global_list(1)\n    add_to_global_list(2)\n    print(\"Global list after additions:\", _global_list)\n\n    # Clear the global list and enforce garbage collection\n    clear_global_list()\n    print(\"Global list after clearing:\", _global_list)\n\n    # Generate numbers up to 5\n    for number in number_generator(5):\n        print(\"Generated number:\", number)\n```\n",
+    "tags": [
+        "GarbageCollection",
+        "Generator",
+        "Global state",
+        "Hard"
+    ],
+    "keywords": [
+        "GarbageCollection",
+        "Generator",
+        "Global state"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "pydocstyle"
+}

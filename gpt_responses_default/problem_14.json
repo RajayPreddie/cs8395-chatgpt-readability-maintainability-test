@@ -1,0 +1,16 @@
+{
+    "id": "problem_14",
+    "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: Deque,dict. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "# Import the deque from collections module\nfrom collections import deque\n\ndef main():\n    # Initialize a deque\n    dq = deque()\n\n    # Initialize a dictionary to store the frequency of elements\n    freq_dict = dict()\n\n    # Populate the deque and dictionary with sample data\n    for i in range(1, 6):  # Adding numbers 1 to 5 to the deque\n        dq.append(i)\n        freq_dict[i] = freq_dict.get(i, 0) + 1  # Update frequency in dict\n\n    # Display the content of deque and dictionary\n    print(\"Deque contents:\", list(dq))\n    print(\"Dictionary contents:\", freq_dict)\n\n    # Perform operations on the deque and update the dictionary accordingly\n    dq.appendleft(0)  # Add 0 to the left\n    freq_dict[0] = freq_dict.get(0, 0) + 1  # Update frequency in dict\n\n    dq.pop()  # Remove the rightmost element\n    # Assuming the deque is not empty, update the frequency of the popped element\n    if dq:\n        popped_element = dq[-1]\n        freq_dict[popped_element] -= 1\n        if freq_dict[popped_element] == 0:\n            del freq_dict[popped_element]  # Remove the element from dict if frequency is 0\n\n    # Final display of the content after operations\n    print(\"Final Deque contents:\", list(dq))\n    print(\"Final Dictionary contents:\", freq_dict)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "Deque",
+        "dict",
+        "Medium"
+    ],
+    "keywords": [
+        "Deque",
+        "dict"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "default"
+}

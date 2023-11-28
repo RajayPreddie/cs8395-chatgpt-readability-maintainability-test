@@ -1,0 +1,14 @@
+{
+    "id": "problem_1",
+    "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: list. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "# Python program to manage a list of tasks\n\ndef display_tasks(tasks):\n    \"\"\"Display the list of tasks with their indices.\"\"\"\n    print(\"\\nCurrent Tasks:\")\n    for index, task in enumerate(tasks):\n        print(f\"{index + 1}. {task}\")\n\ndef add_task(tasks, task):\n    \"\"\"Add a new task to the list.\"\"\"\n    tasks.append(task)\n    print(f\"Task '{task}' added successfully!\")\n\ndef remove_task(tasks, task_index):\n    \"\"\"Remove a task from the list by its index.\"\"\"\n    try:\n        removed_task = tasks.pop(task_index - 1)\n        print(f\"Task '{removed_task}' removed successfully!\")\n    except IndexError:\n        print(\"Invalid task number. Please try again.\")\n\ndef main():\n    tasks = []  # Initialize an empty list of tasks\n\n    while True:\n        # Display the menu\n        print(\"\\nTask Manager\")\n        print(\"1. Display Tasks\")\n        print(\"2. Add Task\")\n        print(\"3. Remove Task\")\n        print(\"4. Exit\")\n\n        # Get the user's choice\n        choice = input(\"Enter your choice (1-4): \")\n\n        # Execute the choice\n        if choice == '1':\n            display_tasks(tasks)\n        elif choice == '2':\n            task = input(\"Enter the task to add: \")\n            add_task(tasks, task)\n        elif choice == '3':\n            display_tasks(tasks)\n            try:\n                task_index = int(input(\"Enter the task number to remove: \"))\n                remove_task(tasks, task_index)\n            except ValueError:\n                print(\"Please enter a valid number.\")\n        elif choice == '4':\n            print(\"Exiting Task Manager...\")\n            break\n        else:\n            print(\"Invalid choice. Please enter a number between 1 and 4.\")\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "list",
+        "Easy"
+    ],
+    "keywords": [
+        "list"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "default"
+}

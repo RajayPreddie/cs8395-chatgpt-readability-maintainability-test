@@ -1,0 +1,14 @@
+{
+    "id": "problem_7",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a more complex example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: Concurrency. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "from concurrent.futures import ThreadPoolExecutor\n\n# Function to perform a computation on a list item\ndef process_item(item):\n    # Replace with actual processing logic\n    return item * item\n\n# Function to process a list using concurrency\ndef process_list_concurrently(input_list):\n    with ThreadPoolExecutor() as executor:\n        # Map the process_item function over the input list using multiple threads\n        results = list(executor.map(process_item, input_list))\n    return results\n\ndef main():\n    # Example list to process\n    example_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n    \n    # Process list concurrently\n    processed_list = process_list_concurrently(example_list)\n    \n    # Print the results\n    for item in processed_list:\n        print(item)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "Concurrency",
+        "Easy"
+    ],
+    "keywords": [
+        "Concurrency"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "radon"
+}

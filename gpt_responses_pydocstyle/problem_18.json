@@ -1,0 +1,18 @@
+{
+    "id": "problem_18",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pydocstyle standard for docstrings. Include a module-level docstring as per pydocstyle guidelines. Here's an example snippet:\n\n\"\"\"Module for demonstrating pydocstyle adherence.\n\nThis module provides examples of how to write docstrings that conform to pydocstyle standards.\n\"\"\"\n\ndef add_numbers(x, y):\n    \"\"\"Add two numbers and return the result.\n\n    :param x: The first number to add.\n    :param y: The second number to add.\n    :return: The sum of x and y.\n    \"\"\"\n    return x + y\n\nFocus on comprehensive and compliant docstring documentation. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: Generator,Global state,heapq. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "\"\"\"A module for demonstrating the use of a generator, global state, and heapq.\n\nThis module provides an example of how to use a generator to manage a global state\nof numbers and utilizes the heapq module to maintain a heap-ordered list.\n\"\"\"\n\nimport heapq\n\n# Global state: a heap-ordered list to store numbers\nnumbers_heap = []\n\ndef add_number_to_heap(number):\n    \"\"\"Add a number to the global heap.\n\n    This function takes a number and adds it to the global heap while maintaining\n    the heap property.\n\n    :param number: The number to be added to the heap.\n    \"\"\"\n    heapq.heappush(numbers_heap, number)\n\ndef get_numbers_generator():\n    \"\"\"Yield numbers from the heap in ascending order.\n\n    This generator yields numbers from the global heap one by one, starting with\n    the smallest number, each time removing it from the heap.\n\n    :yield: The next smallest number from the heap.\n    \"\"\"\n    while numbers_heap:\n        yield heapq.heappop(numbers_heap)\n\n# Example usage:\n# add_number_to_heap(10)\n# add_number_to_heap(5)\n# add_number_to_heap(15)\n# number_gen = get_numbers_generator()\n# for number in number_gen:\n#     print(number)  # Outputs: 5, 10, 15\n```\n\nPlease note that the example usage is commented out. If you want to run the example, you should uncomment those lines and run the script. The generator `get_numbers_generator` will yield the numbers in ascending order, and the global state `numbers_heap` will be modified each time a number is yielded.",
+    "tags": [
+        "Generator",
+        "Global state",
+        "heapq",
+        "Hard"
+    ],
+    "keywords": [
+        "Generator",
+        "Global state",
+        "heapq"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "pydocstyle"
+}

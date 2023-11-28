@@ -1,0 +1,14 @@
+{
+    "id": "problem_10",
+    "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: Counter. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "from collections import Counter\n\ndef count_elements(lst):\n    \"\"\"Count the frequency of each element in a list using Counter\"\"\"\n    return Counter(lst)\n\n# Example usage:\nif __name__ == \"__main__\":\n    # Define a list of elements\n    elements = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']\n    \n    # Count the frequency of each element in the list\n    element_count = count_elements(elements)\n    \n    # Print the count of each element\n    for element, count in element_count.items():\n        print(f\"{element}: {count}\")\n",
+    "tags": [
+        "Counter",
+        "Easy"
+    ],
+    "keywords": [
+        "Counter"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "default"
+}

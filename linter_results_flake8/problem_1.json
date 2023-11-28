@@ -1,16 +1,12 @@
 {
     "flake8": {
-        "violations": {
-            "E302 expected 2 blank lines, found 1": 2,
-            "E501 line too long (86 > 79 characters)": 1,
-            "E305 expected 2 blank lines after class or function definition, found 1": 1
-        },
-        "total_violations": 4,
+        "violations": {},
+        "total_violations": 0,
         "most_frequent_violation": {
-            "violation_type": "E302 expected 2 blank lines, found 1",
-            "frequency": 2
+            "violation_type": "",
+            "frequency": 0
         },
-        "number_of_lines_in_code": 16
+        "number_of_lines_in_code": 30
     },
     "pylint": {
         "violations": {
@@ -22,7 +18,7 @@
             "violation_type": "Missing function or method docstring (missing-function-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 16
+        "number_of_lines_in_code": 30
     },
     "black": {
         "violations": {
@@ -35,19 +31,21 @@
         }
     },
     "radon": {
-        "function_complexity": 1.0,
-        "overall_score": 1.0
+        "function_complexity": 2.3333333333333335,
+        "overall_score": 2.3333333333333335
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D103: Missing docstring in public function": 1
+            "D103: Missing docstring in public function": 1,
+            "D205: 1 blank line required between summary line and description (found 0)": 2,
+            "D400: First line should end with a period (not ',')": 1
         },
-        "total_violations": 2,
+        "total_violations": 5,
         "most_frequent_violation": {
-            "violation_type": "D103: Missing docstring in public function",
-            "frequency": 1
+            "violation_type": "D205: 1 blank line required between summary line and description (found 0)",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 16
+        "number_of_lines_in_code": 30
     }
 }

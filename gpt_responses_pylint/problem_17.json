@@ -1,0 +1,18 @@
+{
+    "id": "problem_17",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. Here's an example snippet compliant with pylint:\n\n\"\"\"Module for demonstrating pylint adherence.\n\nThis module provides an example function formatted to comply with pylint standards.\n\"\"\"\n\ndef calculate_sum(a, b):\n    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n    return a + b\n\nFocus on clean, readable code following the style of the provided snippet. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: GarbageCollection,Generator,Global state. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "\"\"\"Module for demonstrating pylint adherence with GarbageCollection, Generator, Global state.\n\nThis module provides an example of using a garbage collection, generator functions,\nand global state in a way that adheres to pylint standards.\n\"\"\"\n\nimport gc\n\n# Global state\nglobal_list = []\n\ndef enable_garbage_collection():\n    \"\"\"Enable automatic garbage collection.\"\"\"\n    gc.enable()\n\ndef disable_garbage_collection():\n    \"\"\"Disable automatic garbage collection.\"\"\"\n    gc.disable()\n\ndef garbage_collection_status():\n    \"\"\"Return the current status of the garbage collector.\"\"\"\n    return gc.isenabled()\n\ndef add_to_global_list(item):\n    \"\"\"Add an item to the global list.\"\"\"\n    global_list.append(item)\n\ndef clear_global_list():\n    \"\"\"Clear the global list and run garbage collection.\"\"\"\n    global global_list\n    global_list = []\n    gc.collect()\n\ndef generate_numbers(start, end):\n    \"\"\"Yield numbers from start to end using a generator.\"\"\"\n    for number in range(start, end + 1):\n        yield number\n\ndef main():\n    \"\"\"Main function to demonstrate the use of the above concepts.\"\"\"\n    # Enable garbage collection\n    enable_garbage_collection()\n\n    # Add items to the global list\n    for number in generate_numbers(1, 10):\n        add_to_global_list(number)\n\n    # Print the global list\n    print(global_list)\n\n    # Clear the global list and run garbage collection\n    clear_global_list()\n\n    # Print garbage collection status\n    print(f\"Garbage collection enabled: {garbage_collection_status()}\")\n\n# Check if the script is run directly (not imported)\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "GarbageCollection",
+        "Generator",
+        "Global state",
+        "Hard"
+    ],
+    "keywords": [
+        "GarbageCollection",
+        "Generator",
+        "Global state"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "pylint"
+}

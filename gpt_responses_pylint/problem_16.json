@@ -1,0 +1,16 @@
+{
+    "id": "problem_16",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. Here's an example snippet compliant with pylint:\n\n\"\"\"Module for demonstrating pylint adherence.\n\nThis module provides an example function formatted to comply with pylint standards.\n\"\"\"\n\ndef calculate_sum(a, b):\n    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n    return a + b\n\nFocus on clean, readable code following the style of the provided snippet. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: frozenset,GarbageCollection. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "\"\"\"Module for demonstrating pylint adherence with frozenset and garbage collection.\n\nThis module provides a function to demonstrate the use of frozenset and garbage collection in Python.\n\"\"\"\n\nimport gc\n\ndef collect_garbage():\n    \"\"\"Force garbage collection.\"\"\"\n    gc.collect()\n\ndef create_frozenset_from_list(input_list):\n    \"\"\"Create and return a frozenset from the given list.\"\"\"\n    return frozenset(input_list)\n\n# Example usage\nif __name__ == \"__main__\":\n    my_list = [1, 2, 3, 4, 5]\n    my_frozenset = create_frozenset_from_list(my_list)\n    print(\"Frozenset:\", my_frozenset)\n\n    # Explicitly calling garbage collection for demonstration purposes\n    collect_garbage()\n    print(\"Garbage collection has been executed.\")\n",
+    "tags": [
+        "frozenset",
+        "GarbageCollection",
+        "Medium"
+    ],
+    "keywords": [
+        "frozenset",
+        "GarbageCollection"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "pylint"
+}

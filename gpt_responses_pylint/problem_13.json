@@ -1,0 +1,16 @@
+{
+    "id": "problem_13",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. Here's an example snippet compliant with pylint:\n\n\"\"\"Module for demonstrating pylint adherence.\n\nThis module provides an example function formatted to comply with pylint standards.\n\"\"\"\n\ndef calculate_sum(a, b):\n    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n    return a + b\n\nFocus on clean, readable code following the style of the provided snippet. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: DependencyInjection,Deque. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "\"\"\"Module for demonstrating pylint adherence with Dependency Injection and Deque.\n\nThis module provides a class and functions to showcase the use of Dependency Injection\nand a Deque data structure, formatted to comply with pylint standards.\n\"\"\"\n\nfrom collections import deque\nfrom typing import Any, Deque, List\n\nclass ListManager:\n    \"\"\"Class to manage a list using Dependency Injection and Deque.\"\"\"\n\n    def __init__(self, input_list: List[Any]):\n        \"\"\"Initialize the ListManager with a list.\"\"\"\n        self._deque = deque(input_list)\n\n    def append_to_list(self, item: Any):\n        \"\"\"Append an item to the list.\"\"\"\n        self._deque.append(item)\n\n    def pop_from_list(self):\n        \"\"\"Pop an item from the list.\"\"\"\n        return self._deque.pop()\n\n    def get_list(self) -> List[Any]:\n        \"\"\"Return the current list.\"\"\"\n        return list(self._deque)\n\n# Example usage:\nif __name__ == \"__main__\":\n    # Initialize a ListManager with an empty list\n    manager = ListManager([])\n\n    # Append items to the list\n    manager.append_to_list(1)\n    manager.append_to_list(2)\n    manager.append_to_list(3)\n\n    # Pop an item from the list\n    popped_item = manager.pop_from_list()\n    print(f\"Popped item: {popped_item}\")\n\n    # Get the current list\n    current_list = manager.get_list()\n    print(f\"Current list: {current_list}\")\n",
+    "tags": [
+        "DependencyInjection",
+        "Deque",
+        "Medium"
+    ],
+    "keywords": [
+        "DependencyInjection",
+        "Deque"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "pylint"
+}

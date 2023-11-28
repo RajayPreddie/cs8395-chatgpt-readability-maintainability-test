@@ -1,0 +1,16 @@
+{
+    "id": "problem_12",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. Here's an example snippet compliant with pylint:\n\n\"\"\"Module for demonstrating pylint adherence.\n\nThis module provides an example function formatted to comply with pylint standards.\n\"\"\"\n\ndef calculate_sum(a, b):\n    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n    return a + b\n\nFocus on clean, readable code following the style of the provided snippet. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: DefaultDict,DependencyInjection. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "from collections import defaultdict\nfrom typing import Callable, DefaultDict, List\n\nclass Injector:\n    \"\"\"Simple dependency injection class.\"\"\"\n    def __init__(self):\n        self._providers = defaultdict(lambda: None)\n\n    def register(self, name: str, provider: Callable):\n        \"\"\"Register a dependency provider.\"\"\"\n        self._providers[name] = provider\n\n    def get(self, name: str):\n        \"\"\"Get the service instance by name.\"\"\"\n        provider = self._providers.get(name)\n        if not provider:\n            raise ValueError(f\"Service '{name}' not registered\")\n        return provider()\n\ndef greeting_service() -> str:\n    \"\"\"Sample service that provides a greeting.\"\"\"\n    return \"Hello, World!\"\n\ndef main():\n    \"\"\"Main function to demonstrate dependency injection and usage of a list.\"\"\"\n    injector = Injector()\n    injector.register('greeting', greeting_service)\n\n    # Retrieve the greeting service from the injector\n    greet = injector.get('greeting')\n    print(greet)  # Outputs: Hello, World!\n\n    # Example of using a list\n    numbers = [1, 2, 3, 4, 5]\n    sum_of_numbers = sum(numbers)\n    print(f\"The sum of numbers is: {sum_of_numbers}\")\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "DefaultDict",
+        "DependencyInjection",
+        "Medium"
+    ],
+    "keywords": [
+        "DefaultDict",
+        "DependencyInjection"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "pylint"
+}

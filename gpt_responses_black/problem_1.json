@@ -1,18 +1,14 @@
 {
     "id": "problem_1",
-    "description": "Act as a Python developer and write a Python program that strictly adheres to the Black coding style. Here's an example snippet formatted using Black:\n\ndef format_name(first_name, last_name):\n    formatted_first_name = first_name.strip().title()\n    formatted_last_name = last_name.strip().title()\n    return f\"{formatted_first_name} {formatted_last_name}\"\n\nEnsure the code is formatted according to Black's uncompromising style. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: list,asyncio,bytearray. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
-    "code": "import asyncio\n\n# Function to convert strings in a list to bytearrays\nasync def convert_to_bytearrays(string_list):\n    # Create an empty list to hold the bytearrays\n    bytearray_list = []\n    \n    # Iterate over each string in the list\n    for item in string_list:\n        # Convert the string to a bytearray and append to the list\n        bytearray_list.append(bytearray(item, 'utf-8'))\n        \n    return bytearray_list\n\n# Async main function to demonstrate the use of the convert_to_bytearrays function\nasync def main():\n    # Define a list of strings\n    names = [\"Alice\", \"Bob\", \"Charlie\"]\n    \n    # Convert the list of strings to a list of bytearrays\n    bytearrays = await convert_to_bytearrays(names)\n    \n    # Print the list of bytearrays\n    for ba in bytearrays:\n        print(ba)\n\n# Run the async main function using asyncio.run if this is the main module\nif __name__ == \"__main__\":\n    asyncio.run(main())\n",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the Black coding style. Here's an example snippet formatted using Black:\n\ndef format_name(first_name, last_name):\n    formatted_first_name = first_name.strip().title()\n    formatted_last_name = last_name.strip().title()\n    return f\"{formatted_first_name} {formatted_last_name}\"\n\nEnsure the code is formatted according to Black's uncompromising style. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: list. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "# Define a function to filter out negative numbers from a list\ndef filter_negatives(numbers):\n    # Use list comprehension to filter negative numbers\n    positive_numbers = [num for num in numbers if num >= 0]\n    return positive_numbers\n\n# Main function to demonstrate the use of the filter_negatives function\ndef main():\n    # Define a list of numbers with some negative values\n    number_list = [1, -2, 3, -4, 5, -6, 7, 8, -9, 10]\n    \n    # Call the filter_negatives function and store the result\n    positive_list = filter_negatives(number_list)\n    \n    # Print the original and the filtered list\n    print(\"Original list:\", number_list)\n    print(\"Filtered list (no negatives):\", positive_list)\n\n# Execute the main function when the script is run\nif __name__ == \"__main__\":\n    main()\n",
     "tags": [
         "list",
-        "asyncio",
-        "bytearray",
-        "Hard"
+        "Easy"
     ],
     "keywords": [
-        "list",
-        "asyncio",
-        "bytearray"
+        "list"
     ],
-    "difficulty": "Hard",
+    "difficulty": "Easy",
     "prompt_style_adherence": "black"
 }

@@ -8,7 +8,7 @@ from constants.keywords import KEY_WORDS
 
 client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
-def create_problem_descriptions(num_problems=1):
+def create_problem_descriptions(num_problems=20):
     problem_descriptions = []
 
     # Define ratios
@@ -170,7 +170,7 @@ def createLinterPrompts(linters_for_prompting):
     "Strive for a simple and clear code structure, minimizing cyclomatic complexity. "
     "Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. "
     "Verify the program's correctness as if using a Command Line Interface.")
-    elif linter == 'pydoc':
+    elif linter == 'pydocstyle':
       prompts.append(    "Act as a Python developer and write a Python program that strictly adheres to the pydocstyle standard for docstrings. "
     "Include a module-level docstring as per pydocstyle guidelines. Here's an example snippet:\n\n"
     "\"\"\"Module for demonstrating pydocstyle adherence.\n\n"

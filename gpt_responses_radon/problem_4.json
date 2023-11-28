@@ -1,0 +1,14 @@
+{
+    "id": "problem_4",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a more complex example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: bytes. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "def bytes_to_human_readable(num_bytes):\n    \"\"\"Convert a number of bytes into a human-readable string.\"\"\"\n    suffixes = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']\n    i = 0\n    while num_bytes >= 1024 and i < len(suffixes)-1:\n        num_bytes /= 1024.\n        i += 1\n    return f\"{num_bytes:.2f} {suffixes[i]}\"\n\ndef main():\n    # List of byte values to be converted\n    byte_values = [128, 1024, 1536, 1048576, 1073741824, 1099511627776]\n\n    # Convert each byte value to a human-readable form and print it\n    for value in byte_values:\n        print(bytes_to_human_readable(value))\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "bytes",
+        "Easy"
+    ],
+    "keywords": [
+        "bytes"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "radon"
+}

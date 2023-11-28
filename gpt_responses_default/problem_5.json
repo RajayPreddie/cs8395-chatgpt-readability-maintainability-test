@@ -1,0 +1,14 @@
+{
+    "id": "problem_5",
+    "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: ChainMap. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "from collections import ChainMap\n\ndef merge_dictionaries(dict_list):\n    # Create a ChainMap by unpacking the list of dictionaries\n    chain = ChainMap(*dict_list)\n    # Convert the ChainMap back to a dictionary to merge all dictionaries into one\n    merged_dict = dict(chain)\n    return merged_dict\n\nif __name__ == \"__main__\":\n    # List of dictionaries to be merged\n    dict_list = [\n        {'a': 1, 'b': 2},\n        {'b': 3, 'c': 4},\n        {'c': 5, 'd': 6}\n    ]\n\n    # Merge dictionaries using ChainMap\n    result = merge_dictionaries(dict_list)\n\n    # Print the merged dictionary\n    print(result)\n",
+    "tags": [
+        "ChainMap",
+        "Easy"
+    ],
+    "keywords": [
+        "ChainMap"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "default"
+}

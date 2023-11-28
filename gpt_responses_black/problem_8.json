@@ -1,0 +1,14 @@
+{
+    "id": "problem_8",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the Black coding style. Here's an example snippet formatted using Black:\n\ndef format_name(first_name, last_name):\n    formatted_first_name = first_name.strip().title()\n    formatted_last_name = last_name.strip().title()\n    return f\"{formatted_first_name} {formatted_last_name}\"\n\nEnsure the code is formatted according to Black's uncompromising style. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: ContextManager. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "from contextlib import contextmanager\n\n# Define a context manager to manage a list\n@contextmanager\ndef managed_list(initial_data=None):\n    # Initialize the list with the given data or as an empty list\n    data = initial_data if initial_data is not None else []\n    try:\n        yield data  # Provide the list to the block using the context\n    finally:\n        # Clean up or finalize actions (if any) go here\n        # For this example, we'll just print the final state of the list\n        print(f\"Final list state: {data}\")\n\n# Example usage of the context manager\nif __name__ == \"__main__\":\n    with managed_list([1, 2, 3]) as my_list:\n        # Perform operations on the list within the context\n        my_list.append(4)\n        my_list.extend([5, 6])\n        print(f\"Current list state: {my_list}\")\n        # Exiting the 'with' block triggers the context manager's cleanup code\n```\n\nThis program defines a context manager called `managed_list` which is used to manage a list's lifecycle. The context manager initializes the list, provides it to the user's block of code, and upon exit, prints the final state of the list. The example usage demonstrates appending and extending the list within the managed context.",
+    "tags": [
+        "ContextManager",
+        "Easy"
+    ],
+    "keywords": [
+        "ContextManager"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "black"
+}

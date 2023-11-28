@@ -1,0 +1,16 @@
+{
+    "id": "problem_14",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the Black coding style. Here's an example snippet formatted using Black:\n\ndef format_name(first_name, last_name):\n    formatted_first_name = first_name.strip().title()\n    formatted_last_name = last_name.strip().title()\n    return f\"{formatted_first_name} {formatted_last_name}\"\n\nEnsure the code is formatted according to Black's uncompromising style. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: Deque,dict. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "from collections import deque\n\n# Function to demonstrate processing items in a deque\ndef process_deque_items(items):\n    # Initialize a deque with the given list of items\n    dq = deque(items)\n\n    # Process items until the deque is empty\n    while dq:\n        # Pop an item from the left end of the deque\n        current_item = dq.popleft()\n        # Perform some processing on the item (for demonstration, just print it)\n        print(f\"Processing item: {current_item}\")\n\n# Function to demonstrate using a dict to count occurrences of items in a list\ndef count_item_occurrences(items):\n    # Initialize an empty dictionary to store counts\n    counts = dict()\n\n    # Iterate over each item in the list\n    for item in items:\n        # Increment the count for the item in the dictionary\n        counts[item] = counts.get(item, 0) + 1\n\n    return counts\n\n# Example usage:\nif __name__ == \"__main__\":\n    # List of items to process\n    items_to_process = [\"apple\", \"banana\", \"cherry\", \"date\", \"apple\", \"banana\"]\n\n    # Call the function to process items in a deque\n    print(\"Deque Processing:\")\n    process_deque_items(items_to_process)\n\n    # Call the function to count occurrences of items in the list\n    print(\"\\nItem Occurrence Count:\")\n    item_counts = count_item_occurrences(items_to_process)\n    for item, count in item_counts.items():\n        print(f\"{item}: {count}\")\n",
+    "tags": [
+        "Deque",
+        "dict",
+        "Medium"
+    ],
+    "keywords": [
+        "Deque",
+        "dict"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "black"
+}

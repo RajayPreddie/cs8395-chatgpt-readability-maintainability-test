@@ -1,0 +1,14 @@
+{
+    "id": "problem_3",
+    "description": "Act as a Python developer and create a Python program that adheres to the flake8 coding standard. Here's an example snippet:\n\n# Example Snippet for Flake8\ndef find_max(numbers):\n    \"\"\"Find the maximum number in a list.\"\"\"\n    return max(numbers) if numbers else None\n\nEnsure your code is clean, readable, and adheres to flake8 standards. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: bytearray. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "def modify_bytearray(buffer, value, index):\n    \"\"\"\n    Modify a bytearray by setting a value at the specified index.\n\n    Args:\n    - buffer: bytearray to be modified.\n    - value: the value to set in the bytearray.\n    - index: the position in the bytearray to set the value.\n\n    Returns:\n    - The modified bytearray.\n    \"\"\"\n    # Ensure value fits in a byte\n    if not 0 <= value <= 255:\n        raise ValueError(\"Value must be in the range 0-255\")\n\n    # Ensure index is within the bytearray bounds\n    if not 0 <= index < len(buffer):\n        raise IndexError(\"Index out of range\")\n\n    buffer[index] = value\n    return buffer\n\n\n# Example usage\nif __name__ == \"__main__\":\n    # Create a bytearray from a list of integers\n    my_bytearray = bytearray([10, 20, 30, 40, 50])\n\n    # Modify the bytearray\n    try:\n        new_value = 100\n        position = 2\n        modified_bytearray = modify_bytearray(my_bytearray, new_value, position)\n\n        # Print the modified bytearray\n        print(f\"Modified bytearray: {modified_bytearray}\")\n    except (ValueError, IndexError) as e:\n        print(f\"Error: {e}\")\n",
+    "tags": [
+        "bytearray",
+        "Easy"
+    ],
+    "keywords": [
+        "bytearray"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "flake8"
+}

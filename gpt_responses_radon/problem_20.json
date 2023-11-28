@@ -1,0 +1,18 @@
+{
+    "id": "problem_20",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a more complex example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: heapq,IdiomaticPython,Introspection. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "import heapq\n\ndef add_to_heap(heap, item):\n    \"\"\"Add an item to the heap, maintaining the heap invariant.\"\"\"\n    heapq.heappush(heap, item)\n\ndef get_smallest(heap):\n    \"\"\"Return the smallest item from the heap.\"\"\"\n    return heapq.heappop(heap) if heap else None\n\ndef introspect_function(function):\n    \"\"\"Prints the name and docstring of a function.\"\"\"\n    print(f\"Function name: {function.__name__}\")\n    print(f\"Docstring: {function.__doc__}\")\n\ndef main():\n    # Create an empty heap\n    my_heap = []\n    \n    # Add some elements to the heap\n    add_to_heap(my_heap, 10)\n    add_to_heap(my_heap, 1)\n    add_to_heap(my_heap, 5)\n    \n    # Use introspection to display information about 'add_to_heap' function\n    introspect_function(add_to_heap)\n    \n    # Get and print the smallest element from the heap\n    print(\"The smallest element is:\", get_smallest(my_heap))\n    \n    # Idiomatic Python: use list comprehensions\n    # Let's add a range of numbers to the heap using list comprehension\n    [add_to_heap(my_heap, num) for num in range(3, 8)]\n    \n    # Empty the heap and print its elements\n    while my_heap:\n        print(get_smallest(my_heap), end=' ')\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "heapq",
+        "IdiomaticPython",
+        "Introspection",
+        "Hard"
+    ],
+    "keywords": [
+        "heapq",
+        "IdiomaticPython",
+        "Introspection"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "radon"
+}

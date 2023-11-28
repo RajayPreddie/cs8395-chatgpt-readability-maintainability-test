@@ -1,0 +1,18 @@
+{
+    "id": "problem_19",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pydocstyle standard for docstrings. Include a module-level docstring as per pydocstyle guidelines. Here's an example snippet:\n\n\"\"\"Module for demonstrating pydocstyle adherence.\n\nThis module provides examples of how to write docstrings that conform to pydocstyle standards.\n\"\"\"\n\ndef add_numbers(x, y):\n    \"\"\"Add two numbers and return the result.\n\n    :param x: The first number to add.\n    :param y: The second number to add.\n    :return: The sum of x and y.\n    \"\"\"\n    return x + y\n\nFocus on comprehensive and compliant docstring documentation. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: Global state,heapq,IdiomaticPython. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "\"\"\"Module for demonstrating pydocstyle adherence with heapq.\n\nThis module provides an example of idiomatic Python code that uses the heapq module\nto maintain a heap, while also adhering to pydocstyle standards for docstrings.\nGlobal state is avoided to ensure that the functions are pure and reusable.\n\"\"\"\n\nimport heapq\n\ndef add_to_heap(heap, item):\n    \"\"\"Add an item to the heap, maintaining the heap invariant.\n\n    This function adds a new item to the heap, ensuring that the heap properties\n    are maintained.\n\n    :param heap: A list representing the heap to which the item will be added.\n    :param item: The item to be added to the heap.\n    :return: None. The heap is modified in place.\n    \"\"\"\n    heapq.heappush(heap, item)\n\ndef get_smallest(heap):\n    \"\"\"Return the smallest item from the heap.\n\n    This function returns the smallest item from the heap without removing it.\n\n    :param heap: A list representing the heap from which the smallest item is fetched.\n    :return: The smallest item from the heap.\n    \"\"\"\n    return heap[0]\n\ndef remove_smallest(heap):\n    \"\"\"Remove and return the smallest item from the heap.\n\n    This function removes and returns the smallest item from the heap, ensuring\n    that the heap properties are maintained after the removal.\n\n    :param heap: A list representing the heap from which the smallest item will be removed.\n    :return: The smallest item that was removed from the heap.\n    \"\"\"\n    return heapq.heappop(heap)\n\n# Example usage:\nif __name__ == \"__main__\":\n    # Create an empty heap\n    my_heap = []\n    \n    # Add some numbers to the heap\n    add_to_heap(my_heap, 10)\n    add_to_heap(my_heap, 5)\n    add_to_heap(my_heap, 8)\n    \n    # Fetch the smallest number from the heap without removing it\n    smallest = get_smallest(my_heap)\n    print(f\"The smallest number in the heap is: {smallest}\")\n    \n    # Remove the smallest number from the heap\n    removed = remove_smallest(my_heap)\n    print(f\"The number removed from the heap is: {removed}\")\n    \n    # The heap after removing the smallest number\n    print(f\"The heap after removal: {my_heap}\")\n",
+    "tags": [
+        "Global state",
+        "heapq",
+        "IdiomaticPython",
+        "Hard"
+    ],
+    "keywords": [
+        "Global state",
+        "heapq",
+        "IdiomaticPython"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "pydocstyle"
+}

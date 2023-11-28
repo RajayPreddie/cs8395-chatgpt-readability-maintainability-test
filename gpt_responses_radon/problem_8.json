@@ -1,0 +1,14 @@
+{
+    "id": "problem_8",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a more complex example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: ContextManager. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "class ListContextManager:\n    \"\"\"Context manager for a list to handle setup and teardown processes.\"\"\"\n    def __init__(self):\n        self.list = []\n\n    def __enter__(self):\n        # Setup code can go here, if needed\n        return self.list\n\n    def __exit__(self, exc_type, exc_value, traceback):\n        # Teardown code can go here, if needed\n        # For example, we could clear the list or perform some validation\n        self.list.clear()\n\ndef process_list_operations():\n    \"\"\"Function to demonstrate the use of the ListContextManager.\"\"\"\n    with ListContextManager() as my_list:\n        # Perform list operations within the context\n        my_list.append(1)\n        my_list.extend([2, 3, 4])\n        my_list.insert(1, 5)  # Insert 5 at index 1\n\n        # Operations are done, context manager will handle the teardown\n        print(my_list)  # Output the list\n\ndef main():\n    process_list_operations()\n\nif __name__ == \"__main__\":\n    main()\n```\n",
+    "tags": [
+        "ContextManager",
+        "Easy"
+    ],
+    "keywords": [
+        "ContextManager"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "radon"
+}

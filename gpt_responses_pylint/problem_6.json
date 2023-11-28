@@ -1,0 +1,14 @@
+{
+    "id": "problem_6",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. Here's an example snippet compliant with pylint:\n\n\"\"\"Module for demonstrating pylint adherence.\n\nThis module provides an example function formatted to comply with pylint standards.\n\"\"\"\n\ndef calculate_sum(a, b):\n    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n    return a + b\n\nFocus on clean, readable code following the style of the provided snippet. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: Comprehension. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "\"\"\"Module for demonstrating comprehension usage.\n\nThis module provides a function that uses list comprehension to generate a list of squares.\n\"\"\"\n\ndef generate_squares(n):\n    \"\"\"Generate a list of squares from 1 to n squared.\n\n    Args:\n        n: An integer, the upper limit for generating squares.\n\n    Returns:\n        A list of squares from 1 to n squared.\n    \"\"\"\n    return [i ** 2 for i in range(1, n + 1)]\n\n# Example usage:\n# If you want to use this function, uncomment the following lines and run the script.\n# squares = generate_squares(10)\n# print(squares)\n",
+    "tags": [
+        "Comprehension",
+        "Easy"
+    ],
+    "keywords": [
+        "Comprehension"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "pylint"
+}

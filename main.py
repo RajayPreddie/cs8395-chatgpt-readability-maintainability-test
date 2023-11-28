@@ -12,11 +12,11 @@ from utils.chat_gpt_utils import get_gpt_responses_to_problem_descriptions, crea
 from utils.general_utils import extract_json_from_directory
 from constants.linters import LINTER_NAMES
 
-# TODO: Add keywords related to Software Engineering programs
 # TODO: Argument Parsing
 # TODO: In the general output.json, only show the most important results across the different problem descriptions.
 
 parser = argparse.ArgumentParser(description='Get ChatGPT responses and write to files.')
+parser.add_argument('--generate_responses', action='store_true', help='Generate python programs using ChatGPT.')
 
 # Updated argument for linters/tools
 parser.add_argument('--linters', nargs='*', choices=['flake8', 'pylint', 'black', 'radon', 'pydocstyle', 'default', 'all'],
@@ -29,7 +29,7 @@ args = parser.parse_args()
 
 # Usage example
 if 'all' in args.linters:
-    args.linters = ['flake8', 'pylint', 'black', 'radon', 'pydocstyle']
+    args.linters = ['default','flake8', 'pylint', 'black', 'radon', 'pydocstyle']
 
 # Create problem descriptions
 problem_descriptions = create_problem_descriptions()
@@ -37,13 +37,13 @@ problem_descriptions = create_problem_descriptions()
 linters_for_prompting = args.linters
 prompts = createLinterPrompts(linters_for_prompting=linters_for_prompting)
 
-def getPromptSolutions(response_folder, problem_descriptions, prompt, linter):
+def getPromptSolutions(response_folder, problem_descriptions, prompt, linter, args):
   # Prompt Chat GPT to generate the Python Interpreter output
   abs_directory_path = os.path.join(os.getcwd(), response_folder)
   # If the path already exists, then there is no need to reprompt ChatGPT
   prompt_solutions = {}
   # Check if the directory exists
-  if not os.path.exists(abs_directory_path):
+  if not os.path.exists(abs_directory_path) or args.generate_responses:
     # Prompt Chat GPT to generate the Python Interpreter output
       if not os.path.exists(abs_directory_path):
         os.makedirs(abs_directory_path)
@@ -110,7 +110,7 @@ for prompt, linter_name in zip(prompts, linters_for_prompting):
   response_folder = f"gpt_responses_{linter_name}"
   linter_results_folder = f"linter_results_{linter_name}"
 
-  prompt_solutions = getPromptSolutions(response_folder=response_folder, problem_descriptions=problem_descriptions, prompt=prompt, linter=linter_name)
+  prompt_solutions = getPromptSolutions(response_folder=response_folder, problem_descriptions=problem_descriptions, prompt=prompt, linter=linter_name, args = args)
   
   # Create a directory to store the linting results
   linting_results_directory_path = os.path.join(os.getcwd(), linter_results_folder)

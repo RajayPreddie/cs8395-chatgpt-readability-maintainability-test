@@ -1,0 +1,14 @@
+{
+    "id": "problem_4",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. Here's an example snippet compliant with pylint:\n\n\"\"\"Module for demonstrating pylint adherence.\n\nThis module provides an example function formatted to comply with pylint standards.\n\"\"\"\n\ndef calculate_sum(a, b):\n    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n    return a + b\n\nFocus on clean, readable code following the style of the provided snippet. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: bytes. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "\"\"\"Module for demonstrating usage of bytes with a list in Python.\n\nThis module provides a function to convert a list of integers into a bytes object.\n\"\"\"\n\ndef list_to_bytes(int_list):\n    \"\"\"Convert a list of integers to a bytes object.\n\n    Args:\n        int_list (list): A list of integers ranging from 0 to 255.\n\n    Returns:\n        bytes: A bytes object created from the list of integers.\n\n    Raises:\n        ValueError: If any integer in the list is not within the range of 0 to 255.\n    \"\"\"\n    for number in int_list:\n        if not 0 <= number <= 255:\n            raise ValueError(\"List elements should be integers from 0 to 255.\")\n\n    return bytes(int_list)\n\n# Example usage:\nif __name__ == \"__main__\":\n    # A sample list of integers within the range of 0 to 255\n    sample_list = [100, 200, 255, 0, 64]\n\n    # Convert the list to bytes\n    bytes_object = list_to_bytes(sample_list)\n\n    # Output the bytes object\n    print(bytes_object)\n",
+    "tags": [
+        "bytes",
+        "Easy"
+    ],
+    "keywords": [
+        "bytes"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "pylint"
+}

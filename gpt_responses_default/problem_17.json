@@ -1,0 +1,18 @@
+{
+    "id": "problem_17",
+    "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: GarbageCollection,Generator,Global state. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "import gc\n\n# Define a global state list to demonstrate global state manipulation\nglobal_state_list = []\n\ndef manage_global_state(element=None, clear=False):\n    \"\"\"\n    Function to manage the addition or clearing of the global state list.\n    \"\"\"\n    global global_state_list\n\n    if clear:\n        global_state_list.clear()\n    elif element is not None:\n        global_state_list.append(element)\n\n    # Explicitly run garbage collection to demonstrate GarbageCollection\n    gc.collect()\n\ndef list_element_generator():\n    \"\"\"\n    Generator that yields elements from global_state_list one at a time.\n    \"\"\"\n    for element in global_state_list:\n        yield element\n\n# Example usage\nif __name__ == \"__main__\":\n    # Add some elements to the global state list\n    manage_global_state(\"Python\")\n    manage_global_state(\"is\")\n    manage_global_state(\"awesome\")\n\n    # Use the generator to iterate through the elements\n    for elem in list_element_generator():\n        print(elem)\n\n    # Clear the global state list\n    manage_global_state(clear=True)\n\n    # Check if the list is cleared\n    print(\"Global state list cleared:\", not global_state_list)\n",
+    "tags": [
+        "GarbageCollection",
+        "Generator",
+        "Global state",
+        "Hard"
+    ],
+    "keywords": [
+        "GarbageCollection",
+        "Generator",
+        "Global state"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "default"
+}

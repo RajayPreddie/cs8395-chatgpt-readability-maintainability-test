@@ -1,0 +1,14 @@
+{
+    "id": "problem_9",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. Here's an example snippet compliant with pylint:\n\n\"\"\"Module for demonstrating pylint adherence.\n\nThis module provides an example function formatted to comply with pylint standards.\n\"\"\"\n\ndef calculate_sum(a, b):\n    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n    return a + b\n\nFocus on clean, readable code following the style of the provided snippet. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: Coroutine. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "\"\"\"Module for demonstrating the use of coroutines in Python.\n\nThis module provides an example of a coroutine that processes a list of numbers.\n\"\"\"\n\nimport asyncio\n\nasync def process_numbers(numbers_list):\n    \"\"\"Coroutine that processes a list of numbers and prints their squares.\"\"\"\n    for number in numbers_list:\n        await asyncio.sleep(0.1)  # Simulate a non-blocking operation\n        print(f\"The square of {number} is {number * number}\")\n\n# The entry point of the program\nasync def main():\n    \"\"\"Main function that creates and runs tasks using asyncio.\"\"\"\n    numbers = [1, 2, 3, 4, 5]\n    await process_numbers(numbers)\n\n# Run the main function as an asyncio event loop\nif __name__ == \"__main__\":\n    asyncio.run(main())\n",
+    "tags": [
+        "Coroutine",
+        "Easy"
+    ],
+    "keywords": [
+        "Coroutine"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "pylint"
+}

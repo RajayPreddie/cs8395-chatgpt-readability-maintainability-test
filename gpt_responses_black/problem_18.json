@@ -1,0 +1,18 @@
+{
+    "id": "problem_18",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the Black coding style. Here's an example snippet formatted using Black:\n\ndef format_name(first_name, last_name):\n    formatted_first_name = first_name.strip().title()\n    formatted_last_name = last_name.strip().title()\n    return f\"{formatted_first_name} {formatted_last_name}\"\n\nEnsure the code is formatted according to Black's uncompromising style. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: Generator,Global state,heapq. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "import heapq\n\n# Global state for the list\nnumbers_list = []\n\ndef add_number(number):\n    \"\"\"Add a number to the heap.\"\"\"\n    heapq.heappush(numbers_list, number)\n\ndef get_smallest_numbers(n):\n    \"\"\"Return the n smallest numbers using a generator.\"\"\"\n    # Check if n is greater than the list size\n    if n > len(numbers_list):\n        raise ValueError(\"n is larger than the list size.\")\n    \n    # Create a shallow copy of the list to avoid modifying the original list\n    shallow_copy = numbers_list[:]\n    \n    # Use a generator to yield the n smallest numbers\n    for _ in range(n):\n        yield heapq.heappop(shallow_copy)\n\n# Example usage\nif __name__ == \"__main__\":\n    # Add numbers to the list\n    add_number(10)\n    add_number(4)\n    add_number(2)\n    add_number(7)\n    add_number(1)\n    \n    # Print the 3 smallest numbers\n    try:\n        for number in get_smallest_numbers(3):\n            print(number)\n    except ValueError as ve:\n        print(ve)\n```\n\nThis program uses the `heapq` module to manage a list of numbers in a heap structure, ensuring efficient retrieval of the smallest elements. The global state is represented by the `numbers_list`, which is a heap. The `add_number` function adds a new number to the heap, while the `get_smallest_numbers` function is a generator that yields the `n` smallest numbers without altering the original heap. The program includes error handling for cases where `n` exceeds the number of elements in the list. The example usage in the `if __name__ == \"__main__\":` block demonstrates how to add numbers to the list and print the three smallest numbers.",
+    "tags": [
+        "Generator",
+        "Global state",
+        "heapq",
+        "Hard"
+    ],
+    "keywords": [
+        "Generator",
+        "Global state",
+        "heapq"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "black"
+}

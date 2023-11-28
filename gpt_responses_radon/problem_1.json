@@ -1,18 +1,14 @@
 {
     "id": "problem_1",
-    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a more complex example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: list,asyncio,bytearray. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
-    "code": "import asyncio\n\n# Function to perform a task on each element of a bytearray\nasync def process_byte(element):\n    # Simulating an I/O-bound task with asyncio.sleep\n    await asyncio.sleep(0.1)\n    # Return the processed element (for example, element value increased by 1)\n    return element + 1\n\n# Async function to process a bytearray asynchronously using asyncio.gather\nasync def process_bytearray(byte_array):\n    # Create a list of coroutine tasks for each element in the bytearray\n    tasks = [process_byte(element) for element in byte_array]\n    # Wait for all coroutine tasks to complete and return their results\n    return await asyncio.gather(*tasks)\n\n# Main function to run the asyncio event loop\ndef main():\n    # Create a bytearray with sample data\n    byte_array = bytearray([10, 20, 30, 40, 50])\n    # Run the asyncio event loop to process the bytearray\n    processed_list = asyncio.run(process_bytearray(byte_array))\n    # Print the original and processed lists\n    print(\"Original bytearray:\", list(byte_array))\n    print(\"Processed list:\", processed_list)\n\n# Entry point of the program\nif __name__ == \"__main__\":\n    main()\n",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a more complex example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: list. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "def calculate_average(numbers):\n    \"\"\"Calculate and return the average of a list of numbers.\"\"\"\n    return sum(numbers) / len(numbers) if numbers else 0\n\ndef main():\n    # Define a list of numbers\n    numbers_list = [23, 45, 67, 89, 12, 34, 56]\n\n    # Calculate the average\n    average = calculate_average(numbers_list)\n\n    # Print the average\n    print(f\"The average is: {average}\")\n\nif __name__ == \"__main__\":\n    main()\n",
     "tags": [
         "list",
-        "asyncio",
-        "bytearray",
-        "Hard"
+        "Easy"
     ],
     "keywords": [
-        "list",
-        "asyncio",
-        "bytearray"
+        "list"
     ],
-    "difficulty": "Hard",
+    "difficulty": "Easy",
     "prompt_style_adherence": "radon"
 }

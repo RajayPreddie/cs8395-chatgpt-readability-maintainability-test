@@ -1,0 +1,18 @@
+{
+    "id": "problem_20",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the Black coding style. Here's an example snippet formatted using Black:\n\ndef format_name(first_name, last_name):\n    formatted_first_name = first_name.strip().title()\n    formatted_last_name = last_name.strip().title()\n    return f\"{formatted_first_name} {formatted_last_name}\"\n\nEnsure the code is formatted according to Black's uncompromising style. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: heapq,IdiomaticPython,Introspection. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "import heapq\n\n# Define a function to introspect the properties of heapq\ndef introspect_heapq_module():\n    # Using dir() for introspection to list all attributes of heapq\n    attributes = dir(heapq)\n    for attribute in attributes:\n        print(attribute)\n\n# Define a function that uses heapq to process a list\ndef process_numbers(numbers):\n    # Ensure the input is a list for idiomatic usage of heapq\n    if not isinstance(numbers, list):\n        raise TypeError(\"Input must be a list.\")\n\n    # Convert the list into a heap\n    heapq.heapify(numbers)\n\n    # Pop elements from the heap and print them\n    while numbers:\n        # Pop the smallest item off the heap\n        smallest = heapq.heappop(numbers)\n        print(smallest)\n\n# Example usage of the functions\nif __name__ == \"__main__\":\n    # Example list of numbers\n    example_numbers = [5, 9, 1, 3, 4, 8, 7, 2, 6]\n\n    # Process the numbers using a heap\n    process_numbers(example_numbers)\n\n    # Perform introspection on the heapq module\n    introspect_heapq_module()\n",
+    "tags": [
+        "heapq",
+        "IdiomaticPython",
+        "Introspection",
+        "Hard"
+    ],
+    "keywords": [
+        "heapq",
+        "IdiomaticPython",
+        "Introspection"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "black"
+}

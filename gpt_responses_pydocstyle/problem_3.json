@@ -1,0 +1,14 @@
+{
+    "id": "problem_3",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pydocstyle standard for docstrings. Include a module-level docstring as per pydocstyle guidelines. Here's an example snippet:\n\n\"\"\"Module for demonstrating pydocstyle adherence.\n\nThis module provides examples of how to write docstrings that conform to pydocstyle standards.\n\"\"\"\n\ndef add_numbers(x, y):\n    \"\"\"Add two numbers and return the result.\n\n    :param x: The first number to add.\n    :param y: The second number to add.\n    :return: The sum of x and y.\n    \"\"\"\n    return x + y\n\nFocus on comprehensive and compliant docstring documentation. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: bytearray. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "\"\"\"Module for demonstrating bytearray usage with pydocstyle adherence.\n\nThis module provides an example of how to use bytearray in a function while\nadhering to pydocstyle standards for docstrings.\n\"\"\"\n\n\ndef list_to_bytearray(input_list):\n    \"\"\"Convert a list of integers to a bytearray.\n\n    Each integer in the list should represent a valid byte value (0-255).\n    The function will raise a ValueError if an integer is out of this range.\n\n    :param input_list: List of integers to be converted to bytearray.\n    :type input_list: list\n    :return: A bytearray constructed from the list of integers.\n    :rtype: bytearray\n    :raises ValueError: If an integer is out of the byte range (0-255).\n\n    Usage example:\n    >>> list_to_bytearray([65, 66, 67])\n    bytearray(b'ABC')\n    \"\"\"\n    # Ensure all numbers are in the byte range\n    if not all(isinstance(i, int) and 0 <= i <= 255 for i in input_list):\n        raise ValueError(\"List items must be integers in the range 0-255.\")\n\n    # Convert the list to a bytearray and return\n    return bytearray(input_list)\n\n\n# Example usage:\n# This should print: bytearray(b'ABC')\nprint(list_to_bytearray([65, 66, 67]))\n```\n",
+    "tags": [
+        "bytearray",
+        "Easy"
+    ],
+    "keywords": [
+        "bytearray"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "pydocstyle"
+}

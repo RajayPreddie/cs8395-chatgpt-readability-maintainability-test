@@ -1,0 +1,14 @@
+{
+    "id": "problem_5",
+    "description": "Act as a Python developer and create a Python program that adheres to the flake8 coding standard. Here's an example snippet:\n\n# Example Snippet for Flake8\ndef find_max(numbers):\n    \"\"\"Find the maximum number in a list.\"\"\"\n    return max(numbers) if numbers else None\n\nEnsure your code is clean, readable, and adheres to flake8 standards. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: ChainMap. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "from collections import ChainMap\n\n\ndef merge_dicts(*dict_args):\n    \"\"\"Merge dictionaries using ChainMap and return a single dictionary.\"\"\"\n    chain = ChainMap(*dict_args)\n    return dict(chain)\n\n\n# Example usage\nif __name__ == \"__main__\":\n    dict1 = {'a': 1, 'b': 2}\n    dict2 = {'b': 3, 'c': 4}\n    dict3 = {'d': 5, 'e': 6}\n\n    # Merge dictionaries\n    merged_dict = merge_dicts(dict1, dict2, dict3)\n    \n    # Print the merged dictionary\n    print(merged_dict)\n",
+    "tags": [
+        "ChainMap",
+        "Easy"
+    ],
+    "keywords": [
+        "ChainMap"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "flake8"
+}

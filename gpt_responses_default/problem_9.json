@@ -1,0 +1,14 @@
+{
+    "id": "problem_9",
+    "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: Coroutine. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "import asyncio\n\n# Define a coroutine that processes items in a list\nasync def process_item(item):\n    # Simulate a time-consuming operation with asyncio.sleep\n    await asyncio.sleep(1)\n    print(f'Processed item: {item}')\n\n# Define a coroutine that will process a list of items\nasync def process_list(items):\n    # Create a list of tasks for processing each item\n    tasks = [asyncio.create_task(process_item(item)) for item in items]\n    # Wait for all tasks to complete\n    await asyncio.gather(*tasks)\n\n# Define the main coroutine that sets up the event loop\nasync def main():\n    # Example list of items to process\n    items_to_process = ['apple', 'banana', 'cherry', 'date', 'fig', 'grape']\n    # Process the list of items\n    await process_list(items_to_process)\n\n# Run the main coroutine\nasyncio.run(main())\n",
+    "tags": [
+        "Coroutine",
+        "Easy"
+    ],
+    "keywords": [
+        "Coroutine"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "default"
+}

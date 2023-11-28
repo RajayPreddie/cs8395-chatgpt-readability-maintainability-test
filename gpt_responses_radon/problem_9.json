@@ -1,0 +1,14 @@
+{
+    "id": "problem_9",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a more complex example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: Coroutine. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "# This program demonstrates the use of coroutines to process a list of items.\n# A coroutine is defined to process each item, and the main function orchestrates the sending of items to the coroutine.\n\ndef coroutine_processor():\n    \"\"\"Coroutine for processing items.\"\"\"\n    try:\n        while True:\n            item = yield  # Receive an item\n            print(f\"Processing item: {item}\")\n    except GeneratorExit:\n        print(\"Coroutine closing.\")\n\ndef main():\n    items = [1, 2, 3, 4, 5]  # List of items to process\n    processor = coroutine_processor()\n    next(processor)  # Prime the coroutine\n\n    for item in items:\n        processor.send(item)  # Send each item to the coroutine\n\n    processor.close()  # Close the coroutine when done\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "Coroutine",
+        "Easy"
+    ],
+    "keywords": [
+        "Coroutine"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "radon"
+}

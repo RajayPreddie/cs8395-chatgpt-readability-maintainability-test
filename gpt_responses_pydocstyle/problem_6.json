@@ -1,0 +1,14 @@
+{
+    "id": "problem_6",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pydocstyle standard for docstrings. Include a module-level docstring as per pydocstyle guidelines. Here's an example snippet:\n\n\"\"\"Module for demonstrating pydocstyle adherence.\n\nThis module provides examples of how to write docstrings that conform to pydocstyle standards.\n\"\"\"\n\ndef add_numbers(x, y):\n    \"\"\"Add two numbers and return the result.\n\n    :param x: The first number to add.\n    :param y: The second number to add.\n    :return: The sum of x and y.\n    \"\"\"\n    return x + y\n\nFocus on comprehensive and compliant docstring documentation. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: Comprehension. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "\"\"\"Module for demonstrating pydocstyle adherence with list comprehension.\n\nThis module provides an example function that uses list comprehension to solve a problem,\ndemonstrating adherence to pydocstyle standards for docstrings.\n\"\"\"\n\n\ndef square_even_numbers(number_list):\n    \"\"\"Square even numbers in a given list using list comprehension.\n\n    This function processes a list of numbers and returns a new list containing the squares of\n    all the even numbers from the original list.\n\n    :param number_list: A list of numbers to be processed.\n    :type number_list: list\n    :return: A new list with the squares of the even numbers from `number_list`.\n    :rtype: list\n    \"\"\"\n    return [x**2 for x in number_list if x % 2 == 0]\n\n\n# Example usage:\n# if __name__ == \"__main__\":\n#     numbers = [1, 2, 3, 4, 5, 6]\n#     print(square_even_numbers(numbers))\n```\n\nWhen you run the program, uncomment the example usage to see the list comprehension in action. The example usage is commented out to adhere to the instruction of providing only the raw code without execution details.",
+    "tags": [
+        "Comprehension",
+        "Easy"
+    ],
+    "keywords": [
+        "Comprehension"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "pydocstyle"
+}

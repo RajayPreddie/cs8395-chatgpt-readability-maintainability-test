@@ -1,0 +1,16 @@
+{
+    "id": "problem_13",
+    "description": "Act as a Python developer and create a Python program that adheres to the flake8 coding standard. Here's an example snippet:\n\n# Example Snippet for Flake8\ndef find_max(numbers):\n    \"\"\"Find the maximum number in a list.\"\"\"\n    return max(numbers) if numbers else None\n\nEnsure your code is clean, readable, and adheres to flake8 standards. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: DependencyInjection,Deque. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "from collections import deque\nfrom typing import Any, Deque, List, Optional\n\n\nclass DependencyInjector:\n    \"\"\"Simple dependency injector to manage dependencies.\"\"\"\n    def __init__(self):\n        self._services = {}\n\n    def add_service(self, service_name: str, service: Any) -> None:\n        \"\"\"Add a service with a unique name to the injector.\"\"\"\n        self._services[service_name] = service\n\n    def get_service(self, service_name: str) -> Any:\n        \"\"\"Retrieve a service by its unique name.\"\"\"\n        return self._services.get(service_name)\n\n\ndef process_list_with_deque(numbers: List[int]) -> Optional[int]:\n    \"\"\"Process a list using a deque to find the maximum value.\"\"\"\n    if not numbers:\n        return None\n    numbers_deque: Deque[int] = deque(numbers)\n    return max(numbers_deque)\n\n\n# Example usage\nif __name__ == \"__main__\":\n    injector = DependencyInjector()\n    injector.add_service('numbers_processor', process_list_with_deque)\n\n    # Retrieve the service and use it.\n    numbers_processor = injector.get_service('numbers_processor')\n    numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]\n    max_number = numbers_processor(numbers)\n\n    print(f\"The maximum number in the list is: {max_number}\")\n```\n\nThis code defines a simple `DependencyInjector` class for managing dependencies, a function `process_list_with_deque` that uses a `deque` to find the maximum value in a list of numbers, and an example usage that sets up the dependency injector, adds the processing function as a service, retrieves it, and processes a list of numbers. The code follows the flake8 coding standard, ensuring it is clean, readable, and adheres to best practices.",
+    "tags": [
+        "DependencyInjection",
+        "Deque",
+        "Medium"
+    ],
+    "keywords": [
+        "DependencyInjection",
+        "Deque"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "flake8"
+}

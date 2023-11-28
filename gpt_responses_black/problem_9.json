@@ -1,0 +1,14 @@
+{
+    "id": "problem_9",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the Black coding style. Here's an example snippet formatted using Black:\n\ndef format_name(first_name, last_name):\n    formatted_first_name = first_name.strip().title()\n    formatted_last_name = last_name.strip().title()\n    return f\"{formatted_first_name} {formatted_last_name}\"\n\nEnsure the code is formatted according to Black's uncompromising style. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: Coroutine. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "import asyncio\n\n# Define a coroutine that processes items in a list\nasync def process_item(item):\n    # Simulate some asynchronous I/O operation with asyncio.sleep\n    await asyncio.sleep(1)\n    # Return the processed item\n    return f\"Processed {item}\"\n\n# Define a coroutine that processes a list of items\nasync def process_list(items):\n    # Create a list to hold the results\n    results = []\n    # Iterate over the items in the list\n    for item in items:\n        # Process each item by awaiting the coroutine\n        processed_item = await process_item(item)\n        # Append the processed item to the results list\n        results.append(processed_item)\n    # Return the list of processed items\n    return results\n\n# Define the main coroutine that orchestrates the processing\nasync def main():\n    # Define a list of items to process\n    items_to_process = [\"item1\", \"item2\", \"item3\", \"item4\"]\n    # Process the list of items by awaiting the coroutine\n    processed_items = await process_list(items_to_process)\n    # Print the results\n    for processed_item in processed_items:\n        print(processed_item)\n\n# Run the main coroutine using asyncio's event loop\nif __name__ == \"__main__\":\n    asyncio.run(main())\n",
+    "tags": [
+        "Coroutine",
+        "Easy"
+    ],
+    "keywords": [
+        "Coroutine"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "black"
+}

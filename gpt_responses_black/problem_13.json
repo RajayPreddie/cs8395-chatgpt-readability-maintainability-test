@@ -1,0 +1,16 @@
+{
+    "id": "problem_13",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the Black coding style. Here's an example snippet formatted using Black:\n\ndef format_name(first_name, last_name):\n    formatted_first_name = first_name.strip().title()\n    formatted_last_name = last_name.strip().title()\n    return f\"{formatted_first_name} {formatted_last_name}\"\n\nEnsure the code is formatted according to Black's uncompromising style. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: DependencyInjection,Deque. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "from collections import deque\nfrom typing import Any, Callable, Deque, List\n\nclass DependencyInjector:\n    def __init__(self):\n        self._dependencies = {}\n\n    def add_dependency(self, name: str, dependency: Any) -> None:\n        self._dependencies[name] = dependency\n\n    def get_dependency(self, name: str) -> Any:\n        return self._dependencies.get(name)\n\n    def inject(self, func: Callable) -> Callable:\n        def wrapper(*args, **kwargs):\n            injected_args = {\n                name: self.get_dependency(name) for name in func.__annotations__ if name in self._dependencies\n            }\n            return func(*args, **kwargs, **injected_args)\n        return wrapper\n\n# Example usage of DependencyInjector with deque\ndef process_data(data: Deque[int], dependency_injector: DependencyInjector):\n    while data:\n        item = data.popleft()\n        print(f\"Processed item: {item}\")\n\n# Main program that uses DependencyInjector and deque\nif __name__ == \"__main__\":\n    dependency_injector = DependencyInjector()\n    data_list = [1, 2, 3, 4, 5]\n    data_deque: Deque[int] = deque(data_list)\n\n    # Injecting the deque into the process_data function\n    dependency_injector.add_dependency(\"data\", data_deque)\n    injected_process_data = dependency_injector.inject(process_data)\n\n    # Call the injected function without explicitly passing the deque\n    injected_process_data()\n",
+    "tags": [
+        "DependencyInjection",
+        "Deque",
+        "Medium"
+    ],
+    "keywords": [
+        "DependencyInjection",
+        "Deque"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "black"
+}

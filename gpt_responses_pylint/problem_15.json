@@ -1,0 +1,16 @@
+{
+    "id": "problem_15",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. Here's an example snippet compliant with pylint:\n\n\"\"\"Module for demonstrating pylint adherence.\n\nThis module provides an example function formatted to comply with pylint standards.\n\"\"\"\n\ndef calculate_sum(a, b):\n    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n    return a + b\n\nFocus on clean, readable code following the style of the provided snippet. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: dict,frozenset. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "\"\"\"Module for demonstrating pylint adherence with dict and frozenset.\n\nThis module provides a function that uses a list to demonstrate the usage of a dict and frozenset in Python.\n\"\"\"\n\ndef create_frozenset_from_dict_keys(sample_dict):\n    \"\"\"Create and return a frozenset from the keys of the provided dictionary.\"\"\"\n    # Extracting the keys of the dictionary and converting them to a frozenset\n    keys_frozenset = frozenset(sample_dict.keys())\n    return keys_frozenset\n\ndef main():\n    \"\"\"Main function to demonstrate the usage of create_frozenset_from_dict_keys.\"\"\"\n    # Example dictionary\n    example_dict = {'apple': 1, 'banana': 2, 'cherry': 3}\n    \n    # Creating a frozenset from the keys of the example dictionary\n    result_frozenset = create_frozenset_from_dict_keys(example_dict)\n    \n    # Printing the resulting frozenset\n    print(\"Frozenset of dictionary keys:\", result_frozenset)\n\n# Ensuring the main function is called only when the script is executed directly\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "dict",
+        "frozenset",
+        "Medium"
+    ],
+    "keywords": [
+        "dict",
+        "frozenset"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "pylint"
+}

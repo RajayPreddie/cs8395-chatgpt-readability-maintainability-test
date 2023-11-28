@@ -1,0 +1,18 @@
+{
+    "id": "problem_20",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. Here's an example snippet compliant with pylint:\n\n\"\"\"Module for demonstrating pylint adherence.\n\nThis module provides an example function formatted to comply with pylint standards.\n\"\"\"\n\ndef calculate_sum(a, b):\n    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n    return a + b\n\nFocus on clean, readable code following the style of the provided snippet. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: heapq,IdiomaticPython,Introspection. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "import heapq\n\ndef find_largest_elements(numbers, n):\n    \"\"\"\n    Find and return the n largest elements from a list using a min heap.\n\n    Args:\n        numbers (list): The list from which to find the largest elements.\n        n (int): The number of largest elements to find.\n\n    Returns:\n        list: A list of the n largest elements from the input list.\n    \"\"\"\n    if not isinstance(numbers, list) or not isinstance(n, int):\n        raise TypeError(\"Input must be a list and the number of elements an integer.\")\n    \n    if n <= 0:\n        raise ValueError(\"The number of elements to find must be positive.\")\n    \n    if n > len(numbers):\n        raise ValueError(\"The number of elements to find cannot exceed the length of the list.\")\n\n    # Using nlargest from heapq to find the n largest elements\n    return heapq.nlargest(n, numbers)\n\ndef main():\n    \"\"\"\n    Main function to demonstrate the use of the find_largest_elements function.\n    \"\"\"\n    example_list = [34, 18, 27, 45, 15, 55, 10, 88, 60]\n    number_of_elements = 3\n\n    largest_elements = find_largest_elements(example_list, number_of_elements)\n    print(f\"The {number_of_elements} largest elements are: {largest_elements}\")\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "heapq",
+        "IdiomaticPython",
+        "Introspection",
+        "Hard"
+    ],
+    "keywords": [
+        "heapq",
+        "IdiomaticPython",
+        "Introspection"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "pylint"
+}

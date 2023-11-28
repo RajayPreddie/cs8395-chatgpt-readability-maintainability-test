@@ -1,0 +1,18 @@
+{
+    "id": "problem_19",
+    "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: Global state,heapq,IdiomaticPython. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "import heapq\n\n# Global state for our heap (min-heap)\nheap = []\n\ndef add_number(number):\n    \"\"\"Add a number to the heap, maintaining the heap invariant.\"\"\"\n    heapq.heappush(heap, number)\n\ndef get_smallest():\n    \"\"\"Return the smallest number from the heap without removing it.\"\"\"\n    if heap:\n        return heap[0]\n    return None\n\ndef remove_smallest():\n    \"\"\"Remove and return the smallest number from the heap.\"\"\"\n    if heap:\n        return heapq.heappop(heap)\n    return None\n\ndef main():\n    # Idiomatic Python: using a list to store a sequence of numbers to add to the heap\n    numbers_to_add = [5, 7, 9, 1, 3]\n\n    # Add numbers to the heap\n    for number in numbers_to_add:\n        add_number(number)\n\n    # Display the smallest number\n    print(f\"The smallest number in the heap is: {get_smallest()}\")\n\n    # Remove and display the smallest numbers one by one\n    print(\"Removing numbers from the heap:\")\n    while heap:\n        smallest = remove_smallest()\n        print(smallest)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "Global state",
+        "heapq",
+        "IdiomaticPython",
+        "Hard"
+    ],
+    "keywords": [
+        "Global state",
+        "heapq",
+        "IdiomaticPython"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "default"
+}

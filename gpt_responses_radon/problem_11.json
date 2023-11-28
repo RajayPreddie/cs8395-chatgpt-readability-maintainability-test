@@ -1,0 +1,16 @@
+{
+    "id": "problem_11",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a more complex example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: Decorator,DefaultDict. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "from collections import defaultdict\n\n# Decorator to memoize the Fibonacci function\ndef memoize(f):\n    memo = {}\n    def helper(x):\n        if x not in memo:\n            memo[x] = f(x)\n        return memo[x]\n    return helper\n\n@memoize\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number using memoization.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\n# Default dictionary to store Fibonacci numbers\nfib_dict = defaultdict(int)\n\ndef populate_fibonacci_sequence(n, fib_dict):\n    \"\"\"Populate the fib_dict with Fibonacci numbers up to the nth number.\"\"\"\n    for i in range(n + 1):\n        fib_dict[i] = fibonacci(i)\n\ndef main():\n    # Populate the Fibonacci sequence up to the 9th number\n    populate_fibonacci_sequence(9, fib_dict)\n    \n    # Print the Fibonacci sequence\n    for i in range(10):\n        print(fib_dict[i])\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "Decorator",
+        "DefaultDict",
+        "Medium"
+    ],
+    "keywords": [
+        "Decorator",
+        "DefaultDict"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "radon"
+}

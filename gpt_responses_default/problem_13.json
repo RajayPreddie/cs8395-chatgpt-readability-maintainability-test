@@ -1,0 +1,16 @@
+{
+    "id": "problem_13",
+    "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: DependencyInjection,Deque. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "from collections import deque\nfrom typing import Any, Deque, List\n\nclass Queue:\n    def __init__(self):\n        self._queue: Deque[Any] = deque()\n\n    def enqueue(self, item: Any):\n        self._queue.append(item)\n\n    def dequeue(self) -> Any:\n        if self.is_empty():\n            raise IndexError(\"dequeue from an empty queue\")\n        return self._queue.popleft()\n\n    def is_empty(self) -> bool:\n        return len(self._queue) == 0\n\n    def size(self) -> int:\n        return len(self._queue)\n\nclass DependencyInjector:\n    def __init__(self):\n        self._dependencies: dict = {}\n\n    def add_dependency(self, name: str, dependency: Any):\n        self._dependencies[name] = dependency\n\n    def get_dependency(self, name: str) -> Any:\n        return self._dependencies.get(name)\n\n# Dependency Injection example usage\nif __name__ == \"__main__\":\n    # Create a dependency injector\n    injector = DependencyInjector()\n\n    # Add a Queue instance as a dependency\n    injector.add_dependency('my_queue', Queue())\n\n    # Retrieve the Queue instance from the injector\n    queue = injector.get_dependency('my_queue')\n\n    # Use the queue\n    queue.enqueue(1)\n    queue.enqueue(2)\n    queue.enqueue(3)\n\n    # Dequeue and print items\n    while not queue.is_empty():\n        print(queue.dequeue())\n```\n\nThis program defines a `Queue` class that uses a `deque` (double-ended queue) to efficiently implement a queue. It also defines a `DependencyInjector` class that can be used to manage dependencies. The `Queue` is injected as a dependency and then used to enqueue and dequeue items, which are printed to the command line. The program follows Python best practices, including type annotations and adhering to the PEP 8 style guide.",
+    "tags": [
+        "DependencyInjection",
+        "Deque",
+        "Medium"
+    ],
+    "keywords": [
+        "DependencyInjection",
+        "Deque"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "default"
+}

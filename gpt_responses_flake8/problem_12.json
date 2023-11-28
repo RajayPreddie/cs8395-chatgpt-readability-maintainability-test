@@ -1,0 +1,16 @@
+{
+    "id": "problem_12",
+    "description": "Act as a Python developer and create a Python program that adheres to the flake8 coding standard. Here's an example snippet:\n\n# Example Snippet for Flake8\ndef find_max(numbers):\n    \"\"\"Find the maximum number in a list.\"\"\"\n    return max(numbers) if numbers else None\n\nEnsure your code is clean, readable, and adheres to flake8 standards. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: DefaultDict,DependencyInjection. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "from collections import defaultdict\nfrom typing import Callable, Dict, List, TypeVar, Generic\n\n# Define a generic type for the dependency\nT = TypeVar('T')\n\n\nclass DependencyInjector(Generic[T]):\n    \"\"\"Simple dependency injection container.\"\"\"\n\n    def __init__(self):\n        self._providers: Dict[str, Callable[[], T]] = defaultdict(lambda: None)\n\n    def add_provider(self, name: str, provider: Callable[[], T]):\n        \"\"\"Add a provider function for a dependency.\"\"\"\n        self._providers[name] = provider\n\n    def get(self, name: str) -> T:\n        \"\"\"Get the instance of the dependency.\"\"\"\n        provider = self._providers.get(name)\n        if provider is None:\n            raise ValueError(f\"No provider found for {name}\")\n        return provider()\n\n\n# Example usage of DependencyInjector with a list\ndef list_provider() -> List[int]:\n    \"\"\"Provide a list of integers.\"\"\"\n    return [1, 2, 3, 4, 5]\n\n\n# Create an instance of the DependencyInjector\ninjector = DependencyInjector[List[int]]()\ninjector.add_provider('my_list', list_provider)\n\n# Get the list from the injector and find the maximum value\nmy_list = injector.get('my_list')\nmax_value = max(my_list) if my_list else None\n\nprint(f\"The maximum value in the list is: {max_value}\")\n```\n\nThis code defines a simple `DependencyInjector` class that can be used to manage dependencies, such as providing a list of integers. It then uses this injector to get the list and find the maximum value, which is printed to the console. The code adheres to flake8 standards, including proper naming conventions, spacing, and comments.",
+    "tags": [
+        "DefaultDict",
+        "DependencyInjection",
+        "Medium"
+    ],
+    "keywords": [
+        "DefaultDict",
+        "DependencyInjection"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "flake8"
+}

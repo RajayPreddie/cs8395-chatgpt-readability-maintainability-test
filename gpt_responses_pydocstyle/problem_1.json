@@ -1,0 +1,14 @@
+{
+    "id": "problem_1",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pydocstyle standard for docstrings. Include a module-level docstring as per pydocstyle guidelines. Here's an example snippet:\n\n\"\"\"Module for demonstrating pydocstyle adherence.\n\nThis module provides examples of how to write docstrings that conform to pydocstyle standards.\n\"\"\"\n\ndef add_numbers(x, y):\n    \"\"\"Add two numbers and return the result.\n\n    :param x: The first number to add.\n    :param y: The second number to add.\n    :return: The sum of x and y.\n    \"\"\"\n    return x + y\n\nFocus on comprehensive and compliant docstring documentation. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keywords to solve a problem with Python: list. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n",
+    "code": "\"\"\"A module for demonstrating list manipulation in Python.\n\nThis module provides a function to calculate the sum of a list of numbers,\ndemonstrating adherence to the pydocstyle standards for docstrings.\n\"\"\"\n\ndef sum_of_list(numbers):\n    \"\"\"Calculate the sum of a list of numbers.\n\n    This function takes a list of numbers and returns the sum of those numbers.\n    It demonstrates the use of list to store and compute the sum of its elements.\n\n    :param numbers: A list of numbers to be summed up.\n    :type numbers: list\n    :return: The sum of the numbers in the list.\n    :rtype: float or int\n\n    :Example:\n\n    >>> sum_of_list([1, 2, 3, 4])\n    10\n    \"\"\"\n    return sum(numbers)\n\n# Example usage:\n# If running this module directly, the following code will execute.\n# This can be tested in the command line interface.\nif __name__ == \"__main__\":\n    example_list = [10, 20, 30, 40]\n    print(f\"The sum of {example_list} is {sum_of_list(example_list)}.\")\n",
+    "tags": [
+        "list",
+        "Easy"
+    ],
+    "keywords": [
+        "list"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "pydocstyle"
+}
