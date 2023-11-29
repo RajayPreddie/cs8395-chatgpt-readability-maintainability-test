@@ -112,7 +112,7 @@ def createLinterPrompts(linters_for_prompting):
   prompts = []
   # TODO: Improve the prompts later
   for linter in linters_for_prompting:
-    print(linter)
+  
     if linter == 'default':
       prompts.append("Act as a Python developer and create a Python program. "
     "Ensure your code is clean and readable. "

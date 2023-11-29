@@ -1,11 +1,8 @@
-from collections import defaultdict
-from openai import OpenAI
+
+from tqdm import tqdm
 import json
 import os
-import subprocess
 import argparse
-import tempfile
-import re
 from classes.linter_data import LinterData
 from utils.linting_utils import getLinterResultsForProblems
 from utils.chat_gpt_utils import get_gpt_responses_to_problem_descriptions, createLinterPrompts, create_problem_descriptions
@@ -80,7 +77,7 @@ def createOverallResultsForProblems(linter_results_for_prompt_solutions, prompt_
           # number_of_python_programs_with_tag = count_tag_occurrences[tag]
           overall_results[linter].by_tag[tag].update_linter_data(problem_result)
   return overall_results
-def saveResultsToFile(overall_results, linter_name):
+def saveResultsToFile(results, linter_name):
     # Save the results to a file
   output_folder = f"output_{linter_name}"
   # Create a directory to store the JSON objects
@@ -93,19 +90,22 @@ def saveResultsToFile(overall_results, linter_name):
   output_filename = f"output_{linter_name}.json"
   output_filename_fullpath = os.path.join(output_directory_path, output_filename)
   # Convert overall_results to a dictionary format
-  results_dict = {linter: data.to_dict() for linter, data in overall_results.items()}
-  # Calculate the average number of violations per file across all linters. This is the output metric to integrate with cs8395/testing-suite
-  results_dict["output"] = (results_dict["flake8"]["overall"]["average_violations_per_file"] + results_dict["pylint"]["overall"]["average_violations_per_file"] + results_dict["black"]["overall"]["average_violations_per_file"]) / 3
+  results["output"] = results["radon"]["overall"]["average_file_score"]
   # Write the prompt solution to a file
   with open(output_filename_fullpath, 'w') as file:
     # Convert the JSON object to a string
     json_object = json.dumps(
-  results_dict, indent=4)
+  results, indent=4)
     # Write the string to the file
     file.write(json_object)
     # Close the file
     file.close()
-for prompt, linter_name in zip(prompts, linters_for_prompting):
+all_linters_overall_output_json = {
+    "name": "ChatGPT Code Readability and Maintainability Tester",
+    "tags": [],
+    "output": 0.0,
+}
+for prompt, linter_name in tqdm(zip(prompts, linters_for_prompting), total=len(prompts), colour='green'):
 
   response_folder = f"gpt_responses_{linter_name}"
   linter_results_folder = f"linter_results_{linter_name}"
@@ -119,12 +119,22 @@ for prompt, linter_name in zip(prompts, linters_for_prompting):
     os.makedirs(linting_results_directory_path)
   # Create a dictionary to store the results
   linter_results_for_prompt_solutions = getLinterResultsForProblems(prompt_solutions=prompt_solutions)
-  overall_results = createOverallResultsForProblems(linter_results_for_prompt_solutions=linter_results_for_prompt_solutions, prompt_solutions=prompt_solutions, linting_results_directory_path=linting_results_directory_path)
-  
-  saveResultsToFile(overall_results=overall_results, linter_name=linter_name)
+  linter_overall_results = createOverallResultsForProblems(linter_results_for_prompt_solutions=linter_results_for_prompt_solutions, prompt_solutions=prompt_solutions, linting_results_directory_path=linting_results_directory_path)
+  linter_results= {linter: data.to_dict() for linter, data in linter_overall_results.items()}
+  all_linters_overall_output_json[f"{linter_name}_output"] = linter_results["radon"]["overall"]["average_file_score"]
+  all_linters_overall_output_json["output"] += linter_results["radon"]["overall"]["average_file_score"] / len(linters_for_prompting)
+  saveResultsToFile(results=linter_results, linter_name=linter_name)
+all_linters_overall_output_json_path = os.path.join(os.getcwd(), "output.json")
+with open(all_linters_overall_output_json_path, 'w') as file:
+    # Convert the JSON object to a string
+    json_object = json.dumps(
+  all_linters_overall_output_json, indent=4)
+    # Write the string to the file
+    file.write(json_object)
+    # Close the file
+    file.close()
 
 
-        
 '''
 Sources:
  https://stackoverflow.com/questions/56875810/new-pull-request-when-one-is-already-opened
