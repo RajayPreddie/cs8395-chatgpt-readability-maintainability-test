@@ -57,7 +57,7 @@ def get_gpt_responses_to_problem_descriptions(problem_descriptions, response_fol
   # Iterate through each problem description
   for idx, problem_description in enumerate(problem_descriptions):
     # Create a prompt for ChatGPT
-    chatgpt_prompt = f"{prompt} Use the following keywords to solve a problem with Python: {','.join(problem_description['keywords'])}. Remember to only respond with the raw code for the Python program. Generate a Python program that uses a list and return only the raw code. If you have explanations or comments, include them in the code as comments.\n"
+    chatgpt_prompt = f"{prompt} Use the following keywords to solve a problem with Python: {','.join(problem_description['keywords'])}. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) and return only the raw code. Remember to only respond with the raw code for the Python program. Only return the code that you would write in a .py file.\n"
    
      
     # Make an API request to ChatGPT
@@ -112,7 +112,6 @@ def createLinterPrompts(linters_for_prompting):
   prompts = []
   # TODO: Improve the prompts later
   for linter in linters_for_prompting:
-  
     if linter == 'default':
       prompts.append("Act as a Python developer and create a Python program. "
     "Ensure your code is clean and readable. "
