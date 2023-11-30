@@ -1,7 +1,10 @@
 # ChatGPT Code Readability and Maintainability Tester
 
 ## Introduction
-Welcome to the ChatGPT Code Readability and Maintainability Tester! This tool is designed to help our software engineering team assess and improve the quality of Python code. Leveraging the power of OpenAI's GPT models along with several linting tools, our tool provides valuable insights into code readability, maintainability, and adherence to coding standards.
+Welcome to the ChatGPT Code Readability and Maintainability Tester! This tool is designed to give insights into the readability and maintainability of ChatGTP generated python code. Leveraging the power of OpenAI's GPT models along with several linting tools, our tool provides valuable insights into ChatGPT-generated code's readability, maintainability, and adherence to coding standards.
+
+The tool utilizes the following linters/tools: Flake8, Black, Radon, Pydocstyle, and Pylint. There are 6 prompts available for obtaining ChatGPT-generated Python code. Each prompt asks ChatGPT to create a Python program. The specifications of the Python program are the following: ChatGPT needs to use one or more keywords for inspiration and the code needs to adhere to a particular coding standard.
+The keywords are chosen from a list of 100 keywords Each prompt uses one and only one of the following linter/tool standards: Flake8, Black, Radon, Pydocstyle, and Pylint. The 6th prompt is a default prompt that does not mention any specific linter/tool standard. There are 20 python programs generated for each prompt type. Thus, there are 120 ChatGPT-generated Python programs.
 
 ## Installation
 
