@@ -1,0 +1,16 @@
+{
+    "id": "problem_8",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pydocstyle standard for docstrings. Include a module-level docstring as per pydocstyle guidelines. Here's an example snippet:\n\n\"\"\"Module for demonstrating pydocstyle adherence.\n\nThis module provides examples of how to write docstrings that conform to pydocstyle standards.\n\"\"\"\n\ndef add_numbers(x, y):\n    \"\"\"Add two numbers and return the result.\n\n    :param x: The first number to add.\n    :param y: The second number to add.\n    :return: The sum of x and y.\n    \"\"\"\n    return x + y\n\nFocus on comprehensive and compliant docstring documentation. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: ContextManager,Coroutine.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\n\"\"\"Module for demonstrating pydocstyle adherence with ContextManager and Coroutine.\n\nThis module provides examples of how to write docstrings that conform to pydocstyle standards\nand includes a simple context manager and a coroutine example.\n\"\"\"\n\nfrom contextlib import contextmanager\nimport asyncio\n\n@contextmanager\ndef simple_context_manager(obj):\n    \"\"\"Provide a simple context manager for demonstration purposes.\n\n    This context manager simply prints entering and exiting the context.\n\n    :param obj: The object being managed within the context.\n    :yield: The managed object.\n    \"\"\"\n    try:\n        print(\"Entering context\")\n        yield obj\n    finally:\n        print(\"Exiting context\")\n\nasync def simple_coroutine(seconds):\n    \"\"\"A simple coroutine that waits for a given amount of time.\n\n    This coroutine demonstrates the use of async and await keywords in Python.\n\n    :param seconds: The number of seconds to wait.\n    \"\"\"\n    print(f\"Coroutine will wait for {seconds} seconds.\")\n    await asyncio.sleep(seconds)\n    print(\"Coroutine has finished waiting.\")\n\ndef main():\n    \"\"\"Run the main function demonstrating the usage of the context manager and coroutine.\"\"\"\n    with simple_context_manager(\"my_resource\"):\n        print(\"Inside the context\")\n\n    # Run the coroutine\n    asyncio.run(simple_coroutine(3))\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "ContextManager",
+        "Coroutine",
+        "Medium"
+    ],
+    "keywords": [
+        "ContextManager",
+        "Coroutine"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "pydocstyle"
+}

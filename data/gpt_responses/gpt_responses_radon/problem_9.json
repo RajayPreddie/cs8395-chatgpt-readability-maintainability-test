@@ -1,0 +1,18 @@
+{
+    "id": "problem_9",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a more complex example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Coroutine,Counter,Decorator.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import Counter\nimport asyncio\n\ndef coroutine_decorator(func):\n    def wrapper(*args, **kwargs):\n        cr = func(*args, **kwargs)\n        next(cr)\n        return cr\n    return wrapper\n\n@coroutine_decorator\ndef word_counter(counter):\n    try:\n        while True:\n            word = (yield)\n            counter[word] += 1\n    except GeneratorExit:\n        print(\"Word counts:\", counter)\n\nasync def process_words(words, counter_cr):\n    for word in words:\n        counter_cr.send(word)\n    counter_cr.close()\n\ndef main():\n    counter_cr = word_counter(Counter())\n    words = [\"apple\", \"banana\", \"apple\", \"orange\", \"banana\", \"apple\"]\n    \n    loop = asyncio.get_event_loop()\n    loop.run_until_complete(process_words(words, counter_cr))\n    loop.close()\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "Coroutine",
+        "Counter",
+        "Decorator",
+        "Hard"
+    ],
+    "keywords": [
+        "Coroutine",
+        "Counter",
+        "Decorator"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "radon"
+}

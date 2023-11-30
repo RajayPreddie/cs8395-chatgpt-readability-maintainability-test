@@ -1,0 +1,51 @@
+{
+    "flake8": {
+        "violations": {
+            "E501 line too long (105 > 79 characters)": 1
+        },
+        "total_violations": 1,
+        "most_frequent_violation": {
+            "violation_type": "E501 line too long (105 > 79 characters)",
+            "frequency": 1
+        },
+        "number_of_lines_in_code": 61
+    },
+    "pylint": {
+        "violations": {
+            "Line too long (105/100) (line-too-long)": 1,
+            "Redefining name 'item' from outer scope (line 73) (redefined-outer-name)": 1,
+            "Constant name \"product\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1
+        },
+        "total_violations": 3,
+        "most_frequent_violation": {
+            "violation_type": "Constant name \"product\" doesn't conform to UPPER_CASE naming style (invalid-name)",
+            "frequency": 1
+        },
+        "number_of_lines_in_code": 61
+    },
+    "black": {
+        "violations": {
+            "Non-compliant": 1
+        },
+        "total_violations": 1,
+        "most_frequent_violation": {
+            "violation_type": "would reformat",
+            "frequency": 1
+        }
+    },
+    "radon": {
+        "function_complexity": 1.5,
+        "overall_score": 1.5
+    },
+    "pydocstyle": {
+        "violations": {
+            "D401: First line should be in imperative mood (perhaps 'Decorate', not 'Decorator')": 2
+        },
+        "total_violations": 2,
+        "most_frequent_violation": {
+            "violation_type": "D401: First line should be in imperative mood (perhaps 'Decorate', not 'Decorator')",
+            "frequency": 2
+        },
+        "number_of_lines_in_code": 61
+    }
+}

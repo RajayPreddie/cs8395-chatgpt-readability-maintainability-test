@@ -1,0 +1,16 @@
+{
+    "id": "problem_7",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a more complex example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Concurrency,ContextManager.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nimport threading\nfrom contextlib import contextmanager\n\n@contextmanager\ndef acquire(*locks):\n    \"\"\"Acquire all the locks in the order they are provided.\"\"\"\n    for lock in locks:\n        lock.acquire()\n    try:\n        yield\n    finally:\n        for lock in reversed(locks):\n            lock.release()\n\n# Example usage of the context manager with concurrency\nclass Account:\n    def __init__(self, balance=0):\n        self.balance = balance\n        self.lock = threading.Lock()\n\n    def deposit(self, amount):\n        with self.lock:\n            new_balance = self.balance + amount\n            self.balance = new_balance\n\n    def withdraw(self, amount):\n        with self.lock:\n            if self.balance >= amount:\n                new_balance = self.balance - amount\n                self.balance = new_balance\n                return True\n            return False\n\n    def get_balance(self):\n        with self.lock:\n            return self.balance\n\ndef transfer(from_acc, to_acc, amount):\n    with acquire(from_acc.lock, to_acc.lock):\n        if from_acc.withdraw(amount):\n            to_acc.deposit(amount)\n            print(f\"Transferred {amount} from account {id(from_acc)} to account {id(to_acc)}\")\n        else:\n            print(f\"Failed to transfer {amount} from account {id(from_acc)} to account {id(to_acc)}\")\n\ndef main():\n    account_a = Account(1000)\n    account_b = Account(1000)\n\n    t1 = threading.Thread(target=transfer, args=(account_a, account_b, 100))\n    t2 = threading.Thread(target=transfer, args=(account_b, account_a, 200))\n\n    t1.start()\n    t2.start()\n\n    t1.join()\n    t2.join()\n\n    print(f\"Account A balance: {account_a.get_balance()}\")\n    print(f\"Account B balance: {account_b.get_balance()}\")\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "Concurrency",
+        "ContextManager",
+        "Medium"
+    ],
+    "keywords": [
+        "Concurrency",
+        "ContextManager"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "radon"
+}

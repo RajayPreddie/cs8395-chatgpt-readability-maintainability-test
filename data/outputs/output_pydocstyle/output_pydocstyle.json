@@ -1,0 +1,935 @@
+{
+    "flake8": {
+        "overall": {
+            "total_violations": 12,
+            "average_violations_per_line": 0.0566685310108931,
+            "average_violations_per_file": 2.4,
+            "violation_frequencies": {
+                "E302 expected 2 blank lines, found 1": 2,
+                "E501 line too long (84 > 79 characters)": 1,
+                "E501 line too long (93 > 79 characters)": 1,
+                "E501 line too long (96 > 79 characters)": 1,
+                "E501 line too long (89 > 79 characters)": 1,
+                "E501 line too long (95 > 79 characters)": 1,
+                "E501 line too long (87 > 79 characters)": 1,
+                "E501 line too long (81 > 79 characters)": 1,
+                "E501 line too long (90 > 79 characters)": 1,
+                "E501 line too long (88 > 79 characters)": 1,
+                "E501 line too long (80 > 79 characters)": 1
+            },
+            "most_frequent_violation": {
+                "frequency": 2,
+                "violation_type": "E302 expected 2 blank lines, found 1"
+            },
+            "top_violations": [
+                [
+                    "E302 expected 2 blank lines, found 1",
+                    2
+                ],
+                [
+                    "E501 line too long (84 > 79 characters)",
+                    1
+                ],
+                [
+                    "E501 line too long (93 > 79 characters)",
+                    1
+                ]
+            ]
+        },
+        "by_tag": {
+            "list": {
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
+                "most_frequent_violation": {
+                    "frequency": 0,
+                    "violation_type": ""
+                },
+                "top_violations": []
+            },
+            "Easy": {
+                "total_violations": 2,
+                "average_violations_per_line": 0.034482758620689655,
+                "average_violations_per_file": 1.0,
+                "violation_frequencies": {
+                    "E302 expected 2 blank lines, found 1": 2
+                },
+                "most_frequent_violation": {
+                    "frequency": 2,
+                    "violation_type": "E302 expected 2 blank lines, found 1"
+                },
+                "top_violations": [
+                    [
+                        "E302 expected 2 blank lines, found 1",
+                        2
+                    ]
+                ]
+            },
+            "asyncio": {
+                "total_violations": 2,
+                "average_violations_per_line": 0.06896551724137931,
+                "average_violations_per_file": 2.0,
+                "violation_frequencies": {
+                    "E302 expected 2 blank lines, found 1": 2
+                },
+                "most_frequent_violation": {
+                    "frequency": 2,
+                    "violation_type": "E302 expected 2 blank lines, found 1"
+                },
+                "top_violations": [
+                    [
+                        "E302 expected 2 blank lines, found 1",
+                        2
+                    ]
+                ]
+            },
+            "bytearray": {
+                "total_violations": 3,
+                "average_violations_per_line": 0.07894736842105263,
+                "average_violations_per_file": 3.0,
+                "violation_frequencies": {
+                    "E501 line too long (84 > 79 characters)": 1,
+                    "E501 line too long (93 > 79 characters)": 1,
+                    "E501 line too long (96 > 79 characters)": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "E501 line too long (84 > 79 characters)"
+                },
+                "top_violations": [
+                    [
+                        "E501 line too long (84 > 79 characters)",
+                        1
+                    ],
+                    [
+                        "E501 line too long (93 > 79 characters)",
+                        1
+                    ],
+                    [
+                        "E501 line too long (96 > 79 characters)",
+                        1
+                    ]
+                ]
+            },
+            "bytes": {
+                "total_violations": 4,
+                "average_violations_per_line": 0.05058479532163743,
+                "average_violations_per_file": 2.0,
+                "violation_frequencies": {
+                    "E501 line too long (84 > 79 characters)": 1,
+                    "E501 line too long (93 > 79 characters)": 1,
+                    "E501 line too long (96 > 79 characters)": 1,
+                    "E501 line too long (89 > 79 characters)": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "E501 line too long (84 > 79 characters)"
+                },
+                "top_violations": [
+                    [
+                        "E501 line too long (84 > 79 characters)",
+                        1
+                    ],
+                    [
+                        "E501 line too long (93 > 79 characters)",
+                        1
+                    ],
+                    [
+                        "E501 line too long (96 > 79 characters)",
+                        1
+                    ]
+                ]
+            },
+            "Medium": {
+                "total_violations": 3,
+                "average_violations_per_line": 0.07894736842105263,
+                "average_violations_per_file": 3.0,
+                "violation_frequencies": {
+                    "E501 line too long (84 > 79 characters)": 1,
+                    "E501 line too long (93 > 79 characters)": 1,
+                    "E501 line too long (96 > 79 characters)": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "E501 line too long (84 > 79 characters)"
+                },
+                "top_violations": [
+                    [
+                        "E501 line too long (84 > 79 characters)",
+                        1
+                    ],
+                    [
+                        "E501 line too long (93 > 79 characters)",
+                        1
+                    ],
+                    [
+                        "E501 line too long (96 > 79 characters)",
+                        1
+                    ]
+                ]
+            },
+            "ChainMap": {
+                "total_violations": 7,
+                "average_violations_per_line": 0.06771488469601677,
+                "average_violations_per_file": 3.5,
+                "violation_frequencies": {
+                    "E501 line too long (89 > 79 characters)": 1,
+                    "E501 line too long (95 > 79 characters)": 1,
+                    "E501 line too long (87 > 79 characters)": 1,
+                    "E501 line too long (81 > 79 characters)": 1,
+                    "E501 line too long (90 > 79 characters)": 1,
+                    "E501 line too long (88 > 79 characters)": 1,
+                    "E501 line too long (80 > 79 characters)": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "E501 line too long (89 > 79 characters)"
+                },
+                "top_violations": [
+                    [
+                        "E501 line too long (89 > 79 characters)",
+                        1
+                    ],
+                    [
+                        "E501 line too long (95 > 79 characters)",
+                        1
+                    ],
+                    [
+                        "E501 line too long (87 > 79 characters)",
+                        1
+                    ]
+                ]
+            },
+            "Comprehension": {
+                "total_violations": 7,
+                "average_violations_per_line": 0.06771488469601677,
+                "average_violations_per_file": 3.5,
+                "violation_frequencies": {
+                    "E501 line too long (89 > 79 characters)": 1,
+                    "E501 line too long (95 > 79 characters)": 1,
+                    "E501 line too long (87 > 79 characters)": 1,
+                    "E501 line too long (81 > 79 characters)": 1,
+                    "E501 line too long (90 > 79 characters)": 1,
+                    "E501 line too long (88 > 79 characters)": 1,
+                    "E501 line too long (80 > 79 characters)": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "E501 line too long (89 > 79 characters)"
+                },
+                "top_violations": [
+                    [
+                        "E501 line too long (89 > 79 characters)",
+                        1
+                    ],
+                    [
+                        "E501 line too long (95 > 79 characters)",
+                        1
+                    ],
+                    [
+                        "E501 line too long (87 > 79 characters)",
+                        1
+                    ]
+                ]
+            },
+            "Hard": {
+                "total_violations": 7,
+                "average_violations_per_line": 0.06771488469601677,
+                "average_violations_per_file": 3.5,
+                "violation_frequencies": {
+                    "E501 line too long (89 > 79 characters)": 1,
+                    "E501 line too long (95 > 79 characters)": 1,
+                    "E501 line too long (87 > 79 characters)": 1,
+                    "E501 line too long (81 > 79 characters)": 1,
+                    "E501 line too long (90 > 79 characters)": 1,
+                    "E501 line too long (88 > 79 characters)": 1,
+                    "E501 line too long (80 > 79 characters)": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "E501 line too long (89 > 79 characters)"
+                },
+                "top_violations": [
+                    [
+                        "E501 line too long (89 > 79 characters)",
+                        1
+                    ],
+                    [
+                        "E501 line too long (95 > 79 characters)",
+                        1
+                    ],
+                    [
+                        "E501 line too long (87 > 79 characters)",
+                        1
+                    ]
+                ]
+            },
+            "Concurrency": {
+                "total_violations": 6,
+                "average_violations_per_line": 0.11320754716981132,
+                "average_violations_per_file": 6.0,
+                "violation_frequencies": {
+                    "E501 line too long (95 > 79 characters)": 1,
+                    "E501 line too long (87 > 79 characters)": 1,
+                    "E501 line too long (81 > 79 characters)": 1,
+                    "E501 line too long (90 > 79 characters)": 1,
+                    "E501 line too long (88 > 79 characters)": 1,
+                    "E501 line too long (80 > 79 characters)": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "E501 line too long (95 > 79 characters)"
+                },
+                "top_violations": [
+                    [
+                        "E501 line too long (95 > 79 characters)",
+                        1
+                    ],
+                    [
+                        "E501 line too long (87 > 79 characters)",
+                        1
+                    ],
+                    [
+                        "E501 line too long (81 > 79 characters)",
+                        1
+                    ]
+                ]
+            }
+        }
+    },
+    "pylint": {
+        "overall": {
+            "total_violations": 5,
+            "average_violations_per_line": 0.024822183413424036,
+            "average_violations_per_file": 1.0,
+            "violation_frequencies": {
+                "Formatting a regular string which could be an f-string (consider-using-f-string)": 1,
+                "Unnecessary parens after 'not' keyword (superfluous-parens)": 1,
+                "Constant name \"string_to_count\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
+                "Constant name \"bytes_count\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
+                "Redefining name 'numbers' from outer scope (line 61) (redefined-outer-name)": 1
+            },
+            "most_frequent_violation": {
+                "frequency": 1,
+                "violation_type": "Formatting a regular string which could be an f-string (consider-using-f-string)"
+            },
+            "top_violations": [
+                [
+                    "Formatting a regular string which could be an f-string (consider-using-f-string)",
+                    1
+                ],
+                [
+                    "Unnecessary parens after 'not' keyword (superfluous-parens)",
+                    1
+                ],
+                [
+                    "Constant name \"string_to_count\" doesn't conform to UPPER_CASE naming style (invalid-name)",
+                    1
+                ]
+            ]
+        },
+        "by_tag": {
+            "list": {
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
+                "most_frequent_violation": {
+                    "frequency": 0,
+                    "violation_type": ""
+                },
+                "top_violations": []
+            },
+            "Easy": {
+                "total_violations": 1,
+                "average_violations_per_line": 0.017241379310344827,
+                "average_violations_per_file": 0.5,
+                "violation_frequencies": {
+                    "Formatting a regular string which could be an f-string (consider-using-f-string)": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "Formatting a regular string which could be an f-string (consider-using-f-string)"
+                },
+                "top_violations": [
+                    [
+                        "Formatting a regular string which could be an f-string (consider-using-f-string)",
+                        1
+                    ]
+                ]
+            },
+            "asyncio": {
+                "total_violations": 1,
+                "average_violations_per_line": 0.034482758620689655,
+                "average_violations_per_file": 1.0,
+                "violation_frequencies": {
+                    "Formatting a regular string which could be an f-string (consider-using-f-string)": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "Formatting a regular string which could be an f-string (consider-using-f-string)"
+                },
+                "top_violations": [
+                    [
+                        "Formatting a regular string which could be an f-string (consider-using-f-string)",
+                        1
+                    ]
+                ]
+            },
+            "bytearray": {
+                "total_violations": 1,
+                "average_violations_per_line": 0.02631578947368421,
+                "average_violations_per_file": 1.0,
+                "violation_frequencies": {
+                    "Unnecessary parens after 'not' keyword (superfluous-parens)": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "Unnecessary parens after 'not' keyword (superfluous-parens)"
+                },
+                "top_violations": [
+                    [
+                        "Unnecessary parens after 'not' keyword (superfluous-parens)",
+                        1
+                    ]
+                ]
+            },
+            "bytes": {
+                "total_violations": 3,
+                "average_violations_per_line": 0.03538011695906433,
+                "average_violations_per_file": 1.5,
+                "violation_frequencies": {
+                    "Unnecessary parens after 'not' keyword (superfluous-parens)": 1,
+                    "Constant name \"string_to_count\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
+                    "Constant name \"bytes_count\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "Unnecessary parens after 'not' keyword (superfluous-parens)"
+                },
+                "top_violations": [
+                    [
+                        "Unnecessary parens after 'not' keyword (superfluous-parens)",
+                        1
+                    ],
+                    [
+                        "Constant name \"string_to_count\" doesn't conform to UPPER_CASE naming style (invalid-name)",
+                        1
+                    ],
+                    [
+                        "Constant name \"bytes_count\" doesn't conform to UPPER_CASE naming style (invalid-name)",
+                        1
+                    ]
+                ]
+            },
+            "Medium": {
+                "total_violations": 1,
+                "average_violations_per_line": 0.02631578947368421,
+                "average_violations_per_file": 1.0,
+                "violation_frequencies": {
+                    "Unnecessary parens after 'not' keyword (superfluous-parens)": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "Unnecessary parens after 'not' keyword (superfluous-parens)"
+                },
+                "top_violations": [
+                    [
+                        "Unnecessary parens after 'not' keyword (superfluous-parens)",
+                        1
+                    ]
+                ]
+            },
+            "ChainMap": {
+                "total_violations": 3,
+                "average_violations_per_line": 0.03165618448637317,
+                "average_violations_per_file": 1.5,
+                "violation_frequencies": {
+                    "Constant name \"string_to_count\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
+                    "Constant name \"bytes_count\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
+                    "Redefining name 'numbers' from outer scope (line 61) (redefined-outer-name)": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "Constant name \"string_to_count\" doesn't conform to UPPER_CASE naming style (invalid-name)"
+                },
+                "top_violations": [
+                    [
+                        "Constant name \"string_to_count\" doesn't conform to UPPER_CASE naming style (invalid-name)",
+                        1
+                    ],
+                    [
+                        "Constant name \"bytes_count\" doesn't conform to UPPER_CASE naming style (invalid-name)",
+                        1
+                    ],
+                    [
+                        "Redefining name 'numbers' from outer scope (line 61) (redefined-outer-name)",
+                        1
+                    ]
+                ]
+            },
+            "Comprehension": {
+                "total_violations": 3,
+                "average_violations_per_line": 0.03165618448637317,
+                "average_violations_per_file": 1.5,
+                "violation_frequencies": {
+                    "Constant name \"string_to_count\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
+                    "Constant name \"bytes_count\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
+                    "Redefining name 'numbers' from outer scope (line 61) (redefined-outer-name)": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "Constant name \"string_to_count\" doesn't conform to UPPER_CASE naming style (invalid-name)"
+                },
+                "top_violations": [
+                    [
+                        "Constant name \"string_to_count\" doesn't conform to UPPER_CASE naming style (invalid-name)",
+                        1
+                    ],
+                    [
+                        "Constant name \"bytes_count\" doesn't conform to UPPER_CASE naming style (invalid-name)",
+                        1
+                    ],
+                    [
+                        "Redefining name 'numbers' from outer scope (line 61) (redefined-outer-name)",
+                        1
+                    ]
+                ]
+            },
+            "Hard": {
+                "total_violations": 3,
+                "average_violations_per_line": 0.03165618448637317,
+                "average_violations_per_file": 1.5,
+                "violation_frequencies": {
+                    "Constant name \"string_to_count\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
+                    "Constant name \"bytes_count\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
+                    "Redefining name 'numbers' from outer scope (line 61) (redefined-outer-name)": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "Constant name \"string_to_count\" doesn't conform to UPPER_CASE naming style (invalid-name)"
+                },
+                "top_violations": [
+                    [
+                        "Constant name \"string_to_count\" doesn't conform to UPPER_CASE naming style (invalid-name)",
+                        1
+                    ],
+                    [
+                        "Constant name \"bytes_count\" doesn't conform to UPPER_CASE naming style (invalid-name)",
+                        1
+                    ],
+                    [
+                        "Redefining name 'numbers' from outer scope (line 61) (redefined-outer-name)",
+                        1
+                    ]
+                ]
+            },
+            "Concurrency": {
+                "total_violations": 1,
+                "average_violations_per_line": 0.018867924528301886,
+                "average_violations_per_file": 1.0,
+                "violation_frequencies": {
+                    "Redefining name 'numbers' from outer scope (line 61) (redefined-outer-name)": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "Redefining name 'numbers' from outer scope (line 61) (redefined-outer-name)"
+                },
+                "top_violations": [
+                    [
+                        "Redefining name 'numbers' from outer scope (line 61) (redefined-outer-name)",
+                        1
+                    ]
+                ]
+            }
+        }
+    },
+    "black": {
+        "overall": {
+            "total_violations": 5,
+            "average_violations_per_file": 1.0,
+            "violation_frequencies": {
+                "Non-compliant": 5
+            },
+            "most_frequent_violation": {
+                "frequency": 5,
+                "violation_type": "Non-compliant"
+            },
+            "top_violations": [
+                [
+                    "Non-compliant",
+                    5
+                ]
+            ]
+        },
+        "by_tag": {
+            "list": {
+                "total_violations": 1,
+                "average_violations_per_file": 1.0,
+                "violation_frequencies": {
+                    "Non-compliant": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "Non-compliant"
+                },
+                "top_violations": [
+                    [
+                        "Non-compliant",
+                        1
+                    ]
+                ]
+            },
+            "Easy": {
+                "total_violations": 2,
+                "average_violations_per_file": 1.0,
+                "violation_frequencies": {
+                    "Non-compliant": 2
+                },
+                "most_frequent_violation": {
+                    "frequency": 2,
+                    "violation_type": "Non-compliant"
+                },
+                "top_violations": [
+                    [
+                        "Non-compliant",
+                        2
+                    ]
+                ]
+            },
+            "asyncio": {
+                "total_violations": 1,
+                "average_violations_per_file": 1.0,
+                "violation_frequencies": {
+                    "Non-compliant": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "Non-compliant"
+                },
+                "top_violations": [
+                    [
+                        "Non-compliant",
+                        1
+                    ]
+                ]
+            },
+            "bytearray": {
+                "total_violations": 1,
+                "average_violations_per_file": 1.0,
+                "violation_frequencies": {
+                    "Non-compliant": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "Non-compliant"
+                },
+                "top_violations": [
+                    [
+                        "Non-compliant",
+                        1
+                    ]
+                ]
+            },
+            "bytes": {
+                "total_violations": 2,
+                "average_violations_per_file": 1.0,
+                "violation_frequencies": {
+                    "Non-compliant": 2
+                },
+                "most_frequent_violation": {
+                    "frequency": 2,
+                    "violation_type": "Non-compliant"
+                },
+                "top_violations": [
+                    [
+                        "Non-compliant",
+                        2
+                    ]
+                ]
+            },
+            "Medium": {
+                "total_violations": 1,
+                "average_violations_per_file": 1.0,
+                "violation_frequencies": {
+                    "Non-compliant": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "Non-compliant"
+                },
+                "top_violations": [
+                    [
+                        "Non-compliant",
+                        1
+                    ]
+                ]
+            },
+            "ChainMap": {
+                "total_violations": 2,
+                "average_violations_per_file": 1.0,
+                "violation_frequencies": {
+                    "Non-compliant": 2
+                },
+                "most_frequent_violation": {
+                    "frequency": 2,
+                    "violation_type": "Non-compliant"
+                },
+                "top_violations": [
+                    [
+                        "Non-compliant",
+                        2
+                    ]
+                ]
+            },
+            "Comprehension": {
+                "total_violations": 2,
+                "average_violations_per_file": 1.0,
+                "violation_frequencies": {
+                    "Non-compliant": 2
+                },
+                "most_frequent_violation": {
+                    "frequency": 2,
+                    "violation_type": "Non-compliant"
+                },
+                "top_violations": [
+                    [
+                        "Non-compliant",
+                        2
+                    ]
+                ]
+            },
+            "Hard": {
+                "total_violations": 2,
+                "average_violations_per_file": 1.0,
+                "violation_frequencies": {
+                    "Non-compliant": 2
+                },
+                "most_frequent_violation": {
+                    "frequency": 2,
+                    "violation_type": "Non-compliant"
+                },
+                "top_violations": [
+                    [
+                        "Non-compliant",
+                        2
+                    ]
+                ]
+            },
+            "Concurrency": {
+                "total_violations": 1,
+                "average_violations_per_file": 1.0,
+                "violation_frequencies": {
+                    "Non-compliant": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "Non-compliant"
+                },
+                "top_violations": [
+                    [
+                        "Non-compliant",
+                        1
+                    ]
+                ]
+            }
+        }
+    },
+    "radon": {
+        "overall": {
+            "average_file_score": 1.3833333333333333,
+            "average_code_block_type_scores": {
+                "function": 1.3833333333333333
+            }
+        },
+        "by_tag": {
+            "list": {
+                "average_file_score": 1.0,
+                "average_code_block_type_scores": {
+                    "function": 1.0
+                }
+            },
+            "Easy": {
+                "average_file_score": 1.25,
+                "average_code_block_type_scores": {
+                    "function": 1.25
+                }
+            },
+            "asyncio": {
+                "average_file_score": 1.5,
+                "average_code_block_type_scores": {
+                    "function": 1.5
+                }
+            },
+            "bytearray": {
+                "average_file_score": 1.5,
+                "average_code_block_type_scores": {
+                    "function": 1.5
+                }
+            },
+            "bytes": {
+                "average_file_score": 1.5833333333333335,
+                "average_code_block_type_scores": {
+                    "function": 1.5833333333333335
+                }
+            },
+            "Medium": {
+                "average_file_score": 1.5,
+                "average_code_block_type_scores": {
+                    "function": 1.5
+                }
+            },
+            "ChainMap": {
+                "average_file_score": 1.4583333333333335,
+                "average_code_block_type_scores": {
+                    "function": 1.4583333333333335
+                }
+            },
+            "Comprehension": {
+                "average_file_score": 1.4583333333333335,
+                "average_code_block_type_scores": {
+                    "function": 1.4583333333333335
+                }
+            },
+            "Hard": {
+                "average_file_score": 1.4583333333333335,
+                "average_code_block_type_scores": {
+                    "function": 1.4583333333333335
+                }
+            },
+            "Concurrency": {
+                "average_file_score": 1.25,
+                "average_code_block_type_scores": {
+                    "function": 1.25
+                }
+            }
+        }
+    },
+    "pydocstyle": {
+        "overall": {
+            "total_violations": 0,
+            "average_violations_per_line": 0.0,
+            "average_violations_per_file": 0.0,
+            "violation_frequencies": {},
+            "most_frequent_violation": {
+                "frequency": 0,
+                "violation_type": ""
+            },
+            "top_violations": []
+        },
+        "by_tag": {
+            "list": {
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
+                "most_frequent_violation": {
+                    "frequency": 0,
+                    "violation_type": ""
+                },
+                "top_violations": []
+            },
+            "Easy": {
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
+                "most_frequent_violation": {
+                    "frequency": 0,
+                    "violation_type": ""
+                },
+                "top_violations": []
+            },
+            "asyncio": {
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
+                "most_frequent_violation": {
+                    "frequency": 0,
+                    "violation_type": ""
+                },
+                "top_violations": []
+            },
+            "bytearray": {
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
+                "most_frequent_violation": {
+                    "frequency": 0,
+                    "violation_type": ""
+                },
+                "top_violations": []
+            },
+            "bytes": {
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
+                "most_frequent_violation": {
+                    "frequency": 0,
+                    "violation_type": ""
+                },
+                "top_violations": []
+            },
+            "Medium": {
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
+                "most_frequent_violation": {
+                    "frequency": 0,
+                    "violation_type": ""
+                },
+                "top_violations": []
+            },
+            "ChainMap": {
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
+                "most_frequent_violation": {
+                    "frequency": 0,
+                    "violation_type": ""
+                },
+                "top_violations": []
+            },
+            "Comprehension": {
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
+                "most_frequent_violation": {
+                    "frequency": 0,
+                    "violation_type": ""
+                },
+                "top_violations": []
+            },
+            "Hard": {
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
+                "most_frequent_violation": {
+                    "frequency": 0,
+                    "violation_type": ""
+                },
+                "top_violations": []
+            },
+            "Concurrency": {
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
+                "most_frequent_violation": {
+                    "frequency": 0,
+                    "violation_type": ""
+                },
+                "top_violations": []
+            }
+        }
+    },
+    "output": 1.3833333333333333
+}

@@ -1,0 +1,16 @@
+{
+    "id": "problem_3",
+    "description": "Act as a Python developer and create a Python program that adheres to the flake8 coding standard. Here's an example snippet:\n\n# Example Snippet for Flake8\ndef find_max(numbers):\n    \"\"\"Find the maximum number in a list.\"\"\"\n    return max(numbers) if numbers else None\n\nEnsure your code is clean, readable, and adheres to flake8 standards. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytearray,bytes.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\ndef convert_to_bytearray(input_string):\n    \"\"\"\n    Convert a string to a bytearray.\n\n    Args:\n    input_string (str): The string to convert to bytearray.\n\n    Returns:\n    bytearray: The bytearray representation of the input string.\n    \"\"\"\n    return bytearray(input_string, 'utf-8')\n\n\ndef convert_to_bytes(input_string):\n    \"\"\"\n    Convert a string to bytes.\n\n    Args:\n    input_string (str): The string to convert to bytes.\n\n    Returns:\n    bytes: The bytes representation of the input string.\n    \"\"\"\n    return bytes(input_string, 'utf-8')\n\n\ndef main():\n    \"\"\"\n    Main function to demonstrate conversion of string to bytearray and bytes.\n    \"\"\"\n    test_string = \"Hello, World!\"\n\n    # Convert string to bytearray\n    ba = convert_to_bytearray(test_string)\n    print(\"Bytearray:\", ba)\n\n    # Convert string to bytes\n    b = convert_to_bytes(test_string)\n    print(\"Bytes:\", b)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "bytearray",
+        "bytes",
+        "Medium"
+    ],
+    "keywords": [
+        "bytearray",
+        "bytes"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "flake8"
+}

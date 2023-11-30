@@ -1,0 +1,18 @@
+{
+    "id": "problem_5",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: ChainMap,Comprehension,Concurrency.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import ChainMap\nfrom concurrent.futures import ThreadPoolExecutor\nimport itertools\n\ndef generate_chainmap(*dicts):\n    \"\"\"Create a ChainMap from the given dictionaries.\"\"\"\n    return ChainMap(*dicts)\n\ndef square_numbers(numbers):\n    \"\"\"Return a list of squares of the given numbers using list comprehension.\"\"\"\n    return [number ** 2 for number in numbers]\n\ndef concurrent_sum(numbers):\n    \"\"\"Compute the sum of numbers concurrently.\"\"\"\n    with ThreadPoolExecutor() as executor:\n        futures = [executor.submit(lambda x: x, num) for num in numbers]\n        return sum(f.result() for f in futures)\n\ndef main():\n    # Generate a ChainMap\n    dict1 = {'a': 1, 'b': 2}\n    dict2 = {'b': 3, 'c': 4}\n    chain_map = generate_chainmap(dict1, dict2)\n    print(f\"ChainMap: {chain_map}\")\n\n    # Square numbers using comprehension\n    numbers = [1, 2, 3, 4, 5]\n    squares = square_numbers(numbers)\n    print(f\"Squares: {squares}\")\n\n    # Concurrent sum of numbers\n    sum_result = concurrent_sum(numbers)\n    print(f\"Concurrent Sum: {sum_result}\")\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "ChainMap",
+        "Comprehension",
+        "Concurrency",
+        "Hard"
+    ],
+    "keywords": [
+        "ChainMap",
+        "Comprehension",
+        "Concurrency"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "radon"
+}

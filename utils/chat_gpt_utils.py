@@ -1,14 +1,16 @@
-
 import os
 import json
+import re
 from collections import defaultdict
 from openai import OpenAI
 from constants.keywords import KEY_WORDS
+from constants.prompts import ADDITIONAL_PROMPT_SPECIFICATIONS
+from constants.linters import LINTER_PROMPTS_MAP
+
 
 
 client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
-
-def create_problem_descriptions(num_problems=20):
+def create_problem_descriptions(num_problems=5):
     problem_descriptions = []
 
     # Define ratios
@@ -57,7 +59,7 @@ def get_gpt_responses_to_problem_descriptions(problem_descriptions, response_fol
   # Iterate through each problem description
   for idx, problem_description in enumerate(problem_descriptions):
     # Create a prompt for ChatGPT
-    chatgpt_prompt = f"{prompt} Use the following keywords to solve a problem with Python: {','.join(problem_description['keywords'])}. Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) and return only the raw code. Remember to only respond with the raw code for the Python program. Only return the code that you would write in a .py file.\n"
+    chatgpt_prompt = f"{prompt} Use the following keyword(s) to solve a problem with Python: {','.join(problem_description['keywords'])}.{ADDITIONAL_PROMPT_SPECIFICATIONS}\n"
    
      
     # Make an API request to ChatGPT
@@ -74,10 +76,16 @@ def get_gpt_responses_to_problem_descriptions(problem_descriptions, response_fol
     n=1,
     stop=None
 )
-
-    code = chat_completion.choices[0].message.content.strip('```').lstrip('python\n')
-    if "python\n" == code[:7]:
-      code = code[7:]
+    
+    code = chat_completion.choices[0].message.content
+    # Define a regular expression pattern to match code blocks
+    pattern = r'```python(.*?)```'
+    # Find the first code block in the input string
+    match = re.search(pattern, code, re.DOTALL)
+    
+    # Extract the inner part of ```python...```
+    if match:
+      code = match.group(1)  #
     # Save the response to a file
     filename = f"{problem_description['id']}.json"
     full_path = os.path.join(abs_directory_path, filename)
@@ -112,78 +120,7 @@ def createLinterPrompts(linters_for_prompting):
   prompts = []
   # TODO: Improve the prompts later
   for linter in linters_for_prompting:
-    if linter == 'default':
-      prompts.append("Act as a Python developer and create a Python program. "
-    "Ensure your code is clean and readable. "
-    "Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. "
-    "Verify the program's correctness as if using a Command Line Interface.")
-    elif linter == 'flake8':
-      prompts.append("Act as a Python developer and create a Python program that adheres to the flake8 coding standard. "
-    "Here's an example snippet:\n\n"
-    "# Example Snippet for Flake8\n"
-    "def find_max(numbers):\n"
-    "    \"\"\"Find the maximum number in a list.\"\"\"\n"
-    "    return max(numbers) if numbers else None\n\n"
-    "Ensure your code is clean, readable, and adheres to flake8 standards. "
-    "Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. "
-    "Verify the program's correctness as if using a Command Line Interface.")
-    elif linter == 'pylint':
-      prompts.append(    "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. "
-    "Here's an example snippet compliant with pylint:\n\n"
-    "\"\"\"Module for demonstrating pylint adherence.\n\n"
-    "This module provides an example function formatted to comply with pylint standards.\n"
-    "\"\"\"\n\n"
-    "def calculate_sum(a, b):\n"
-    "    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n"
-    "    return a + b\n"
-    "\n"
-    "Focus on clean, readable code following the style of the provided snippet. "
-    "Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. "
-    "Verify the program's correctness as if using a Command Line Interface."
-)
-    elif linter == 'black':
-      prompts.append(    "Act as a Python developer and write a Python program that strictly adheres to the Black coding style. "
-    "Here's an example snippet formatted using Black:\n\n"
-    "def format_name(first_name, last_name):\n"
-    "    formatted_first_name = first_name.strip().title()\n"
-    "    formatted_last_name = last_name.strip().title()\n"
-    "    return f\"{formatted_first_name} {formatted_last_name}\"\n\n"
-    "Ensure the code is formatted according to Black's uncompromising style. "
-    "Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. "
-    "Verify the program's correctness as if using a Command Line Interface."
-)
-    elif linter == 'radon':
-      prompts.append(    "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. "
-    "Here's a more complex example snippet with low cyclomatic complexity:\n\n"
-    "# Example Snippet for Radon\n"
-    "def fibonacci(n):\n"
-    "    \"\"\"Return the nth Fibonacci number.\"\"\"\n"
-    "    if n <= 1:\n"
-    "        return n\n"
-    "    return fibonacci(n - 1) + fibonacci(n - 2)\n\n"
-    "def main():\n"
-    "    for i in range(10):\n"
-    "        print(fibonacci(i))\n\n"
-    "if __name__ == \"__main__\":\n"
-    "    main()\n\n"
-    "Strive for a simple and clear code structure, minimizing cyclomatic complexity. "
-    "Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. "
-    "Verify the program's correctness as if using a Command Line Interface.")
-    elif linter == 'pydocstyle':
-      prompts.append(    "Act as a Python developer and write a Python program that strictly adheres to the pydocstyle standard for docstrings. "
-    "Include a module-level docstring as per pydocstyle guidelines. Here's an example snippet:\n\n"
-    "\"\"\"Module for demonstrating pydocstyle adherence.\n\n"
-    "This module provides examples of how to write docstrings that conform to pydocstyle standards.\n"
-    "\"\"\"\n\n"
-    "def add_numbers(x, y):\n"
-    "    \"\"\"Add two numbers and return the result.\n\n"
-    "    :param x: The first number to add.\n"
-    "    :param y: The second number to add.\n"
-    "    :return: The sum of x and y.\n"
-    "    \"\"\"\n"
-    "    return x + y\n\n"
-    "Focus on comprehensive and compliant docstring documentation. "
-    "Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. "
-    "Verify the program's correctness as if using a Command Line Interface.")
+    if linter in LINTER_PROMPTS_MAP:
+      prompts.append(LINTER_PROMPTS_MAP[linter])
   return prompts
 

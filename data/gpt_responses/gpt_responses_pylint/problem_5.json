@@ -1,0 +1,18 @@
+{
+    "id": "problem_5",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. Here's an example snippet compliant with pylint:\n\n\"\"\"Module for demonstrating pylint adherence.\n\nThis module provides an example function formatted to comply with pylint standards.\n\"\"\"\n\ndef calculate_sum(a, b):\n    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n    return a + b\n\nFocus on clean, readable code following the style of the provided snippet. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: ChainMap,Comprehension,Concurrency.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nimport concurrent.futures\nfrom collections import ChainMap\n\ndef merge_dictionaries(dict_list):\n    \"\"\"Merge a list of dictionaries into a single dictionary using ChainMap.\"\"\"\n    chain = ChainMap(*dict_list)\n    return dict(chain)\n\ndef square_numbers(numbers):\n    \"\"\"Return a list of the squares of the given numbers using list comprehension.\"\"\"\n    return [number ** 2 for number in numbers]\n\ndef process_data_concurrently(data_chunks):\n    \"\"\"Process data in parallel and collect the results.\"\"\"\n    with concurrent.futures.ThreadPoolExecutor() as executor:\n        results = list(executor.map(square_numbers, data_chunks))\n    return results\n\nif __name__ == \"__main__\":\n    # Example usage of the functions\n\n    # Merge dictionaries using ChainMap\n    dict_list = [{'a': 1, 'b': 2}, {'c': 3, 'd': 4}, {'e': 5}]\n    merged_dict = merge_dictionaries(dict_list)\n    print(\"Merged Dictionary:\", merged_dict)\n\n    # Square numbers using list comprehension\n    numbers = [1, 2, 3, 4, 5]\n    squares = square_numbers(numbers)\n    print(\"Squares:\", squares)\n\n    # Process data concurrently\n    data_chunks = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\n    squared_chunks = process_data_concurrently(data_chunks)\n    print(\"Squared Numbers in Chunks:\", squared_chunks)\n",
+    "tags": [
+        "ChainMap",
+        "Comprehension",
+        "Concurrency",
+        "Hard"
+    ],
+    "keywords": [
+        "ChainMap",
+        "Comprehension",
+        "Concurrency"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "pylint"
+}

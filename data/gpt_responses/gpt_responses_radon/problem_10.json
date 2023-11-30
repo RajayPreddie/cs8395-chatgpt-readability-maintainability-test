@@ -1,0 +1,18 @@
+{
+    "id": "problem_10",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a more complex example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Counter,Decorator,DefaultDict.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import Counter, defaultdict\n\ndef count_decorator(func):\n    def wrapper(*args, **kwargs):\n        wrapper.calls += 1\n        return func(*args, **kwargs)\n    wrapper.calls = 0\n    return wrapper\n\n@count_decorator\ndef count_elements(iterable):\n    \"\"\"Count elements in the iterable and return a Counter object.\"\"\"\n    return Counter(iterable)\n\ndef group_by_first_letter(strings):\n    \"\"\"Group strings by their first letter using a defaultdict.\"\"\"\n    grouped = defaultdict(list)\n    for string in strings:\n        first_letter = string[0].lower()\n        grouped[first_letter].append(string)\n    return grouped\n\ndef main():\n    # Counting elements example\n    fruits = ['apple', 'banana', 'cherry', 'date', 'banana', 'cherry', 'cherry']\n    fruit_counts = count_elements(fruits)\n    print(\"Fruit counts:\", fruit_counts)\n    print(\"Function 'count_elements' was called\", count_elements.calls, \"times\")\n\n    # Grouping strings by first letter example\n    words = ['apple', 'ant', 'banana', 'bat', 'cat', 'car']\n    grouped_words = group_by_first_letter(words)\n    for letter, words in grouped_words.items():\n        print(f\"Words starting with '{letter}': {words}\")\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "Counter",
+        "Decorator",
+        "DefaultDict",
+        "Hard"
+    ],
+    "keywords": [
+        "Counter",
+        "Decorator",
+        "DefaultDict"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "radon"
+}

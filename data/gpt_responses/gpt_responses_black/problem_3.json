@@ -1,0 +1,16 @@
+{
+    "id": "problem_3",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the Black coding style. Here's an example snippet formatted using Black:\n\ndef format_name(first_name, last_name):\n    formatted_first_name = first_name.strip().title()\n    formatted_last_name = last_name.strip().title()\n    return f\"{formatted_first_name} {formatted_last_name}\"\n\nEnsure the code is formatted according to Black's uncompromising style. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytearray,bytes.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\ndef convert_string_to_bytearray(string_data):\n    \"\"\"\n    Convert a string into a bytearray.\n    \"\"\"\n    if not isinstance(string_data, str):\n        raise ValueError(\"Input must be a string.\")\n\n    byte_array = bytearray(string_data, \"utf-8\")\n    return byte_array\n\n\ndef convert_bytearray_to_string(byte_array):\n    \"\"\"\n    Convert a bytearray back to a string.\n    \"\"\"\n    if not isinstance(byte_array, bytearray):\n        raise ValueError(\"Input must be a bytearray.\")\n\n    string_data = byte_array.decode(\"utf-8\")\n    return string_data\n\n\ndef main():\n    # Example usage:\n    original_string = \"Hello, World!\"\n    print(\"Original string:\", original_string)\n\n    # Convert the string to a bytearray\n    byte_array = convert_string_to_bytearray(original_string)\n    print(\"Bytearray:\", byte_array)\n\n    # Convert the bytearray back to a string\n    converted_string = convert_bytearray_to_string(byte_array)\n    print(\"Converted string:\", converted_string)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "bytearray",
+        "bytes",
+        "Medium"
+    ],
+    "keywords": [
+        "bytearray",
+        "bytes"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "black"
+}

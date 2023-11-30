@@ -1,0 +1,18 @@
+{
+    "id": "problem_10",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pydocstyle standard for docstrings. Include a module-level docstring as per pydocstyle guidelines. Here's an example snippet:\n\n\"\"\"Module for demonstrating pydocstyle adherence.\n\nThis module provides examples of how to write docstrings that conform to pydocstyle standards.\n\"\"\"\n\ndef add_numbers(x, y):\n    \"\"\"Add two numbers and return the result.\n\n    :param x: The first number to add.\n    :param y: The second number to add.\n    :return: The sum of x and y.\n    \"\"\"\n    return x + y\n\nFocus on comprehensive and compliant docstring documentation. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Counter,Decorator,DefaultDict.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\n\"\"\"Module for demonstrating pydocstyle adherence with Counter, Decorator, and DefaultDict.\n\nThis module provides a simple text analyzer that uses collections.Counter to count the occurrences\nof each word in a given text. It also provides a decorator for logging the execution time of functions\nand a DefaultDict to provide a default value for non-existent keys.\n\"\"\"\n\nfrom collections import Counter, defaultdict\nimport time\nfrom functools import wraps\n\n\ndef execution_time_logger(func):\n    \"\"\"Decorate a function to log its execution time.\n\n    :param func: The function to decorate.\n    :return: The wrapper function.\n    \"\"\"\n    @wraps(func)\n    def wrapper(*args, **kwargs):\n        start_time = time.time()\n        result = func(*args, **kwargs)\n        end_time = time.time()\n        print(f\"{func.__name__} executed in {end_time - start_time:.4f} seconds.\")\n        return result\n    return wrapper\n\n\n@execution_time_logger\ndef count_words(text):\n    \"\"\"Count the occurrences of each word in a given text.\n\n    :param text: The text to analyze.\n    :return: A Counter object with words as keys and their counts as values.\n    \"\"\"\n    words = text.split()\n    return Counter(words)\n\n\ndef create_default_dict(default_value):\n    \"\"\"Create a defaultdict with a given default value.\n\n    :param default_value: The default value for non-existent keys.\n    :return: A defaultdict object.\n    \"\"\"\n    return defaultdict(lambda: default_value)\n\n\nif __name__ == \"__main__\":\n    # Example usage:\n    example_text = \"hello world hello\"\n\n    word_counts = count_words(example_text)\n    for word, count in word_counts.items():\n        print(f\"Word: {word}, Count: {count}\")\n\n    default_dict = create_default_dict(\"Not Available\")\n    print(default_dict[\"a_key\"])  # Should print \"Not Available\" since \"a_key\" is not in the dict\n",
+    "tags": [
+        "Counter",
+        "Decorator",
+        "DefaultDict",
+        "Hard"
+    ],
+    "keywords": [
+        "Counter",
+        "Decorator",
+        "DefaultDict"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "pydocstyle"
+}

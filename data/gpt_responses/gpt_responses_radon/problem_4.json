@@ -1,0 +1,18 @@
+{
+    "id": "problem_4",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytes,ChainMap,Comprehension.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import ChainMap\n\ndef count_byte_values(byte_string):\n    \"\"\"Count occurrences of each byte value in the byte string.\"\"\"\n    return {byte: byte_string.count(byte) for byte in set(byte_string)}\n\ndef merge_byte_counts(*byte_strings):\n    \"\"\"Merge byte counts from multiple byte strings using ChainMap.\"\"\"\n    byte_counts = [count_byte_values(byte_string) for byte_string in byte_strings]\n    return dict(ChainMap(*byte_counts))\n\ndef main():\n    byte_strings = [\n        bytes([1, 2, 3, 4, 5]),\n        bytes([2, 3, 4, 5, 6]),\n        bytes([3, 4, 5, 6, 7])\n    ]\n    merged_counts = merge_byte_counts(*byte_strings)\n    for byte_value, count in merged_counts.items():\n        print(f\"Byte value {byte_value}: {count}\")\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "bytes",
+        "ChainMap",
+        "Comprehension",
+        "Hard"
+    ],
+    "keywords": [
+        "bytes",
+        "ChainMap",
+        "Comprehension"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "radon"
+}

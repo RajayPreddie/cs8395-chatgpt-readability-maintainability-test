@@ -1,0 +1,16 @@
+{
+    "id": "problem_3",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. Here's an example snippet compliant with pylint:\n\n\"\"\"Module for demonstrating pylint adherence.\n\nThis module provides an example function formatted to comply with pylint standards.\n\"\"\"\n\ndef calculate_sum(a, b):\n    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n    return a + b\n\nFocus on clean, readable code following the style of the provided snippet. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytearray,bytes.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\n\"\"\"Module for demonstrating bytearray and bytes manipulation in Python.\n\nThis module provides functions to perform operations on bytearray and bytes objects.\n\"\"\"\n\ndef bytes_to_bytearray(input_bytes):\n    \"\"\"Convert bytes object to bytearray.\n\n    Args:\n        input_bytes (bytes): The bytes object to convert.\n\n    Returns:\n        bytearray: A mutable bytearray object.\n    \"\"\"\n    return bytearray(input_bytes)\n\ndef bytearray_to_bytes(input_bytearray):\n    \"\"\"Convert bytearray to bytes object.\n\n    Args:\n        input_bytearray (bytearray): The bytearray object to convert.\n\n    Returns:\n        bytes: An immutable bytes object.\n    \"\"\"\n    return bytes(input_bytearray)\n\ndef modify_bytearray(input_bytearray, index, value):\n    \"\"\"Modify an element of the bytearray.\n\n    Args:\n        input_bytearray (bytearray): The bytearray to modify.\n        index (int): The position of the element to change.\n        value (int): The new value to set, must be in range(256).\n\n    Returns:\n        bytearray: The modified bytearray.\n    \"\"\"\n    if not 0 <= value < 256:\n        raise ValueError(\"Value must be in range(0, 256)\")\n    input_bytearray[index] = value\n    return input_bytearray\n\n# Example usage\nif __name__ == \"__main__\":\n    original_bytes = bytes([1, 2, 3])\n    print(\"Original bytes:\", original_bytes)\n\n    # Convert bytes to bytearray\n    byte_array = bytes_to_bytearray(original_bytes)\n    print(\"Bytearray:\", byte_array)\n\n    # Modify the bytearray\n    modified_bytearray = modify_bytearray(byte_array, 1, 255)\n    print(\"Modified bytearray:\", modified_bytearray)\n\n    # Convert bytearray back to bytes\n    modified_bytes = bytearray_to_bytes(modified_bytearray)\n    print(\"Modified bytes:\", modified_bytes)\n",
+    "tags": [
+        "bytearray",
+        "bytes",
+        "Medium"
+    ],
+    "keywords": [
+        "bytearray",
+        "bytes"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "pylint"
+}

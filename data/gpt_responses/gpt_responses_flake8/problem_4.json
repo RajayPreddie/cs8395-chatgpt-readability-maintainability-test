@@ -1,0 +1,18 @@
+{
+    "id": "problem_4",
+    "description": "Act as a Python developer and create a Python program that adheres to the flake8 coding standard. Here's an example snippet:\n\n# Example Snippet for Flake8\ndef find_max(numbers):\n    \"\"\"Find the maximum number in a list.\"\"\"\n    return max(numbers) if numbers else None\n\nEnsure your code is clean, readable, and adheres to flake8 standards. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytes,ChainMap,Comprehension.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import ChainMap\n\n\ndef bytes_to_human_readable(num_bytes):\n    \"\"\"Convert bytes to a human readable format.\"\"\"\n    suffixes = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']\n    i = 0\n    while num_bytes >= 1024 and i < len(suffixes) - 1:\n        num_bytes /= 1024.\n        i += 1\n    return f\"{num_bytes:.2f} {suffixes[i]}\"\n\n\ndef merge_dictionaries(*dict_args):\n    \"\"\"Merge multiple dictionaries using ChainMap.\"\"\"\n    return ChainMap(*dict_args)\n\n\ndef square_numbers_comprehension(numbers):\n    \"\"\"Return a list of squares of the given numbers using list comprehension.\"\"\"\n    return [number ** 2 for number in numbers]\n\n\n# Example usage:\nif __name__ == \"__main__\":\n    # Bytes to human readable\n    print(bytes_to_human_readable(1024))\n    print(bytes_to_human_readable(123456789))\n\n    # Merge dictionaries using ChainMap\n    dict1 = {'a': 1, 'b': 2}\n    dict2 = {'b': 3, 'c': 4}\n    merged_dict = merge_dictionaries(dict1, dict2)\n    for key, value in merged_dict.items():\n        print(f\"{key}: {value}\")\n\n    # List comprehension to square numbers\n    numbers = [1, 2, 3, 4, 5]\n    print(square_numbers_comprehension(numbers))\n",
+    "tags": [
+        "bytes",
+        "ChainMap",
+        "Comprehension",
+        "Hard"
+    ],
+    "keywords": [
+        "bytes",
+        "ChainMap",
+        "Comprehension"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "flake8"
+}

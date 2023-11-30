@@ -1,0 +1,14 @@
+{
+    "id": "problem_1",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: list.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\ndef create_shopping_list():\n    \"\"\"Create a shopping list based on user input.\"\"\"\n    shopping_list = []\n    print(\"Enter items for the shopping list (type 'done' when finished):\")\n\n    while True:\n        item = input(\"Enter item: \").strip()\n        if item.lower() == 'done':\n            break\n        shopping_list.append(item)\n\n    return shopping_list\n\ndef display_shopping_list(shopping_list):\n    \"\"\"Display the shopping list.\"\"\"\n    print(\"\\nShopping List:\")\n    for index, item in enumerate(shopping_list, start=1):\n        print(f\"{index}. {item}\")\n\ndef main():\n    shopping_list = create_shopping_list()\n    display_shopping_list(shopping_list)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "list",
+        "Easy"
+    ],
+    "keywords": [
+        "list"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "radon"
+}

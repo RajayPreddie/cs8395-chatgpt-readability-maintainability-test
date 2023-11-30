@@ -1,0 +1,18 @@
+{
+    "id": "problem_5",
+    "description": "Act as a Python developer and create a Python program that adheres to the flake8 coding standard. Here's an example snippet:\n\n# Example Snippet for Flake8\ndef find_max(numbers):\n    \"\"\"Find the maximum number in a list.\"\"\"\n    return max(numbers) if numbers else None\n\nEnsure your code is clean, readable, and adheres to flake8 standards. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: ChainMap,Comprehension,Concurrency.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nimport concurrent.futures\nfrom collections import ChainMap\n\n\ndef generate_squares(n):\n    \"\"\"Generate squares of numbers up to n using list comprehension.\"\"\"\n    return [i ** 2 for i in range(n)]\n\n\ndef merge_dictionaries(*dicts):\n    \"\"\"Merge dictionaries using ChainMap.\"\"\"\n    return dict(ChainMap(*dicts))\n\n\ndef concurrent_task(numbers):\n    \"\"\"Concurrently find the max number in lists.\"\"\"\n    with concurrent.futures.ThreadPoolExecutor() as executor:\n        futures = [executor.submit(find_max, nums) for nums in numbers]\n        return [future.result() for future in futures]\n\n\ndef find_max(numbers):\n    \"\"\"Find the maximum number in a list.\"\"\"\n    return max(numbers) if numbers else None\n\n\nif __name__ == \"__main__\":\n    squares = generate_squares(10)\n    print(f\"Squares up to 10: {squares}\")\n\n    dict1 = {'a': 1, 'b': 2}\n    dict2 = {'b': 3, 'c': 4}\n    merged_dict = merge_dictionaries(dict1, dict2)\n    print(f\"Merged Dictionary: {merged_dict}\")\n\n    list_of_numbers = [[3, 5, 1], [8, 7, 2], [9, 6, 0]]\n    max_numbers = concurrent_task(list_of_numbers)\n    print(f\"Maximum numbers: {max_numbers}\")\n",
+    "tags": [
+        "ChainMap",
+        "Comprehension",
+        "Concurrency",
+        "Hard"
+    ],
+    "keywords": [
+        "ChainMap",
+        "Comprehension",
+        "Concurrency"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "flake8"
+}

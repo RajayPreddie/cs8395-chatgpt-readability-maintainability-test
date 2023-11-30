@@ -1,0 +1,16 @@
+{
+    "id": "problem_3",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytearray,bytes.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\ndef string_to_bytearray(input_string):\n    \"\"\"Convert a string to a bytearray.\"\"\"\n    return bytearray(input_string, 'utf-8')\n\ndef bytearray_to_string(byte_array):\n    \"\"\"Convert a bytearray back to a string.\"\"\"\n    return byte_array.decode('utf-8')\n\ndef main():\n    original_string = \"Hello, World!\"\n    print(f\"Original string: {original_string}\")\n    \n    byte_array = string_to_bytearray(original_string)\n    print(f\"Converted to bytearray: {byte_array}\")\n    \n    converted_string = bytearray_to_string(byte_array)\n    print(f\"Converted back to string: {converted_string}\")\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "bytearray",
+        "bytes",
+        "Medium"
+    ],
+    "keywords": [
+        "bytearray",
+        "bytes"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "radon"
+}

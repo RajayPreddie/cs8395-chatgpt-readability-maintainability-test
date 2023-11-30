@@ -1,0 +1,16 @@
+{
+    "id": "problem_8",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a more complex example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: ContextManager,Coroutine.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nimport asyncio\nimport contextlib\n\nclass AsyncFileWriter:\n    def __init__(self, filename, mode='w'):\n        self.filename = filename\n        self.mode = mode\n        self.file = None\n\n    async def __aenter__(self):\n        self.file = await asyncio.to_thread(open, self.filename, self.mode)\n        return self.file\n\n    async def __aexit__(self, exc_type, exc_value, traceback):\n        await asyncio.to_thread(self.file.close)\n\nasync def write_data_to_file(filename, data):\n    async with AsyncFileWriter(filename) as file:\n        await asyncio.to_thread(file.write, data)\n\nasync def main():\n    data = \"This is an example using ContextManager and Coroutine.\"\n    await write_data_to_file('output.txt', data)\n\nif __name__ == \"__main__\":\n    asyncio.run(main())\n",
+    "tags": [
+        "ContextManager",
+        "Coroutine",
+        "Medium"
+    ],
+    "keywords": [
+        "ContextManager",
+        "Coroutine"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "radon"
+}

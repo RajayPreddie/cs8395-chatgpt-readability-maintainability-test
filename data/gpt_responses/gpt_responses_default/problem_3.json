@@ -1,0 +1,16 @@
+{
+    "id": "problem_3",
+    "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytearray,bytes.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\ndef main():\n    # Initialize a bytearray with some data\n    data = bytearray([104, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100])\n\n    # Convert bytearray to bytes\n    byte_data = bytes(data)\n\n    # Print the bytes\n    print(\"Bytes data:\", byte_data)\n\n    # Print the string representation of the bytes\n    print(\"String representation:\", byte_data.decode())\n\n    # Modify the bytearray\n    data[5] = 33  # Change space (32) to exclamation mark (33)\n\n    # Convert modified bytearray to bytes and print\n    modified_byte_data = bytes(data)\n    print(\"Modified bytes data:\", modified_byte_data)\n    print(\"Modified string representation:\", modified_byte_data.decode())\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "bytearray",
+        "bytes",
+        "Medium"
+    ],
+    "keywords": [
+        "bytearray",
+        "bytes"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "default"
+}

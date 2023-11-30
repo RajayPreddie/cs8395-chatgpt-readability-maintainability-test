@@ -7,7 +7,7 @@ class DefaultLinterData(AnalysisData):
     def __init__(self):
       self.total_violations = 0
       self.average_violations_per_file = 0
-      self.most_frequent_violation = {"frequency": -1, "violation_type": ""}
+      self.most_frequent_violation = {"frequency": 0, "violation_type": ""}
       self.violation_frequencies = defaultdict(int)
       self.top_violations = []
       self.number_of_python_programs = 0

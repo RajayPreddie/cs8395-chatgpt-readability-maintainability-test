@@ -1,1 +1,5 @@
-LINTER_NAMES = ['flake8', 'pylint', 'black', 'radon', 'pydocstyle']
+from constants.prompts import BLACK_PROMPT, DEFAULT_PROMPT, FLAKE8_PROMPT, PYDOCSTYLE_PROMPT, PYLINT_PROMPT, RADON_PROMPT
+
+LINTER_PROMPTS_MAP = {"default": DEFAULT_PROMPT, "flake8": FLAKE8_PROMPT, "pylint": PYLINT_PROMPT, "black": BLACK_PROMPT, "radon": RADON_PROMPT, "pydocstyle": PYDOCSTYLE_PROMPT}
+LINTER_NAMES = LINTER_NAMES = [key for key in LINTER_PROMPTS_MAP.keys() if key != 'default']
+

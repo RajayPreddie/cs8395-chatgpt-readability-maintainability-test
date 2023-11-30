@@ -1,0 +1,14 @@
+{
+    "id": "problem_2",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pydocstyle standard for docstrings. Include a module-level docstring as per pydocstyle guidelines. Here's an example snippet:\n\n\"\"\"Module for demonstrating pydocstyle adherence.\n\nThis module provides examples of how to write docstrings that conform to pydocstyle standards.\n\"\"\"\n\ndef add_numbers(x, y):\n    \"\"\"Add two numbers and return the result.\n\n    :param x: The first number to add.\n    :param y: The second number to add.\n    :return: The sum of x and y.\n    \"\"\"\n    return x + y\n\nFocus on comprehensive and compliant docstring documentation. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: asyncio.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\n\"\"\"Module for demonstrating asyncio usage with pydocstyle adherence.\n\nThis module provides an example of how to use asyncio in Python while\nalso conforming to the pydocstyle standards for docstrings.\n\"\"\"\n\nimport asyncio\n\nasync def fetch_data(delay):\n    \"\"\"Simulate fetching data from a database or an API with a delay.\n\n    This is an asynchronous function that waits for a given amount of time\n    before simulating a data retrieval operation.\n\n    :param delay: The amount of time in seconds to wait before returning data.\n    :return: A string simulating data that was 'fetched' after the delay.\n    \"\"\"\n    await asyncio.sleep(delay)\n    return \"Data fetched after {} second(s)\".format(delay)\n\nasync def main():\n    \"\"\"Run multiple data fetching tasks concurrently.\n\n    This is the main entry point for running async tasks. It gathers and runs\n    multiple fetch_data tasks concurrently and then prints their results.\n    \"\"\"\n    tasks = [\n        fetch_data(2),\n        fetch_data(3),\n        fetch_data(1)\n    ]\n    results = await asyncio.gather(*tasks)\n    for result in results:\n        print(result)\n\nif __name__ == \"__main__\":\n    asyncio.run(main())\n",
+    "tags": [
+        "asyncio",
+        "Easy"
+    ],
+    "keywords": [
+        "asyncio"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "pydocstyle"
+}

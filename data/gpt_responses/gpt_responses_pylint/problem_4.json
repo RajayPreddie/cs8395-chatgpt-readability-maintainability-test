@@ -1,0 +1,18 @@
+{
+    "id": "problem_4",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. Here's an example snippet compliant with pylint:\n\n\"\"\"Module for demonstrating pylint adherence.\n\nThis module provides an example function formatted to comply with pylint standards.\n\"\"\"\n\ndef calculate_sum(a, b):\n    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n    return a + b\n\nFocus on clean, readable code following the style of the provided snippet. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytes,ChainMap,Comprehension.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import ChainMap\n\ndef convert_to_bytes(data):\n    \"\"\"Convert a list of strings to a list of bytes.\"\"\"\n    return [s.encode() for s in data]\n\ndef merge_dictionaries(*dicts):\n    \"\"\"Merge multiple dictionaries using ChainMap.\"\"\"\n    return ChainMap(*dicts)\n\ndef main():\n    # Example usage of convert_to_bytes with list comprehension\n    strings = ['hello', 'world', 'python', 'coding']\n    bytes_list = convert_to_bytes(strings)\n    print(\"List of bytes:\", bytes_list)\n\n    # Example usage of ChainMap to merge dictionaries\n    dict1 = {'a': 1, 'b': 2}\n    dict2 = {'b': 3, 'c': 4}\n    dict3 = {'d': 5}\n    merged_dict = merge_dictionaries(dict1, dict2, dict3)\n    print(\"Merged dictionary using ChainMap:\", merged_dict)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "bytes",
+        "ChainMap",
+        "Comprehension",
+        "Hard"
+    ],
+    "keywords": [
+        "bytes",
+        "ChainMap",
+        "Comprehension"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "pylint"
+}
