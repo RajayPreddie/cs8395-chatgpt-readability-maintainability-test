@@ -1,33 +1,31 @@
 {
     "flake8": {
         "violations": {
-            "E501 line too long (95 > 79 characters)": 1,
-            "E501 line too long (84 > 79 characters)": 1,
-            "F841 local variable 'data' is assigned to but never used": 1
+            "E501 line too long (87 > 79 characters)": 1
         },
-        "total_violations": 3,
+        "total_violations": 1,
         "most_frequent_violation": {
-            "violation_type": "F841 local variable 'data' is assigned to but never used",
+            "violation_type": "E501 line too long (87 > 79 characters)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 34
+        "number_of_lines_in_code": 48
     },
     "pylint": {
         "violations": {
             "Missing module docstring (missing-module-docstring)": 1,
-            "Missing function or method docstring (missing-function-docstring)": 1,
-            "Unused variable 'data' (unused-variable)": 1
+            "Missing function or method docstring (missing-function-docstring)": 3,
+            "Consider iterating the dictionary directly instead of calling .keys() (consider-iterating-dictionary)": 1
         },
-        "total_violations": 3,
+        "total_violations": 5,
         "most_frequent_violation": {
-            "violation_type": "Unused variable 'data' (unused-variable)",
-            "frequency": 1
+            "violation_type": "Missing function or method docstring (missing-function-docstring)",
+            "frequency": 3
         },
-        "number_of_lines_in_code": 34
+        "number_of_lines_in_code": 48
     },
     "black": {
         "violations": {
-            "Non-compliant": 1
+            "non_compliant": 1
         },
         "total_violations": 1,
         "most_frequent_violation": {
@@ -36,20 +34,19 @@
         }
     },
     "radon": {
-        "function_complexity": 1.6666666666666667,
-        "overall_score": 1.6666666666666667
+        "function_complexity": 2.6666666666666665,
+        "overall_score": 2.6666666666666665
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D200: One-line docstring should fit on one line with quotes (found 3)": 2,
-            "D103: Missing docstring in public function": 1
+            "D103: Missing docstring in public function": 3
         },
         "total_violations": 4,
         "most_frequent_violation": {
-            "violation_type": "D200: One-line docstring should fit on one line with quotes (found 3)",
-            "frequency": 2
+            "violation_type": "D103: Missing docstring in public function",
+            "frequency": 3
         },
-        "number_of_lines_in_code": 34
+        "number_of_lines_in_code": 48
     }
 }

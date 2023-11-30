@@ -1,7 +1,10 @@
 import argparse
 import os
 import json
-from constants.linters import LINTER_PROMPTS_MAP
+from constants.linters import LINTER_PROMPTS_MAP, DEFAULT
+from constants import config
+from constants.constants import ID_KEY
+
 # Extract JSON from a directory
 def extract_json_from_directory(abs_directory_path):
   # Create a list to store the JSON objects
@@ -18,7 +21,7 @@ def extract_json_from_directory(abs_directory_path):
         data = file.read()
         # Convert the JSON object to a Python dictionary
         json_object = json.loads(data)
-        json_objects[json_object["id"]] = json_object
+        json_objects[json_object[ID_KEY]] = json_object
         # Close the file
         file.close()
   # Return the list of JSON objects
@@ -26,19 +29,17 @@ def extract_json_from_directory(abs_directory_path):
 
 
 def createArgs():
-  parser = argparse.ArgumentParser(description='Get ChatGPT responses and write to files.')
-  parser.add_argument('--generate_responses', action='store_true', help='Generate python programs using ChatGPT.')
+  parser = argparse.ArgumentParser(description=config.ARGUMENT_PARSER_DESCRIPTION)
+  parser.add_argument(config.ARGUMENT_PARSER_GENERATE_RESPONSES_ARGUMENT, action=config.ARGUMENT_PARSER_GENERATE_RESPONSES_ACTION, help=config.ARGUMENT_PARSER_GENERATE_RESPONSES_HELP_MESSAGE)
 
   # Updated argument for linters/tools
-  parser.add_argument('--linters', nargs='*', choices=['flake8', 'pylint', 'black', 'radon', 'pydocstyle', 'default', 'all'],
-                      default=['default'],
-                      help='Specify which linter/tool prompts to run. '
-                          'Options include flake8, pylint, black, radon, pydocstyle, default, or all. '
-                          '"default" uses the default prompt. If not specified, defaults to "default".')
+  parser.add_argument(config.ARGUMENT_PARSER_LINTERS_ARGUMENT, nargs=config.ARGUMENT_PARSER_LINTERS_N_ARGS, choices=config.ARGUMENT_PARSER_LINTERS_CHOICES,
+                      default=[DEFAULT],
+                      help=config.ARGUMENT_PARSER_LINTERS_HELP_MESSAGE)
 
   args = parser.parse_args()
 
   # Usage example
-  if 'all' in args.linters:
+  if config.ARGUMENT_PARSER_LINTERS_ALL_LINTERS in args.linters:
       args.linters = LINTER_PROMPTS_MAP.keys()
   return args

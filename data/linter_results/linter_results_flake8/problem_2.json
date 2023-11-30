@@ -22,7 +22,7 @@
     },
     "black": {
         "violations": {
-            "Non-compliant": 1
+            "non_compliant": 1
         },
         "total_violations": 1,
         "most_frequent_violation": {

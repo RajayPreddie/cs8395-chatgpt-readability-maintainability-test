@@ -8,7 +8,7 @@
             "violation_type": "E302 expected 2 blank lines, found 1",
             "frequency": 3
         },
-        "number_of_lines_in_code": 26
+        "number_of_lines_in_code": 22
     },
     "pylint": {
         "violations": {
@@ -19,11 +19,11 @@
             "violation_type": "Missing module docstring (missing-module-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 26
+        "number_of_lines_in_code": 22
     },
     "black": {
         "violations": {
-            "Non-compliant": 1
+            "non_compliant": 1
         },
         "total_violations": 1,
         "most_frequent_violation": {
@@ -45,6 +45,6 @@
             "violation_type": "D401: First line should be in imperative mood; try rephrasing (found 'Main')",
             "frequency": 1
         },
-        "number_of_lines_in_code": 26
+        "number_of_lines_in_code": 22
     }
 }

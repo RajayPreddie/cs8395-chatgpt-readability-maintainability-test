@@ -9,7 +9,7 @@
             "violation_type": "E302 expected 2 blank lines, found 1",
             "frequency": 3
         },
-        "number_of_lines_in_code": 27
+        "number_of_lines_in_code": 24
     },
     "pylint": {
         "violations": {
@@ -21,11 +21,11 @@
             "violation_type": "Missing function or method docstring (missing-function-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 27
+        "number_of_lines_in_code": 24
     },
     "black": {
         "violations": {
-            "Non-compliant": 1
+            "non_compliant": 1
         },
         "total_violations": 1,
         "most_frequent_violation": {
@@ -34,19 +34,20 @@
         }
     },
     "radon": {
-        "function_complexity": 2.3333333333333335,
-        "overall_score": 2.3333333333333335
+        "function_complexity": 1.3333333333333333,
+        "overall_score": 1.3333333333333333
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
+            "D401: First line should be in imperative mood (perhaps 'Convert', not 'Converts')": 1,
             "D103: Missing docstring in public function": 1
         },
-        "total_violations": 2,
+        "total_violations": 3,
         "most_frequent_violation": {
             "violation_type": "D103: Missing docstring in public function",
             "frequency": 1
         },
-        "number_of_lines_in_code": 27
+        "number_of_lines_in_code": 24
     }
 }

@@ -3,32 +3,36 @@
         "violations": {
             "E302 expected 2 blank lines, found 1": 4,
             "E501 line too long (81 > 79 characters)": 1,
+            "E501 line too long (90 > 79 characters)": 2,
+            "E501 line too long (135 > 79 characters)": 1,
+            "E501 line too long (118 > 79 characters)": 1,
             "E501 line too long (86 > 79 characters)": 1,
-            "E501 line too long (93 > 79 characters)": 1,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 8,
+        "total_violations": 11,
         "most_frequent_violation": {
             "violation_type": "E302 expected 2 blank lines, found 1",
             "frequency": 4
         },
-        "number_of_lines_in_code": 36
+        "number_of_lines_in_code": 38
     },
     "pylint": {
         "violations": {
+            "Line too long (135/100) (line-too-long)": 1,
+            "Line too long (118/100) (line-too-long)": 1,
             "Missing module docstring (missing-module-docstring)": 1,
             "Missing function or method docstring (missing-function-docstring)": 1
         },
-        "total_violations": 2,
+        "total_violations": 4,
         "most_frequent_violation": {
             "violation_type": "Missing function or method docstring (missing-function-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 36
+        "number_of_lines_in_code": 38
     },
     "black": {
         "violations": {
-            "Non-compliant": 1
+            "non_compliant": 1
         },
         "total_violations": 1,
         "most_frequent_violation": {
@@ -37,8 +41,8 @@
         }
     },
     "radon": {
-        "function_complexity": 1.75,
-        "overall_score": 1.75
+        "function_complexity": 2.25,
+        "overall_score": 2.25
     },
     "pydocstyle": {
         "violations": {
@@ -50,6 +54,6 @@
             "violation_type": "D103: Missing docstring in public function",
             "frequency": 1
         },
-        "number_of_lines_in_code": 36
+        "number_of_lines_in_code": 38
     }
 }

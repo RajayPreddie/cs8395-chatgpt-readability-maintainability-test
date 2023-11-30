@@ -1,20 +1,79 @@
-
+NUMBER_OF_EASY_PROBLEMS_RATIO = 0.5
+NUMBER_OF_MEDIUM_PROBLEMS_RATIO = 0.3
 PROBLEM_DIFFICULTY_EASY = "Easy"
 PROBLEM_DIFFICULTY_MEDIUM = "Medium"
 PROBLEM_DIFFICULTY_HARD = "Hard"
-ID = "id"
-DESCRIPTION = "description"
-TAGS = "tags"
-KEYWORDS = "keywords"
-DIFFICULTY = "difficulty"
-PROBLEM_INITIAL_NAME = "problem_"
-USE_THE_FOLLOWING_KEYWORDS = "Use the following keyword(s) to solve a problem with Python: "
-FILTER_MARKDOWN_CODE = r'```python(.*?)```'
+ID_KEY= "id"
+DESCRIPTION_KEY = "description"
+TAGS_KEY = "tags"
+KEYWORDS_KEY = "keywords"
+DIFFICULTY_KEY = "difficulty"
+TAGS_KEY = "tags"
+PROMPT_STYLE_ADHERENCE_KEY = "prompt_style_adherence"
+PROBLEM = "problem"
+USE_THE_FOLLOWING_KEYWORDS = "Use the following keyword(s) to solve a problem with Python:"
+FILTER_MARKDOWN_CODE_REGEX = r'```python(.*?)```'
+FILTER_MARKDOWN_CODE_MATCH_GROUP = 1
 DOT_JSON = ".json"
-CODE = "code"
+CODE_KEY = "code"
+
+# Linting
+UTF_ENCODING = "utf-8"
+TEMP_FILE_NAME_START = "/var"
+PYTHON_FILE_SUFFIX = ".py"
+OVERALL_SCORE_KEY = "overall_score"
+
 CODE_BLOCK_TYPE = "code_block_type"
-FUNCTION_CODE_BLOCK_TYPE = "function"
-CLASS_CODE_BLOCK_TYPE = "class"
-METHOD_CODE_BLOCK_TYPE = "method"
-TAGS = "tags"
-PROMPT_STYLE_ADHERENCE = "prompt_style_adherence"
+FUNCTION_CODE_BLOCK_TYPE_NICKNAME = "F"
+CLASS_CODE_BLOCK_TYPE_NICKNAME = "C"
+METHOD_CODE_BLOCK_TYPE_NICKNAME = "M"
+FUNCTION_CODE_BLOCK_TYPE = "function_complexity"
+CLASS_CODE_BLOCK_TYPE = "class_complexity"
+METHOD_CODE_BLOCK_TYPE = "method_complexity"
+
+# Linting Violations
+VIOLATIONS_KEY = "violations"
+TOTAL_VIOLATIONS_KEY = "total_violations"
+MOST_FREQUENT_VIOLATION_KEY = "most_frequent_violation"
+VIOLATION_TYPE_KEY = "violation_type"
+FREQUENCY_KEY = "frequency"
+NUMBER_OF_LINES_IN_CODE_KEY = "number_of_lines_in_code"
+
+PYLINT_PARSE_YOUR_CODE_HAS_BEEN_RATED_AT = "Your code has been rated at"
+PYLINT_PARSE_STAR = "*"
+PYLINT_PARSE_MINUS = "-"
+FLAKE_8_PARSE_BRACE = "{"
+
+BLACK_WOULD_REFORMAT = "would reformat"
+BLACK_NON_COMPLIANT_KEY =   "non_compliant"
+
+
+PYLINT_OUTPUT_FORMAT_TEXT_ARG = "--output-format=text"
+PYLINT_COMMAND_LINE_ARGS = {
+  PYLINT_OUTPUT_FORMAT_TEXT_ARG: PYLINT_OUTPUT_FORMAT_TEXT_ARG
+}
+BLACK_CHECK_ARG = "--check"
+BLACK_COMMAND_LINE_ARGS = {
+  BLACK_CHECK_ARG: BLACK_CHECK_ARG
+}
+RADON_CLASS_COMPLEXITY_ARG = "cc"
+RADON_SHOW_ARG = "-s"
+RADON_COMMAND_LINE_ARGS = {
+  RADON_CLASS_COMPLEXITY_ARG: RADON_CLASS_COMPLEXITY_ARG,
+  RADON_SHOW_ARG: RADON_SHOW_ARG
+}
+
+# Violation Data class
+VIOLATION_DATA_AVERAGE_VIOLATIONS_PER_LINE_KEY = "average_violations_per_line"
+VIOLATION_DATA_AVERAGE_VIOLATIONS_PER_FILE_KEY = "average_violations_per_file"
+VIOLATION_DATA_VIOLATION_FREQUENCIES_KEY = "violation_frequencies"
+VIOLATION_DATA_MOST_FREQUENT_VIOLATION_KEY = "most_frequent_violation"
+VIOLATION_DATA_TOP_VIOLATIONS_KEY = "top_violations"
+
+# Linter Data Class
+LINTER_DATA_OVERALL_DATA_KEY = "overall"
+LINTER_DATA_BY_TAG_DATA_KEY = "by_tag"
+
+# Radon Data class
+RADON_AVERAGE_FILE_SCORE_KEY = "average_file_score"
+RADON_AVERAGE_CODE_BLOCK_TYPE_SCORES_KEY = "average_code_block_type_scores"

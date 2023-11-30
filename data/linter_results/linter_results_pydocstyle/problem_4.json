@@ -1,34 +1,31 @@
 {
     "flake8": {
         "violations": {
-            "E501 line too long (85 > 79 characters)": 4,
-            "E501 line too long (81 > 79 characters)": 1,
-            "E501 line too long (92 > 79 characters)": 1,
-            "E501 line too long (89 > 79 characters)": 1,
-            "E501 line too long (87 > 79 characters)": 1,
-            "E501 line too long (83 > 79 characters)": 1
+            "E501 line too long (81 > 79 characters)": 2
         },
-        "total_violations": 9,
+        "total_violations": 2,
         "most_frequent_violation": {
-            "violation_type": "E501 line too long (85 > 79 characters)",
-            "frequency": 4
+            "violation_type": "E501 line too long (81 > 79 characters)",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 65
+        "number_of_lines_in_code": 62
     },
     "pylint": {
         "violations": {
-            "Missing module docstring (missing-module-docstring)": 1
+            "Missing module docstring (missing-module-docstring)": 1,
+            "Redefining name 'byte_sequence' from outer scope (line 50) (redefined-outer-name)": 1,
+            "Constant name \"byte_sequence\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1
         },
-        "total_violations": 1,
+        "total_violations": 3,
         "most_frequent_violation": {
-            "violation_type": "Missing module docstring (missing-module-docstring)",
+            "violation_type": "Constant name \"byte_sequence\" doesn't conform to UPPER_CASE naming style (invalid-name)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 65
+        "number_of_lines_in_code": 62
     },
     "black": {
         "violations": {
-            "Non-compliant": 1
+            "non_compliant": 1
         },
         "total_violations": 1,
         "most_frequent_violation": {
@@ -37,8 +34,8 @@
         }
     },
     "radon": {
-        "function_complexity": 2.0,
-        "overall_score": 2.0
+        "function_complexity": 1.6666666666666667,
+        "overall_score": 1.6666666666666667
     },
     "pydocstyle": {
         "violations": {
@@ -49,6 +46,6 @@
             "violation_type": "D100: Missing docstring in public module",
             "frequency": 1
         },
-        "number_of_lines_in_code": 65
+        "number_of_lines_in_code": 62
     }
 }

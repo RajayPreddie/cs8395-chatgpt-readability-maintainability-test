@@ -1,31 +1,27 @@
 {
     "flake8": {
-        "violations": {
-            "W293 blank line contains whitespace": 6
-        },
-        "total_violations": 6,
+        "violations": {},
+        "total_violations": 0,
         "most_frequent_violation": {
-            "violation_type": "W293 blank line contains whitespace",
-            "frequency": 6
+            "violation_type": "",
+            "frequency": 0
         },
-        "number_of_lines_in_code": 50
+        "number_of_lines_in_code": 28
     },
     "pylint": {
         "violations": {
-            "Trailing whitespace (trailing-whitespace)": 2,
-            "Missing module docstring (missing-module-docstring)": 1,
-            "Constant name \"sample_text\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1
+            "Missing module docstring (missing-module-docstring)": 1
         },
-        "total_violations": 4,
+        "total_violations": 1,
         "most_frequent_violation": {
-            "violation_type": "Trailing whitespace (trailing-whitespace)",
-            "frequency": 2
+            "violation_type": "Missing module docstring (missing-module-docstring)",
+            "frequency": 1
         },
-        "number_of_lines_in_code": 50
+        "number_of_lines_in_code": 28
     },
     "black": {
         "violations": {
-            "Non-compliant": 1
+            "non_compliant": 1
         },
         "total_violations": 1,
         "most_frequent_violation": {
@@ -39,13 +35,15 @@
     },
     "pydocstyle": {
         "violations": {
-            "D100: Missing docstring in public module": 1
+            "D100: Missing docstring in public module": 1,
+            "D200: One-line docstring should fit on one line with quotes (found 3)": 2,
+            "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
         },
-        "total_violations": 1,
+        "total_violations": 4,
         "most_frequent_violation": {
-            "violation_type": "D100: Missing docstring in public module",
-            "frequency": 1
+            "violation_type": "D200: One-line docstring should fit on one line with quotes (found 3)",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 50
+        "number_of_lines_in_code": 28
     }
 }

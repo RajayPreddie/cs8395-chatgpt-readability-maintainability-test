@@ -6,23 +6,23 @@
             "violation_type": "",
             "frequency": 0
         },
-        "number_of_lines_in_code": 28
+        "number_of_lines_in_code": 37
     },
     "pylint": {
         "violations": {
             "Missing module docstring (missing-module-docstring)": 1,
-            "Consider using enumerate instead of iterating with range and len (consider-using-enumerate)": 1
+            "Missing function or method docstring (missing-function-docstring)": 1
         },
         "total_violations": 2,
         "most_frequent_violation": {
-            "violation_type": "Consider using enumerate instead of iterating with range and len (consider-using-enumerate)",
+            "violation_type": "Missing function or method docstring (missing-function-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 28
+        "number_of_lines_in_code": 37
     },
     "black": {
         "violations": {
-            "Non-compliant": 1
+            "non_compliant": 1
         },
         "total_violations": 1,
         "most_frequent_violation": {
@@ -31,21 +31,21 @@
         }
     },
     "radon": {
-        "function_complexity": 2.0,
-        "overall_score": 2.0
+        "function_complexity": 1.6666666666666667,
+        "overall_score": 1.6666666666666667
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D202: No blank lines allowed after function docstring (found 1)": 1,
-            "D205: 1 blank line required between summary line and description (found 0)": 1,
-            "D401: First line should be in imperative mood (perhaps 'Take', not 'Takes')": 1
+            "D200: One-line docstring should fit on one line with quotes (found 3)": 2,
+            "D401: First line should be in imperative mood (perhaps 'Convert', not 'Converts')": 2,
+            "D103: Missing docstring in public function": 1
         },
-        "total_violations": 4,
+        "total_violations": 6,
         "most_frequent_violation": {
-            "violation_type": "D401: First line should be in imperative mood (perhaps 'Take', not 'Takes')",
-            "frequency": 1
+            "violation_type": "D401: First line should be in imperative mood (perhaps 'Convert', not 'Converts')",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 28
+        "number_of_lines_in_code": 37
     }
 }

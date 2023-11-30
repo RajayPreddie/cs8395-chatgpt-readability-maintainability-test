@@ -1,11 +1,11 @@
 {
     "name": "ChatGPT Code Readability and Maintainability Tester",
     "tags": [],
-    "output": 1.8055555555555558,
-    "default_output": 1.8,
-    "flake8_output": 1.9333333333333336,
-    "pylint_output": 1.5666666666666667,
-    "black_output": 1.4,
-    "radon_output": 1.9833333333333336,
-    "pydocstyle_output": 2.15
+    "output": 1.9611111111111112,
+    "default_output": 2.1333333333333333,
+    "flake8_output": 2.6333333333333337,
+    "pylint_output": 1.6666666666666667,
+    "black_output": 2.083333333333333,
+    "radon_output": 1.5166666666666666,
+    "pydocstyle_output": 1.7333333333333336
 }
