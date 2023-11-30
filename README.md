@@ -28,7 +28,9 @@ python main.py --generate_responses --linters [OPTIONS]
 ```
 
 - `--generate_responses`: Activates the generation of Python programs using ChatGPT.
-- `--linters`: Specify which linters to apply. Options include `flake8`, `pylint`, `black`, `radon`, `pydocstyle`, `default`, and `all`. Defaults to `default` when not specified.
+- `--linters`: Specify which linter prompts to apply. Options include `flake8`, `pylint`, `black`, `radon`, `pydocstyle`, `default`, and `all`. Defaults to `default` when not specified.
+On each run of the tool, all of the linters/tools are used. The --linters argument is
+for speciyfing which linter prompts to use when prompting ChatGPT for python programs.
 
 For example:
 
@@ -36,7 +38,7 @@ For example:
 python main.py --generate_responses --linters flake8 pylint
 ```
 
-This command generates Python programs using ChatGPT and subsequently analyzes them with both flake8 and pylint linters.
+This command generates Python programs using ChatGPT prompts that ask to adhere to flake8 and pylint.
 
 ## Utility Scripts Overview
 - **chat_gpt_utils.py**: Manages interactions with GPT models for problem description generation.
@@ -74,9 +76,6 @@ A generalized form of data tracking for various linting tools, highlighting over
 ### Individual Linter Output Scores
 The `output.json` file provides an overall analysis of code readability and maintainability through the lens of Radon.
 
-Each score is the Radon average score per file for each linter prompt, providing a focused analysis on specific aspects of code quality based on the linter used.
+Each score is the Radon average score per file for each linter prompt, providing an insight into the readability and maintainability of the code ChatGPT writes based on the linter prompt.
 
-These scores are crucial in identifying specific areas where the code excels or needs improvement, guiding our team towards writing cleaner, more maintainable, and well-documented Python code.
 
-## Contributing
-We welcome contributions from our team. Please adhere to the standard fork-and-pull request workflow. Ensure that your contributions comply with our coding standards and include necessary tests.
