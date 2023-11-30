@@ -2,28 +2,26 @@
     "flake8": {
         "violations": {
             "E302 expected 2 blank lines, found 1": 2,
-            "W293 blank line contains whitespace": 2,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 5,
+        "total_violations": 3,
         "most_frequent_violation": {
-            "violation_type": "W293 blank line contains whitespace",
+            "violation_type": "E302 expected 2 blank lines, found 1",
             "frequency": 2
         },
-        "number_of_lines_in_code": 15
+        "number_of_lines_in_code": 19
     },
     "pylint": {
         "violations": {
-            "Trailing whitespace (trailing-whitespace)": 2,
             "Missing module docstring (missing-module-docstring)": 1,
             "Missing function or method docstring (missing-function-docstring)": 1
         },
-        "total_violations": 4,
+        "total_violations": 2,
         "most_frequent_violation": {
-            "violation_type": "Trailing whitespace (trailing-whitespace)",
-            "frequency": 2
+            "violation_type": "Missing function or method docstring (missing-function-docstring)",
+            "frequency": 1
         },
-        "number_of_lines_in_code": 15
+        "number_of_lines_in_code": 19
     },
     "black": {
         "violations": {
@@ -42,13 +40,14 @@
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
+            "D401: First line should be in imperative mood (perhaps 'Convert', not 'Converts')": 2,
             "D103: Missing docstring in public function": 1
         },
-        "total_violations": 2,
+        "total_violations": 4,
         "most_frequent_violation": {
-            "violation_type": "D103: Missing docstring in public function",
-            "frequency": 1
+            "violation_type": "D401: First line should be in imperative mood (perhaps 'Convert', not 'Converts')",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 15
+        "number_of_lines_in_code": 19
     }
 }

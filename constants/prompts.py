@@ -56,7 +56,7 @@ RADON_PROMPT = (    "Act as a Python developer and write a Python program with a
     "Verify the program's correctness as if using a Command Line Interface.")
 
 PYDOCSTYLE_PROMPT = (    "Act as a Python developer and write a Python program that strictly adheres to the pydocstyle standard for docstrings. "
-    "Include a module-level docstring as per pydocstyle guidelines. Here's an example snippet:\n\n"
+    "Here's an example snippet:\n\n"
     "\"\"\"Module for demonstrating pydocstyle adherence.\n\n"
     "This module provides examples of how to write docstrings that conform to pydocstyle standards.\n"
     "\"\"\"\n\n"

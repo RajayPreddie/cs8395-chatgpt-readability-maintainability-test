@@ -32,7 +32,7 @@ def createArgs():
   # Updated argument for linters/tools
   parser.add_argument('--linters', nargs='*', choices=['flake8', 'pylint', 'black', 'radon', 'pydocstyle', 'default', 'all'],
                       default=['default'],
-                      help='Specify which linter/tool prompts to regenerate. '
+                      help='Specify which linter/tool prompts to run. '
                           'Options include flake8, pylint, black, radon, pydocstyle, default, or all. '
                           '"default" uses the default prompt. If not specified, defaults to "default".')
 

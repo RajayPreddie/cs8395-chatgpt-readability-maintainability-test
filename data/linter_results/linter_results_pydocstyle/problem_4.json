@@ -1,26 +1,30 @@
 {
     "flake8": {
         "violations": {
-            "E501 line too long (89 > 79 characters)": 1
+            "E501 line too long (85 > 79 characters)": 4,
+            "E501 line too long (81 > 79 characters)": 1,
+            "E501 line too long (92 > 79 characters)": 1,
+            "E501 line too long (89 > 79 characters)": 1,
+            "E501 line too long (87 > 79 characters)": 1,
+            "E501 line too long (83 > 79 characters)": 1
         },
-        "total_violations": 1,
+        "total_violations": 9,
         "most_frequent_violation": {
-            "violation_type": "E501 line too long (89 > 79 characters)",
-            "frequency": 1
+            "violation_type": "E501 line too long (85 > 79 characters)",
+            "frequency": 4
         },
-        "number_of_lines_in_code": 45
+        "number_of_lines_in_code": 65
     },
     "pylint": {
         "violations": {
-            "Constant name \"string_to_count\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
-            "Constant name \"bytes_count\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1
+            "Missing module docstring (missing-module-docstring)": 1
         },
-        "total_violations": 2,
+        "total_violations": 1,
         "most_frequent_violation": {
-            "violation_type": "Constant name \"bytes_count\" doesn't conform to UPPER_CASE naming style (invalid-name)",
+            "violation_type": "Missing module docstring (missing-module-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 45
+        "number_of_lines_in_code": 65
     },
     "black": {
         "violations": {
@@ -33,16 +37,18 @@
         }
     },
     "radon": {
-        "function_complexity": 1.6666666666666667,
-        "overall_score": 1.6666666666666667
+        "function_complexity": 2.0,
+        "overall_score": 2.0
     },
     "pydocstyle": {
-        "violations": {},
-        "total_violations": 0,
-        "most_frequent_violation": {
-            "violation_type": "",
-            "frequency": 0
+        "violations": {
+            "D100: Missing docstring in public module": 1
         },
-        "number_of_lines_in_code": 45
+        "total_violations": 1,
+        "most_frequent_violation": {
+            "violation_type": "D100: Missing docstring in public module",
+            "frequency": 1
+        },
+        "number_of_lines_in_code": 65
     }
 }

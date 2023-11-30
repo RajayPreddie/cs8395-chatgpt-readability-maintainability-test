@@ -1,25 +1,25 @@
 {
     "flake8": {
         "violations": {
-            "E302 expected 2 blank lines, found 1": 2
+            "E302 expected 2 blank lines, found 1": 3
         },
-        "total_violations": 2,
+        "total_violations": 3,
         "most_frequent_violation": {
             "violation_type": "E302 expected 2 blank lines, found 1",
-            "frequency": 2
+            "frequency": 3
         },
-        "number_of_lines_in_code": 29
+        "number_of_lines_in_code": 40
     },
     "pylint": {
         "violations": {
-            "Formatting a regular string which could be an f-string (consider-using-f-string)": 1
+            "Missing module docstring (missing-module-docstring)": 1
         },
         "total_violations": 1,
         "most_frequent_violation": {
-            "violation_type": "Formatting a regular string which could be an f-string (consider-using-f-string)",
+            "violation_type": "Missing module docstring (missing-module-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 29
+        "number_of_lines_in_code": 40
     },
     "black": {
         "violations": {
@@ -32,16 +32,18 @@
         }
     },
     "radon": {
-        "function_complexity": 1.5,
-        "overall_score": 1.5
+        "function_complexity": 1.0,
+        "overall_score": 1.0
     },
     "pydocstyle": {
-        "violations": {},
-        "total_violations": 0,
-        "most_frequent_violation": {
-            "violation_type": "",
-            "frequency": 0
+        "violations": {
+            "D100: Missing docstring in public module": 1
         },
-        "number_of_lines_in_code": 29
+        "total_violations": 1,
+        "most_frequent_violation": {
+            "violation_type": "D100: Missing docstring in public module",
+            "frequency": 1
+        },
+        "number_of_lines_in_code": 40
     }
 }

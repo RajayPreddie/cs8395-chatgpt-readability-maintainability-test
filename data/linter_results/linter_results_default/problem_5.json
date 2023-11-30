@@ -1,35 +1,34 @@
 {
     "flake8": {
         "violations": {
-            "F401 'os' imported but unused": 1,
-            "E302 expected 2 blank lines, found 1": 4,
-            "E501 line too long (84 > 79 characters)": 1,
-            "E501 line too long (85 > 79 characters)": 1,
-            "E501 line too long (96 > 79 characters)": 1,
-            "E501 line too long (98 > 79 characters)": 1,
-            "E501 line too long (99 > 79 characters)": 1,
-            "E501 line too long (83 > 79 characters)": 1,
-            "E305 expected 2 blank lines after class or function definition, found 1": 1
+            "E302 expected 2 blank lines, found 1": 2,
+            "E305 expected 2 blank lines after class or function definition, found 1": 1,
+            "E501 line too long (117 > 79 characters)": 1,
+            "E501 line too long (82 > 79 characters)": 1,
+            "E501 line too long (91 > 79 characters)": 1,
+            "E501 line too long (90 > 79 characters)": 1,
+            "E501 line too long (88 > 79 characters)": 1
         },
-        "total_violations": 12,
+        "total_violations": 8,
         "most_frequent_violation": {
             "violation_type": "E302 expected 2 blank lines, found 1",
-            "frequency": 4
+            "frequency": 2
         },
-        "number_of_lines_in_code": 36
+        "number_of_lines_in_code": 45
     },
     "pylint": {
         "violations": {
+            "Line too long (117/100) (line-too-long)": 1,
             "Missing module docstring (missing-module-docstring)": 1,
-            "Missing function or method docstring (missing-function-docstring)": 1,
-            "Unused import os (unused-import)": 1
+            "Missing function or method docstring (missing-function-docstring)": 2,
+            "Redefining name 'default_config' from outer scope (line 33) (redefined-outer-name)": 1
         },
-        "total_violations": 3,
+        "total_violations": 5,
         "most_frequent_violation": {
-            "violation_type": "Unused import os (unused-import)",
-            "frequency": 1
+            "violation_type": "Missing function or method docstring (missing-function-docstring)",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 36
+        "number_of_lines_in_code": 45
     },
     "black": {
         "violations": {
@@ -42,22 +41,19 @@
         }
     },
     "radon": {
-        "function_complexity": 2.5,
-        "overall_score": 2.5
+        "function_complexity": 3.0,
+        "overall_score": 3.0
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D400: First line should end with a period (not 'p')": 1,
-            "D400: First line should end with a period (not 'n')": 1,
-            "D400: First line should end with a period (not 's')": 1,
-            "D103: Missing docstring in public function": 1
+            "D103: Missing docstring in public function": 2
         },
-        "total_violations": 5,
+        "total_violations": 3,
         "most_frequent_violation": {
             "violation_type": "D103: Missing docstring in public function",
-            "frequency": 1
+            "frequency": 2
         },
-        "number_of_lines_in_code": 36
+        "number_of_lines_in_code": 45
     }
 }

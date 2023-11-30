@@ -2,7 +2,7 @@
     "flake8": {
         "violations": {
             "E302 expected 2 blank lines, found 1": 3,
-            "E501 line too long (85 > 79 characters)": 1,
+            "E501 line too long (88 > 79 characters)": 1,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
         "total_violations": 5,
@@ -10,21 +10,18 @@
             "violation_type": "E302 expected 2 blank lines, found 1",
             "frequency": 3
         },
-        "number_of_lines_in_code": 28
+        "number_of_lines_in_code": 26
     },
     "pylint": {
         "violations": {
-            "Missing module docstring (missing-module-docstring)": 1,
-            "Redefining name 'dict_list' from outer scope (line 24) (redefined-outer-name)": 1,
-            "Redefining name 'numbers' from outer scope (line 29) (redefined-outer-name)": 1,
-            "Redefining name 'data_chunks' from outer scope (line 34) (redefined-outer-name)": 1
+            "Missing module docstring (missing-module-docstring)": 1
         },
-        "total_violations": 4,
+        "total_violations": 1,
         "most_frequent_violation": {
-            "violation_type": "Redefining name 'data_chunks' from outer scope (line 34) (redefined-outer-name)",
+            "violation_type": "Missing module docstring (missing-module-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 28
+        "number_of_lines_in_code": 26
     },
     "black": {
         "violations": {
@@ -37,8 +34,8 @@
         }
     },
     "radon": {
-        "function_complexity": 1.3333333333333333,
-        "overall_score": 1.3333333333333333
+        "function_complexity": 2.0,
+        "overall_score": 2.0
     },
     "pydocstyle": {
         "violations": {
@@ -49,6 +46,6 @@
             "violation_type": "D100: Missing docstring in public module",
             "frequency": 1
         },
-        "number_of_lines_in_code": 28
+        "number_of_lines_in_code": 26
     }
 }

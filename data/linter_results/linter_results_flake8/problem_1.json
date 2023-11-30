@@ -1,14 +1,14 @@
 {
     "flake8": {
         "violations": {
-            "E501 line too long (91 > 79 characters)": 1
+            "W293 blank line contains whitespace": 2
         },
-        "total_violations": 1,
+        "total_violations": 2,
         "most_frequent_violation": {
-            "violation_type": "E501 line too long (91 > 79 characters)",
-            "frequency": 1
+            "violation_type": "W293 blank line contains whitespace",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 16
+        "number_of_lines_in_code": 22
     },
     "pylint": {
         "violations": {
@@ -20,7 +20,7 @@
             "violation_type": "Missing function or method docstring (missing-function-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 16
+        "number_of_lines_in_code": 22
     },
     "black": {
         "violations": {
@@ -46,6 +46,6 @@
             "violation_type": "D103: Missing docstring in public function",
             "frequency": 1
         },
-        "number_of_lines_in_code": 16
+        "number_of_lines_in_code": 22
     }
 }

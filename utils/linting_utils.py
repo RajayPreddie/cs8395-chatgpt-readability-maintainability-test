@@ -47,7 +47,7 @@ def parse_radon_output(output):
         
   if "overall_score" in radon_data:
     radon_data['overall_score'] = radon_data['overall_score'] / number_of_lines
-  if "class_complexityy" in radon_data:
+  if "class_complexity" in radon_data:
     radon_data['class_complexity'] /= code_block_type_frequency["class_complexity"]
 
   if "method_complexity" in radon_data:
@@ -105,7 +105,7 @@ def run_all_linters(code):
   # Save the code to a temporary file
   tmp_filename = save_code_to_temp_file(code)
   # Create a dictionary to store the results
-  number_of_lines_in_code = count_non_empty_lines(code)
+  number_of_lines_in_code = count_lines(code)
   results = {}
   # flake8
   flake8_output, _ = run_linting_tool('flake8', tmp_filename)
@@ -146,9 +146,7 @@ def getLinterResultsForProblems(prompt_solutions):
     # Add the prompt solution to the dictionary
     linter_results_for_prompt_solutions[id] = lint_results
   return linter_results_for_prompt_solutions
-def count_non_empty_lines(code_str):
+def count_lines(code_str):
     # Split the string into lines
     lines = code_str.splitlines()
-    # Filter out the empty lines
-    non_empty_lines = [line for line in lines if line.strip()]
-    return len(non_empty_lines)
+    return len(lines)
