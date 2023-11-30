@@ -1,26 +1,30 @@
 {
     "flake8": {
         "violations": {
+            "E501 line too long (83 > 79 characters)": 1,
+            "E302 expected 2 blank lines, found 1": 1,
+            "W293 blank line contains whitespace": 3,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 1,
+        "total_violations": 6,
         "most_frequent_violation": {
-            "violation_type": "E305 expected 2 blank lines after class or function definition, found 1",
-            "frequency": 1
+            "violation_type": "W293 blank line contains whitespace",
+            "frequency": 3
         },
-        "number_of_lines_in_code": 19
+        "number_of_lines_in_code": 28
     },
     "pylint": {
         "violations": {
+            "Trailing whitespace (trailing-whitespace)": 3,
             "Missing module docstring (missing-module-docstring)": 1,
-            "Redefining name 'duplicates' from outer scope (line 18) (redefined-outer-name)": 1
+            "Missing function or method docstring (missing-function-docstring)": 1
         },
-        "total_violations": 2,
+        "total_violations": 5,
         "most_frequent_violation": {
-            "violation_type": "Redefining name 'duplicates' from outer scope (line 18) (redefined-outer-name)",
-            "frequency": 1
+            "violation_type": "Trailing whitespace (trailing-whitespace)",
+            "frequency": 3
         },
-        "number_of_lines_in_code": 19
+        "number_of_lines_in_code": 28
     },
     "black": {
         "violations": {
@@ -33,20 +37,21 @@
         }
     },
     "radon": {
-        "function_complexity": 3.0,
-        "overall_score": 3.0
+        "function_complexity": 2.5,
+        "overall_score": 2.5
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
             "D200: One-line docstring should fit on one line with quotes (found 3)": 1,
-            "D401: First line should be in imperative mood (perhaps 'Find', not 'Finds')": 1
+            "D401: First line should be in imperative mood (perhaps 'Remove', not 'Removes')": 1,
+            "D103: Missing docstring in public function": 1
         },
-        "total_violations": 3,
+        "total_violations": 4,
         "most_frequent_violation": {
-            "violation_type": "D401: First line should be in imperative mood (perhaps 'Find', not 'Finds')",
+            "violation_type": "D103: Missing docstring in public function",
             "frequency": 1
         },
-        "number_of_lines_in_code": 19
+        "number_of_lines_in_code": 28
     }
 }

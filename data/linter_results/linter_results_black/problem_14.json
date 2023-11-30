@@ -1,0 +1,52 @@
+{
+    "flake8": {
+        "violations": {
+            "E501 line too long (85 > 79 characters)": 1
+        },
+        "total_violations": 1,
+        "most_frequent_violation": {
+            "violation_type": "E501 line too long (85 > 79 characters)",
+            "frequency": 1
+        },
+        "number_of_lines_in_code": 39
+    },
+    "pylint": {
+        "violations": {
+            "Missing module docstring (missing-module-docstring)": 1,
+            "Missing function or method docstring (missing-function-docstring)": 1,
+            "Consider using '{}' instead of a call to 'dict'. (use-dict-literal)": 1
+        },
+        "total_violations": 3,
+        "most_frequent_violation": {
+            "violation_type": "Consider using '{}' instead of a call to 'dict'. (use-dict-literal)",
+            "frequency": 1
+        },
+        "number_of_lines_in_code": 39
+    },
+    "black": {
+        "violations": {
+            "non_compliant": 1
+        },
+        "total_violations": 1,
+        "most_frequent_violation": {
+            "violation_type": "would reformat",
+            "frequency": 1
+        }
+    },
+    "radon": {
+        "function_complexity": 7.0,
+        "overall_score": 7.0
+    },
+    "pydocstyle": {
+        "violations": {
+            "D100: Missing docstring in public module": 1,
+            "D103: Missing docstring in public function": 1
+        },
+        "total_violations": 2,
+        "most_frequent_violation": {
+            "violation_type": "D103: Missing docstring in public function",
+            "frequency": 1
+        },
+        "number_of_lines_in_code": 39
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "id": "problem_15",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pydocstyle standard for docstrings. Here's an example snippet:\n\n\"\"\"Module for demonstrating pydocstyle adherence.\n\nThis module provides examples of how to write docstrings that conform to pydocstyle standards.\n\"\"\"\n\ndef add_numbers(x, y):\n    \"\"\"Add two numbers and return the result.\n\n    :param x: The first number to add.\n    :param y: The second number to add.\n    :return: The sum of x and y.\n    \"\"\"\n    return x + y\n\nFocus on comprehensive and compliant docstring documentation. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: dict,frozenset.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\ndef merge_dictionaries(dict1, dict2):\n    \"\"\"Merge two dictionaries into a frozenset of tuples.\n\n    Each tuple contains a key and the corresponding value from either dictionary.\n    If a key is present in both dictionaries, the value from the first dictionary\n    will be used.\n\n    :param dict1: The first dictionary to merge.\n    :param dict2: The second dictionary to merge.\n    :return: A frozenset containing tuples of key-value pairs.\n    \"\"\"\n    merged = dict1.copy()\n    for key, value in dict2.items():\n        if key not in merged:\n            merged[key] = value\n    return frozenset(merged.items())\n\n# Example usage:\n# dict_a = {'apple': 1, 'banana': 2}\n# dict_b = {'banana': 3, 'orange': 4}\n# result = merge_dictionaries(dict_a, dict_b)\n# print(result)\n",
+    "tags": [
+        "dict",
+        "frozenset",
+        "Medium"
+    ],
+    "keywords": [
+        "dict",
+        "frozenset"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "pydocstyle"
+}

@@ -1,0 +1,16 @@
+{
+    "id": "problem_12",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. Here's an example snippet compliant with pylint:\n\n\"\"\"Module for demonstrating pylint adherence.\n\nThis module provides an example function formatted to comply with pylint standards.\n\"\"\"\n\ndef calculate_sum(a, b):\n    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n    return a + b\n\nFocus on clean, readable code following the style of the provided snippet. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: DefaultDict,DependencyInjection.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import defaultdict\nfrom typing import Callable, DefaultDict, TypeVar\n\nT = TypeVar('T')\n\nclass DependencyInjector:\n    \"\"\"A simple dependency injector to manage dependencies.\"\"\"\n\n    def __init__(self):\n        self._dependencies: DefaultDict[str, Callable] = defaultdict(lambda: None)\n\n    def add_dependency(self, name: str, provider: Callable):\n        \"\"\"Add a dependency provider.\"\"\"\n        self._dependencies[name] = provider\n\n    def get_dependency(self, name: str) -> T:\n        \"\"\"Retrieve a dependency by name.\"\"\"\n        provider = self._dependencies[name]\n        if provider is None:\n            raise ValueError(f\"Dependency '{name}' not found\")\n        return provider()\n\ndef greet_user(user_repository):\n    \"\"\"Greet users based on the user repository provided.\"\"\"\n    users = user_repository.get_users()\n    for user in users:\n        print(f\"Hello, {user}!\")\n\nclass UserRepository:\n    \"\"\"A simple user repository.\"\"\"\n\n    def get_users(self):\n        \"\"\"Return a list of users.\"\"\"\n        return ['Alice', 'Bob', 'Charlie']\n\nif __name__ == \"__main__\":\n    injector = DependencyInjector()\n    injector.add_dependency('user_repository', UserRepository)\n\n    user_repo = injector.get_dependency('user_repository')\n    greet_user(user_repo)\n",
+    "tags": [
+        "DefaultDict",
+        "DependencyInjection",
+        "Medium"
+    ],
+    "keywords": [
+        "DefaultDict",
+        "DependencyInjection"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "pylint"
+}

@@ -1,0 +1,18 @@
+{
+    "id": "problem_19",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pydocstyle standard for docstrings. Here's an example snippet:\n\n\"\"\"Module for demonstrating pydocstyle adherence.\n\nThis module provides examples of how to write docstrings that conform to pydocstyle standards.\n\"\"\"\n\ndef add_numbers(x, y):\n    \"\"\"Add two numbers and return the result.\n\n    :param x: The first number to add.\n    :param y: The second number to add.\n    :return: The sum of x and y.\n    \"\"\"\n    return x + y\n\nFocus on comprehensive and compliant docstring documentation. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Global state,heapq,IdiomaticPython.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\n\"\"\"Module for demonstrating pydocstyle adherence with heapq and global state.\n\nThis module provides an example of how to use heapq to manage a global priority queue.\n\"\"\"\n\nimport heapq\n\n# Global priority queue\npriority_queue = []\n\ndef add_to_priority_queue(item, priority):\n    \"\"\"Add an item with a given priority to the global priority queue.\n\n    This function uses the heapq module to maintain the global priority queue.\n\n    :param item: The item to be added to the priority queue.\n    :param priority: The priority of the item, with lower values indicating higher priority.\n    \"\"\"\n    heapq.heappush(priority_queue, (priority, item))\n\ndef pop_from_priority_queue():\n    \"\"\"Remove and return the highest priority item from the global priority queue.\n\n    If the priority queue is empty, None is returned.\n\n    :return: The highest priority item, or None if the priority queue is empty.\n    \"\"\"\n    if priority_queue:\n        return heapq.heappop(priority_queue)[1]\n    else:\n        return None\n\ndef get_priority_queue():\n    \"\"\"Get a sorted list of items from the global priority queue.\n\n    This function returns a list of items sorted by their priority, from highest to lowest.\n\n    :return: A list of tuples, each containing the priority and the item.\n    \"\"\"\n    return sorted(priority_queue)\n\n# Example usage\nif __name__ == \"__main__\":\n    add_to_priority_queue(\"task1\", 2)\n    add_to_priority_queue(\"task2\", 1)\n    add_to_priority_queue(\"task3\", 3)\n\n    print(\"Next task:\", pop_from_priority_queue())  # Should print \"task2\"\n    print(\"Remaining tasks:\", get_priority_queue())  # Should print the remaining tasks in order\n",
+    "tags": [
+        "Global state",
+        "heapq",
+        "IdiomaticPython",
+        "Hard"
+    ],
+    "keywords": [
+        "Global state",
+        "heapq",
+        "IdiomaticPython"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "pydocstyle"
+}

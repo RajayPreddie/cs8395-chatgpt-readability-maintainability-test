@@ -1,0 +1,14 @@
+{
+    "id": "problem_10",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pydocstyle standard for docstrings. Here's an example snippet:\n\n\"\"\"Module for demonstrating pydocstyle adherence.\n\nThis module provides examples of how to write docstrings that conform to pydocstyle standards.\n\"\"\"\n\ndef add_numbers(x, y):\n    \"\"\"Add two numbers and return the result.\n\n    :param x: The first number to add.\n    :param y: The second number to add.\n    :return: The sum of x and y.\n    \"\"\"\n    return x + y\n\nFocus on comprehensive and compliant docstring documentation. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Counter.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import Counter\n\ndef count_elements(iterable):\n    \"\"\"Count the occurrences of elements in an iterable.\n\n    This function takes an iterable and returns a dictionary-like object\n    where elements are keys and their counts are values.\n\n    :param iterable: An iterable of hashable elements to count.\n    :type iterable: list, tuple, or any iterable of hashable items.\n    :return: A Counter object with the count of each element.\n    :rtype: collections.Counter\n    \"\"\"\n    return Counter(iterable)\n\nif __name__ == \"__main__\":\n    # Example usage:\n    # Count the occurrences of characters in a string.\n    example_string = \"pydocstyle adherence\"\n    character_count = count_elements(example_string)\n    for char, count in character_count.items():\n        print(f\"'{char}': {count}\")\n",
+    "tags": [
+        "Counter",
+        "Easy"
+    ],
+    "keywords": [
+        "Counter"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "pydocstyle"
+}

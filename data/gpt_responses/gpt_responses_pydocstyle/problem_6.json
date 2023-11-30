@@ -1,0 +1,14 @@
+{
+    "id": "problem_6",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pydocstyle standard for docstrings. Here's an example snippet:\n\n\"\"\"Module for demonstrating pydocstyle adherence.\n\nThis module provides examples of how to write docstrings that conform to pydocstyle standards.\n\"\"\"\n\ndef add_numbers(x, y):\n    \"\"\"Add two numbers and return the result.\n\n    :param x: The first number to add.\n    :param y: The second number to add.\n    :return: The sum of x and y.\n    \"\"\"\n    return x + y\n\nFocus on comprehensive and compliant docstring documentation. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Comprehension.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\ndef generate_squares(max_root):\n    \"\"\"Generate a dictionary of squares from 1 to max_root.\n\n    Each key-value pair in the dictionary is a number and its square.\n\n    :param max_root: The maximum number to compute the square of.\n    :type max_root: int\n    :return: A dictionary with numbers as keys and their squares as values.\n    :rtype: dict\n    :raises TypeError: If max_root is not an integer.\n    \"\"\"\n    if not isinstance(max_root, int):\n        raise TypeError(\"max_root must be an integer\")\n\n    return {num: num**2 for num in range(1, max_root + 1)}\n\n\ndef filter_odd_squares(squares_dict):\n    \"\"\"Filter out the odd squares from a dictionary of squares.\n\n    :param squares_dict: A dictionary with numbers as keys and their squares as values.\n    :type squares_dict: dict\n    :return: A new dictionary with only even squares.\n    :rtype: dict\n    \"\"\"\n    return {num: square for num, square in squares_dict.items() if square % 2 == 0}\n\n\n# Example usage\nif __name__ == \"__main__\":\n    squares = generate_squares(10)\n    even_squares = filter_odd_squares(squares)\n    print(even_squares)\n",
+    "tags": [
+        "Comprehension",
+        "Easy"
+    ],
+    "keywords": [
+        "Comprehension"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "pydocstyle"
+}

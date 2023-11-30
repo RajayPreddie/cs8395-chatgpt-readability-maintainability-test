@@ -1,0 +1,16 @@
+{
+    "id": "problem_14",
+    "description": "Act as a Python developer and create a Python program that adheres to the flake8 coding standard. Here's an example snippet:\n\n# Example Snippet for Flake8\ndef find_max(numbers):\n    \"\"\"Find the maximum number in a list.\"\"\"\n    return max(numbers) if numbers else None\n\nEnsure your code is clean, readable, and adheres to flake8 standards. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Deque,dict.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import deque\n\ndef manage_orders():\n    \"\"\"Manage orders using deque and dict for quick access and updates.\"\"\"\n    order_queue = deque()\n    order_details = {}\n\n    while True:\n        action = input(\"Enter action (add, serve, exit): \").strip().lower()\n\n        if action == 'add':\n            order_id = input(\"Enter order ID: \").strip()\n            details = input(\"Enter order details: \").strip()\n            order_queue.append(order_id)\n            order_details[order_id] = details\n            print(f\"Order {order_id} added.\")\n\n        elif action == 'serve':\n            if order_queue:\n                served_order = order_queue.popleft()\n                served_details = order_details.pop(served_order)\n                print(f\"Order {served_order} served with details: {served_details}\")\n            else:\n                print(\"No orders to serve.\")\n\n        elif action == 'exit':\n            print(\"Exiting order manager.\")\n            break\n        else:\n            print(\"Invalid action. Please choose 'add', 'serve', or 'exit'.\")\n\nif __name__ == \"__main__\":\n    manage_orders()\n",
+    "tags": [
+        "Deque",
+        "dict",
+        "Medium"
+    ],
+    "keywords": [
+        "Deque",
+        "dict"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "flake8"
+}

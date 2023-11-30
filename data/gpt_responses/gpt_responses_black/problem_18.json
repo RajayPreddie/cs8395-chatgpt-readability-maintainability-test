@@ -1,0 +1,18 @@
+{
+    "id": "problem_18",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the Black coding style. Here's an example snippet formatted using Black:\n\ndef format_name(first_name, last_name):\n    formatted_first_name = first_name.strip().title()\n    formatted_last_name = last_name.strip().title()\n    return f\"{formatted_first_name} {formatted_last_name}\"\n\nEnsure the code is formatted according to Black's uncompromising style. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Generator,Global state,heapq.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nimport heapq\n\nclass GlobalState:\n    def __init__(self):\n        self._data_heap = []\n\n    def add_data(self, value):\n        heapq.heappush(self._data_heap, value)\n\n    def get_smallest(self):\n        return heapq.heappop(self._data_heap) if self._data_heap else None\n\n    def __iter__(self):\n        return self\n\n    def __next__(self):\n        if not self._data_heap:\n            raise StopIteration\n        return self.get_smallest()\n\ndef data_generator(start, end):\n    for i in range(start, end + 1):\n        yield i\n\ndef main():\n    global_state = GlobalState()\n    start, end = 1, 10\n\n    for data in data_generator(start, end):\n        global_state.add_data(data)\n\n    print(\"Smallest to largest:\")\n    for data in global_state:\n        print(data)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "Generator",
+        "Global state",
+        "heapq",
+        "Hard"
+    ],
+    "keywords": [
+        "Generator",
+        "Global state",
+        "heapq"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "black"
+}

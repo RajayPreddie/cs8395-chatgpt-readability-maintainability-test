@@ -1,28 +1,27 @@
 {
     "flake8": {
         "violations": {
-            "E501 line too long (80 > 79 characters)": 2,
-            "E302 expected 2 blank lines, found 1": 1,
-            "E305 expected 2 blank lines after class or function definition, found 1": 1
-        },
-        "total_violations": 4,
-        "most_frequent_violation": {
-            "violation_type": "E501 line too long (80 > 79 characters)",
-            "frequency": 2
-        },
-        "number_of_lines_in_code": 30
-    },
-    "pylint": {
-        "violations": {
-            "Missing module docstring (missing-module-docstring)": 1,
-            "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)": 1
+            "E501 line too long (99 > 79 characters)": 1,
+            "E501 line too long (109 > 79 characters)": 1
         },
         "total_violations": 2,
         "most_frequent_violation": {
-            "violation_type": "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)",
+            "violation_type": "E501 line too long (109 > 79 characters)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 30
+        "number_of_lines_in_code": 24
+    },
+    "pylint": {
+        "violations": {
+            "Line too long (109/100) (line-too-long)": 1,
+            "Missing module docstring (missing-module-docstring)": 1
+        },
+        "total_violations": 2,
+        "most_frequent_violation": {
+            "violation_type": "Missing module docstring (missing-module-docstring)",
+            "frequency": 1
+        },
+        "number_of_lines_in_code": 24
     },
     "black": {
         "violations": {
@@ -35,8 +34,8 @@
         }
     },
     "radon": {
-        "function_complexity": 1.5,
-        "overall_score": 1.5
+        "function_complexity": 2.0,
+        "overall_score": 2.0
     },
     "pydocstyle": {
         "violations": {
@@ -47,6 +46,6 @@
             "violation_type": "D100: Missing docstring in public module",
             "frequency": 1
         },
-        "number_of_lines_in_code": 30
+        "number_of_lines_in_code": 24
     }
 }

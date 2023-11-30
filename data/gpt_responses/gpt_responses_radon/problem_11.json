@@ -1,0 +1,16 @@
+{
+    "id": "problem_11",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Decorator,DefaultDict.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import defaultdict\nfrom functools import wraps\n\ndef memoize(func):\n    \"\"\"\n    Decorator to cache the results of the function call.\n    \"\"\"\n    cache = defaultdict(int)\n\n    @wraps(func)\n    def memoized_func(*args):\n        if args not in cache:\n            cache[args] = func(*args)\n        return cache[args]\n\n    return memoized_func\n\n@memoize\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number with memoization.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "Decorator",
+        "DefaultDict",
+        "Medium"
+    ],
+    "keywords": [
+        "Decorator",
+        "DefaultDict"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "radon"
+}

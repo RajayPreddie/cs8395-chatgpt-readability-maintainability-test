@@ -1,18 +1,14 @@
 {
     "id": "problem_4",
-    "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytes,ChainMap,Comprehension.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
-    "code": "\nfrom collections import ChainMap\n\ndef merge_dictionaries(dict1, dict2):\n    # Using ChainMap to merge two dictionaries\n    merged_dict = ChainMap(dict1, dict2)\n    return merged_dict\n\ndef convert_to_bytes(merged_dict):\n    # Using bytes comprehension to convert merged dictionary values to bytes\n    bytes_dict = {k: bytes(v, 'utf-8') for k, v in merged_dict.items()}\n    return bytes_dict\n\ndef main():\n    # Two sample dictionaries\n    dict1 = {'apple': 'fruit', 'carrot': 'vegetable'}\n    dict2 = {'python': 'language', 'java': 'coffee'}\n\n    # Merge dictionaries using ChainMap\n    merged_dict = merge_dictionaries(dict1, dict2)\n\n    # Convert merged dictionary values to bytes\n    bytes_dict = convert_to_bytes(merged_dict)\n\n    # Print the result\n    for key, value in bytes_dict.items():\n        print(f\"{key}: {value}\")\n\nif __name__ == \"__main__\":\n    main()\n",
+    "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytes.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nimport sys\n\ndef bytes_to_human_readable(num_bytes):\n    \"\"\"\n    Converts a number of bytes into a human-readable string with units.\n    \"\"\"\n    for unit in ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB']:\n        if num_bytes < 1024.0:\n            return f\"{num_bytes:3.1f}{unit}\"\n        num_bytes /= 1024.0\n    return f\"{num_bytes:.1f}ZB\"\n\ndef main():\n    if len(sys.argv) != 2:\n        print(\"Usage: python bytes_converter.py <number_of_bytes>\")\n        sys.exit(1)\n\n    try:\n        num_bytes = int(sys.argv[1])\n    except ValueError:\n        print(\"Please enter a valid integer for the number of bytes.\")\n        sys.exit(1)\n\n    human_readable = bytes_to_human_readable(num_bytes)\n    print(f\"{num_bytes} bytes is equivalent to {human_readable}\")\n\nif __name__ == \"__main__\":\n    main()\n",
     "tags": [
         "bytes",
-        "ChainMap",
-        "Comprehension",
-        "Hard"
+        "Easy"
     ],
     "keywords": [
-        "bytes",
-        "ChainMap",
-        "Comprehension"
+        "bytes"
     ],
-    "difficulty": "Hard",
+    "difficulty": "Easy",
     "prompt_style_adherence": "default"
 }

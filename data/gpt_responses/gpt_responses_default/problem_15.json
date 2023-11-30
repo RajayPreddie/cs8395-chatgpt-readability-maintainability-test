@@ -1,0 +1,16 @@
+{
+    "id": "problem_15",
+    "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: dict,frozenset.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\ndef count_unique_items(list_of_dicts):\n    \"\"\"\n    Counts unique items across all values in a list of dictionaries, where each value is a list.\n\n    Args:\n    list_of_dicts: A list of dictionaries with lists as values.\n\n    Returns:\n    A dictionary with items as keys and their counts as values.\n    \"\"\"\n    unique_items = frozenset(item for d in list_of_dicts for item in d.values())\n    item_count = {item: 0 for item in unique_items}\n\n    for d in list_of_dicts:\n        for items in d.values():\n            for item in items:\n                if item in item_count:\n                    item_count[item] += 1\n\n    return item_count\n\nif __name__ == \"__main__\":\n    list_of_dicts = [\n        {'fruits': ['apple', 'banana', 'orange'], 'vegetables': ['carrot', 'celery']},\n        {'fruits': ['apple', 'cherry'], 'snacks': ['chips', 'chocolate']},\n        {'drinks': ['water', 'orange juice'], 'snacks': ['chocolate', 'candy']}\n    ]\n\n    result = count_unique_items(list_of_dicts)\n    for item, count in result.items():\n        print(f\"{item}: {count}\")\n",
+    "tags": [
+        "dict",
+        "frozenset",
+        "Medium"
+    ],
+    "keywords": [
+        "dict",
+        "frozenset"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "default"
+}

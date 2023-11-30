@@ -1,0 +1,16 @@
+{
+    "id": "problem_14",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pydocstyle standard for docstrings. Here's an example snippet:\n\n\"\"\"Module for demonstrating pydocstyle adherence.\n\nThis module provides examples of how to write docstrings that conform to pydocstyle standards.\n\"\"\"\n\ndef add_numbers(x, y):\n    \"\"\"Add two numbers and return the result.\n\n    :param x: The first number to add.\n    :param y: The second number to add.\n    :return: The sum of x and y.\n    \"\"\"\n    return x + y\n\nFocus on comprehensive and compliant docstring documentation. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Deque,dict.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import deque\n\ndef rotate_deque(dq, n):\n    \"\"\"Rotate the deque object by n steps.\n\n    This function rotates the deque object to the right if n is positive,\n    or to the left if n is negative.\n\n    :param dq: A deque object to be rotated.\n    :param n: The number of steps to rotate the deque.\n    :return: None, the deque is modified in place.\n    \"\"\"\n    dq.rotate(n)\n\ndef create_frequency_dict(iterable):\n    \"\"\"Create a dictionary with the frequency of each element in the iterable.\n\n    This function counts the frequency of each element in the iterable and\n    returns a dictionary with these frequencies.\n\n    :param iterable: An iterable with hashable elements to count.\n    :return: A dictionary with elements as keys and frequencies as values.\n    \"\"\"\n    frequency = {}\n    for item in iterable:\n        frequency[item] = frequency.get(item, 0) + 1\n    return frequency\n\n# Example usage\nif __name__ == \"__main__\":\n    # Rotate a deque example\n    dq = deque([1, 2, 3, 4, 5])\n    rotate_deque(dq, 2)\n    print(f\"Rotated deque: {dq}\")\n\n    # Create frequency dictionary example\n    freq_dict = create_frequency_dict(\"abracadabra\")\n    print(f\"Frequency dictionary: {freq_dict}\")\n",
+    "tags": [
+        "Deque",
+        "dict",
+        "Medium"
+    ],
+    "keywords": [
+        "Deque",
+        "dict"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "pydocstyle"
+}

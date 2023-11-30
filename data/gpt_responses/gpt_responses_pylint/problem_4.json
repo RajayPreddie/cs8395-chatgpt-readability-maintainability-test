@@ -1,18 +1,14 @@
 {
     "id": "problem_4",
-    "description": "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. Here's an example snippet compliant with pylint:\n\n\"\"\"Module for demonstrating pylint adherence.\n\nThis module provides an example function formatted to comply with pylint standards.\n\"\"\"\n\ndef calculate_sum(a, b):\n    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n    return a + b\n\nFocus on clean, readable code following the style of the provided snippet. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytes,ChainMap,Comprehension.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
-    "code": "\nfrom collections import ChainMap\n\ndef convert_to_bytes(string_list):\n    \"\"\"Convert a list of strings to a list of bytes.\"\"\"\n    return [bytes(string, encoding='utf-8') for string in string_list]\n\ndef merge_dictionaries(dict_list):\n    \"\"\"Merge a list of dictionaries into a single ChainMap.\"\"\"\n    return ChainMap(*dict_list)\n\ndef main():\n    # Example usage of the convert_to_bytes function\n    string_list = ['Python', 'Pylint', 'Coding']\n    byte_list = convert_to_bytes(string_list)\n    print(\"List of bytes:\", byte_list)\n\n    # Example usage of the merge_dictionaries function\n    dict_list = [{'a': 1}, {'b': 2}, {'c': 3}]\n    merged_dict = merge_dictionaries(dict_list)\n    print(\"Merged ChainMap:\", merged_dict)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. Here's an example snippet compliant with pylint:\n\n\"\"\"Module for demonstrating pylint adherence.\n\nThis module provides an example function formatted to comply with pylint standards.\n\"\"\"\n\ndef calculate_sum(a, b):\n    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n    return a + b\n\nFocus on clean, readable code following the style of the provided snippet. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytes.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\n\"\"\"Module for demonstrating the use of 'bytes' in Python.\n\nThis module provides a function that converts strings to bytes and measures their size.\n\"\"\"\n\ndef string_to_bytes(input_string):\n    \"\"\"Convert a string to bytes and return its size.\n\n    Args:\n        input_string (str): The string to be converted to bytes.\n\n    Returns:\n        int: The size of the input string in bytes.\n    \"\"\"\n    byte_data = bytes(input_string, 'utf-8')\n    return len(byte_data)\n\nif __name__ == \"__main__\":\n    user_input = input(\"Enter a string to convert to bytes: \")\n    size_in_bytes = string_to_bytes(user_input)\n    print(f\"The size of the input string in bytes is: {size_in_bytes}\")\n",
     "tags": [
         "bytes",
-        "ChainMap",
-        "Comprehension",
-        "Hard"
+        "Easy"
     ],
     "keywords": [
-        "bytes",
-        "ChainMap",
-        "Comprehension"
+        "bytes"
     ],
-    "difficulty": "Hard",
+    "difficulty": "Easy",
     "prompt_style_adherence": "pylint"
 }

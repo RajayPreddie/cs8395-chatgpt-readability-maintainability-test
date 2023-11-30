@@ -1,0 +1,16 @@
+{
+    "id": "problem_14",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Deque,dict.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import deque\n\ndef recent_items_tracker():\n    \"\"\"\n    Tracks recent items using a deque and a dictionary.\n    \"\"\"\n    max_size = 5\n    recent_items = deque(maxlen=max_size)\n    item_positions = dict()\n\n    while True:\n        item = input(\"Enter an item (or 'exit' to quit): \").strip()\n        if item.lower() == 'exit':\n            break\n\n        if item in item_positions:\n            recent_items.remove(item)\n            recent_items.appendleft(item)\n        else:\n            if len(recent_items) == max_size:\n                del item_positions[recent_items.pop()]\n            recent_items.appendleft(item)\n            item_positions[item] = True\n\n        print(\"Recent items:\", list(recent_items))\n\ndef main():\n    recent_items_tracker()\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "Deque",
+        "dict",
+        "Medium"
+    ],
+    "keywords": [
+        "Deque",
+        "dict"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "radon"
+}

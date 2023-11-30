@@ -1,0 +1,18 @@
+{
+    "id": "problem_20",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: heapq,IdiomaticPython,Introspection.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nimport heapq\n\ndef merge_sorted_arrays(sorted_arrays):\n    \"\"\"Merge multiple sorted arrays into a single sorted array.\"\"\"\n    min_heap = []\n    # Create a list of iterators for each array\n    iterators = [iter(x) for x in sorted_arrays]\n\n    # Put the first element from each iterator in min_heap\n    for i, it in enumerate(iterators):\n        first_element = next(it, None)\n        if first_element is not None:\n            heapq.heappush(min_heap, (first_element, i))\n\n    result = []\n    while min_heap:\n        smallest, smallest_array_index = heapq.heappop(min_heap)\n        result.append(smallest)\n        next_element = next(iterators[smallest_array_index], None)\n        if next_element is not None:\n            heapq.heappush(min_heap, (next_element, smallest_array_index))\n\n    return result\n\ndef main():\n    # Example usage of merge_sorted_arrays\n    sorted_arrays = [\n        [1, 4, 7],\n        [2, 5, 8],\n        [3, 6, 9]\n    ]\n    print(merge_sorted_arrays(sorted_arrays))\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "heapq",
+        "IdiomaticPython",
+        "Introspection",
+        "Hard"
+    ],
+    "keywords": [
+        "heapq",
+        "IdiomaticPython",
+        "Introspection"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "radon"
+}

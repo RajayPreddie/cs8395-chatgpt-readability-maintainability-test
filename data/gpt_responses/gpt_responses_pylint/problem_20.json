@@ -1,0 +1,18 @@
+{
+    "id": "problem_20",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. Here's an example snippet compliant with pylint:\n\n\"\"\"Module for demonstrating pylint adherence.\n\nThis module provides an example function formatted to comply with pylint standards.\n\"\"\"\n\ndef calculate_sum(a, b):\n    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n    return a + b\n\nFocus on clean, readable code following the style of the provided snippet. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: heapq,IdiomaticPython,Introspection.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nimport heapq\n\ndef find_k_largest_numbers(sequence, k):\n    \"\"\"\n    Find the k largest numbers in a sequence using a min-heap.\n\n    Args:\n        sequence (list): The list of numbers from which to find the k largest.\n        k (int): The number of largest elements to find.\n\n    Returns:\n        list: A list containing the k largest numbers from the sequence.\n    \"\"\"\n    if not sequence or k <= 0:\n        return []\n\n    min_heap = sequence[:k]\n    heapq.heapify(min_heap)\n\n    for number in sequence[k:]:\n        if number > min_heap[0]:\n            heapq.heappop(min_heap)\n            heapq.heappush(min_heap, number)\n\n    return min_heap\n\ndef main():\n    \"\"\"\n    Main function to demonstrate the use of find_k_largest_numbers function.\n    \"\"\"\n    sequence = [12, 3, 17, 2, 9, 23, 11, 8]\n    k = 3\n    print(f\"The {k} largest numbers in the sequence are: {find_k_largest_numbers(sequence, k)}\")\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "heapq",
+        "IdiomaticPython",
+        "Introspection",
+        "Hard"
+    ],
+    "keywords": [
+        "heapq",
+        "IdiomaticPython",
+        "Introspection"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "pylint"
+}

@@ -1,0 +1,18 @@
+{
+    "id": "problem_20",
+    "description": "Act as a Python developer and create a Python program that adheres to the flake8 coding standard. Here's an example snippet:\n\n# Example Snippet for Flake8\ndef find_max(numbers):\n    \"\"\"Find the maximum number in a list.\"\"\"\n    return max(numbers) if numbers else None\n\nEnsure your code is clean, readable, and adheres to flake8 standards. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: heapq,IdiomaticPython,Introspection.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nimport heapq\n\n\ndef find_k_largest_numbers(sequence, k):\n    \"\"\"Find the k largest numbers in a sequence using heapq.\"\"\"\n    if not sequence or k <= 0:\n        return []\n\n    # Use heapq to find the k largest numbers\n    return heapq.nlargest(k, sequence)\n\n\ndef is_callable_attribute(obj, attribute):\n    \"\"\"Check if an attribute of an object is callable (method/function).\"\"\"\n    return callable(getattr(obj, attribute, None))\n\n\ndef idiomatic_way_to_swap(a, b):\n    \"\"\"Swap two variables in an idiomatic Python way.\"\"\"\n    a, b = b, a\n    return a, b\n\n\n# Example usage:\nif __name__ == \"__main__\":\n    numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]\n    k = 3\n\n    print(f\"The {k} largest numbers are: {find_k_largest_numbers(numbers, k)}\")\n\n    print(f\"Is 'find_k_largest_numbers' callable? {is_callable_attribute(__builtins__, 'find_k_largest_numbers')}\")\n\n    x, y = 10, 20\n    print(f\"Before swap: x={x}, y={y}\")\n    x, y = idiomatic_way_to_swap(x, y)\n    print(f\"After swap: x={x}, y={y}\")\n",
+    "tags": [
+        "heapq",
+        "IdiomaticPython",
+        "Introspection",
+        "Hard"
+    ],
+    "keywords": [
+        "heapq",
+        "IdiomaticPython",
+        "Introspection"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "flake8"
+}

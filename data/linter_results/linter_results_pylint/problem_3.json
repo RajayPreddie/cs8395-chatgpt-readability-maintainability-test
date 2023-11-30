@@ -1,26 +1,27 @@
 {
     "flake8": {
         "violations": {
-            "E501 line too long (81 > 79 characters)": 1,
-            "W293 blank line contains whitespace": 2
+            "E302 expected 2 blank lines, found 1": 2,
+            "E501 line too long (83 > 79 characters)": 1,
+            "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 3,
+        "total_violations": 4,
         "most_frequent_violation": {
-            "violation_type": "W293 blank line contains whitespace",
+            "violation_type": "E302 expected 2 blank lines, found 1",
             "frequency": 2
         },
-        "number_of_lines_in_code": 40
+        "number_of_lines_in_code": 45
     },
     "pylint": {
         "violations": {
-            "Trailing whitespace (trailing-whitespace)": 2
+            "Unnecessary parens after 'not' keyword (superfluous-parens)": 2
         },
         "total_violations": 2,
         "most_frequent_violation": {
-            "violation_type": "Trailing whitespace (trailing-whitespace)",
+            "violation_type": "Unnecessary parens after 'not' keyword (superfluous-parens)",
             "frequency": 2
         },
-        "number_of_lines_in_code": 40
+        "number_of_lines_in_code": 45
     },
     "black": {
         "violations": {
@@ -33,18 +34,19 @@
         }
     },
     "radon": {
-        "function_complexity": 2.3333333333333335,
-        "overall_score": 2.3333333333333335
+        "function_complexity": 3.0,
+        "overall_score": 3.0
     },
     "pydocstyle": {
         "violations": {
+            "D200: One-line docstring should fit on one line with quotes (found 3)": 1,
             "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
         },
-        "total_violations": 1,
+        "total_violations": 2,
         "most_frequent_violation": {
             "violation_type": "D401: First line should be in imperative mood; try rephrasing (found 'Main')",
             "frequency": 1
         },
-        "number_of_lines_in_code": 40
+        "number_of_lines_in_code": 45
     }
 }

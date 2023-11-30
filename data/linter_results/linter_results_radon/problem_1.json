@@ -1,15 +1,15 @@
 {
     "flake8": {
         "violations": {
-            "E302 expected 2 blank lines, found 1": 2,
+            "E302 expected 2 blank lines, found 1": 1,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 3,
+        "total_violations": 2,
         "most_frequent_violation": {
-            "violation_type": "E302 expected 2 blank lines, found 1",
-            "frequency": 2
+            "violation_type": "E305 expected 2 blank lines after class or function definition, found 1",
+            "frequency": 1
         },
-        "number_of_lines_in_code": 17
+        "number_of_lines_in_code": 13
     },
     "pylint": {
         "violations": {
@@ -21,7 +21,7 @@
             "violation_type": "Missing function or method docstring (missing-function-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 17
+        "number_of_lines_in_code": 13
     },
     "black": {
         "violations": {
@@ -34,8 +34,8 @@
         }
     },
     "radon": {
-        "function_complexity": 1.6666666666666667,
-        "overall_score": 1.6666666666666667
+        "function_complexity": 2.5,
+        "overall_score": 2.5
     },
     "pydocstyle": {
         "violations": {
@@ -47,6 +47,6 @@
             "violation_type": "D103: Missing docstring in public function",
             "frequency": 1
         },
-        "number_of_lines_in_code": 17
+        "number_of_lines_in_code": 13
     }
 }

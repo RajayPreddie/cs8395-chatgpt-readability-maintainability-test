@@ -1,0 +1,14 @@
+{
+    "id": "problem_6",
+    "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Comprehension.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\ndef main():\n    # This program will take a list of numbers and create a new list with squares of even numbers\n    # using list comprehension\n\n    # Define the list of numbers\n    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n\n    # Use list comprehension to create a new list with squares of even numbers\n    squares_of_even = [x**2 for x in numbers if x % 2 == 0]\n\n    # Print the original and the new list\n    print(f\"Original list: {numbers}\")\n    print(f\"Squares of even numbers: {squares_of_even}\")\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "Comprehension",
+        "Easy"
+    ],
+    "keywords": [
+        "Comprehension"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "default"
+}

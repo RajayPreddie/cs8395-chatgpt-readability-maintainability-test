@@ -1,0 +1,16 @@
+{
+    "id": "problem_16",
+    "description": "Act as a Python developer and create a Python program that adheres to the flake8 coding standard. Here's an example snippet:\n\n# Example Snippet for Flake8\ndef find_max(numbers):\n    \"\"\"Find the maximum number in a list.\"\"\"\n    return max(numbers) if numbers else None\n\nEnsure your code is clean, readable, and adheres to flake8 standards. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: frozenset,GarbageCollection.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nimport gc\n\n\ndef manage_garbage_collection():\n    \"\"\"\n    Enable, disable and manually run garbage collection, and\n    demonstrate the use of frozenset in the process.\n    \"\"\"\n    # Disable garbage collection\n    gc.disable()\n    print(\"Garbage collection disabled.\")\n\n    # Create a large number of frozensets to simulate objects\n    lots_of_frozensets = [frozenset(i for i in range(1000)) for _ in range(1000)]\n    print(f\"Created {len(lots_of_frozensets)} frozensets.\")\n\n    # Enable garbage collection\n    gc.enable()\n    print(\"Garbage collection enabled.\")\n\n    # Manually run garbage collection\n    collected_items = gc.collect()\n    print(f\"Garbage collection run, number of unreachable objects collected: {collected_items}.\")\n\n\nif __name__ == \"__main__\":\n    manage_garbage_collection()\n",
+    "tags": [
+        "frozenset",
+        "GarbageCollection",
+        "Medium"
+    ],
+    "keywords": [
+        "frozenset",
+        "GarbageCollection"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "flake8"
+}

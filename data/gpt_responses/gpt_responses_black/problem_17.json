@@ -1,0 +1,18 @@
+{
+    "id": "problem_17",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the Black coding style. Here's an example snippet formatted using Black:\n\ndef format_name(first_name, last_name):\n    formatted_first_name = first_name.strip().title()\n    formatted_last_name = last_name.strip().title()\n    return f\"{formatted_first_name} {formatted_last_name}\"\n\nEnsure the code is formatted according to Black's uncompromising style. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: GarbageCollection,Generator,Global state.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nimport gc\nimport itertools\n\ndef garbage_collection_info():\n    gc.collect()\n    print(f\"Garbage collection thresholds: {gc.get_threshold()}\")\n    print(f\"Garbage collection stats: {gc.get_stats()}\")\n\ndef infinite_sequence():\n    num = 0\n    while True:\n        yield num\n        num += 1\n\nglobal_state = {}\n\ndef update_global_state(key, value):\n    global_state[key] = value\n\ndef get_global_state(key):\n    return global_state.get(key, None)\n\nif __name__ == \"__main__\":\n    garbage_collection_info()\n\n    seq_gen = infinite_sequence()\n    for _ in range(10):\n        num = next(seq_gen)\n        update_global_state(f\"number_{num}\", num)\n        print(f\"Updated global state with number_{num}: {get_global_state(f'number_{num}')}\")\n    \n    print(\"Global state:\")\n    for key, value in global_state.items():\n        print(f\"{key}: {value}\")\n",
+    "tags": [
+        "GarbageCollection",
+        "Generator",
+        "Global state",
+        "Hard"
+    ],
+    "keywords": [
+        "GarbageCollection",
+        "Generator",
+        "Global state"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "black"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "problem_8",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: ContextManager.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nimport os\n\nclass ContextManager:\n    def __init__(self, filename, mode):\n        self.filename = filename\n        self.mode = mode\n        self.file = None\n\n    def __enter__(self):\n        self.file = open(self.filename, self.mode)\n        return self.file\n\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        if self.file:\n            self.file.close()\n\ndef write_to_file(filename, text):\n    with ContextManager(filename, 'w') as file:\n        file.write(text)\n\ndef read_from_file(filename):\n    with ContextManager(filename, 'r') as file:\n        return file.read()\n\ndef main():\n    filename = 'test.txt'\n    content = 'Hello, this is a test content.'\n    \n    write_to_file(filename, content)\n    print(f\"Content written to {filename}\")\n\n    read_content = read_from_file(filename)\n    print(f\"Content read from {filename}:\")\n    print(read_content)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "ContextManager",
+        "Easy"
+    ],
+    "keywords": [
+        "ContextManager"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "radon"
+}

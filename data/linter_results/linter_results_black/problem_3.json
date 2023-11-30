@@ -6,7 +6,7 @@
             "violation_type": "",
             "frequency": 0
         },
-        "number_of_lines_in_code": 37
+        "number_of_lines_in_code": 22
     },
     "pylint": {
         "violations": {
@@ -18,7 +18,7 @@
             "violation_type": "Missing function or method docstring (missing-function-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 37
+        "number_of_lines_in_code": 22
     },
     "black": {
         "violations": {
@@ -31,21 +31,22 @@
         }
     },
     "radon": {
-        "function_complexity": 1.6666666666666667,
-        "overall_score": 1.6666666666666667
+        "function_complexity": 1.5,
+        "overall_score": 1.5
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D200: One-line docstring should fit on one line with quotes (found 3)": 2,
-            "D401: First line should be in imperative mood (perhaps 'Convert', not 'Converts')": 2,
+            "D205: 1 blank line required between summary line and description (found 0)": 1,
+            "D400: First line should end with a period (not 'y')": 1,
+            "D401: First line should be in imperative mood (perhaps 'Take', not 'Takes')": 1,
             "D103: Missing docstring in public function": 1
         },
-        "total_violations": 6,
+        "total_violations": 5,
         "most_frequent_violation": {
-            "violation_type": "D401: First line should be in imperative mood (perhaps 'Convert', not 'Converts')",
-            "frequency": 2
+            "violation_type": "D103: Missing docstring in public function",
+            "frequency": 1
         },
-        "number_of_lines_in_code": 37
+        "number_of_lines_in_code": 22
     }
 }

@@ -1,18 +1,14 @@
 {
     "id": "problem_4",
-    "description": "Act as a Python developer and create a Python program that adheres to the flake8 coding standard. Here's an example snippet:\n\n# Example Snippet for Flake8\ndef find_max(numbers):\n    \"\"\"Find the maximum number in a list.\"\"\"\n    return max(numbers) if numbers else None\n\nEnsure your code is clean, readable, and adheres to flake8 standards. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytes,ChainMap,Comprehension.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
-    "code": "\nfrom collections import ChainMap\nimport sys\n\n\ndef merge_dictionaries_with_comprehension(*dicts):\n    \"\"\"Merge multiple dictionaries using dictionary comprehension.\"\"\"\n    return {k: v for d in dicts for k, v in d.items()}\n\n\ndef convert_to_bytes(data):\n    \"\"\"Convert a dictionary's values to bytes.\"\"\"\n    return {k: bytes(v, 'utf-8') if isinstance(v, str) else v for k, v in data.items()}\n\n\ndef main():\n    \"\"\"Main function that uses ChainMap and comprehension to solve a problem.\"\"\"\n    # Create two dictionaries\n    dict1 = {'apple': 1, 'banana': 2}\n    dict2 = {'berry': 3, 'orange': 4}\n\n    # Merge dictionaries using ChainMap\n    merged_dict = ChainMap(dict1, dict2)\n\n    # Use comprehension to merge dictionaries into a new dictionary\n    merged_dict_comprehension = merge_dictionaries_with_comprehension(dict1, dict2)\n\n    # Convert the merged dictionary values to bytes\n    bytes_dict = convert_to_bytes(merged_dict_comprehension)\n\n    print(bytes_dict)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "description": "Act as a Python developer and create a Python program that adheres to the flake8 coding standard. Here's an example snippet:\n\n# Example Snippet for Flake8\ndef find_max(numbers):\n    \"\"\"Find the maximum number in a list.\"\"\"\n    return max(numbers) if numbers else None\n\nEnsure your code is clean, readable, and adheres to flake8 standards. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytes.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\ndef count_unique_bytes(byte_sequence):\n    \"\"\"\n    Count the number of unique bytes in a sequence of bytes.\n\n    Args:\n    byte_sequence: A sequence of bytes.\n\n    Returns:\n    An integer representing the number of unique bytes.\n    \"\"\"\n    unique_bytes = set(byte_sequence)\n    return len(unique_bytes)\n\n\ndef main():\n    # Example byte sequence\n    byte_sequence = b'The quick brown fox jumps over the lazy dog'\n    unique_count = count_unique_bytes(byte_sequence)\n    print(f\"Number of unique bytes: {unique_count}\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
     "tags": [
         "bytes",
-        "ChainMap",
-        "Comprehension",
-        "Hard"
+        "Easy"
     ],
     "keywords": [
-        "bytes",
-        "ChainMap",
-        "Comprehension"
+        "bytes"
     ],
-    "difficulty": "Hard",
+    "difficulty": "Easy",
     "prompt_style_adherence": "flake8"
 }

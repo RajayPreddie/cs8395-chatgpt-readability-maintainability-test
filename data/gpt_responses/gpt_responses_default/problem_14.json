@@ -1,0 +1,16 @@
+{
+    "id": "problem_14",
+    "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Deque,dict.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import deque\n\nclass LRUCache:\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.cache = dict()\n        self.queue = deque()\n\n    def get(self, key):\n        if key in self.cache:\n            # Move the accessed key to the end of the queue\n            self.queue.remove(key)\n            self.queue.append(key)\n            return self.cache[key]\n        else:\n            return -1\n\n    def put(self, key, value):\n        if key in self.cache:\n            # Update the value and move the key to the end of the queue\n            self.queue.remove(key)\n        elif len(self.cache) == self.capacity:\n            # Remove the least recently used item\n            oldest_key = self.queue.popleft()\n            del self.cache[oldest_key]\n        \n        self.cache[key] = value\n        self.queue.append(key)\n\nif __name__ == \"__main__\":\n    # Example usage of the LRUCache\n    lru_cache = LRUCache(3)\n    lru_cache.put(1, 'A')\n    lru_cache.put(2, 'B')\n    lru_cache.put(3, 'C')\n\n    print(lru_cache.get(1))  # Should return 'A'\n    lru_cache.put(4, 'D')    # Should evict key 2\n    print(lru_cache.get(2))  # Should return -1 (not found)\n    print(lru_cache.get(3))  # Should return 'C'\n    print(lru_cache.get(4))  # Should return 'D'\n    lru_cache.put(1, 'AA')   # Update value for key 1\n    print(lru_cache.get(1))  # Should return 'AA'\n",
+    "tags": [
+        "Deque",
+        "dict",
+        "Medium"
+    ],
+    "keywords": [
+        "Deque",
+        "dict"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "default"
+}

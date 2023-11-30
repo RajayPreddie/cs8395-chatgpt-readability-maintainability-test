@@ -1,18 +1,14 @@
 {
     "id": "problem_5",
-    "description": "Act as a Python developer and create a Python program that adheres to the flake8 coding standard. Here's an example snippet:\n\n# Example Snippet for Flake8\ndef find_max(numbers):\n    \"\"\"Find the maximum number in a list.\"\"\"\n    return max(numbers) if numbers else None\n\nEnsure your code is clean, readable, and adheres to flake8 standards. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: ChainMap,Comprehension,Concurrency.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
-    "code": "\nfrom collections import ChainMap\nimport concurrent.futures\n\n\ndef merge_dictionaries(*dicts):\n    \"\"\"Merge dictionaries using ChainMap and return a combined dictionary.\"\"\"\n    chain = ChainMap(*dicts)\n    return dict(chain)\n\n\ndef squared_numbers_comprehension(numbers):\n    \"\"\"Use a comprehension to return a list of squared numbers.\"\"\"\n    return [number ** 2 for number in numbers]\n\n\ndef fetch_data_concurrently(tasks, function):\n    \"\"\"Use concurrency to apply a function to a list of tasks.\"\"\"\n    with concurrent.futures.ThreadPoolExecutor() as executor:\n        results = list(executor.map(function, tasks))\n    return results\n\n\nif __name__ == \"__main__\":\n    # Example usage of the merge_dictionaries function\n    dict1 = {'a': 1, 'b': 2}\n    dict2 = {'b': 3, 'c': 4}\n    print(merge_dictionaries(dict1, dict2))\n\n    # Example usage of the squared_numbers_comprehension function\n    numbers = [1, 2, 3, 4, 5]\n    print(squared_numbers_comprehension(numbers))\n\n    # Example usage of the fetch_data_concurrently function\n    # Here we just use a simple print function for demonstration\n    tasks = ['Task 1', 'Task 2', 'Task 3']\n    print(fetch_data_concurrently(tasks, print))\n",
+    "description": "Act as a Python developer and create a Python program that adheres to the flake8 coding standard. Here's an example snippet:\n\n# Example Snippet for Flake8\ndef find_max(numbers):\n    \"\"\"Find the maximum number in a list.\"\"\"\n    return max(numbers) if numbers else None\n\nEnsure your code is clean, readable, and adheres to flake8 standards. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: ChainMap.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import ChainMap\n\n\ndef merge_dictionaries(*dict_args):\n    \"\"\"\n    Merge multiple dictionaries using ChainMap and return a single dictionary.\n    \"\"\"\n    chain = ChainMap(*dict_args)\n    return dict(chain)\n\n\ndef main():\n    # Example dictionaries to be merged\n    dict1 = {'a': 1, 'b': 2}\n    dict2 = {'b': 3, 'c': 4}\n    dict3 = {'f': 5, 'd': 6}\n\n    # Merge dictionaries using ChainMap\n    merged_dict = merge_dictionaries(dict1, dict2, dict3)\n\n    print(\"Merged Dictionary:\", merged_dict)\n\n\nif __name__ == \"__main__\":\n    main()\n",
     "tags": [
         "ChainMap",
-        "Comprehension",
-        "Concurrency",
-        "Hard"
+        "Easy"
     ],
     "keywords": [
-        "ChainMap",
-        "Comprehension",
-        "Concurrency"
+        "ChainMap"
     ],
-    "difficulty": "Hard",
+    "difficulty": "Easy",
     "prompt_style_adherence": "flake8"
 }

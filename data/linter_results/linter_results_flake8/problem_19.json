@@ -1,0 +1,55 @@
+{
+    "flake8": {
+        "violations": {
+            "E302 expected 2 blank lines, found 1": 1,
+            "W293 blank line contains whitespace": 3
+        },
+        "total_violations": 4,
+        "most_frequent_violation": {
+            "violation_type": "W293 blank line contains whitespace",
+            "frequency": 3
+        },
+        "number_of_lines_in_code": 38
+    },
+    "pylint": {
+        "violations": {
+            "Trailing whitespace (trailing-whitespace)": 3,
+            "Missing module docstring (missing-module-docstring)": 1
+        },
+        "total_violations": 4,
+        "most_frequent_violation": {
+            "violation_type": "Trailing whitespace (trailing-whitespace)",
+            "frequency": 3
+        },
+        "number_of_lines_in_code": 38
+    },
+    "black": {
+        "violations": {
+            "non_compliant": 1
+        },
+        "total_violations": 1,
+        "most_frequent_violation": {
+            "violation_type": "would reformat",
+            "frequency": 1
+        }
+    },
+    "radon": {
+        "function_complexity": 2.0,
+        "overall_score": 1.5,
+        "class_complexity": 2.0,
+        "method_complexity": 1.25
+    },
+    "pydocstyle": {
+        "violations": {
+            "D100: Missing docstring in public module": 1,
+            "D107: Missing docstring in __init__": 1,
+            "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
+        },
+        "total_violations": 3,
+        "most_frequent_violation": {
+            "violation_type": "D401: First line should be in imperative mood; try rephrasing (found 'Main')",
+            "frequency": 1
+        },
+        "number_of_lines_in_code": 38
+    }
+}

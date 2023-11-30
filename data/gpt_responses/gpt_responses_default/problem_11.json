@@ -1,0 +1,16 @@
+{
+    "id": "problem_11",
+    "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Decorator,DefaultDict.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import defaultdict\nfrom functools import wraps\n\ndef count_calls(func):\n    @wraps(func)\n    def wrapper_count_calls(*args, **kwargs):\n        wrapper_count_calls.calls[func.__name__] += 1\n        return func(*args, **kwargs)\n    wrapper_count_calls.calls = defaultdict(int)\n    return wrapper_count_calls\n\n@count_calls\ndef say_hello(name):\n    print(f\"Hello, {name}!\")\n\n@count_calls\ndef say_goodbye(name):\n    print(f\"Goodbye, {name}!\")\n\nif __name__ == \"__main__\":\n    say_hello(\"Alice\")\n    say_hello(\"Bob\")\n    say_goodbye(\"Charlie\")\n    say_goodbye(\"Alice\")\n    say_hello(\"Diana\")\n\n    print(\"Function call counts:\")\n    for func_name, count in say_hello.calls.items():\n        print(f\"{func_name}: {count}\")\n",
+    "tags": [
+        "Decorator",
+        "DefaultDict",
+        "Medium"
+    ],
+    "keywords": [
+        "Decorator",
+        "DefaultDict"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "default"
+}

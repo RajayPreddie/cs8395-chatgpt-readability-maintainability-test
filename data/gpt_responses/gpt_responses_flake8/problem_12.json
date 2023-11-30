@@ -1,0 +1,16 @@
+{
+    "id": "problem_12",
+    "description": "Act as a Python developer and create a Python program that adheres to the flake8 coding standard. Here's an example snippet:\n\n# Example Snippet for Flake8\ndef find_max(numbers):\n    \"\"\"Find the maximum number in a list.\"\"\"\n    return max(numbers) if numbers else None\n\nEnsure your code is clean, readable, and adheres to flake8 standards. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: DefaultDict,DependencyInjection.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import defaultdict\nfrom typing import Any, Callable, Dict, List\n\n\nclass Injector:\n    \"\"\"A simple dependency injection class.\"\"\"\n    def __init__(self):\n        self._dependencies: Dict[str, Any] = {}\n\n    def add_dependency(self, name: str, dependency: Any) -> None:\n        self._dependencies[name] = dependency\n\n    def get_dependency(self, name: str) -> Any:\n        return self._dependencies.get(name)\n\n\nclass WordCounter:\n    \"\"\"Counts occurrences of words in a given text.\"\"\"\n    def __init__(self, text_processor: Callable[[str], List[str]]):\n        self.text_processor = text_processor\n        self.word_counts = defaultdict(int)\n\n    def process_text(self, text: str) -> None:\n        for word in self.text_processor(text):\n            self.word_counts[word] += 1\n\n    def get_word_count(self, word: str) -> int:\n        return self.word_counts[word]\n\n    def get_all_word_counts(self) -> Dict[str, int]:\n        return dict(self.word_counts)\n\n\ndef simple_text_processor(text: str) -> List[str]:\n    \"\"\"A simple text processor that splits text into words.\"\"\"\n    return text.lower().split()\n\n\ndef main():\n    injector = Injector()\n    injector.add_dependency('text_processor', simple_text_processor)\n\n    text = \"Dependency injection is a technique whereby one object supplies the dependencies of another object.\"\n    word_counter = WordCounter(injector.get_dependency('text_processor'))\n    word_counter.process_text(text)\n\n    for word, count in word_counter.get_all_word_counts().items():\n        print(f\"{word}: {count}\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "DefaultDict",
+        "DependencyInjection",
+        "Medium"
+    ],
+    "keywords": [
+        "DefaultDict",
+        "DependencyInjection"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "flake8"
+}

@@ -1,0 +1,14 @@
+{
+    "id": "problem_6",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the Black coding style. Here's an example snippet formatted using Black:\n\ndef format_name(first_name, last_name):\n    formatted_first_name = first_name.strip().title()\n    formatted_last_name = last_name.strip().title()\n    return f\"{formatted_first_name} {formatted_last_name}\"\n\nEnsure the code is formatted according to Black's uncompromising style. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Comprehension.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\ndef calculate_squares(numbers):\n    \"\"\"\n    This function takes a list of numbers and returns a dictionary\n    where each number is a key and its square is the value.\n    \"\"\"\n    return {number: number ** 2 for number in numbers}\n\n\ndef main():\n    num_list = [1, 2, 3, 4, 5]\n    squares_dict = calculate_squares(num_list)\n    for num, square in squares_dict.items():\n        print(f\"The square of {num} is {square}\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "Comprehension",
+        "Easy"
+    ],
+    "keywords": [
+        "Comprehension"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "black"
+}

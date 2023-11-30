@@ -1,23 +1,26 @@
 {
     "flake8": {
-        "violations": {},
-        "total_violations": 0,
-        "most_frequent_violation": {
-            "violation_type": "",
-            "frequency": 0
-        },
-        "number_of_lines_in_code": 38
-    },
-    "pylint": {
         "violations": {
-            "Missing module docstring (missing-module-docstring)": 1
+            "E501 line too long (85 > 79 characters)": 1
         },
         "total_violations": 1,
         "most_frequent_violation": {
-            "violation_type": "Missing module docstring (missing-module-docstring)",
+            "violation_type": "E501 line too long (85 > 79 characters)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 38
+        "number_of_lines_in_code": 23
+    },
+    "pylint": {
+        "violations": {
+            "Missing module docstring (missing-module-docstring)": 1,
+            "Missing function or method docstring (missing-function-docstring)": 1
+        },
+        "total_violations": 2,
+        "most_frequent_violation": {
+            "violation_type": "Missing function or method docstring (missing-function-docstring)",
+            "frequency": 1
+        },
+        "number_of_lines_in_code": 23
     },
     "black": {
         "violations": {
@@ -30,19 +33,19 @@
         }
     },
     "radon": {
-        "function_complexity": 6.0,
-        "overall_score": 6.0
+        "function_complexity": 1.5,
+        "overall_score": 1.5
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D200: One-line docstring should fit on one line with quotes (found 3)": 1
+            "D103: Missing docstring in public function": 1
         },
         "total_violations": 2,
         "most_frequent_violation": {
-            "violation_type": "D200: One-line docstring should fit on one line with quotes (found 3)",
+            "violation_type": "D103: Missing docstring in public function",
             "frequency": 1
         },
-        "number_of_lines_in_code": 38
+        "number_of_lines_in_code": 23
     }
 }

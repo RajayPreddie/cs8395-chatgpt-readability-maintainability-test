@@ -1,0 +1,57 @@
+{
+    "flake8": {
+        "violations": {
+            "E501 line too long (102 > 79 characters)": 1,
+            "W293 blank line contains whitespace": 4,
+            "E302 expected 2 blank lines, found 1": 1,
+            "E305 expected 2 blank lines after class or function definition, found 1": 1
+        },
+        "total_violations": 7,
+        "most_frequent_violation": {
+            "violation_type": "W293 blank line contains whitespace",
+            "frequency": 4
+        },
+        "number_of_lines_in_code": 33
+    },
+    "pylint": {
+        "violations": {
+            "Line too long (102/100) (line-too-long)": 1,
+            "Trailing whitespace (trailing-whitespace)": 4,
+            "Missing module docstring (missing-module-docstring)": 1,
+            "Missing function or method docstring (missing-function-docstring)": 1
+        },
+        "total_violations": 7,
+        "most_frequent_violation": {
+            "violation_type": "Trailing whitespace (trailing-whitespace)",
+            "frequency": 4
+        },
+        "number_of_lines_in_code": 33
+    },
+    "black": {
+        "violations": {
+            "non_compliant": 1
+        },
+        "total_violations": 1,
+        "most_frequent_violation": {
+            "violation_type": "would reformat",
+            "frequency": 1
+        }
+    },
+    "radon": {
+        "function_complexity": 3.5,
+        "overall_score": 3.5
+    },
+    "pydocstyle": {
+        "violations": {
+            "D100: Missing docstring in public module": 1,
+            "D205: 1 blank line required between summary line and description (found 0)": 1,
+            "D103: Missing docstring in public function": 1
+        },
+        "total_violations": 3,
+        "most_frequent_violation": {
+            "violation_type": "D103: Missing docstring in public function",
+            "frequency": 1
+        },
+        "number_of_lines_in_code": 33
+    }
+}

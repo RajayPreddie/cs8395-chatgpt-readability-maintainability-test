@@ -1,16 +1,14 @@
 {
     "id": "problem_3",
-    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytearray,bytes.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
-    "code": "\ndef convert_to_bytearray(input_string):\n    \"\"\"Convert a string to a bytearray.\"\"\"\n    return bytearray(input_string, 'utf-8')\n\ndef convert_to_bytes(byte_array):\n    \"\"\"Convert a bytearray to bytes.\"\"\"\n    return bytes(byte_array)\n\ndef display_byte_data(byte_data):\n    \"\"\"Display byte data in a readable format.\"\"\"\n    print(\"Byte data:\", byte_data)\n\ndef main():\n    sample_string = \"Python is fun!\"\n    byte_array = convert_to_bytearray(sample_string)\n    byte_data = convert_to_bytes(byte_array)\n    display_byte_data(byte_data)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytearray.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\ndef to_bytearray(string):\n    \"\"\"Convert a string to a bytearray.\"\"\"\n    return bytearray(string, 'utf-8')\n\ndef modify_bytearray(b_array, index, new_value):\n    \"\"\"Modify an element of the bytearray.\"\"\"\n    if 0 <= index < len(b_array):\n        b_array[index] = new_value\n    else:\n        print(\"Index out of range.\")\n\ndef display_bytearray(b_array):\n    \"\"\"Display the bytearray.\"\"\"\n    print(\"Bytearray content:\", b_array)\n\ndef main():\n    user_input = input(\"Enter a string to convert to bytearray: \")\n    b_array = to_bytearray(user_input)\n    display_bytearray(b_array)\n\n    try:\n        index = int(input(\"Enter the index to modify (0-based): \"))\n        new_value = int(input(\"Enter the new value (0-255): \"))\n        modify_bytearray(b_array, index, new_value)\n        display_bytearray(b_array)\n    except ValueError:\n        print(\"Invalid input. Please enter an integer.\")\n\nif __name__ == \"__main__\":\n    main()\n",
     "tags": [
         "bytearray",
-        "bytes",
-        "Medium"
+        "Easy"
     ],
     "keywords": [
-        "bytearray",
-        "bytes"
+        "bytearray"
     ],
-    "difficulty": "Medium",
+    "difficulty": "Easy",
     "prompt_style_adherence": "radon"
 }

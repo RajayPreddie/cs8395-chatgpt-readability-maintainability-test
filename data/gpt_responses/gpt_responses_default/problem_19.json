@@ -1,0 +1,18 @@
+{
+    "id": "problem_19",
+    "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Global state,heapq,IdiomaticPython.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nimport heapq\n\nclass GlobalState:\n    def __init__(self):\n        self._state_heap = []\n    \n    def add_state(self, state_value):\n        heapq.heappush(self._state_heap, state_value)\n    \n    def remove_state(self):\n        if self._state_heap:\n            return heapq.heappop(self._state_heap)\n        else:\n            raise IndexError(\"No states to remove\")\n\n    def get_all_states(self):\n        return sorted(self._state_heap)\n\ndef main():\n    # Create a global state manager\n    global_state_manager = GlobalState()\n\n    # Add some states\n    global_state_manager.add_state(5)\n    global_state_manager.add_state(3)\n    global_state_manager.add_state(10)\n    global_state_manager.add_state(1)\n\n    # Print all states in sorted order\n    print(\"All states:\", global_state_manager.get_all_states())\n\n    # Remove a state\n    removed_state = global_state_manager.remove_state()\n    print(\"Removed state:\", removed_state)\n\n    # Print all states again to see the change\n    print(\"All states after removal:\", global_state_manager.get_all_states())\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "Global state",
+        "heapq",
+        "IdiomaticPython",
+        "Hard"
+    ],
+    "keywords": [
+        "Global state",
+        "heapq",
+        "IdiomaticPython"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "default"
+}

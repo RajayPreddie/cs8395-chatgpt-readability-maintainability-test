@@ -1,0 +1,14 @@
+{
+    "id": "problem_7",
+    "description": "Act as a Python developer and create a Python program that adheres to the flake8 coding standard. Here's an example snippet:\n\n# Example Snippet for Flake8\ndef find_max(numbers):\n    \"\"\"Find the maximum number in a list.\"\"\"\n    return max(numbers) if numbers else None\n\nEnsure your code is clean, readable, and adheres to flake8 standards. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Concurrency.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nimport concurrent.futures\n\n\ndef compute_factorial(number):\n    \"\"\"Compute factorial of a given number.\"\"\"\n    if number == 0:\n        return 1\n    else:\n        return number * compute_factorial(number - 1)\n\n\ndef main():\n    numbers = [5, 7, 10]\n    factorials = {}\n\n    # Using concurrency to calculate factorial of numbers\n    with concurrent.futures.ThreadPoolExecutor() as executor:\n        futures = {executor.submit(compute_factorial, num): num for num in numbers}\n        for future in concurrent.futures.as_completed(futures):\n            num = futures[future]\n            factorials[num] = future.result()\n\n    for num, fac in factorials.items():\n        print(f\"The factorial of {num} is {fac}\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "Concurrency",
+        "Easy"
+    ],
+    "keywords": [
+        "Concurrency"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "flake8"
+}

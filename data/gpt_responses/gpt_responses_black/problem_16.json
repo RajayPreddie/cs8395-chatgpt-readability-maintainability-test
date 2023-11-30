@@ -1,0 +1,16 @@
+{
+    "id": "problem_16",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the Black coding style. Here's an example snippet formatted using Black:\n\ndef format_name(first_name, last_name):\n    formatted_first_name = first_name.strip().title()\n    formatted_last_name = last_name.strip().title()\n    return f\"{formatted_first_name} {formatted_last_name}\"\n\nEnsure the code is formatted according to Black's uncompromising style. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: frozenset,GarbageCollection.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nimport gc\nimport weakref\n\nclass GarbageCollectionHelper:\n    def __init__(self, items):\n        self._items = frozenset(items)\n        self._observed_objects = weakref.WeakSet()\n\n    def track_object(self, obj):\n        self._observed_objects.add(obj)\n\n    def cleanup_unused(self):\n        gc.collect()\n        unused_items = self._items - frozenset(self._observed_objects)\n        for item in unused_items:\n            print(f\"Cleaning up: {item}\")\n        self._items = frozenset(self._observed_objects)\n\n    def get_tracked_items(self):\n        return self._items\n\ndef main():\n    helper = GarbageCollectionHelper([\"item1\", \"item2\", \"item3\"])\n\n    # Simulate tracking objects\n    obj1 = {\"name\": \"object1\"}\n    obj2 = {\"name\": \"object2\"}\n    helper.track_object(obj1)\n    helper.track_object(obj2)\n\n    # Display tracked items before cleanup\n    print(\"Tracked items before cleanup:\", helper.get_tracked_items())\n\n    # Simulate removal of references to objects\n    del obj1\n    del obj2\n\n    # Cleanup and display tracked items after cleanup\n    helper.cleanup_unused()\n    print(\"Tracked items after cleanup:\", helper.get_tracked_items())\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "frozenset",
+        "GarbageCollection",
+        "Medium"
+    ],
+    "keywords": [
+        "frozenset",
+        "GarbageCollection"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "black"
+}

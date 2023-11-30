@@ -1,0 +1,18 @@
+{
+    "id": "problem_19",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Global state,heapq,IdiomaticPython.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nimport heapq\n\nclass GlobalState:\n    def __init__(self):\n        self._heap = []\n\n    def add_number(self, number):\n        \"\"\"Adds a number to the heap.\"\"\"\n        heapq.heappush(self._heap, number)\n\n    def get_smallest(self):\n        \"\"\"Returns the smallest number from the heap.\"\"\"\n        return heapq.heappop(self._heap) if self._heap else None\n\n    def get_heap(self):\n        \"\"\"Returns the current heap.\"\"\"\n        return self._heap\n\ndef main():\n    state = GlobalState()\n    \n    # Add some numbers to the heap\n    numbers_to_add = [5, 3, 10, 1, 4]\n    for number in numbers_to_add:\n        state.add_number(number)\n\n    # Get and print the smallest numbers from the heap\n    print(\"Smallest numbers in the heap:\")\n    while state.get_heap():\n        smallest = state.get_smallest()\n        print(smallest)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "Global state",
+        "heapq",
+        "IdiomaticPython",
+        "Hard"
+    ],
+    "keywords": [
+        "Global state",
+        "heapq",
+        "IdiomaticPython"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "radon"
+}

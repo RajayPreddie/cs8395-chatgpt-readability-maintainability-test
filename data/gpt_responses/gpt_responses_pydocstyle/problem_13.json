@@ -1,0 +1,16 @@
+{
+    "id": "problem_13",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pydocstyle standard for docstrings. Here's an example snippet:\n\n\"\"\"Module for demonstrating pydocstyle adherence.\n\nThis module provides examples of how to write docstrings that conform to pydocstyle standards.\n\"\"\"\n\ndef add_numbers(x, y):\n    \"\"\"Add two numbers and return the result.\n\n    :param x: The first number to add.\n    :param y: The second number to add.\n    :return: The sum of x and y.\n    \"\"\"\n    return x + y\n\nFocus on comprehensive and compliant docstring documentation. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: DependencyInjection,Deque.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import deque\nfrom typing import Any, Callable\n\n\nclass DependencyInjector:\n    \"\"\"A simple dependency injection container.\n\n    This class is responsible for storing dependencies and providing them upon request.\n\n    Attributes:\n        dependencies (dict): A dictionary to store dependencies.\n    \"\"\"\n\n    def __init__(self):\n        \"\"\"Initialize the DependencyInjector with an empty dictionary.\"\"\"\n        self.dependencies = {}\n\n    def add(self, name: str, dependency: Any) -> None:\n        \"\"\"Add a dependency to the container.\n\n        :param name: The name of the dependency.\n        :param dependency: The dependency object.\n        \"\"\"\n        self.dependencies[name] = dependency\n\n    def get(self, name: str) -> Any:\n        \"\"\"Retrieve a dependency from the container by its name.\n\n        :param name: The name of the dependency to retrieve.\n        :return: The requested dependency object.\n        \"\"\"\n        return self.dependencies.get(name)\n\n\ndef process_data(data_deque: deque, process: Callable[[Any], Any]) -> deque:\n    \"\"\"Process each item in a deque with a given function and return a new deque.\n\n    :param data_deque: A deque containing data to be processed.\n    :param process: A callable that processes each item in the deque.\n    :return: A new deque with processed items.\n    \"\"\"\n    return deque(process(item) for item in data_deque)\n\n\n# Example usage:\n\n# Dependency injection container setup\ndi = DependencyInjector()\ndi.add('data_processor', lambda x: x * 2)\n\n# Create a deque with some sample data\ndata = deque([1, 2, 3, 4, 5])\n\n# Retrieve the data processor from the dependency injector\ndata_processor = di.get('data_processor')\n\n# Process the data using the retrieved processor\nprocessed_data = process_data(data, data_processor)\n\n# Output the processed data\nprint(processed_data)\n",
+    "tags": [
+        "DependencyInjection",
+        "Deque",
+        "Medium"
+    ],
+    "keywords": [
+        "DependencyInjection",
+        "Deque"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "pydocstyle"
+}

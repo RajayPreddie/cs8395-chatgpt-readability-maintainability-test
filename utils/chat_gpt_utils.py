@@ -10,7 +10,7 @@ from constants.linters import LINTER_PROMPTS_MAP
 
 
 
-def create_problem_descriptions(num_problems=5):
+def create_problem_descriptions(num_problems=20):
     problem_descriptions = []
 
 

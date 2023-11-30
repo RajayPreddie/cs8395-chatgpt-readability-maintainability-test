@@ -1,0 +1,18 @@
+{
+    "id": "problem_20",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the Black coding style. Here's an example snippet formatted using Black:\n\ndef format_name(first_name, last_name):\n    formatted_first_name = first_name.strip().title()\n    formatted_last_name = last_name.strip().title()\n    return f\"{formatted_first_name} {formatted_last_name}\"\n\nEnsure the code is formatted according to Black's uncompromising style. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: heapq,IdiomaticPython,Introspection.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nimport heapq\n\ndef top_n_items(iterable, n):\n    \"\"\"\n    Return the top n items from the iterable using a min-heap.\n    This is idiomatic Python, using heapq for efficiency.\n    \"\"\"\n    if n <= 0:\n        return []\n    \n    # Use nlargest to get the n largest items from the iterable\n    return heapq.nlargest(n, iterable)\n\ndef introspect_function(func):\n    \"\"\"\n    Perform introspection on the given function to display its name,\n    docstring, annotations, and default values for parameters.\n    \"\"\"\n    print(f\"Function name: {func.__name__}\")\n    print(f\"Docstring: {func.__doc__}\")\n    \n    if func.__annotations__:\n        print(\"Annotations:\")\n        for param, annotation in func.__annotations__.items():\n            print(f\"  {param}: {annotation}\")\n    else:\n        print(\"No annotations.\")\n    \n    if func.__defaults__:\n        print(\"Default parameter values:\")\n        defaults = func.__defaults__\n        arg_count = func.__code__.co_argcount\n        arg_names = func.__code__.co_varnames\n        for i, default in enumerate(defaults):\n            print(f\"  {arg_names[arg_count - len(defaults) + i]}: {default}\")\n    else:\n        print(\"No default parameter values.\")\n\n# Example usage\nif __name__ == \"__main__\":\n    items = [1, 3, 5, 7, 9, 2, 4, 6, 8, 0]\n    print(\"Top 3 items:\", top_n_items(items, 3))\n\n    introspect_function(top_n_items)\n",
+    "tags": [
+        "heapq",
+        "IdiomaticPython",
+        "Introspection",
+        "Hard"
+    ],
+    "keywords": [
+        "heapq",
+        "IdiomaticPython",
+        "Introspection"
+    ],
+    "difficulty": "Hard",
+    "prompt_style_adherence": "black"
+}

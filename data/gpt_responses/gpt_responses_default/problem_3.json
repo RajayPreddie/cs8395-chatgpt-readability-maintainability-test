@@ -1,16 +1,14 @@
 {
     "id": "problem_3",
-    "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytearray,bytes.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
-    "code": "\ndef main():\n    # Prompt user for input\n    input_string = input(\"Enter a string to convert to bytearray and manipulate: \")\n\n    # Convert string to bytes\n    byte_string = bytes(input_string, 'utf-8')\n\n    # Create a bytearray from the bytes\n    byte_array = bytearray(byte_string)\n\n    # Perform a simple manipulation: Increment each byte by 1\n    for i in range(len(byte_array)):\n        byte_array[i] += 1\n\n    # Convert bytearray back to bytes\n    manipulated_bytes = bytes(byte_array)\n\n    # Convert bytes back to string and print\n    manipulated_string = manipulated_bytes.decode('utf-8')\n    print(\"Manipulated string:\", manipulated_string)\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytearray.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\ndef file_to_bytearray(file_path):\n    \"\"\"\n    Reads the content of a file and returns it as a bytearray.\n    \"\"\"\n    try:\n        with open(file_path, 'rb') as file:\n            file_content = file.read()\n            return bytearray(file_content)\n    except FileNotFoundError:\n        print(f\"The file {file_path} was not found.\")\n        return None\n    except Exception as e:\n        print(f\"An error occurred: {e}\")\n        return None\n\ndef modify_bytearray(b_array, index, value):\n    \"\"\"\n    Modifies a bytearray at a specified index with a new value.\n    \"\"\"\n    try:\n        b_array[index] = value\n    except IndexError:\n        print(f\"Index {index} is out of the range of the bytearray.\")\n    except ValueError:\n        print(f\"Value {value} is not a valid byte.\")\n    except Exception as e:\n        print(f\"An error occurred: {e}\")\n\ndef save_bytearray_to_file(b_array, file_path):\n    \"\"\"\n    Saves a bytearray to a file.\n    \"\"\"\n    try:\n        with open(file_path, 'wb') as file:\n            file.write(b_array)\n    except Exception as e:\n        print(f\"An error occurred while writing to the file: {e}\")\n\ndef main():\n    # Example usage\n    input_file = \"input.bin\"\n    output_file = \"output.bin\"\n\n    # Read content of input_file into a bytearray\n    content = file_to_bytearray(input_file)\n    if content is not None:\n        print(\"Original content:\", content)\n\n        # Modify the bytearray (e.g., change the first byte to 255)\n        modify_bytearray(content, 0, 255)\n        print(\"Modified content:\", content)\n\n        # Save the modified bytearray to output_file\n        save_bytearray_to_file(content, output_file)\n        print(f\"Modified content has been saved to {output_file}\")\n\nif __name__ == \"__main__\":\n    main()\n",
     "tags": [
         "bytearray",
-        "bytes",
-        "Medium"
+        "Easy"
     ],
     "keywords": [
-        "bytearray",
-        "bytes"
+        "bytearray"
     ],
-    "difficulty": "Medium",
+    "difficulty": "Easy",
     "prompt_style_adherence": "default"
 }

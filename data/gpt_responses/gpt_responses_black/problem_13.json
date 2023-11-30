@@ -1,0 +1,16 @@
+{
+    "id": "problem_13",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the Black coding style. Here's an example snippet formatted using Black:\n\ndef format_name(first_name, last_name):\n    formatted_first_name = first_name.strip().title()\n    formatted_last_name = last_name.strip().title()\n    return f\"{formatted_first_name} {formatted_last_name}\"\n\nEnsure the code is formatted according to Black's uncompromising style. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: DependencyInjection,Deque.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import deque\nfrom typing import Any, Callable\n\n\nclass DependencyInjector:\n    def __init__(self):\n        self._dependencies = {}\n\n    def add_dependency(self, name: str, dependency: Any):\n        self._dependencies[name] = dependency\n\n    def get_dependency(self, name: str):\n        return self._dependencies.get(name)\n\n    def inject(self, func: Callable):\n        def wrapper(*args, **kwargs):\n            new_kwargs = {\n                **kwargs,\n                **{k: self.get_dependency(k) for k in self._dependencies},\n            }\n            return func(*args, **new_kwargs)\n\n        return wrapper\n\n\nclass TaskQueue:\n    def __init__(self):\n        self._queue = deque()\n\n    def add_task(self, task):\n        self._queue.append(task)\n\n    def run_tasks(self):\n        while self._queue:\n            task = self._queue.popleft()\n            task.execute()\n\n\nclass Task:\n    def __init__(self, name, action):\n        self.name = name\n        self.action = action\n\n    def execute(self):\n        print(f\"Executing {self.name}\")\n        self.action()\n\n\n# Example usage\nif __name__ == \"__main__\":\n    def my_custom_task():\n        print(\"This is a custom task.\")\n\n    injector = DependencyInjector()\n    injector.add_dependency(\"task_queue\", TaskQueue())\n\n    @injector.inject\n    def add_task_to_queue(task_queue: TaskQueue, task_name: str, action: Callable):\n        task = Task(task_name, action)\n        task_queue.add_task(task)\n\n    # Adding tasks to the queue\n    add_task_to_queue(task_name=\"CustomTask1\", action=my_custom_task)\n    add_task_to_queue(task_name=\"CustomTask2\", action=lambda: print(\"Another custom task.\"))\n\n    # Getting the task queue and running tasks\n    task_queue = injector.get_dependency(\"task_queue\")\n    task_queue.run_tasks()\n",
+    "tags": [
+        "DependencyInjection",
+        "Deque",
+        "Medium"
+    ],
+    "keywords": [
+        "DependencyInjection",
+        "Deque"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "black"
+}

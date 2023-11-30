@@ -1,18 +1,14 @@
 {
     "id": "problem_4",
-    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytes,ChainMap,Comprehension.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
-    "code": "\nfrom collections import ChainMap\n\ndef convert_to_bytes(data):\n    \"\"\"Converts a list of values to a list of bytes.\"\"\"\n    return [bytes(str(item), 'utf-8') for item in data]\n\ndef merge_dictionaries(*dicts):\n    \"\"\"Merge dictionaries using ChainMap and return a single dictionary.\"\"\"\n    chain = ChainMap(*dicts)\n    return dict(chain)\n\ndef main():\n    data = [123, 456, 789]\n    byte_values = convert_to_bytes(data)\n    print(\"Byte values:\", byte_values)\n\n    dict1 = {'a': 1, 'b': 2}\n    dict2 = {'b': 3, 'c': 4}\n    merged_dict = merge_dictionaries(dict1, dict2)\n    print(\"Merged Dictionary:\", merged_dict)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: bytes.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\ndef bytes_to_human_readable(num_bytes):\n    \"\"\"Convert a byte value to a human-readable format.\"\"\"\n    for unit in ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB']:\n        if num_bytes < 1024:\n            return f\"{num_bytes:.2f} {unit}\"\n        num_bytes /= 1024\n    return f\"{num_bytes:.2f} YB\"\n\ndef main():\n    byte_values = [1024, 2048, 78900, 123456789]\n    for value in byte_values:\n        readable_format = bytes_to_human_readable(value)\n        print(readable_format)\n\nif __name__ == \"__main__\":\n    main()\n",
     "tags": [
         "bytes",
-        "ChainMap",
-        "Comprehension",
-        "Hard"
+        "Easy"
     ],
     "keywords": [
-        "bytes",
-        "ChainMap",
-        "Comprehension"
+        "bytes"
     ],
-    "difficulty": "Hard",
+    "difficulty": "Easy",
     "prompt_style_adherence": "radon"
 }

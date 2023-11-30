@@ -1,0 +1,14 @@
+{
+    "id": "problem_7",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. Here's an example snippet compliant with pylint:\n\n\"\"\"Module for demonstrating pylint adherence.\n\nThis module provides an example function formatted to comply with pylint standards.\n\"\"\"\n\ndef calculate_sum(a, b):\n    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n    return a + b\n\nFocus on clean, readable code following the style of the provided snippet. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Concurrency.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\"\"\"Module for demonstrating concurrency in Python.\n\nThis module provides an example function that uses threading to perform a concurrent task.\n\"\"\"\n\nimport threading\n\nclass Counter:\n    \"\"\"Thread-safe counter object.\"\"\"\n\n    def __init__(self):\n        self.value = 0\n        self.lock = threading.Lock()\n\n    def increment(self):\n        \"\"\"Increment the counter safely with a lock.\"\"\"\n        with self.lock:\n            self.value += 1\n\n    def get_value(self):\n        \"\"\"Get the current value of the counter.\"\"\"\n        with self.lock:\n            return self.value\n\ndef worker(counter, iterations):\n    \"\"\"Worker function to increment the counter.\"\"\"\n    for _ in range(iterations):\n        counter.increment()\n\ndef main():\n    \"\"\"Main function to demonstrate concurrency with threads.\"\"\"\n    counter = Counter()\n    threads = []\n    num_threads = 10\n    iterations = 100\n\n    # Create and start threads\n    for i in range(num_threads):\n        thread = threading.Thread(target=worker, args=(counter, iterations))\n        threads.append(thread)\n        thread.start()\n\n    # Wait for all threads to complete\n    for thread in threads:\n        thread.join()\n\n    print(f\"Final counter value: {counter.get_value()}\")\n\nif __name__ == \"__main__\":\n    main()",
+    "tags": [
+        "Concurrency",
+        "Easy"
+    ],
+    "keywords": [
+        "Concurrency"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "pylint"
+}

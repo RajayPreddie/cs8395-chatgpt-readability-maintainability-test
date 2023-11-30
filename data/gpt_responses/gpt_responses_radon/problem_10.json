@@ -1,0 +1,14 @@
+{
+    "id": "problem_10",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Counter.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\nfrom collections import Counter\n\ndef count_elements(sequence):\n    \"\"\"Count the frequency of each element in the given sequence.\"\"\"\n    return Counter(sequence)\n\ndef display_frequencies(counter):\n    \"\"\"Display the frequencies of elements in the counter.\"\"\"\n    for element, frequency in counter.items():\n        print(f\"{element}: {frequency}\")\n\ndef main():\n    sequence = input(\"Enter elements of the sequence separated by space: \").split()\n    element_frequencies = count_elements(sequence)\n    display_frequencies(element_frequencies)\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "Counter",
+        "Easy"
+    ],
+    "keywords": [
+        "Counter"
+    ],
+    "difficulty": "Easy",
+    "prompt_style_adherence": "radon"
+}

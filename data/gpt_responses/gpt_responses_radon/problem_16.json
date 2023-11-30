@@ -1,0 +1,16 @@
+{
+    "id": "problem_16",
+    "description": "Act as a Python developer and write a Python program with a focus on maintainable and low-complexity code as measured by radon. Here's a example snippet with low cyclomatic complexity:\n\n# Example Snippet for Radon\ndef fibonacci(n):\n    \"\"\"Return the nth Fibonacci number.\"\"\"\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\ndef main():\n    for i in range(10):\n        print(fibonacci(i))\n\nif __name__ == \"__main__\":\n    main()\n\nStrive for a simple and clear code structure, minimizing cyclomatic complexity. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: frozenset,GarbageCollection.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\ndef manage_memory(objects):\n    \"\"\"\n    Simulate garbage collection by removing objects that are no longer in use.\n    The objects parameter is a list of tuples, where each tuple represents an object with a unique ID.\n    \"\"\"\n    # Use frozenset to store unique IDs of objects that are still in use\n    in_use_ids = frozenset(obj[0] for obj in objects if obj[1] == 'in_use')\n    \n    # Filter out objects that are not in use anymore\n    cleaned_objects = [obj for obj in objects if obj[0] in in_use_ids]\n    \n    return cleaned_objects\n\ndef main():\n    # Example list of objects with their IDs and status\n    objects = [\n        (1, 'in_use'),\n        (2, 'not_in_use'),\n        (3, 'in_use'),\n        (4, 'not_in_use'),\n        (5, 'in_use'),\n    ]\n    \n    # Simulate garbage collection\n    objects_after_gc = manage_memory(objects)\n    \n    # Print the IDs of objects that are still in use after garbage collection\n    for obj in objects_after_gc:\n        print(f\"Object ID {obj[0]} is still in use.\")\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "frozenset",
+        "GarbageCollection",
+        "Medium"
+    ],
+    "keywords": [
+        "frozenset",
+        "GarbageCollection"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "radon"
+}

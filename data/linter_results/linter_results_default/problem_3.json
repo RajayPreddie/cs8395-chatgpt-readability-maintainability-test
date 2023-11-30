@@ -1,27 +1,28 @@
 {
     "flake8": {
         "violations": {
-            "E501 line too long (83 > 79 characters)": 1
+            "E302 expected 2 blank lines, found 1": 3,
+            "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 1,
+        "total_violations": 4,
         "most_frequent_violation": {
-            "violation_type": "E501 line too long (83 > 79 characters)",
-            "frequency": 1
+            "violation_type": "E302 expected 2 blank lines, found 1",
+            "frequency": 3
         },
-        "number_of_lines_in_code": 25
+        "number_of_lines_in_code": 59
     },
     "pylint": {
         "violations": {
             "Missing module docstring (missing-module-docstring)": 1,
-            "Missing function or method docstring (missing-function-docstring)": 1,
-            "Consider using enumerate instead of iterating with range and len (consider-using-enumerate)": 1
+            "Catching too general exception Exception (broad-exception-caught)": 3,
+            "Missing function or method docstring (missing-function-docstring)": 1
         },
-        "total_violations": 3,
+        "total_violations": 5,
         "most_frequent_violation": {
-            "violation_type": "Consider using enumerate instead of iterating with range and len (consider-using-enumerate)",
-            "frequency": 1
+            "violation_type": "Catching too general exception Exception (broad-exception-caught)",
+            "frequency": 3
         },
-        "number_of_lines_in_code": 25
+        "number_of_lines_in_code": 59
     },
     "black": {
         "violations": {
@@ -34,19 +35,23 @@
         }
     },
     "radon": {
-        "function_complexity": 2.0,
-        "overall_score": 2.0
+        "function_complexity": 2.75,
+        "overall_score": 2.75
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
+            "D200: One-line docstring should fit on one line with quotes (found 3)": 3,
+            "D401: First line should be in imperative mood (perhaps 'Read', not 'Reads')": 1,
+            "D401: First line should be in imperative mood (perhaps 'Modify', not 'Modifies')": 1,
+            "D401: First line should be in imperative mood (perhaps 'Save', not 'Saves')": 1,
             "D103: Missing docstring in public function": 1
         },
-        "total_violations": 2,
+        "total_violations": 8,
         "most_frequent_violation": {
-            "violation_type": "D103: Missing docstring in public function",
-            "frequency": 1
+            "violation_type": "D200: One-line docstring should fit on one line with quotes (found 3)",
+            "frequency": 3
         },
-        "number_of_lines_in_code": 25
+        "number_of_lines_in_code": 59
     }
 }

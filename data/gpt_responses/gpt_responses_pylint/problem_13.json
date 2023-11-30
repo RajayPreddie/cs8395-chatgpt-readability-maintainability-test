@@ -1,0 +1,16 @@
+{
+    "id": "problem_13",
+    "description": "Act as a Python developer and write a Python program that strictly adheres to the pylint coding standard. Here's an example snippet compliant with pylint:\n\n\"\"\"Module for demonstrating pylint adherence.\n\nThis module provides an example function formatted to comply with pylint standards.\n\"\"\"\n\ndef calculate_sum(a, b):\n    \"\"\"Calculate and return the sum of two numbers.\"\"\"\n    return a + b\n\nFocus on clean, readable code following the style of the provided snippet. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: DependencyInjection,Deque.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
+    "code": "\n\"\"\"\nModule to demonstrate dependency injection and usage of collections.deque.\n\nThis module provides an example class and function that uses dependency injection\nand the deque from the collections module to manage a queue of tasks.\n\"\"\"\n\nfrom collections import deque\n\nclass TaskQueue:\n    \"\"\"Class to manage a queue of tasks using dependency injection.\"\"\"\n\n    def __init__(self, dependency):\n        \"\"\"\n        Initialize the TaskQueue with a dependency.\n\n        :param dependency: An instance of a dependency to process tasks.\n        \"\"\"\n        self._dependency = dependency\n        self._tasks = deque()\n\n    def add_task(self, task):\n        \"\"\"\n        Add a task to the queue.\n\n        :param task: The task to add to the queue.\n        \"\"\"\n        self._tasks.append(task)\n\n    def process_tasks(self):\n        \"\"\"Process all tasks in the queue using the injected dependency.\"\"\"\n        while self._tasks:\n            task = self._tasks.popleft()\n            self._dependency.process(task)\n\n\nclass TaskProcessor:\n    \"\"\"Class to process tasks.\"\"\"\n\n    @staticmethod\n    def process(task):\n        \"\"\"\n        Process a task.\n\n        :param task: The task to process.\n        \"\"\"\n        print(f\"Processing task: {task}\")\n\n\ndef main():\n    \"\"\"Main function to demonstrate dependency injection with TaskQueue.\"\"\"\n    # Create an instance of TaskProcessor to inject into TaskQueue\n    processor = TaskProcessor()\n    task_queue = TaskQueue(processor)\n\n    # Add some tasks to the queue\n    task_queue.add_task(\"Task 1\")\n    task_queue.add_task(\"Task 2\")\n    task_queue.add_task(\"Task 3\")\n\n    # Process all tasks in the queue\n    task_queue.process_tasks()\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "tags": [
+        "DependencyInjection",
+        "Deque",
+        "Medium"
+    ],
+    "keywords": [
+        "DependencyInjection",
+        "Deque"
+    ],
+    "difficulty": "Medium",
+    "prompt_style_adherence": "pylint"
+}

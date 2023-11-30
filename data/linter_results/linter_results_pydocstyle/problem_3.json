@@ -1,27 +1,28 @@
 {
     "flake8": {
-        "violations": {},
-        "total_violations": 0,
-        "most_frequent_violation": {
-            "violation_type": "",
-            "frequency": 0
+        "violations": {
+            "E501 line too long (85 > 79 characters)": 2,
+            "W293 blank line contains whitespace": 1
         },
-        "number_of_lines_in_code": 48
+        "total_violations": 3,
+        "most_frequent_violation": {
+            "violation_type": "E501 line too long (85 > 79 characters)",
+            "frequency": 2
+        },
+        "number_of_lines_in_code": 43
     },
     "pylint": {
         "violations": {
             "Missing module docstring (missing-module-docstring)": 1,
-            "Redefining name 'bytearray1' from outer scope (line 44) (redefined-outer-name)": 1,
-            "Redefining name 'bytearray2' from outer scope (line 45) (redefined-outer-name)": 1,
-            "Constant name \"string1\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
-            "Constant name \"string2\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1
+            "Redefining name 'byte_array' from outer scope (line 38) (redefined-outer-name)": 1,
+            "Constant name \"original_string\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1
         },
-        "total_violations": 5,
+        "total_violations": 3,
         "most_frequent_violation": {
-            "violation_type": "Constant name \"string2\" doesn't conform to UPPER_CASE naming style (invalid-name)",
+            "violation_type": "Constant name \"original_string\" doesn't conform to UPPER_CASE naming style (invalid-name)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 48
+        "number_of_lines_in_code": 43
     },
     "black": {
         "violations": {
@@ -34,8 +35,8 @@
         }
     },
     "radon": {
-        "function_complexity": 2.5,
-        "overall_score": 2.5
+        "function_complexity": 1.5,
+        "overall_score": 1.5
     },
     "pydocstyle": {
         "violations": {
@@ -46,6 +47,6 @@
             "violation_type": "D100: Missing docstring in public module",
             "frequency": 1
         },
-        "number_of_lines_in_code": 48
+        "number_of_lines_in_code": 43
     }
 }
