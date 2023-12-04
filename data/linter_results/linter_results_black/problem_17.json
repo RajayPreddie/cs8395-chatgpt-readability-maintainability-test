@@ -1,35 +1,23 @@
 {
     "flake8": {
-        "violations": {
-            "F401 'itertools' imported but unused": 1,
-            "E302 expected 2 blank lines, found 1": 4,
-            "E305 expected 2 blank lines after class or function definition, found 1": 2,
-            "E501 line too long (93 > 79 characters)": 1,
-            "W293 blank line contains whitespace": 1
-        },
-        "total_violations": 9,
+        "violations": {},
+        "total_violations": 0,
         "most_frequent_violation": {
-            "violation_type": "E302 expected 2 blank lines, found 1",
-            "frequency": 4
+            "violation_type": "",
+            "frequency": 0
         },
-        "number_of_lines_in_code": 35
+        "number_of_lines_in_code": 56
     },
     "pylint": {
         "violations": {
-            "Trailing whitespace (trailing-whitespace)": 1,
-            "Missing module docstring (missing-module-docstring)": 1,
-            "Missing function or method docstring (missing-function-docstring)": 4,
-            "Redefining name 'num' from outer scope (line 29) (redefined-outer-name)": 1,
-            "Redefining name 'key' from outer scope (line 34) (redefined-outer-name)": 2,
-            "Redefining name 'value' from outer scope (line 34) (redefined-outer-name)": 1,
-            "Unused import itertools (unused-import)": 1
+            "Missing module docstring (missing-module-docstring)": 1
         },
-        "total_violations": 11,
+        "total_violations": 1,
         "most_frequent_violation": {
-            "violation_type": "Missing function or method docstring (missing-function-docstring)",
-            "frequency": 4
+            "violation_type": "Missing module docstring (missing-module-docstring)",
+            "frequency": 1
         },
-        "number_of_lines_in_code": 35
+        "number_of_lines_in_code": 56
     },
     "black": {
         "violations": {
@@ -48,13 +36,14 @@
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D103: Missing docstring in public function": 4
+            "D200: One-line docstring should fit on one line with quotes (found 3)": 4,
+            "D401: First line should be in imperative mood; try rephrasing (found 'A')": 1
         },
-        "total_violations": 5,
+        "total_violations": 6,
         "most_frequent_violation": {
-            "violation_type": "D103: Missing docstring in public function",
+            "violation_type": "D200: One-line docstring should fit on one line with quotes (found 3)",
             "frequency": 4
         },
-        "number_of_lines_in_code": 35
+        "number_of_lines_in_code": 56
     }
 }

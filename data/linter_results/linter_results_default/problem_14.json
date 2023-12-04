@@ -2,31 +2,28 @@
     "flake8": {
         "violations": {
             "E302 expected 2 blank lines, found 1": 1,
-            "W293 blank line contains whitespace": 1,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 3,
+        "total_violations": 2,
         "most_frequent_violation": {
             "violation_type": "E305 expected 2 blank lines after class or function definition, found 1",
             "frequency": 1
         },
-        "number_of_lines_in_code": 44
+        "number_of_lines_in_code": 40
     },
     "pylint": {
         "violations": {
-            "Trailing whitespace (trailing-whitespace)": 1,
             "Missing module docstring (missing-module-docstring)": 1,
-            "Missing class docstring (missing-class-docstring)": 1,
-            "Consider using '{}' instead of a call to 'dict'. (use-dict-literal)": 1,
-            "Missing function or method docstring (missing-function-docstring)": 2,
-            "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)": 1
+            "Missing function or method docstring (missing-function-docstring)": 1,
+            "Variable name \"MAX_RECENT_ITEMS\" doesn't conform to snake_case naming style (invalid-name)": 1,
+            "Consider using '{}' instead of a call to 'dict'. (use-dict-literal)": 1
         },
-        "total_violations": 7,
+        "total_violations": 4,
         "most_frequent_violation": {
-            "violation_type": "Missing function or method docstring (missing-function-docstring)",
-            "frequency": 2
+            "violation_type": "Consider using '{}' instead of a call to 'dict'. (use-dict-literal)",
+            "frequency": 1
         },
-        "number_of_lines_in_code": 44
+        "number_of_lines_in_code": 40
     },
     "black": {
         "violations": {
@@ -39,22 +36,19 @@
         }
     },
     "radon": {
-        "class_complexity": 3.0,
-        "overall_score": 2.25,
-        "method_complexity": 2.0
+        "function_complexity": 6.0,
+        "overall_score": 6.0
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D101: Missing docstring in public class": 1,
-            "D107: Missing docstring in __init__": 1,
-            "D102: Missing docstring in public method": 2
+            "D103: Missing docstring in public function": 1
         },
-        "total_violations": 5,
+        "total_violations": 2,
         "most_frequent_violation": {
-            "violation_type": "D102: Missing docstring in public method",
-            "frequency": 2
+            "violation_type": "D103: Missing docstring in public function",
+            "frequency": 1
         },
-        "number_of_lines_in_code": 44
+        "number_of_lines_in_code": 40
     }
 }

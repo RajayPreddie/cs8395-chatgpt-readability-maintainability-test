@@ -1,33 +1,30 @@
 {
     "flake8": {
         "violations": {
-            "F401 'os' imported but unused": 1,
+            "F401 'contextlib' imported but unused": 1,
             "E302 expected 2 blank lines, found 1": 4,
-            "W293 blank line contains whitespace": 1,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 7,
+        "total_violations": 6,
         "most_frequent_violation": {
             "violation_type": "E302 expected 2 blank lines, found 1",
             "frequency": 4
         },
-        "number_of_lines_in_code": 38
+        "number_of_lines_in_code": 42
     },
     "pylint": {
         "violations": {
-            "Trailing whitespace (trailing-whitespace)": 1,
             "Missing module docstring (missing-module-docstring)": 1,
-            "Missing class docstring (missing-class-docstring)": 1,
             "Using open without explicitly specifying an encoding (unspecified-encoding)": 1,
-            "Missing function or method docstring (missing-function-docstring)": 3,
-            "Unused import os (unused-import)": 1
+            "Missing function or method docstring (missing-function-docstring)": 1,
+            "Unused import contextlib (unused-import)": 1
         },
-        "total_violations": 8,
+        "total_violations": 4,
         "most_frequent_violation": {
-            "violation_type": "Missing function or method docstring (missing-function-docstring)",
-            "frequency": 3
+            "violation_type": "Unused import contextlib (unused-import)",
+            "frequency": 1
         },
-        "number_of_lines_in_code": 38
+        "number_of_lines_in_code": 42
     },
     "black": {
         "violations": {
@@ -48,16 +45,17 @@
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D101: Missing docstring in public class": 1,
+            "D204: 1 blank line required after class docstring (found 0)": 1,
             "D107: Missing docstring in __init__": 1,
             "D105: Missing docstring in magic method": 2,
-            "D103: Missing docstring in public function": 3
+            "D401: First line should be in imperative mood; try rephrasing (found 'Function')": 2,
+            "D103: Missing docstring in public function": 1
         },
         "total_violations": 8,
         "most_frequent_violation": {
-            "violation_type": "D103: Missing docstring in public function",
-            "frequency": 3
+            "violation_type": "D401: First line should be in imperative mood; try rephrasing (found 'Function')",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 38
+        "number_of_lines_in_code": 42
     }
 }

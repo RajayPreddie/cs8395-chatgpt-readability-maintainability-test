@@ -1,11 +1,12 @@
 {
     "flake8": {
         "violations": {
-            "E501 line too long (87 > 79 characters)": 1,
+            "E501 line too long (103 > 79 characters)": 1,
             "E302 expected 2 blank lines, found 1": 1,
+            "W293 blank line contains whitespace": 1,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 3,
+        "total_violations": 4,
         "most_frequent_violation": {
             "violation_type": "E305 expected 2 blank lines after class or function definition, found 1",
             "frequency": 1
@@ -13,11 +14,13 @@
         "number_of_lines_in_code": 22
     },
     "pylint": {
-        "violations": {},
-        "total_violations": 0,
+        "violations": {
+            "Line too long (103/100) (line-too-long)": 1
+        },
+        "total_violations": 1,
         "most_frequent_violation": {
-            "violation_type": "",
-            "frequency": 0
+            "violation_type": "Line too long (103/100) (line-too-long)",
+            "frequency": 1
         },
         "number_of_lines_in_code": 22
     },

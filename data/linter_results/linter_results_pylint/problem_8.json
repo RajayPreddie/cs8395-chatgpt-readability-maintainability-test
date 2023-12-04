@@ -1,28 +1,24 @@
 {
     "flake8": {
         "violations": {
-            "E302 expected 2 blank lines, found 1": 2,
-            "E305 expected 2 blank lines after class or function definition, found 1": 1,
-            "E501 line too long (82 > 79 characters)": 1
+            "E302 expected 2 blank lines, found 1": 4,
+            "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 4,
+        "total_violations": 5,
         "most_frequent_violation": {
             "violation_type": "E302 expected 2 blank lines, found 1",
-            "frequency": 2
+            "frequency": 4
         },
-        "number_of_lines_in_code": 34
+        "number_of_lines_in_code": 33
     },
     "pylint": {
-        "violations": {
-            "Missing module docstring (missing-module-docstring)": 1,
-            "Using variable 'original_directory' before assignment (used-before-assignment)": 1
-        },
-        "total_violations": 2,
+        "violations": {},
+        "total_violations": 0,
         "most_frequent_violation": {
-            "violation_type": "Using variable 'original_directory' before assignment (used-before-assignment)",
-            "frequency": 1
+            "violation_type": "",
+            "frequency": 0
         },
-        "number_of_lines_in_code": 34
+        "number_of_lines_in_code": 33
     },
     "black": {
         "violations": {
@@ -40,13 +36,13 @@
     },
     "pydocstyle": {
         "violations": {
-            "D100: Missing docstring in public module": 1
+            "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
         },
         "total_violations": 1,
         "most_frequent_violation": {
-            "violation_type": "D100: Missing docstring in public module",
+            "violation_type": "D401: First line should be in imperative mood; try rephrasing (found 'Main')",
             "frequency": 1
         },
-        "number_of_lines_in_code": 34
+        "number_of_lines_in_code": 33
     }
 }

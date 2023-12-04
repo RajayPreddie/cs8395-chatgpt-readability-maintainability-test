@@ -1,12 +1,15 @@
 {
     "flake8": {
-        "violations": {},
-        "total_violations": 0,
-        "most_frequent_violation": {
-            "violation_type": "",
-            "frequency": 0
+        "violations": {
+            "E302 expected 2 blank lines, found 1": 2,
+            "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "number_of_lines_in_code": 31
+        "total_violations": 3,
+        "most_frequent_violation": {
+            "violation_type": "E302 expected 2 blank lines, found 1",
+            "frequency": 2
+        },
+        "number_of_lines_in_code": 40
     },
     "pylint": {
         "violations": {
@@ -17,7 +20,7 @@
             "violation_type": "Missing module docstring (missing-module-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 31
+        "number_of_lines_in_code": 40
     },
     "black": {
         "violations": {
@@ -36,13 +39,14 @@
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
+            "D200: One-line docstring should fit on one line with quotes (found 3)": 2,
             "D401: First line should be in imperative mood (perhaps 'Decorate', not 'Decorator')": 1
         },
-        "total_violations": 2,
+        "total_violations": 4,
         "most_frequent_violation": {
-            "violation_type": "D401: First line should be in imperative mood (perhaps 'Decorate', not 'Decorator')",
-            "frequency": 1
+            "violation_type": "D200: One-line docstring should fit on one line with quotes (found 3)",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 31
+        "number_of_lines_in_code": 40
     }
 }

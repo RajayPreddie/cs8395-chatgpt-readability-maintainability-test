@@ -1,25 +1,29 @@
 {
     "flake8": {
-        "violations": {},
-        "total_violations": 0,
-        "most_frequent_violation": {
-            "violation_type": "",
-            "frequency": 0
+        "violations": {
+            "E302 expected 2 blank lines, found 1": 2,
+            "W293 blank line contains whitespace": 1,
+            "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "number_of_lines_in_code": 28
+        "total_violations": 4,
+        "most_frequent_violation": {
+            "violation_type": "E302 expected 2 blank lines, found 1",
+            "frequency": 2
+        },
+        "number_of_lines_in_code": 26
     },
     "pylint": {
         "violations": {
+            "Trailing whitespace (trailing-whitespace)": 1,
             "Missing module docstring (missing-module-docstring)": 1,
-            "Missing function or method docstring (missing-function-docstring)": 2,
-            "Redefining name 'data' from outer scope (line 25) (redefined-outer-name)": 1
+            "Missing function or method docstring (missing-function-docstring)": 2
         },
         "total_violations": 4,
         "most_frequent_violation": {
             "violation_type": "Missing function or method docstring (missing-function-docstring)",
             "frequency": 2
         },
-        "number_of_lines_in_code": 28
+        "number_of_lines_in_code": 26
     },
     "black": {
         "violations": {
@@ -45,6 +49,6 @@
             "violation_type": "D103: Missing docstring in public function",
             "frequency": 2
         },
-        "number_of_lines_in_code": 28
+        "number_of_lines_in_code": 26
     }
 }

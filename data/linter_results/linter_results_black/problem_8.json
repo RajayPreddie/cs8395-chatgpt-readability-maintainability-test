@@ -3,14 +3,14 @@
         "violations": {
             "E302 expected 2 blank lines, found 1": 2,
             "E305 expected 2 blank lines after class or function definition, found 1": 1,
-            "E501 line too long (83 > 79 characters)": 1
+            "E501 line too long (80 > 79 characters)": 1
         },
         "total_violations": 4,
         "most_frequent_violation": {
             "violation_type": "E302 expected 2 blank lines, found 1",
             "frequency": 2
         },
-        "number_of_lines_in_code": 22
+        "number_of_lines_in_code": 21
     },
     "pylint": {
         "violations": {
@@ -23,7 +23,7 @@
             "violation_type": "Missing function or method docstring (missing-function-docstring)",
             "frequency": 2
         },
-        "number_of_lines_in_code": 22
+        "number_of_lines_in_code": 21
     },
     "black": {
         "violations": {
@@ -49,6 +49,6 @@
             "violation_type": "D103: Missing docstring in public function",
             "frequency": 2
         },
-        "number_of_lines_in_code": 22
+        "number_of_lines_in_code": 21
     }
 }

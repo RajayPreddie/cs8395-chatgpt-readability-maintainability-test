@@ -1,15 +1,14 @@
 {
     "flake8": {
         "violations": {
-            "E302 expected 2 blank lines, found 1": 3,
-            "E305 expected 2 blank lines after class or function definition, found 1": 1
+            "E302 expected 2 blank lines, found 1": 2
         },
-        "total_violations": 4,
+        "total_violations": 2,
         "most_frequent_violation": {
             "violation_type": "E302 expected 2 blank lines, found 1",
-            "frequency": 3
+            "frequency": 2
         },
-        "number_of_lines_in_code": 42
+        "number_of_lines_in_code": 29
     },
     "pylint": {
         "violations": {
@@ -20,7 +19,7 @@
             "violation_type": "Missing module docstring (missing-module-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 42
+        "number_of_lines_in_code": 29
     },
     "black": {
         "violations": {
@@ -38,13 +37,14 @@
     },
     "pydocstyle": {
         "violations": {
-            "D100: Missing docstring in public module": 1
+            "D100: Missing docstring in public module": 1,
+            "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
         },
-        "total_violations": 1,
+        "total_violations": 2,
         "most_frequent_violation": {
-            "violation_type": "D100: Missing docstring in public module",
+            "violation_type": "D401: First line should be in imperative mood; try rephrasing (found 'Main')",
             "frequency": 1
         },
-        "number_of_lines_in_code": 42
+        "number_of_lines_in_code": 29
     }
 }

@@ -12,9 +12,6 @@ from constants.linters import LINTER_PROMPTS_MAP
 
 def create_problem_descriptions(num_problems=20):
     problem_descriptions = []
-
-
-   
     num_easy = int(num_problems * constants.NUMBER_OF_EASY_PROBLEMS_RATIO)
     num_medium = int(num_problems *  constants.NUMBER_OF_MEDIUM_PROBLEMS_RATIO)
     

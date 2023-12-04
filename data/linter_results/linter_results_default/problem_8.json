@@ -2,28 +2,28 @@
     "flake8": {
         "violations": {
             "E302 expected 2 blank lines, found 1": 1,
-            "E305 expected 2 blank lines after class or function definition, found 1": 1,
-            "E501 line too long (80 > 79 characters)": 1
+            "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 3,
+        "total_violations": 2,
         "most_frequent_violation": {
-            "violation_type": "E501 line too long (80 > 79 characters)",
+            "violation_type": "E305 expected 2 blank lines after class or function definition, found 1",
             "frequency": 1
         },
-        "number_of_lines_in_code": 20
+        "number_of_lines_in_code": 23
     },
     "pylint": {
         "violations": {
             "Missing module docstring (missing-module-docstring)": 1,
             "Missing function or method docstring (missing-function-docstring)": 1,
-            "Using variable 'cwd' before assignment (used-before-assignment)": 1
+            "Using variable 'cwd' before assignment (used-before-assignment)": 1,
+            "Constant name \"new_path\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1
         },
-        "total_violations": 3,
+        "total_violations": 4,
         "most_frequent_violation": {
-            "violation_type": "Using variable 'cwd' before assignment (used-before-assignment)",
+            "violation_type": "Constant name \"new_path\" doesn't conform to UPPER_CASE naming style (invalid-name)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 20
+        "number_of_lines_in_code": 23
     },
     "black": {
         "violations": {
@@ -49,6 +49,6 @@
             "violation_type": "D103: Missing docstring in public function",
             "frequency": 1
         },
-        "number_of_lines_in_code": 20
+        "number_of_lines_in_code": 23
     }
 }

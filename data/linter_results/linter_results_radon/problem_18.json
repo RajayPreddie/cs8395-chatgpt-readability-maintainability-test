@@ -1,29 +1,29 @@
 {
     "flake8": {
         "violations": {
-            "E302 expected 2 blank lines, found 1": 2,
+            "E302 expected 2 blank lines, found 1": 3,
+            "W293 blank line contains whitespace": 6,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 3,
+        "total_violations": 10,
         "most_frequent_violation": {
-            "violation_type": "E302 expected 2 blank lines, found 1",
-            "frequency": 2
+            "violation_type": "W293 blank line contains whitespace",
+            "frequency": 6
         },
-        "number_of_lines_in_code": 26
+        "number_of_lines_in_code": 43
     },
     "pylint": {
         "violations": {
+            "Trailing whitespace (trailing-whitespace)": 6,
             "Missing module docstring (missing-module-docstring)": 1,
-            "Global variable 'current_number' undefined at the module level (global-variable-undefined)": 2,
-            "Using variable 'current_number' before assignment (used-before-assignment)": 1,
             "Missing function or method docstring (missing-function-docstring)": 1
         },
-        "total_violations": 5,
+        "total_violations": 8,
         "most_frequent_violation": {
-            "violation_type": "Global variable 'current_number' undefined at the module level (global-variable-undefined)",
-            "frequency": 2
+            "violation_type": "Trailing whitespace (trailing-whitespace)",
+            "frequency": 6
         },
-        "number_of_lines_in_code": 26
+        "number_of_lines_in_code": 43
     },
     "black": {
         "violations": {
@@ -37,19 +37,22 @@
     },
     "radon": {
         "function_complexity": 2.5,
-        "overall_score": 2.5
+        "overall_score": 1.625,
+        "class_complexity": 2.0,
+        "method_complexity": 1.2
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D401: First line should be in imperative mood (perhaps 'Generate', not 'Generator')": 1,
+            "D204: 1 blank line required after class docstring (found 0)": 1,
+            "D107: Missing docstring in __init__": 1,
             "D103: Missing docstring in public function": 1
         },
-        "total_violations": 3,
+        "total_violations": 4,
         "most_frequent_violation": {
             "violation_type": "D103: Missing docstring in public function",
             "frequency": 1
         },
-        "number_of_lines_in_code": 26
+        "number_of_lines_in_code": 43
     }
 }

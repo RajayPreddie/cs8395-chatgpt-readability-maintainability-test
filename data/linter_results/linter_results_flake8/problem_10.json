@@ -2,27 +2,27 @@
     "flake8": {
         "violations": {
             "E302 expected 2 blank lines, found 1": 1,
-            "E305 expected 2 blank lines after class or function definition, found 1": 1,
-            "E501 line too long (83 > 79 characters)": 1
+            "W293 blank line contains whitespace": 2,
+            "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 3,
+        "total_violations": 4,
         "most_frequent_violation": {
-            "violation_type": "E501 line too long (83 > 79 characters)",
-            "frequency": 1
+            "violation_type": "W293 blank line contains whitespace",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 18
+        "number_of_lines_in_code": 24
     },
     "pylint": {
         "violations": {
-            "Missing module docstring (missing-module-docstring)": 1,
-            "Redefining name 'elements' from outer scope (line 17) (redefined-outer-name)": 1
+            "Trailing whitespace (trailing-whitespace)": 2,
+            "Missing module docstring (missing-module-docstring)": 1
         },
-        "total_violations": 2,
+        "total_violations": 3,
         "most_frequent_violation": {
-            "violation_type": "Redefining name 'elements' from outer scope (line 17) (redefined-outer-name)",
-            "frequency": 1
+            "violation_type": "Trailing whitespace (trailing-whitespace)",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 18
+        "number_of_lines_in_code": 24
     },
     "black": {
         "violations": {
@@ -48,6 +48,6 @@
             "violation_type": "D205: 1 blank line required between summary line and description (found 0)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 18
+        "number_of_lines_in_code": 24
     }
 }

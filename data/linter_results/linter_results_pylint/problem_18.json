@@ -1,28 +1,28 @@
 {
     "flake8": {
         "violations": {
-            "E501 line too long (83 > 79 characters)": 1,
-            "E302 expected 2 blank lines, found 1": 4,
-            "W293 blank line contains whitespace": 4,
+            "E302 expected 2 blank lines, found 1": 3,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
-        },
-        "total_violations": 10,
-        "most_frequent_violation": {
-            "violation_type": "W293 blank line contains whitespace",
-            "frequency": 4
-        },
-        "number_of_lines_in_code": 50
-    },
-    "pylint": {
-        "violations": {
-            "Trailing whitespace (trailing-whitespace)": 4
         },
         "total_violations": 4,
         "most_frequent_violation": {
-            "violation_type": "Trailing whitespace (trailing-whitespace)",
-            "frequency": 4
+            "violation_type": "E302 expected 2 blank lines, found 1",
+            "frequency": 3
         },
-        "number_of_lines_in_code": 50
+        "number_of_lines_in_code": 38
+    },
+    "pylint": {
+        "violations": {
+            "Missing module docstring (missing-module-docstring)": 1,
+            "Global variable 'min_heap' undefined at the module level (global-variable-undefined)": 1,
+            "Redefining name 'smallest_numbers' from outer scope (line 37) (redefined-outer-name)": 1
+        },
+        "total_violations": 3,
+        "most_frequent_violation": {
+            "violation_type": "Redefining name 'smallest_numbers' from outer scope (line 37) (redefined-outer-name)",
+            "frequency": 1
+        },
+        "number_of_lines_in_code": 38
     },
     "black": {
         "violations": {
@@ -35,18 +35,18 @@
         }
     },
     "radon": {
-        "function_complexity": 1.75,
-        "overall_score": 1.75
+        "function_complexity": 2.3333333333333335,
+        "overall_score": 2.3333333333333335
     },
     "pydocstyle": {
         "violations": {
-            "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
+            "D100: Missing docstring in public module": 1
         },
         "total_violations": 1,
         "most_frequent_violation": {
-            "violation_type": "D401: First line should be in imperative mood; try rephrasing (found 'Main')",
+            "violation_type": "D100: Missing docstring in public module",
             "frequency": 1
         },
-        "number_of_lines_in_code": 50
+        "number_of_lines_in_code": 38
     }
 }

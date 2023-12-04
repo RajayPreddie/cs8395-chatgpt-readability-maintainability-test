@@ -1,7 +1,7 @@
 {
     "id": "problem_6",
     "description": "Act as a Python developer and create a Python program. Ensure your code is clean and readable. Return only the raw code for the Python program, ensuring it's functional and follows Python best practices. Verify the program's correctness as if using a Command Line Interface. Use the following keyword(s) to solve a problem with Python: Comprehension.Remember to only respond with the raw code for the Python program. Generate a Python program that uses the keyword(s) for inspiration on the type of problem to solve. Only return the code that you would write in a .py file. Do not output in Markdown format.\n\n",
-    "code": "\ndef main():\n    # This program will take a list of numbers and create a new list with squares of even numbers\n    # using list comprehension\n\n    # Define the list of numbers\n    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n\n    # Use list comprehension to create a new list with squares of even numbers\n    squares_of_even = [x**2 for x in numbers if x % 2 == 0]\n\n    # Print the original and the new list\n    print(f\"Original list: {numbers}\")\n    print(f\"Squares of even numbers: {squares_of_even}\")\n\nif __name__ == \"__main__\":\n    main()\n",
+    "code": "\n# Python program to generate a dictionary with list comprehension\n# The dictionary will map each number from 1 to 10 with its square\n\ndef generate_squares_dict():\n    return {num: num**2 for num in range(1, 11)}\n\nif __name__ == \"__main__\":\n    squares_dict = generate_squares_dict()\n    for number, square in squares_dict.items():\n        print(f\"The square of {number} is {square}\")\n",
     "tags": [
         "Comprehension",
         "Easy"

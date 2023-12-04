@@ -1,27 +1,25 @@
 {
     "flake8": {
         "violations": {
-            "W293 blank line contains whitespace": 3
+            "E501 line too long (99 > 79 characters)": 1
         },
-        "total_violations": 3,
+        "total_violations": 1,
         "most_frequent_violation": {
-            "violation_type": "W293 blank line contains whitespace",
-            "frequency": 3
+            "violation_type": "E501 line too long (99 > 79 characters)",
+            "frequency": 1
         },
-        "number_of_lines_in_code": 29
+        "number_of_lines_in_code": 31
     },
     "pylint": {
         "violations": {
-            "Trailing whitespace (trailing-whitespace)": 1,
-            "Missing module docstring (missing-module-docstring)": 1,
-            "Missing function or method docstring (missing-function-docstring)": 1
+            "Missing module docstring (missing-module-docstring)": 1
         },
-        "total_violations": 3,
+        "total_violations": 1,
         "most_frequent_violation": {
-            "violation_type": "Missing function or method docstring (missing-function-docstring)",
+            "violation_type": "Missing module docstring (missing-module-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 29
+        "number_of_lines_in_code": 31
     },
     "black": {
         "violations": {
@@ -34,19 +32,18 @@
         }
     },
     "radon": {
-        "function_complexity": 1.0,
-        "overall_score": 1.0
+        "function_complexity": 1.5,
+        "overall_score": 1.5
     },
     "pydocstyle": {
         "violations": {
-            "D100: Missing docstring in public module": 1,
-            "D103: Missing docstring in public function": 1
+            "D100: Missing docstring in public module": 1
         },
-        "total_violations": 2,
+        "total_violations": 1,
         "most_frequent_violation": {
-            "violation_type": "D103: Missing docstring in public function",
+            "violation_type": "D100: Missing docstring in public module",
             "frequency": 1
         },
-        "number_of_lines_in_code": 29
+        "number_of_lines_in_code": 31
     }
 }

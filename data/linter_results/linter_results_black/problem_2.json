@@ -33,8 +33,8 @@
         }
     },
     "radon": {
-        "function_complexity": 1.3333333333333333,
-        "overall_score": 1.3333333333333333
+        "function_complexity": 1.0,
+        "overall_score": 1.0
     },
     "pydocstyle": {
         "violations": {

@@ -38,11 +38,10 @@
         "violations": {
             "D100: Missing docstring in public module": 1,
             "D205: 1 blank line required between summary line and description (found 0)": 1,
-            "D400: First line should end with a period (not 'y')": 1,
-            "D401: First line should be in imperative mood; try rephrasing (found 'This')": 1,
+            "D400: First line should end with a period (not 'n')": 1,
             "D103: Missing docstring in public function": 1
         },
-        "total_violations": 5,
+        "total_violations": 4,
         "most_frequent_violation": {
             "violation_type": "D103: Missing docstring in public function",
             "frequency": 1

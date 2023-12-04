@@ -2,26 +2,26 @@
     "flake8": {
         "violations": {
             "E302 expected 2 blank lines, found 1": 1,
-            "E501 line too long (84 > 79 characters)": 1,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 3,
+        "total_violations": 2,
         "most_frequent_violation": {
             "violation_type": "E305 expected 2 blank lines after class or function definition, found 1",
             "frequency": 1
         },
-        "number_of_lines_in_code": 34
+        "number_of_lines_in_code": 54
     },
     "pylint": {
         "violations": {
-            "Missing module docstring (missing-module-docstring)": 1
+            "Missing module docstring (missing-module-docstring)": 1,
+            "Variable name \"MAX_RECENT\" doesn't conform to snake_case naming style (invalid-name)": 1
         },
-        "total_violations": 1,
+        "total_violations": 2,
         "most_frequent_violation": {
-            "violation_type": "Missing module docstring (missing-module-docstring)",
+            "violation_type": "Variable name \"MAX_RECENT\" doesn't conform to snake_case naming style (invalid-name)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 34
+        "number_of_lines_in_code": 54
     },
     "black": {
         "violations": {
@@ -34,18 +34,21 @@
         }
     },
     "radon": {
-        "function_complexity": 6.0,
-        "overall_score": 6.0
+        "function_complexity": 1.0,
+        "overall_score": 1.0
     },
     "pydocstyle": {
         "violations": {
-            "D100: Missing docstring in public module": 1
+            "D100: Missing docstring in public module": 1,
+            "D205: 1 blank line required between summary line and description (found 0)": 2,
+            "D400: First line should end with a period (not 'f')": 2,
+            "D401: First line should be in imperative mood; try rephrasing (found 'A')": 1
         },
-        "total_violations": 1,
+        "total_violations": 6,
         "most_frequent_violation": {
-            "violation_type": "D100: Missing docstring in public module",
-            "frequency": 1
+            "violation_type": "D400: First line should end with a period (not 'f')",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 34
+        "number_of_lines_in_code": 54
     }
 }

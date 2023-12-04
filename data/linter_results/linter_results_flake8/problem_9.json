@@ -6,7 +6,7 @@
             "violation_type": "",
             "frequency": 0
         },
-        "number_of_lines_in_code": 27
+        "number_of_lines_in_code": 25
     },
     "pylint": {
         "violations": {
@@ -17,7 +17,7 @@
             "violation_type": "Missing module docstring (missing-module-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 27
+        "number_of_lines_in_code": 25
     },
     "black": {
         "violations": {
@@ -43,6 +43,6 @@
             "violation_type": "D401: First line should be in imperative mood; try rephrasing (found 'Main')",
             "frequency": 1
         },
-        "number_of_lines_in_code": 27
+        "number_of_lines_in_code": 25
     }
 }

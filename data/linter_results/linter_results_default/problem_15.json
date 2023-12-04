@@ -1,30 +1,30 @@
 {
     "flake8": {
         "violations": {
-            "E501 line too long (96 > 79 characters)": 1,
-            "E501 line too long (80 > 79 characters)": 1,
+            "E501 line too long (86 > 79 characters)": 1,
             "E305 expected 2 blank lines after class or function definition, found 1": 1,
-            "E501 line too long (86 > 79 characters)": 1
-        },
-        "total_violations": 4,
-        "most_frequent_violation": {
-            "violation_type": "E501 line too long (86 > 79 characters)",
-            "frequency": 1
-        },
-        "number_of_lines_in_code": 32
-    },
-    "pylint": {
-        "violations": {
-            "Missing module docstring (missing-module-docstring)": 1,
-            "Redefining name 'list_of_dicts' from outer scope (line 24) (redefined-outer-name)": 1,
-            "Redefining name 'item' from outer scope (line 31) (redefined-outer-name)": 1
+            "W293 blank line contains whitespace": 1
         },
         "total_violations": 3,
         "most_frequent_violation": {
-            "violation_type": "Redefining name 'item' from outer scope (line 31) (redefined-outer-name)",
+            "violation_type": "W293 blank line contains whitespace",
             "frequency": 1
         },
-        "number_of_lines_in_code": 32
+        "number_of_lines_in_code": 35
+    },
+    "pylint": {
+        "violations": {
+            "Trailing whitespace (trailing-whitespace)": 1,
+            "Missing module docstring (missing-module-docstring)": 1,
+            "Redefining name 'list_of_items' from outer scope (line 18) (redefined-outer-name)": 1,
+            "Redefining name 'item' from outer scope (line 32) (redefined-outer-name)": 1
+        },
+        "total_violations": 4,
+        "most_frequent_violation": {
+            "violation_type": "Redefining name 'item' from outer scope (line 32) (redefined-outer-name)",
+            "frequency": 1
+        },
+        "number_of_lines_in_code": 35
     },
     "black": {
         "violations": {
@@ -37,19 +37,21 @@
         }
     },
     "radon": {
-        "function_complexity": 8.0,
-        "overall_score": 8.0
+        "function_complexity": 4.0,
+        "overall_score": 4.0
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
+            "D205: 1 blank line required between summary line and description (found 0)": 1,
+            "D400: First line should end with a period (not 'y')": 1,
             "D401: First line should be in imperative mood (perhaps 'Count', not 'Counts')": 1
         },
-        "total_violations": 2,
+        "total_violations": 4,
         "most_frequent_violation": {
             "violation_type": "D401: First line should be in imperative mood (perhaps 'Count', not 'Counts')",
             "frequency": 1
         },
-        "number_of_lines_in_code": 32
+        "number_of_lines_in_code": 35
     }
 }

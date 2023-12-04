@@ -1,31 +1,30 @@
 {
     "flake8": {
         "violations": {
-            "E302 expected 2 blank lines, found 1": 2,
-            "W293 blank line contains whitespace": 2,
+            "E302 expected 2 blank lines, found 1": 4,
+            "E501 line too long (84 > 79 characters)": 1,
+            "W293 blank line contains whitespace": 3,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
-        },
-        "total_violations": 5,
-        "most_frequent_violation": {
-            "violation_type": "E302 expected 2 blank lines, found 1",
-            "frequency": 2
-        },
-        "number_of_lines_in_code": 41
-    },
-    "pylint": {
-        "violations": {
-            "Trailing whitespace (trailing-whitespace)": 2,
-            "Missing module docstring (missing-module-docstring)": 1,
-            "Missing class docstring (missing-class-docstring)": 1,
-            "Missing function or method docstring (missing-function-docstring)": 4,
-            "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)": 1
         },
         "total_violations": 9,
         "most_frequent_violation": {
-            "violation_type": "Missing function or method docstring (missing-function-docstring)",
+            "violation_type": "E302 expected 2 blank lines, found 1",
             "frequency": 4
         },
-        "number_of_lines_in_code": 41
+        "number_of_lines_in_code": 44
+    },
+    "pylint": {
+        "violations": {
+            "Trailing whitespace (trailing-whitespace)": 3,
+            "Missing module docstring (missing-module-docstring)": 1,
+            "Missing function or method docstring (missing-function-docstring)": 1
+        },
+        "total_violations": 5,
+        "most_frequent_violation": {
+            "violation_type": "Trailing whitespace (trailing-whitespace)",
+            "frequency": 3
+        },
+        "number_of_lines_in_code": 44
     },
     "black": {
         "violations": {
@@ -38,24 +37,23 @@
         }
     },
     "radon": {
-        "class_complexity": 2.0,
-        "overall_score": 1.3333333333333333,
-        "method_complexity": 1.25,
-        "function_complexity": 1.0
+        "function_complexity": 2.25,
+        "overall_score": 2.25
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D101: Missing docstring in public class": 1,
-            "D107: Missing docstring in __init__": 1,
-            "D102: Missing docstring in public method": 3,
+            "D200: One-line docstring should fit on one line with quotes (found 3)": 3,
+            "D401: First line should be in imperative mood (perhaps 'Add', not 'Adds')": 1,
+            "D401: First line should be in imperative mood (perhaps 'Return', not 'Returns')": 1,
+            "D401: First line should be in imperative mood (perhaps 'Remove', not 'Removes')": 1,
             "D103: Missing docstring in public function": 1
         },
-        "total_violations": 7,
+        "total_violations": 8,
         "most_frequent_violation": {
-            "violation_type": "D102: Missing docstring in public method",
+            "violation_type": "D200: One-line docstring should fit on one line with quotes (found 3)",
             "frequency": 3
         },
-        "number_of_lines_in_code": 41
+        "number_of_lines_in_code": 44
     }
 }

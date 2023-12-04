@@ -2,7 +2,7 @@
     "flake8": {
         "violations": {
             "E302 expected 2 blank lines, found 1": 2,
-            "E501 line too long (86 > 79 characters)": 1,
+            "E501 line too long (87 > 79 characters)": 1,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
         "total_violations": 4,
@@ -10,20 +10,18 @@
             "violation_type": "E302 expected 2 blank lines, found 1",
             "frequency": 2
         },
-        "number_of_lines_in_code": 33
+        "number_of_lines_in_code": 39
     },
     "pylint": {
         "violations": {
-            "Missing module docstring (missing-module-docstring)": 1,
-            "Missing function or method docstring (missing-function-docstring)": 1,
-            "Formatting a regular string which could be an f-string (consider-using-f-string)": 1
+            "Missing module docstring (missing-module-docstring)": 1
         },
-        "total_violations": 3,
+        "total_violations": 1,
         "most_frequent_violation": {
-            "violation_type": "Formatting a regular string which could be an f-string (consider-using-f-string)",
+            "violation_type": "Missing module docstring (missing-module-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 33
+        "number_of_lines_in_code": 39
     },
     "black": {
         "violations": {
@@ -36,20 +34,20 @@
         }
     },
     "radon": {
-        "function_complexity": 2.5,
-        "overall_score": 2.5
+        "function_complexity": 3.5,
+        "overall_score": 3.5
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D200: One-line docstring should fit on one line with quotes (found 3)": 1,
-            "D103: Missing docstring in public function": 1
+            "D200: One-line docstring should fit on one line with quotes (found 3)": 2,
+            "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
         },
-        "total_violations": 3,
+        "total_violations": 4,
         "most_frequent_violation": {
-            "violation_type": "D103: Missing docstring in public function",
-            "frequency": 1
+            "violation_type": "D200: One-line docstring should fit on one line with quotes (found 3)",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 33
+        "number_of_lines_in_code": 39
     }
 }

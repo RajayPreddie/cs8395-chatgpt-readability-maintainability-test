@@ -2,30 +2,26 @@
     "flake8": {
         "violations": {
             "E302 expected 2 blank lines, found 1": 2,
-            "E501 line too long (81 > 79 characters)": 2,
-            "E501 line too long (84 > 79 characters)": 1,
-            "E501 line too long (80 > 79 characters)": 1,
-            "W293 blank line contains whitespace": 2,
+            "E501 line too long (82 > 79 characters)": 1,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 9,
+        "total_violations": 4,
         "most_frequent_violation": {
-            "violation_type": "W293 blank line contains whitespace",
+            "violation_type": "E302 expected 2 blank lines, found 1",
             "frequency": 2
         },
-        "number_of_lines_in_code": 33
+        "number_of_lines_in_code": 26
     },
     "pylint": {
         "violations": {
-            "Trailing whitespace (trailing-whitespace)": 2,
             "Missing module docstring (missing-module-docstring)": 1
         },
-        "total_violations": 3,
+        "total_violations": 1,
         "most_frequent_violation": {
-            "violation_type": "Trailing whitespace (trailing-whitespace)",
-            "frequency": 2
+            "violation_type": "Missing module docstring (missing-module-docstring)",
+            "frequency": 1
         },
-        "number_of_lines_in_code": 33
+        "number_of_lines_in_code": 26
     },
     "black": {
         "violations": {
@@ -50,6 +46,6 @@
             "violation_type": "D100: Missing docstring in public module",
             "frequency": 1
         },
-        "number_of_lines_in_code": 33
+        "number_of_lines_in_code": 26
     }
 }

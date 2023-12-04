@@ -1,31 +1,32 @@
 {
     "flake8": {
         "violations": {
-            "F401 'math' imported but unused": 1,
-            "E302 expected 2 blank lines, found 1": 3,
+            "E302 expected 2 blank lines, found 1": 2,
+            "W293 blank line contains whitespace": 1,
+            "E501 line too long (110 > 79 characters)": 1,
+            "E501 line too long (86 > 79 characters)": 1,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 5,
+        "total_violations": 6,
         "most_frequent_violation": {
             "violation_type": "E302 expected 2 blank lines, found 1",
-            "frequency": 3
+            "frequency": 2
         },
-        "number_of_lines_in_code": 33
+        "number_of_lines_in_code": 24
     },
     "pylint": {
         "violations": {
+            "Trailing whitespace (trailing-whitespace)": 1,
+            "Line too long (110/100) (line-too-long)": 1,
             "Missing module docstring (missing-module-docstring)": 1,
-            "Missing function or method docstring (missing-function-docstring)": 1,
-            "Redefining name 'is_prime' from outer scope (line 5) (redefined-outer-name)": 1,
-            "Unnecessary use of a comprehension, use list(range(1, 101)) instead. (unnecessary-comprehension)": 1,
-            "Unused import math (unused-import)": 1
+            "Missing function or method docstring (missing-function-docstring)": 1
         },
-        "total_violations": 5,
+        "total_violations": 4,
         "most_frequent_violation": {
-            "violation_type": "Unused import math (unused-import)",
+            "violation_type": "Missing function or method docstring (missing-function-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 33
+        "number_of_lines_in_code": 24
     },
     "black": {
         "violations": {
@@ -38,8 +39,8 @@
         }
     },
     "radon": {
-        "function_complexity": 4.0,
-        "overall_score": 4.0
+        "function_complexity": 2.5,
+        "overall_score": 2.5
     },
     "pydocstyle": {
         "violations": {
@@ -51,6 +52,6 @@
             "violation_type": "D103: Missing docstring in public function",
             "frequency": 1
         },
-        "number_of_lines_in_code": 33
+        "number_of_lines_in_code": 24
     }
 }

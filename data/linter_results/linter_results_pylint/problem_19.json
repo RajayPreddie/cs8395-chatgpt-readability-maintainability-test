@@ -1,24 +1,30 @@
 {
     "flake8": {
         "violations": {
-            "E302 expected 2 blank lines, found 1": 3,
+            "E501 line too long (84 > 79 characters)": 1,
+            "E501 line too long (91 > 79 characters)": 2,
+            "E302 expected 2 blank lines, found 1": 1,
+            "E501 line too long (82 > 79 characters)": 1,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 4,
+        "total_violations": 6,
         "most_frequent_violation": {
-            "violation_type": "E302 expected 2 blank lines, found 1",
-            "frequency": 3
+            "violation_type": "E501 line too long (91 > 79 characters)",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 59
+        "number_of_lines_in_code": 52
     },
     "pylint": {
-        "violations": {},
-        "total_violations": 0,
-        "most_frequent_violation": {
-            "violation_type": "",
-            "frequency": 0
+        "violations": {
+            "Constant name \"total_items_added\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
+            "Using the global statement (global-statement)": 1
         },
-        "number_of_lines_in_code": 59
+        "total_violations": 2,
+        "most_frequent_violation": {
+            "violation_type": "Using the global statement (global-statement)",
+            "frequency": 1
+        },
+        "number_of_lines_in_code": 52
     },
     "black": {
         "violations": {
@@ -31,22 +37,17 @@
         }
     },
     "radon": {
-        "function_complexity": 2.0,
-        "overall_score": 1.5,
         "class_complexity": 2.0,
-        "method_complexity": 1.2
+        "overall_score": 1.5,
+        "method_complexity": 1.4
     },
     "pydocstyle": {
-        "violations": {
-            "D205: 1 blank line required between summary line and description (found 0)": 1,
-            "D400: First line should end with a period (not 'n')": 1,
-            "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
-        },
-        "total_violations": 3,
+        "violations": {},
+        "total_violations": 0,
         "most_frequent_violation": {
-            "violation_type": "D401: First line should be in imperative mood; try rephrasing (found 'Main')",
-            "frequency": 1
+            "violation_type": "",
+            "frequency": 0
         },
-        "number_of_lines_in_code": 59
+        "number_of_lines_in_code": 52
     }
 }

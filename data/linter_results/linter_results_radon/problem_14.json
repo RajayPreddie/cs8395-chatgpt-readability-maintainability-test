@@ -1,28 +1,30 @@
 {
     "flake8": {
         "violations": {
-            "E302 expected 2 blank lines, found 1": 2,
+            "E302 expected 2 blank lines, found 1": 4,
+            "W293 blank line contains whitespace": 2,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 3,
+        "total_violations": 7,
         "most_frequent_violation": {
             "violation_type": "E302 expected 2 blank lines, found 1",
-            "frequency": 2
+            "frequency": 4
         },
-        "number_of_lines_in_code": 32
+        "number_of_lines_in_code": 54
     },
     "pylint": {
         "violations": {
+            "Trailing whitespace (trailing-whitespace)": 2,
             "Missing module docstring (missing-module-docstring)": 1,
             "Consider using '{}' instead of a call to 'dict'. (use-dict-literal)": 1,
             "Missing function or method docstring (missing-function-docstring)": 1
         },
-        "total_violations": 3,
+        "total_violations": 5,
         "most_frequent_violation": {
-            "violation_type": "Missing function or method docstring (missing-function-docstring)",
-            "frequency": 1
+            "violation_type": "Trailing whitespace (trailing-whitespace)",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 32
+        "number_of_lines_in_code": 54
     },
     "black": {
         "violations": {
@@ -35,13 +37,13 @@
         }
     },
     "radon": {
-        "function_complexity": 3.0,
-        "overall_score": 3.0
+        "function_complexity": 1.25,
+        "overall_score": 1.25
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D200: One-line docstring should fit on one line with quotes (found 3)": 1,
+            "D401: First line should be in imperative mood (perhaps 'Decorate', not 'Decorator')": 1,
             "D103: Missing docstring in public function": 1
         },
         "total_violations": 3,
@@ -49,6 +51,6 @@
             "violation_type": "D103: Missing docstring in public function",
             "frequency": 1
         },
-        "number_of_lines_in_code": 32
+        "number_of_lines_in_code": 54
     }
 }

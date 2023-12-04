@@ -6,7 +6,7 @@
             "violation_type": "",
             "frequency": 0
         },
-        "number_of_lines_in_code": 26
+        "number_of_lines_in_code": 24
     },
     "pylint": {
         "violations": {
@@ -18,7 +18,7 @@
             "violation_type": "Missing function or method docstring (missing-function-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 26
+        "number_of_lines_in_code": 24
     },
     "black": {
         "violations": {
@@ -37,14 +37,13 @@
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D200: One-line docstring should fit on one line with quotes (found 3)": 1,
             "D103: Missing docstring in public function": 1
         },
-        "total_violations": 3,
+        "total_violations": 2,
         "most_frequent_violation": {
             "violation_type": "D103: Missing docstring in public function",
             "frequency": 1
         },
-        "number_of_lines_in_code": 26
+        "number_of_lines_in_code": 24
     }
 }

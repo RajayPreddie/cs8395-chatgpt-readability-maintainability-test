@@ -6,7 +6,7 @@
             "violation_type": "",
             "frequency": 0
         },
-        "number_of_lines_in_code": 24
+        "number_of_lines_in_code": 21
     },
     "pylint": {
         "violations": {
@@ -18,7 +18,7 @@
             "violation_type": "Missing function or method docstring (missing-function-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 24
+        "number_of_lines_in_code": 21
     },
     "black": {
         "violations": {
@@ -44,6 +44,6 @@
             "violation_type": "D103: Missing docstring in public function",
             "frequency": 1
         },
-        "number_of_lines_in_code": 24
+        "number_of_lines_in_code": 21
     }
 }

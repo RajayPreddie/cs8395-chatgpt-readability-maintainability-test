@@ -6,25 +6,20 @@
             "violation_type": "",
             "frequency": 0
         },
-        "number_of_lines_in_code": 64
+        "number_of_lines_in_code": 49
     },
     "pylint": {
         "violations": {
             "Missing module docstring (missing-module-docstring)": 1,
             "Missing class docstring (missing-class-docstring)": 1,
-            "Missing function or method docstring (missing-function-docstring)": 2,
-            "Redefining name 'numbers' from outer scope (line 61) (redefined-outer-name)": 1,
-            "Redefining name 'window_size' from outer scope (line 62) (redefined-outer-name)": 1,
-            "Redefining name 'injector' from outer scope (line 58) (redefined-outer-name)": 1,
-            "Unused argument 'injector' (unused-argument)": 1,
-            "Constant name \"window_size\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1
+            "Missing function or method docstring (missing-function-docstring)": 2
         },
-        "total_violations": 9,
+        "total_violations": 4,
         "most_frequent_violation": {
             "violation_type": "Missing function or method docstring (missing-function-docstring)",
             "frequency": 2
         },
-        "number_of_lines_in_code": 64
+        "number_of_lines_in_code": 49
     },
     "black": {
         "violations": {
@@ -37,8 +32,8 @@
         }
     },
     "radon": {
-        "function_complexity": 2.0,
-        "overall_score": 1.4,
+        "function_complexity": 1.5,
+        "overall_score": 1.3333333333333333,
         "class_complexity": 2.0,
         "method_complexity": 1.0
     },
@@ -47,14 +42,13 @@
             "D100: Missing docstring in public module": 1,
             "D101: Missing docstring in public class": 1,
             "D107: Missing docstring in __init__": 1,
-            "D102: Missing docstring in public method": 2,
-            "D200: One-line docstring should fit on one line with quotes (found 3)": 1
+            "D102: Missing docstring in public method": 2
         },
-        "total_violations": 6,
+        "total_violations": 5,
         "most_frequent_violation": {
             "violation_type": "D102: Missing docstring in public method",
             "frequency": 2
         },
-        "number_of_lines_in_code": 64
+        "number_of_lines_in_code": 49
     }
 }

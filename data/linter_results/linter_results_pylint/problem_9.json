@@ -1,15 +1,14 @@
 {
     "flake8": {
         "violations": {
-            "E302 expected 2 blank lines, found 1": 3,
-            "E305 expected 2 blank lines after class or function definition, found 1": 1
+            "E302 expected 2 blank lines, found 1": 3
         },
-        "total_violations": 4,
+        "total_violations": 3,
         "most_frequent_violation": {
             "violation_type": "E302 expected 2 blank lines, found 1",
             "frequency": 3
         },
-        "number_of_lines_in_code": 24
+        "number_of_lines_in_code": 25
     },
     "pylint": {
         "violations": {
@@ -20,7 +19,7 @@
             "violation_type": "Missing module docstring (missing-module-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 24
+        "number_of_lines_in_code": 25
     },
     "black": {
         "violations": {
@@ -33,8 +32,8 @@
         }
     },
     "radon": {
-        "function_complexity": 1.0,
-        "overall_score": 1.0
+        "function_complexity": 1.3333333333333333,
+        "overall_score": 1.3333333333333333
     },
     "pydocstyle": {
         "violations": {
@@ -46,6 +45,6 @@
             "violation_type": "D401: First line should be in imperative mood; try rephrasing (found 'Main')",
             "frequency": 1
         },
-        "number_of_lines_in_code": 24
+        "number_of_lines_in_code": 25
     }
 }

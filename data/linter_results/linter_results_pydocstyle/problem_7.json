@@ -1,18 +1,14 @@
 {
     "flake8": {
         "violations": {
-            "E302 expected 2 blank lines, found 1": 2,
-            "E501 line too long (87 > 79 characters)": 1,
-            "E501 line too long (81 > 79 characters)": 1,
-            "E501 line too long (96 > 79 characters)": 1,
-            "E305 expected 2 blank lines after class or function definition, found 1": 1
+            "E302 expected 2 blank lines, found 1": 1
         },
-        "total_violations": 6,
+        "total_violations": 1,
         "most_frequent_violation": {
             "violation_type": "E302 expected 2 blank lines, found 1",
-            "frequency": 2
+            "frequency": 1
         },
-        "number_of_lines_in_code": 30
+        "number_of_lines_in_code": 52
     },
     "pylint": {
         "violations": {
@@ -23,7 +19,7 @@
             "violation_type": "Missing module docstring (missing-module-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 30
+        "number_of_lines_in_code": 52
     },
     "black": {
         "violations": {
@@ -36,19 +32,20 @@
         }
     },
     "radon": {
-        "function_complexity": 2.0,
-        "overall_score": 2.0
+        "class_complexity": 3.0,
+        "overall_score": 1.8,
+        "method_complexity": 1.6666666666666667,
+        "function_complexity": 1.0
     },
     "pydocstyle": {
         "violations": {
-            "D100: Missing docstring in public module": 1,
-            "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
+            "D100: Missing docstring in public module": 1
         },
-        "total_violations": 2,
+        "total_violations": 1,
         "most_frequent_violation": {
-            "violation_type": "D401: First line should be in imperative mood; try rephrasing (found 'Main')",
+            "violation_type": "D100: Missing docstring in public module",
             "frequency": 1
         },
-        "number_of_lines_in_code": 30
+        "number_of_lines_in_code": 52
     }
 }

@@ -1,29 +1,31 @@
 {
     "flake8": {
         "violations": {
-            "E302 expected 2 blank lines, found 1": 1,
-            "E501 line too long (86 > 79 characters)": 1,
-            "E501 line too long (90 > 79 characters)": 1,
+            "E302 expected 2 blank lines, found 1": 2,
+            "E501 line too long (91 > 79 characters)": 1,
+            "E501 line too long (82 > 79 characters)": 1,
+            "E501 line too long (83 > 79 characters)": 1,
+            "W293 blank line contains whitespace": 1,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 4,
+        "total_violations": 7,
         "most_frequent_violation": {
-            "violation_type": "E305 expected 2 blank lines after class or function definition, found 1",
-            "frequency": 1
+            "violation_type": "E302 expected 2 blank lines, found 1",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 60
+        "number_of_lines_in_code": 46
     },
     "pylint": {
         "violations": {
-            "Missing module docstring (missing-module-docstring)": 1,
-            "Too few public methods (1/2) (too-few-public-methods)": 1
+            "Trailing whitespace (trailing-whitespace)": 1,
+            "Missing module docstring (missing-module-docstring)": 1
         },
         "total_violations": 2,
         "most_frequent_violation": {
-            "violation_type": "Too few public methods (1/2) (too-few-public-methods)",
+            "violation_type": "Missing module docstring (missing-module-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 60
+        "number_of_lines_in_code": 46
     },
     "black": {
         "violations": {
@@ -37,8 +39,9 @@
     },
     "radon": {
         "class_complexity": 2.0,
-        "overall_score": 1.5,
-        "method_complexity": 1.25
+        "overall_score": 1.2,
+        "function_complexity": 1.0,
+        "method_complexity": 1.0
     },
     "pydocstyle": {
         "violations": {
@@ -49,6 +52,6 @@
             "violation_type": "D100: Missing docstring in public module",
             "frequency": 1
         },
-        "number_of_lines_in_code": 60
+        "number_of_lines_in_code": 46
     }
 }

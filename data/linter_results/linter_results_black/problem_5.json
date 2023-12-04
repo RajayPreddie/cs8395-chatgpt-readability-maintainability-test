@@ -1,14 +1,14 @@
 {
     "flake8": {
         "violations": {
-            "E501 line too long (84 > 79 characters)": 1
+            "E501 line too long (87 > 79 characters)": 1
         },
         "total_violations": 1,
         "most_frequent_violation": {
-            "violation_type": "E501 line too long (84 > 79 characters)",
+            "violation_type": "E501 line too long (87 > 79 characters)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 25
+        "number_of_lines_in_code": 26
     },
     "pylint": {
         "violations": {
@@ -20,7 +20,7 @@
             "violation_type": "Missing function or method docstring (missing-function-docstring)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 25
+        "number_of_lines_in_code": 26
     },
     "black": {
         "violations": {
@@ -39,7 +39,7 @@
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D205: 1 blank line required between summary line and description (found 0)": 1,
+            "D200: One-line docstring should fit on one line with quotes (found 3)": 1,
             "D103: Missing docstring in public function": 1
         },
         "total_violations": 3,
@@ -47,6 +47,6 @@
             "violation_type": "D103: Missing docstring in public function",
             "frequency": 1
         },
-        "number_of_lines_in_code": 25
+        "number_of_lines_in_code": 26
     }
 }

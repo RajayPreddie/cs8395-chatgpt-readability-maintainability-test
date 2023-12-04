@@ -1,28 +1,25 @@
 {
     "flake8": {
-        "violations": {
-            "E302 expected 2 blank lines, found 1": 2,
-            "E305 expected 2 blank lines after class or function definition, found 1": 1
-        },
-        "total_violations": 3,
+        "violations": {},
+        "total_violations": 0,
         "most_frequent_violation": {
-            "violation_type": "E302 expected 2 blank lines, found 1",
-            "frequency": 2
+            "violation_type": "",
+            "frequency": 0
         },
-        "number_of_lines_in_code": 30
+        "number_of_lines_in_code": 34
     },
     "pylint": {
         "violations": {
             "Missing module docstring (missing-module-docstring)": 1,
             "Using variable 'cwd' before assignment (used-before-assignment)": 1,
-            "Redefining name 'directory' from outer scope (line 21) (redefined-outer-name)": 1
+            "Catching too general exception Exception (broad-exception-caught)": 1
         },
         "total_violations": 3,
         "most_frequent_violation": {
-            "violation_type": "Redefining name 'directory' from outer scope (line 21) (redefined-outer-name)",
+            "violation_type": "Catching too general exception Exception (broad-exception-caught)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 30
+        "number_of_lines_in_code": 34
     },
     "black": {
         "violations": {
@@ -47,6 +44,6 @@
             "violation_type": "D100: Missing docstring in public module",
             "frequency": 1
         },
-        "number_of_lines_in_code": 30
+        "number_of_lines_in_code": 34
     }
 }

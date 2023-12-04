@@ -2,27 +2,28 @@
     "flake8": {
         "violations": {
             "E302 expected 2 blank lines, found 1": 2,
-            "W293 blank line contains whitespace": 3,
+            "W293 blank line contains whitespace": 1,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
-        },
-        "total_violations": 6,
-        "most_frequent_violation": {
-            "violation_type": "W293 blank line contains whitespace",
-            "frequency": 3
-        },
-        "number_of_lines_in_code": 45
-    },
-    "pylint": {
-        "violations": {
-            "Trailing whitespace (trailing-whitespace)": 3,
-            "Missing module docstring (missing-module-docstring)": 1
         },
         "total_violations": 4,
         "most_frequent_violation": {
-            "violation_type": "Trailing whitespace (trailing-whitespace)",
-            "frequency": 3
+            "violation_type": "E302 expected 2 blank lines, found 1",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 45
+        "number_of_lines_in_code": 29
+    },
+    "pylint": {
+        "violations": {
+            "Trailing whitespace (trailing-whitespace)": 1,
+            "Missing module docstring (missing-module-docstring)": 1,
+            "Redefining name 'k' from outer scope (line 25) (redefined-outer-name)": 1
+        },
+        "total_violations": 3,
+        "most_frequent_violation": {
+            "violation_type": "Redefining name 'k' from outer scope (line 25) (redefined-outer-name)",
+            "frequency": 1
+        },
+        "number_of_lines_in_code": 29
     },
     "black": {
         "violations": {
@@ -35,20 +36,19 @@
         }
     },
     "radon": {
-        "function_complexity": 3.5,
-        "overall_score": 3.5
+        "function_complexity": 2.0,
+        "overall_score": 2.0
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D205: 1 blank line required between summary line and description (found 0)": 2,
-            "D400: First line should end with a period (not ',')": 1
+            "D200: One-line docstring should fit on one line with quotes (found 3)": 2
         },
-        "total_violations": 4,
+        "total_violations": 3,
         "most_frequent_violation": {
-            "violation_type": "D205: 1 blank line required between summary line and description (found 0)",
+            "violation_type": "D200: One-line docstring should fit on one line with quotes (found 3)",
             "frequency": 2
         },
-        "number_of_lines_in_code": 45
+        "number_of_lines_in_code": 29
     }
 }

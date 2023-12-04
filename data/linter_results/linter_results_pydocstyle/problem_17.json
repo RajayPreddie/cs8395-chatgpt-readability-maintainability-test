@@ -1,25 +1,26 @@
 {
     "flake8": {
         "violations": {
-            "E501 line too long (82 > 79 characters)": 2
-        },
-        "total_violations": 2,
-        "most_frequent_violation": {
-            "violation_type": "E501 line too long (82 > 79 characters)",
-            "frequency": 2
-        },
-        "number_of_lines_in_code": 71
-    },
-    "pylint": {
-        "violations": {
-            "Missing module docstring (missing-module-docstring)": 1
+            "E302 expected 2 blank lines, found 0": 1
         },
         "total_violations": 1,
         "most_frequent_violation": {
-            "violation_type": "Missing module docstring (missing-module-docstring)",
+            "violation_type": "E302 expected 2 blank lines, found 0",
             "frequency": 1
         },
-        "number_of_lines_in_code": 71
+        "number_of_lines_in_code": 91
+    },
+    "pylint": {
+        "violations": {
+            "Missing module docstring (missing-module-docstring)": 1,
+            "Import outside toplevel (gc) (import-outside-toplevel)": 2
+        },
+        "total_violations": 3,
+        "most_frequent_violation": {
+            "violation_type": "Import outside toplevel (gc) (import-outside-toplevel)",
+            "frequency": 2
+        },
+        "number_of_lines_in_code": 91
     },
     "black": {
         "violations": {
@@ -32,8 +33,10 @@
         }
     },
     "radon": {
-        "function_complexity": 1.25,
-        "overall_score": 1.25
+        "function_complexity": 1.3333333333333333,
+        "overall_score": 1.3333333333333333,
+        "class_complexity": 2.0,
+        "method_complexity": 1.0
     },
     "pydocstyle": {
         "violations": {
@@ -44,6 +47,6 @@
             "violation_type": "D100: Missing docstring in public module",
             "frequency": 1
         },
-        "number_of_lines_in_code": 71
+        "number_of_lines_in_code": 91
     }
 }

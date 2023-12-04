@@ -2,27 +2,31 @@
     "flake8": {
         "violations": {
             "E302 expected 2 blank lines, found 1": 2,
-            "E501 line too long (94 > 79 characters)": 1,
+            "W293 blank line contains whitespace": 2,
+            "E501 line too long (86 > 79 characters)": 1,
+            "E501 line too long (90 > 79 characters)": 1,
             "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 4,
+        "total_violations": 7,
         "most_frequent_violation": {
-            "violation_type": "E302 expected 2 blank lines, found 1",
+            "violation_type": "W293 blank line contains whitespace",
             "frequency": 2
         },
-        "number_of_lines_in_code": 22
+        "number_of_lines_in_code": 28
     },
     "pylint": {
         "violations": {
+            "Trailing whitespace (trailing-whitespace)": 2,
             "Missing module docstring (missing-module-docstring)": 1,
-            "Missing function or method docstring (missing-function-docstring)": 2
+            "Missing function or method docstring (missing-function-docstring)": 2,
+            "Catching too general exception Exception (broad-exception-caught)": 1
         },
-        "total_violations": 3,
+        "total_violations": 6,
         "most_frequent_violation": {
             "violation_type": "Missing function or method docstring (missing-function-docstring)",
             "frequency": 2
         },
-        "number_of_lines_in_code": 22
+        "number_of_lines_in_code": 28
     },
     "black": {
         "violations": {
@@ -35,8 +39,8 @@
         }
     },
     "radon": {
-        "function_complexity": 2.0,
-        "overall_score": 2.0
+        "function_complexity": 2.5,
+        "overall_score": 2.5
     },
     "pydocstyle": {
         "violations": {
@@ -48,6 +52,6 @@
             "violation_type": "D103: Missing docstring in public function",
             "frequency": 2
         },
-        "number_of_lines_in_code": 22
+        "number_of_lines_in_code": 28
     }
 }

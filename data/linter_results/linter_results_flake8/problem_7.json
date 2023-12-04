@@ -1,27 +1,29 @@
 {
     "flake8": {
         "violations": {
-            "E501 line too long (83 > 79 characters)": 1
+            "E302 expected 2 blank lines, found 1": 2,
+            "E501 line too long (83 > 79 characters)": 1,
+            "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 1,
+        "total_violations": 4,
         "most_frequent_violation": {
-            "violation_type": "E501 line too long (83 > 79 characters)",
-            "frequency": 1
+            "violation_type": "E302 expected 2 blank lines, found 1",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 29
+        "number_of_lines_in_code": 26
     },
     "pylint": {
         "violations": {
             "Missing module docstring (missing-module-docstring)": 1,
             "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)": 1,
-            "Missing function or method docstring (missing-function-docstring)": 1
+            "Catching too general exception Exception (broad-exception-caught)": 1
         },
         "total_violations": 3,
         "most_frequent_violation": {
-            "violation_type": "Missing function or method docstring (missing-function-docstring)",
+            "violation_type": "Catching too general exception Exception (broad-exception-caught)",
             "frequency": 1
         },
-        "number_of_lines_in_code": 29
+        "number_of_lines_in_code": 26
     },
     "black": {
         "violations": {
@@ -34,19 +36,19 @@
         }
     },
     "radon": {
-        "function_complexity": 3.0,
-        "overall_score": 3.0
+        "function_complexity": 3.5,
+        "overall_score": 3.5
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D103: Missing docstring in public function": 1
+            "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
         },
         "total_violations": 2,
         "most_frequent_violation": {
-            "violation_type": "D103: Missing docstring in public function",
+            "violation_type": "D401: First line should be in imperative mood; try rephrasing (found 'Main')",
             "frequency": 1
         },
-        "number_of_lines_in_code": 29
+        "number_of_lines_in_code": 26
     }
 }

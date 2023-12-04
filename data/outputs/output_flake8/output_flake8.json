@@ -1,68 +1,59 @@
 {
     "flake8": {
         "overall": {
-            "total_violations": 27,
-            "average_violations_per_line": 0.04780066608153297,
-            "average_violations_per_file": 1.35,
+            "total_violations": 28,
+            "average_violations_per_line": 0.04911304061564972,
+            "average_violations_per_file": 1.4,
             "violation_frequencies": {
-                "E501 line too long (85 > 79 characters)": 1,
-                "E302 expected 2 blank lines, found 1": 8,
-                "E501 line too long (81 > 79 characters)": 2,
-                "E501 line too long (83 > 79 characters)": 3,
-                "E305 expected 2 blank lines after class or function definition, found 1": 3,
-                "E501 line too long (112 > 79 characters)": 1,
-                "E501 line too long (84 > 79 characters)": 1,
-                "W293 blank line contains whitespace": 6,
-                "E501 line too long (97 > 79 characters)": 1,
-                "E501 line too long (115 > 79 characters)": 1
+                "E302 expected 2 blank lines, found 1": 11,
+                "W293 blank line contains whitespace": 5,
+                "E501 line too long (85 > 79 characters)": 2,
+                "E501 line too long (83 > 79 characters)": 2,
+                "E305 expected 2 blank lines after class or function definition, found 1": 5,
+                "F401 'typing.Dict' imported but unused": 1,
+                "E501 line too long (99 > 79 characters)": 1,
+                "E501 line too long (86 > 79 characters)": 1
             },
             "most_frequent_violation": {
-                "frequency": 8,
+                "frequency": 11,
                 "violation_type": "E302 expected 2 blank lines, found 1"
             },
             "top_violations": [
                 [
                     "E302 expected 2 blank lines, found 1",
-                    8
+                    11
                 ],
                 [
                     "W293 blank line contains whitespace",
-                    6
+                    5
                 ],
                 [
-                    "E501 line too long (83 > 79 characters)",
-                    3
+                    "E305 expected 2 blank lines after class or function definition, found 1",
+                    5
                 ]
             ]
         },
         "by_tag": {
             "list": {
-                "total_violations": 1,
-                "average_violations_per_line": 0.043478260869565216,
-                "average_violations_per_file": 1.0,
-                "violation_frequencies": {
-                    "E501 line too long (85 > 79 characters)": 1
-                },
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
                 "most_frequent_violation": {
-                    "frequency": 1,
-                    "violation_type": "E501 line too long (85 > 79 characters)"
+                    "frequency": 0,
+                    "violation_type": ""
                 },
-                "top_violations": [
-                    [
-                        "E501 line too long (85 > 79 characters)",
-                        1
-                    ]
-                ]
+                "top_violations": []
             },
             "Easy": {
-                "total_violations": 12,
-                "average_violations_per_line": 0.05225123015415369,
-                "average_violations_per_file": 1.2,
+                "total_violations": 13,
+                "average_violations_per_line": 0.051634615384615376,
+                "average_violations_per_file": 1.3,
                 "violation_frequencies": {
-                    "E501 line too long (85 > 79 characters)": 1,
                     "E302 expected 2 blank lines, found 1": 6,
-                    "E501 line too long (81 > 79 characters)": 1,
-                    "E501 line too long (83 > 79 characters)": 2,
+                    "W293 blank line contains whitespace": 3,
+                    "E501 line too long (85 > 79 characters)": 1,
+                    "E501 line too long (83 > 79 characters)": 1,
                     "E305 expected 2 blank lines after class or function definition, found 1": 2
                 },
                 "most_frequent_violation": {
@@ -75,8 +66,8 @@
                         6
                     ],
                     [
-                        "E501 line too long (83 > 79 characters)",
-                        2
+                        "W293 blank line contains whitespace",
+                        3
                     ],
                     [
                         "E305 expected 2 blank lines after class or function definition, found 1",
@@ -85,11 +76,12 @@
                 ]
             },
             "asyncio": {
-                "total_violations": 3,
-                "average_violations_per_line": 0.11538461538461539,
-                "average_violations_per_file": 3.0,
+                "total_violations": 4,
+                "average_violations_per_line": 0.13333333333333333,
+                "average_violations_per_file": 4.0,
                 "violation_frequencies": {
-                    "E302 expected 2 blank lines, found 1": 3
+                    "E302 expected 2 blank lines, found 1": 3,
+                    "W293 blank line contains whitespace": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 3,
@@ -99,6 +91,10 @@
                     [
                         "E302 expected 2 blank lines, found 1",
                         3
+                    ],
+                    [
+                        "W293 blank line contains whitespace",
+                        1
                     ]
                 ]
             },
@@ -140,40 +136,100 @@
                 "average_violations_per_line": 0.0625,
                 "average_violations_per_file": 1.0,
                 "violation_frequencies": {
-                    "E501 line too long (81 > 79 characters)": 1
+                    "E501 line too long (85 > 79 characters)": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 1,
-                    "violation_type": "E501 line too long (81 > 79 characters)"
+                    "violation_type": "E501 line too long (85 > 79 characters)"
                 },
                 "top_violations": [
                     [
-                        "E501 line too long (81 > 79 characters)",
+                        "E501 line too long (85 > 79 characters)",
                         1
                     ]
                 ]
             },
             "Concurrency": {
-                "total_violations": 1,
-                "average_violations_per_line": 0.034482758620689655,
-                "average_violations_per_file": 1.0,
+                "total_violations": 4,
+                "average_violations_per_line": 0.15384615384615385,
+                "average_violations_per_file": 4.0,
                 "violation_frequencies": {
-                    "E501 line too long (83 > 79 characters)": 1
+                    "E302 expected 2 blank lines, found 1": 2,
+                    "E501 line too long (83 > 79 characters)": 1,
+                    "E305 expected 2 blank lines after class or function definition, found 1": 1
                 },
                 "most_frequent_violation": {
-                    "frequency": 1,
-                    "violation_type": "E501 line too long (83 > 79 characters)"
+                    "frequency": 2,
+                    "violation_type": "E302 expected 2 blank lines, found 1"
                 },
                 "top_violations": [
                     [
+                        "E302 expected 2 blank lines, found 1",
+                        2
+                    ],
+                    [
                         "E501 line too long (83 > 79 characters)",
+                        1
+                    ],
+                    [
+                        "E305 expected 2 blank lines after class or function definition, found 1",
                         1
                     ]
                 ]
             },
             "ContextManager": {
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
+                "most_frequent_violation": {
+                    "frequency": 0,
+                    "violation_type": ""
+                },
+                "top_violations": []
+            },
+            "Coroutine": {
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
+                "most_frequent_violation": {
+                    "frequency": 0,
+                    "violation_type": ""
+                },
+                "top_violations": []
+            },
+            "Counter": {
+                "total_violations": 4,
+                "average_violations_per_line": 0.16666666666666666,
+                "average_violations_per_file": 4.0,
+                "violation_frequencies": {
+                    "E302 expected 2 blank lines, found 1": 1,
+                    "W293 blank line contains whitespace": 2,
+                    "E305 expected 2 blank lines after class or function definition, found 1": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 2,
+                    "violation_type": "W293 blank line contains whitespace"
+                },
+                "top_violations": [
+                    [
+                        "W293 blank line contains whitespace",
+                        2
+                    ],
+                    [
+                        "E302 expected 2 blank lines, found 1",
+                        1
+                    ],
+                    [
+                        "E305 expected 2 blank lines after class or function definition, found 1",
+                        1
+                    ]
+                ]
+            },
+            "Decorator": {
                 "total_violations": 3,
-                "average_violations_per_line": 0.1,
+                "average_violations_per_line": 0.075,
                 "average_violations_per_file": 3.0,
                 "violation_frequencies": {
                     "E302 expected 2 blank lines, found 1": 2,
@@ -194,131 +250,87 @@
                     ]
                 ]
             },
-            "Coroutine": {
-                "total_violations": 0,
-                "average_violations_per_line": 0.0,
-                "average_violations_per_file": 0.0,
-                "violation_frequencies": {},
-                "most_frequent_violation": {
-                    "frequency": 0,
-                    "violation_type": ""
-                },
-                "top_violations": []
-            },
-            "Counter": {
-                "total_violations": 3,
-                "average_violations_per_line": 0.16666666666666666,
-                "average_violations_per_file": 3.0,
+            "DefaultDict": {
+                "total_violations": 4,
+                "average_violations_per_line": 0.05178571428571428,
+                "average_violations_per_file": 2.0,
                 "violation_frequencies": {
-                    "E302 expected 2 blank lines, found 1": 1,
+                    "E302 expected 2 blank lines, found 1": 2,
                     "E305 expected 2 blank lines after class or function definition, found 1": 1,
-                    "E501 line too long (83 > 79 characters)": 1
+                    "F401 'typing.Dict' imported but unused": 1
                 },
                 "most_frequent_violation": {
-                    "frequency": 1,
+                    "frequency": 2,
                     "violation_type": "E302 expected 2 blank lines, found 1"
                 },
                 "top_violations": [
                     [
                         "E302 expected 2 blank lines, found 1",
-                        1
+                        2
                     ],
                     [
                         "E305 expected 2 blank lines after class or function definition, found 1",
                         1
                     ],
                     [
-                        "E501 line too long (83 > 79 characters)",
-                        1
-                    ]
-                ]
-            },
-            "Decorator": {
-                "total_violations": 0,
-                "average_violations_per_line": 0.0,
-                "average_violations_per_file": 0.0,
-                "violation_frequencies": {},
-                "most_frequent_violation": {
-                    "frequency": 0,
-                    "violation_type": ""
-                },
-                "top_violations": []
-            },
-            "DefaultDict": {
-                "total_violations": 1,
-                "average_violations_per_line": 0.009433962264150943,
-                "average_violations_per_file": 0.5,
-                "violation_frequencies": {
-                    "E501 line too long (112 > 79 characters)": 1
-                },
-                "most_frequent_violation": {
-                    "frequency": 1,
-                    "violation_type": "E501 line too long (112 > 79 characters)"
-                },
-                "top_violations": [
-                    [
-                        "E501 line too long (112 > 79 characters)",
+                        "F401 'typing.Dict' imported but unused",
                         1
                     ]
                 ]
             },
             "Medium": {
-                "total_violations": 9,
-                "average_violations_per_line": 0.04699667765609822,
-                "average_violations_per_file": 1.5,
+                "total_violations": 7,
+                "average_violations_per_line": 0.028811088354099106,
+                "average_violations_per_file": 1.1666666666666667,
                 "violation_frequencies": {
-                    "E501 line too long (112 > 79 characters)": 1,
-                    "E302 expected 2 blank lines, found 1": 1,
-                    "E501 line too long (84 > 79 characters)": 1,
-                    "E305 expected 2 blank lines after class or function definition, found 1": 1,
-                    "W293 blank line contains whitespace": 3,
-                    "E501 line too long (81 > 79 characters)": 1,
-                    "E501 line too long (97 > 79 characters)": 1
+                    "E302 expected 2 blank lines, found 1": 3,
+                    "E305 expected 2 blank lines after class or function definition, found 1": 2,
+                    "F401 'typing.Dict' imported but unused": 1,
+                    "E501 line too long (99 > 79 characters)": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 3,
-                    "violation_type": "W293 blank line contains whitespace"
+                    "violation_type": "E302 expected 2 blank lines, found 1"
                 },
                 "top_violations": [
                     [
-                        "W293 blank line contains whitespace",
+                        "E302 expected 2 blank lines, found 1",
                         3
                     ],
                     [
-                        "E501 line too long (112 > 79 characters)",
-                        1
+                        "E305 expected 2 blank lines after class or function definition, found 1",
+                        2
                     ],
                     [
-                        "E302 expected 2 blank lines, found 1",
+                        "F401 'typing.Dict' imported but unused",
                         1
                     ]
                 ]
             },
             "DependencyInjection": {
                 "total_violations": 1,
-                "average_violations_per_line": 0.009433962264150943,
+                "average_violations_per_line": 0.014285714285714285,
                 "average_violations_per_file": 0.5,
                 "violation_frequencies": {
-                    "E501 line too long (112 > 79 characters)": 1
+                    "F401 'typing.Dict' imported but unused": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 1,
-                    "violation_type": "E501 line too long (112 > 79 characters)"
+                    "violation_type": "F401 'typing.Dict' imported but unused"
                 },
                 "top_violations": [
                     [
-                        "E501 line too long (112 > 79 characters)",
+                        "F401 'typing.Dict' imported but unused",
                         1
                     ]
                 ]
             },
             "Deque": {
-                "total_violations": 3,
-                "average_violations_per_line": 0.04411764705882353,
-                "average_violations_per_file": 1.5,
+                "total_violations": 2,
+                "average_violations_per_line": 0.018518518518518517,
+                "average_violations_per_file": 1.0,
                 "violation_frequencies": {
                     "E302 expected 2 blank lines, found 1": 1,
-                    "E501 line too long (84 > 79 characters)": 1,
                     "E305 expected 2 blank lines after class or function definition, found 1": 1
                 },
                 "most_frequent_violation": {
@@ -331,241 +343,231 @@
                         1
                     ],
                     [
-                        "E501 line too long (84 > 79 characters)",
-                        1
-                    ],
-                    [
                         "E305 expected 2 blank lines after class or function definition, found 1",
                         1
                     ]
                 ]
             },
             "dict": {
-                "total_violations": 6,
-                "average_violations_per_line": 0.09584178498985801,
-                "average_violations_per_file": 3.0,
+                "total_violations": 3,
+                "average_violations_per_line": 0.03464755077658303,
+                "average_violations_per_file": 1.5,
                 "violation_frequencies": {
                     "E302 expected 2 blank lines, found 1": 1,
-                    "E501 line too long (84 > 79 characters)": 1,
                     "E305 expected 2 blank lines after class or function definition, found 1": 1,
-                    "W293 blank line contains whitespace": 3
+                    "E501 line too long (99 > 79 characters)": 1
                 },
                 "most_frequent_violation": {
-                    "frequency": 3,
-                    "violation_type": "W293 blank line contains whitespace"
+                    "frequency": 1,
+                    "violation_type": "E302 expected 2 blank lines, found 1"
                 },
                 "top_violations": [
-                    [
-                        "W293 blank line contains whitespace",
-                        3
-                    ],
                     [
                         "E302 expected 2 blank lines, found 1",
                         1
                     ],
                     [
-                        "E501 line too long (84 > 79 characters)",
+                        "E305 expected 2 blank lines after class or function definition, found 1",
+                        1
+                    ],
+                    [
+                        "E501 line too long (99 > 79 characters)",
                         1
                     ]
                 ]
             },
             "frozenset": {
-                "total_violations": 5,
-                "average_violations_per_line": 0.0874384236453202,
-                "average_violations_per_file": 2.5,
+                "total_violations": 1,
+                "average_violations_per_line": 0.016129032258064516,
+                "average_violations_per_file": 0.5,
                 "violation_frequencies": {
-                    "W293 blank line contains whitespace": 3,
-                    "E501 line too long (81 > 79 characters)": 1,
-                    "E501 line too long (97 > 79 characters)": 1
+                    "E501 line too long (99 > 79 characters)": 1
                 },
                 "most_frequent_violation": {
-                    "frequency": 3,
-                    "violation_type": "W293 blank line contains whitespace"
+                    "frequency": 1,
+                    "violation_type": "E501 line too long (99 > 79 characters)"
                 },
                 "top_violations": [
                     [
-                        "W293 blank line contains whitespace",
-                        3
-                    ],
-                    [
-                        "E501 line too long (81 > 79 characters)",
-                        1
-                    ],
-                    [
-                        "E501 line too long (97 > 79 characters)",
+                        "E501 line too long (99 > 79 characters)",
                         1
                     ]
                 ]
             },
             "GarbageCollection": {
-                "total_violations": 2,
-                "average_violations_per_line": 0.03571428571428571,
-                "average_violations_per_file": 1.0,
-                "violation_frequencies": {
-                    "E501 line too long (81 > 79 characters)": 1,
-                    "E501 line too long (97 > 79 characters)": 1
-                },
+                "total_violations": 0,
+                "average_violations_per_line": 0.0,
+                "average_violations_per_file": 0.0,
+                "violation_frequencies": {},
                 "most_frequent_violation": {
-                    "frequency": 1,
-                    "violation_type": "E501 line too long (81 > 79 characters)"
+                    "frequency": 0,
+                    "violation_type": ""
                 },
-                "top_violations": [
-                    [
-                        "E501 line too long (81 > 79 characters)",
-                        1
-                    ],
-                    [
-                        "E501 line too long (97 > 79 characters)",
-                        1
-                    ]
-                ]
+                "top_violations": []
             },
             "Generator": {
                 "total_violations": 1,
-                "average_violations_per_line": 0.009615384615384616,
+                "average_violations_per_line": 0.014705882352941176,
                 "average_violations_per_file": 0.5,
                 "violation_frequencies": {
-                    "E501 line too long (83 > 79 characters)": 1
+                    "E501 line too long (86 > 79 characters)": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 1,
-                    "violation_type": "E501 line too long (83 > 79 characters)"
+                    "violation_type": "E501 line too long (86 > 79 characters)"
                 },
                 "top_violations": [
                     [
-                        "E501 line too long (83 > 79 characters)",
+                        "E501 line too long (86 > 79 characters)",
                         1
                     ]
                 ]
             },
             "Global state": {
-                "total_violations": 5,
-                "average_violations_per_line": 0.04149797570850202,
-                "average_violations_per_file": 1.6666666666666667,
+                "total_violations": 3,
+                "average_violations_per_line": 0.02192513368983957,
+                "average_violations_per_file": 1.0,
                 "violation_frequencies": {
-                    "E501 line too long (83 > 79 characters)": 1,
+                    "E501 line too long (86 > 79 characters)": 1,
                     "E302 expected 2 blank lines, found 1": 1,
-                    "W293 blank line contains whitespace": 3
+                    "E501 line too long (85 > 79 characters)": 1
                 },
                 "most_frequent_violation": {
-                    "frequency": 3,
-                    "violation_type": "W293 blank line contains whitespace"
+                    "frequency": 1,
+                    "violation_type": "E501 line too long (86 > 79 characters)"
                 },
                 "top_violations": [
                     [
-                        "W293 blank line contains whitespace",
-                        3
-                    ],
-                    [
-                        "E501 line too long (83 > 79 characters)",
+                        "E501 line too long (86 > 79 characters)",
                         1
                     ],
                     [
                         "E302 expected 2 blank lines, found 1",
+                        1
+                    ],
+                    [
+                        "E501 line too long (85 > 79 characters)",
                         1
                     ]
                 ]
             },
             "Hard": {
-                "total_violations": 6,
-                "average_violations_per_line": 0.03788023853813327,
-                "average_violations_per_file": 1.5,
+                "total_violations": 8,
+                "average_violations_per_line": 0.0732620320855615,
+                "average_violations_per_file": 2.0,
                 "violation_frequencies": {
+                    "E501 line too long (86 > 79 characters)": 1,
+                    "E302 expected 2 blank lines, found 1": 2,
+                    "E501 line too long (85 > 79 characters)": 1,
                     "E501 line too long (83 > 79 characters)": 1,
-                    "E302 expected 2 blank lines, found 1": 1,
-                    "W293 blank line contains whitespace": 3,
-                    "E501 line too long (115 > 79 characters)": 1
+                    "W293 blank line contains whitespace": 2,
+                    "E305 expected 2 blank lines after class or function definition, found 1": 1
                 },
                 "most_frequent_violation": {
-                    "frequency": 3,
-                    "violation_type": "W293 blank line contains whitespace"
+                    "frequency": 2,
+                    "violation_type": "E302 expected 2 blank lines, found 1"
                 },
                 "top_violations": [
                     [
-                        "W293 blank line contains whitespace",
-                        3
-                    ],
-                    [
-                        "E501 line too long (83 > 79 characters)",
-                        1
-                    ],
-                    [
                         "E302 expected 2 blank lines, found 1",
+                        2
+                    ],
+                    [
+                        "W293 blank line contains whitespace",
+                        2
+                    ],
+                    [
+                        "E501 line too long (86 > 79 characters)",
                         1
                     ]
                 ]
             },
             "heapq": {
-                "total_violations": 6,
-                "average_violations_per_line": 0.05050698471751103,
-                "average_violations_per_file": 2.0,
+                "total_violations": 8,
+                "average_violations_per_line": 0.09768270944741532,
+                "average_violations_per_file": 2.6666666666666665,
                 "violation_frequencies": {
+                    "E501 line too long (86 > 79 characters)": 1,
+                    "E302 expected 2 blank lines, found 1": 2,
+                    "E501 line too long (85 > 79 characters)": 1,
                     "E501 line too long (83 > 79 characters)": 1,
-                    "E302 expected 2 blank lines, found 1": 1,
-                    "W293 blank line contains whitespace": 3,
-                    "E501 line too long (115 > 79 characters)": 1
+                    "W293 blank line contains whitespace": 2,
+                    "E305 expected 2 blank lines after class or function definition, found 1": 1
                 },
                 "most_frequent_violation": {
-                    "frequency": 3,
-                    "violation_type": "W293 blank line contains whitespace"
+                    "frequency": 2,
+                    "violation_type": "E302 expected 2 blank lines, found 1"
                 },
                 "top_violations": [
                     [
-                        "W293 blank line contains whitespace",
-                        3
-                    ],
-                    [
-                        "E501 line too long (83 > 79 characters)",
-                        1
-                    ],
-                    [
                         "E302 expected 2 blank lines, found 1",
+                        2
+                    ],
+                    [
+                        "W293 blank line contains whitespace",
+                        2
+                    ],
+                    [
+                        "E501 line too long (86 > 79 characters)",
                         1
                     ]
                 ]
             },
             "IdiomaticPython": {
-                "total_violations": 5,
-                "average_violations_per_line": 0.06614509246088193,
-                "average_violations_per_file": 2.5,
+                "total_violations": 7,
+                "average_violations_per_line": 0.1318181818181818,
+                "average_violations_per_file": 3.5,
                 "violation_frequencies": {
-                    "E302 expected 2 blank lines, found 1": 1,
-                    "W293 blank line contains whitespace": 3,
-                    "E501 line too long (115 > 79 characters)": 1
+                    "E302 expected 2 blank lines, found 1": 2,
+                    "E501 line too long (85 > 79 characters)": 1,
+                    "E501 line too long (83 > 79 characters)": 1,
+                    "W293 blank line contains whitespace": 2,
+                    "E305 expected 2 blank lines after class or function definition, found 1": 1
                 },
                 "most_frequent_violation": {
-                    "frequency": 3,
+                    "frequency": 2,
+                    "violation_type": "E302 expected 2 blank lines, found 1"
+                },
+                "top_violations": [
+                    [
+                        "E302 expected 2 blank lines, found 1",
+                        2
+                    ],
+                    [
+                        "W293 blank line contains whitespace",
+                        2
+                    ],
+                    [
+                        "E501 line too long (85 > 79 characters)",
+                        1
+                    ]
+                ]
+            },
+            "Introspection": {
+                "total_violations": 5,
+                "average_violations_per_line": 0.22727272727272727,
+                "average_violations_per_file": 5.0,
+                "violation_frequencies": {
+                    "E302 expected 2 blank lines, found 1": 1,
+                    "E501 line too long (83 > 79 characters)": 1,
+                    "W293 blank line contains whitespace": 2,
+                    "E305 expected 2 blank lines after class or function definition, found 1": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 2,
                     "violation_type": "W293 blank line contains whitespace"
                 },
                 "top_violations": [
                     [
                         "W293 blank line contains whitespace",
-                        3
+                        2
                     ],
                     [
                         "E302 expected 2 blank lines, found 1",
                         1
                     ],
                     [
-                        "E501 line too long (115 > 79 characters)",
-                        1
-                    ]
-                ]
-            },
-            "Introspection": {
-                "total_violations": 1,
-                "average_violations_per_line": 0.02702702702702703,
-                "average_violations_per_file": 1.0,
-                "violation_frequencies": {
-                    "E501 line too long (115 > 79 characters)": 1
-                },
-                "most_frequent_violation": {
-                    "frequency": 1,
-                    "violation_type": "E501 line too long (115 > 79 characters)"
-                },
-                "top_violations": [
-                    [
-                        "E501 line too long (115 > 79 characters)",
+                        "E501 line too long (83 > 79 characters)",
                         1
                     ]
                 ]
@@ -574,33 +576,23 @@
     },
     "pylint": {
         "overall": {
-            "total_violations": 58,
-            "average_violations_per_line": 0.08250707323674747,
-            "average_violations_per_file": 2.9,
+            "total_violations": 48,
+            "average_violations_per_line": 0.08114382705610003,
+            "average_violations_per_file": 2.4,
             "violation_frequencies": {
                 "Missing module docstring (missing-module-docstring)": 20,
-                "Missing function or method docstring (missing-function-docstring)": 14,
+                "Missing function or method docstring (missing-function-docstring)": 10,
+                "Trailing whitespace (trailing-whitespace)": 5,
+                "Consider explicitly re-raising using 'except ValueError as exc' and 'raise ValueError('Input must be a hex string') from exc' (raise-missing-from)": 1,
                 "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)": 1,
+                "Catching too general exception Exception (broad-exception-caught)": 3,
                 "Using variable 'cwd' before assignment (used-before-assignment)": 1,
-                "Redefining name 'directory' from outer scope (line 21) (redefined-outer-name)": 1,
-                "Redefining name 'elements' from outer scope (line 17) (redefined-outer-name)": 1,
-                "Line too long (112/100) (line-too-long)": 1,
-                "Missing class docstring (missing-class-docstring)": 1,
-                "Redefining name 'numbers' from outer scope (line 61) (redefined-outer-name)": 1,
-                "Redefining name 'window_size' from outer scope (line 62) (redefined-outer-name)": 1,
-                "Redefining name 'injector' from outer scope (line 58) (redefined-outer-name)": 1,
-                "Unused argument 'injector' (unused-argument)": 1,
-                "Constant name \"window_size\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
-                "Trailing whitespace (trailing-whitespace)": 4,
-                "Constant name \"current_fibonacci_generator\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
-                "Using the global statement (global-statement)": 1,
-                "Using global for 'current_fibonacci_generator' but no assignment is done (global-variable-not-assigned)": 1,
-                "Redefining name 'n' from outer scope (line 44) (redefined-outer-name)": 1,
-                "Redefining name 'k' from outer scope (line 45) (redefined-outer-name)": 1,
-                "NoneType (invalid-unary-operand-type)": 1,
-                "Constant name \"result\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
-                "Line too long (115/100) (line-too-long)": 1,
-                "Redefining name 'k' from outer scope (line 28) (redefined-outer-name)": 1
+                "Missing class docstring (missing-class-docstring)": 2,
+                "Unused Dict imported from typing (unused-import)": 1,
+                "Variable name \"MAX_RECENT\" doesn't conform to snake_case naming style (invalid-name)": 1,
+                "Global variable 'max_numbers' undefined at the module level (global-variable-undefined)": 1,
+                "Constant name \"num_count\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
+                "Using open without explicitly specifying an encoding (unspecified-encoding)": 1
             },
             "most_frequent_violation": {
                 "frequency": 20,
@@ -613,18 +605,18 @@
                 ],
                 [
                     "Missing function or method docstring (missing-function-docstring)",
-                    14
+                    10
                 ],
                 [
                     "Trailing whitespace (trailing-whitespace)",
-                    4
+                    5
                 ]
             ]
         },
         "by_tag": {
             "list": {
                 "total_violations": 2,
-                "average_violations_per_line": 0.08695652173913043,
+                "average_violations_per_line": 0.08,
                 "average_violations_per_file": 2.0,
                 "violation_frequencies": {
                     "Missing module docstring (missing-module-docstring)": 1,
@@ -646,16 +638,17 @@
                 ]
             },
             "Easy": {
-                "total_violations": 19,
-                "average_violations_per_line": 0.07997708944672963,
-                "average_violations_per_file": 1.9,
+                "total_violations": 23,
+                "average_violations_per_line": 0.09188580047403577,
+                "average_violations_per_file": 2.3,
                 "violation_frequencies": {
                     "Missing module docstring (missing-module-docstring)": 10,
                     "Missing function or method docstring (missing-function-docstring)": 5,
+                    "Trailing whitespace (trailing-whitespace)": 3,
+                    "Consider explicitly re-raising using 'except ValueError as exc' and 'raise ValueError('Input must be a hex string') from exc' (raise-missing-from)": 1,
                     "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)": 1,
-                    "Using variable 'cwd' before assignment (used-before-assignment)": 1,
-                    "Redefining name 'directory' from outer scope (line 21) (redefined-outer-name)": 1,
-                    "Redefining name 'elements' from outer scope (line 17) (redefined-outer-name)": 1
+                    "Catching too general exception Exception (broad-exception-caught)": 2,
+                    "Using variable 'cwd' before assignment (used-before-assignment)": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 10,
@@ -671,17 +664,42 @@
                         5
                     ],
                     [
-                        "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)",
-                        1
+                        "Trailing whitespace (trailing-whitespace)",
+                        3
                     ]
                 ]
             },
             "asyncio": {
-                "total_violations": 1,
-                "average_violations_per_line": 0.038461538461538464,
-                "average_violations_per_file": 1.0,
+                "total_violations": 2,
+                "average_violations_per_line": 0.06666666666666667,
+                "average_violations_per_file": 2.0,
                 "violation_frequencies": {
+                    "Trailing whitespace (trailing-whitespace)": 1,
                     "Missing module docstring (missing-module-docstring)": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "Trailing whitespace (trailing-whitespace)"
+                },
+                "top_violations": [
+                    [
+                        "Trailing whitespace (trailing-whitespace)",
+                        1
+                    ],
+                    [
+                        "Missing module docstring (missing-module-docstring)",
+                        1
+                    ]
+                ]
+            },
+            "bytearray": {
+                "total_violations": 3,
+                "average_violations_per_line": 0.1,
+                "average_violations_per_file": 3.0,
+                "violation_frequencies": {
+                    "Missing module docstring (missing-module-docstring)": 1,
+                    "Consider explicitly re-raising using 'except ValueError as exc' and 'raise ValueError('Input must be a hex string') from exc' (raise-missing-from)": 1,
+                    "Missing function or method docstring (missing-function-docstring)": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 1,
@@ -691,12 +709,20 @@
                     [
                         "Missing module docstring (missing-module-docstring)",
                         1
+                    ],
+                    [
+                        "Consider explicitly re-raising using 'except ValueError as exc' and 'raise ValueError('Input must be a hex string') from exc' (raise-missing-from)",
+                        1
+                    ],
+                    [
+                        "Missing function or method docstring (missing-function-docstring)",
+                        1
                     ]
                 ]
             },
-            "bytearray": {
+            "bytes": {
                 "total_violations": 2,
-                "average_violations_per_line": 0.1,
+                "average_violations_per_line": 0.09523809523809523,
                 "average_violations_per_file": 2.0,
                 "violation_frequencies": {
                     "Missing module docstring (missing-module-docstring)": 1,
@@ -717,7 +743,7 @@
                     ]
                 ]
             },
-            "bytes": {
+            "ChainMap": {
                 "total_violations": 2,
                 "average_violations_per_line": 0.08333333333333333,
                 "average_violations_per_file": 2.0,
@@ -740,9 +766,9 @@
                     ]
                 ]
             },
-            "ChainMap": {
+            "Comprehension": {
                 "total_violations": 2,
-                "average_violations_per_line": 0.07692307692307693,
+                "average_violations_per_line": 0.125,
                 "average_violations_per_file": 2.0,
                 "violation_frequencies": {
                     "Missing module docstring (missing-module-docstring)": 1,
@@ -763,32 +789,14 @@
                     ]
                 ]
             },
-            "Comprehension": {
-                "total_violations": 1,
-                "average_violations_per_line": 0.0625,
-                "average_violations_per_file": 1.0,
-                "violation_frequencies": {
-                    "Missing module docstring (missing-module-docstring)": 1
-                },
-                "most_frequent_violation": {
-                    "frequency": 1,
-                    "violation_type": "Missing module docstring (missing-module-docstring)"
-                },
-                "top_violations": [
-                    [
-                        "Missing module docstring (missing-module-docstring)",
-                        1
-                    ]
-                ]
-            },
             "Concurrency": {
                 "total_violations": 3,
-                "average_violations_per_line": 0.10344827586206896,
+                "average_violations_per_line": 0.11538461538461539,
                 "average_violations_per_file": 3.0,
                 "violation_frequencies": {
                     "Missing module docstring (missing-module-docstring)": 1,
                     "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)": 1,
-                    "Missing function or method docstring (missing-function-docstring)": 1
+                    "Catching too general exception Exception (broad-exception-caught)": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 1,
@@ -804,19 +812,19 @@
                         1
                     ],
                     [
-                        "Missing function or method docstring (missing-function-docstring)",
+                        "Catching too general exception Exception (broad-exception-caught)",
                         1
                     ]
                 ]
             },
             "ContextManager": {
                 "total_violations": 3,
-                "average_violations_per_line": 0.1,
+                "average_violations_per_line": 0.08823529411764706,
                 "average_violations_per_file": 3.0,
                 "violation_frequencies": {
                     "Missing module docstring (missing-module-docstring)": 1,
                     "Using variable 'cwd' before assignment (used-before-assignment)": 1,
-                    "Redefining name 'directory' from outer scope (line 21) (redefined-outer-name)": 1
+                    "Catching too general exception Exception (broad-exception-caught)": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 1,
@@ -832,14 +840,14 @@
                         1
                     ],
                     [
-                        "Redefining name 'directory' from outer scope (line 21) (redefined-outer-name)",
+                        "Catching too general exception Exception (broad-exception-caught)",
                         1
                     ]
                 ]
             },
             "Coroutine": {
                 "total_violations": 1,
-                "average_violations_per_line": 0.037037037037037035,
+                "average_violations_per_line": 0.04,
                 "average_violations_per_file": 1.0,
                 "violation_frequencies": {
                     "Missing module docstring (missing-module-docstring)": 1
@@ -856,31 +864,31 @@
                 ]
             },
             "Counter": {
-                "total_violations": 2,
-                "average_violations_per_line": 0.1111111111111111,
-                "average_violations_per_file": 2.0,
+                "total_violations": 3,
+                "average_violations_per_line": 0.125,
+                "average_violations_per_file": 3.0,
                 "violation_frequencies": {
-                    "Missing module docstring (missing-module-docstring)": 1,
-                    "Redefining name 'elements' from outer scope (line 17) (redefined-outer-name)": 1
+                    "Trailing whitespace (trailing-whitespace)": 2,
+                    "Missing module docstring (missing-module-docstring)": 1
                 },
                 "most_frequent_violation": {
-                    "frequency": 1,
-                    "violation_type": "Missing module docstring (missing-module-docstring)"
+                    "frequency": 2,
+                    "violation_type": "Trailing whitespace (trailing-whitespace)"
                 },
                 "top_violations": [
                     [
-                        "Missing module docstring (missing-module-docstring)",
-                        1
+                        "Trailing whitespace (trailing-whitespace)",
+                        2
                     ],
                     [
-                        "Redefining name 'elements' from outer scope (line 17) (redefined-outer-name)",
+                        "Missing module docstring (missing-module-docstring)",
                         1
                     ]
                 ]
             },
             "Decorator": {
                 "total_violations": 1,
-                "average_violations_per_line": 0.03225806451612903,
+                "average_violations_per_line": 0.025,
                 "average_violations_per_file": 1.0,
                 "violation_frequencies": {
                     "Missing module docstring (missing-module-docstring)": 1
@@ -897,115 +905,102 @@
                 ]
             },
             "DefaultDict": {
-                "total_violations": 9,
-                "average_violations_per_line": 0.09160073037127206,
-                "average_violations_per_file": 4.5,
+                "total_violations": 7,
+                "average_violations_per_line": 0.09821428571428571,
+                "average_violations_per_file": 3.5,
                 "violation_frequencies": {
                     "Missing module docstring (missing-module-docstring)": 2,
-                    "Line too long (112/100) (line-too-long)": 1,
-                    "Missing function or method docstring (missing-function-docstring)": 6
+                    "Missing class docstring (missing-class-docstring)": 1,
+                    "Missing function or method docstring (missing-function-docstring)": 3,
+                    "Unused Dict imported from typing (unused-import)": 1
                 },
                 "most_frequent_violation": {
-                    "frequency": 6,
+                    "frequency": 3,
                     "violation_type": "Missing function or method docstring (missing-function-docstring)"
                 },
                 "top_violations": [
                     [
                         "Missing function or method docstring (missing-function-docstring)",
-                        6
+                        3
                     ],
                     [
                         "Missing module docstring (missing-module-docstring)",
                         2
                     ],
                     [
-                        "Line too long (112/100) (line-too-long)",
+                        "Missing class docstring (missing-class-docstring)",
                         1
                     ]
                 ]
             },
             "Medium": {
-                "total_violations": 23,
-                "average_violations_per_line": 0.08206679783746353,
-                "average_violations_per_file": 3.8333333333333335,
+                "total_violations": 15,
+                "average_violations_per_line": 0.06279468179147406,
+                "average_violations_per_file": 2.5,
                 "violation_frequencies": {
                     "Missing module docstring (missing-module-docstring)": 6,
-                    "Line too long (112/100) (line-too-long)": 1,
-                    "Missing function or method docstring (missing-function-docstring)": 9,
-                    "Missing class docstring (missing-class-docstring)": 1,
-                    "Redefining name 'numbers' from outer scope (line 61) (redefined-outer-name)": 1,
-                    "Redefining name 'window_size' from outer scope (line 62) (redefined-outer-name)": 1,
-                    "Redefining name 'injector' from outer scope (line 58) (redefined-outer-name)": 1,
-                    "Unused argument 'injector' (unused-argument)": 1,
-                    "Constant name \"window_size\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
-                    "Trailing whitespace (trailing-whitespace)": 1
+                    "Missing class docstring (missing-class-docstring)": 2,
+                    "Missing function or method docstring (missing-function-docstring)": 5,
+                    "Unused Dict imported from typing (unused-import)": 1,
+                    "Variable name \"MAX_RECENT\" doesn't conform to snake_case naming style (invalid-name)": 1
                 },
                 "most_frequent_violation": {
-                    "frequency": 9,
-                    "violation_type": "Missing function or method docstring (missing-function-docstring)"
+                    "frequency": 6,
+                    "violation_type": "Missing module docstring (missing-module-docstring)"
                 },
                 "top_violations": [
-                    [
-                        "Missing function or method docstring (missing-function-docstring)",
-                        9
-                    ],
                     [
                         "Missing module docstring (missing-module-docstring)",
                         6
                     ],
                     [
-                        "Line too long (112/100) (line-too-long)",
-                        1
+                        "Missing function or method docstring (missing-function-docstring)",
+                        5
+                    ],
+                    [
+                        "Missing class docstring (missing-class-docstring)",
+                        2
                     ]
                 ]
             },
             "DependencyInjection": {
-                "total_violations": 17,
-                "average_violations_per_line": 0.14578419811320753,
-                "average_violations_per_file": 8.5,
+                "total_violations": 10,
+                "average_violations_per_line": 0.12653061224489795,
+                "average_violations_per_file": 5.0,
                 "violation_frequencies": {
-                    "Line too long (112/100) (line-too-long)": 1,
                     "Missing module docstring (missing-module-docstring)": 2,
-                    "Missing function or method docstring (missing-function-docstring)": 8,
-                    "Missing class docstring (missing-class-docstring)": 1,
-                    "Redefining name 'numbers' from outer scope (line 61) (redefined-outer-name)": 1,
-                    "Redefining name 'window_size' from outer scope (line 62) (redefined-outer-name)": 1,
-                    "Redefining name 'injector' from outer scope (line 58) (redefined-outer-name)": 1,
-                    "Unused argument 'injector' (unused-argument)": 1,
-                    "Constant name \"window_size\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1
+                    "Missing class docstring (missing-class-docstring)": 2,
+                    "Missing function or method docstring (missing-function-docstring)": 5,
+                    "Unused Dict imported from typing (unused-import)": 1
                 },
                 "most_frequent_violation": {
-                    "frequency": 8,
+                    "frequency": 5,
                     "violation_type": "Missing function or method docstring (missing-function-docstring)"
                 },
                 "top_violations": [
                     [
                         "Missing function or method docstring (missing-function-docstring)",
-                        8
+                        5
                     ],
                     [
                         "Missing module docstring (missing-module-docstring)",
                         2
                     ],
                     [
-                        "Line too long (112/100) (line-too-long)",
-                        1
+                        "Missing class docstring (missing-class-docstring)",
+                        2
                     ]
                 ]
             },
             "Deque": {
-                "total_violations": 10,
-                "average_violations_per_line": 0.08501838235294118,
-                "average_violations_per_file": 5.0,
+                "total_violations": 6,
+                "average_violations_per_line": 0.05933484504913076,
+                "average_violations_per_file": 3.0,
                 "violation_frequencies": {
                     "Missing module docstring (missing-module-docstring)": 2,
                     "Missing class docstring (missing-class-docstring)": 1,
                     "Missing function or method docstring (missing-function-docstring)": 2,
-                    "Redefining name 'numbers' from outer scope (line 61) (redefined-outer-name)": 1,
-                    "Redefining name 'window_size' from outer scope (line 62) (redefined-outer-name)": 1,
-                    "Redefining name 'injector' from outer scope (line 58) (redefined-outer-name)": 1,
-                    "Unused argument 'injector' (unused-argument)": 1,
-                    "Constant name \"window_size\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1
+                    "Variable name \"MAX_RECENT\" doesn't conform to snake_case naming style (invalid-name)": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 2,
@@ -1027,13 +1022,12 @@
                 ]
             },
             "dict": {
-                "total_violations": 4,
-                "average_violations_per_line": 0.06643002028397565,
-                "average_violations_per_file": 2.0,
+                "total_violations": 3,
+                "average_violations_per_line": 0.03464755077658303,
+                "average_violations_per_file": 1.5,
                 "violation_frequencies": {
                     "Missing module docstring (missing-module-docstring)": 2,
-                    "Trailing whitespace (trailing-whitespace)": 1,
-                    "Missing function or method docstring (missing-function-docstring)": 1
+                    "Variable name \"MAX_RECENT\" doesn't conform to snake_case naming style (invalid-name)": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 2,
@@ -1045,23 +1039,17 @@
                         2
                     ],
                     [
-                        "Trailing whitespace (trailing-whitespace)",
-                        1
-                    ],
-                    [
-                        "Missing function or method docstring (missing-function-docstring)",
+                        "Variable name \"MAX_RECENT\" doesn't conform to snake_case naming style (invalid-name)",
                         1
                     ]
                 ]
             },
             "frozenset": {
-                "total_violations": 4,
-                "average_violations_per_line": 0.06958128078817734,
-                "average_violations_per_file": 2.0,
+                "total_violations": 2,
+                "average_violations_per_line": 0.030834914611005692,
+                "average_violations_per_file": 1.0,
                 "violation_frequencies": {
-                    "Trailing whitespace (trailing-whitespace)": 1,
-                    "Missing module docstring (missing-module-docstring)": 2,
-                    "Missing function or method docstring (missing-function-docstring)": 1
+                    "Missing module docstring (missing-module-docstring)": 2
                 },
                 "most_frequent_violation": {
                     "frequency": 2,
@@ -1071,26 +1059,15 @@
                     [
                         "Missing module docstring (missing-module-docstring)",
                         2
-                    ],
-                    [
-                        "Trailing whitespace (trailing-whitespace)",
-                        1
-                    ],
-                    [
-                        "Missing function or method docstring (missing-function-docstring)",
-                        1
                     ]
                 ]
             },
             "GarbageCollection": {
-                "total_violations": 5,
-                "average_violations_per_line": 0.05559299191374663,
-                "average_violations_per_file": 2.5,
+                "total_violations": 2,
+                "average_violations_per_line": 0.025122549019607844,
+                "average_violations_per_file": 1.0,
                 "violation_frequencies": {
-                    "Missing module docstring (missing-module-docstring)": 2,
-                    "Constant name \"current_fibonacci_generator\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
-                    "Using the global statement (global-statement)": 1,
-                    "Using global for 'current_fibonacci_generator' but no assignment is done (global-variable-not-assigned)": 1
+                    "Missing module docstring (missing-module-docstring)": 2
                 },
                 "most_frequent_violation": {
                     "frequency": 2,
@@ -1100,30 +1077,17 @@
                     [
                         "Missing module docstring (missing-module-docstring)",
                         2
-                    ],
-                    [
-                        "Constant name \"current_fibonacci_generator\" doesn't conform to UPPER_CASE naming style (invalid-name)",
-                        1
-                    ],
-                    [
-                        "Using the global statement (global-statement)",
-                        1
                     ]
                 ]
             },
             "Generator": {
-                "total_violations": 9,
-                "average_violations_per_line": 0.08581277213352685,
-                "average_violations_per_file": 4.5,
+                "total_violations": 4,
+                "average_violations_per_line": 0.0545343137254902,
+                "average_violations_per_file": 2.0,
                 "violation_frequencies": {
                     "Missing module docstring (missing-module-docstring)": 2,
-                    "Constant name \"current_fibonacci_generator\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
-                    "Using the global statement (global-statement)": 1,
-                    "Using global for 'current_fibonacci_generator' but no assignment is done (global-variable-not-assigned)": 1,
-                    "Redefining name 'n' from outer scope (line 44) (redefined-outer-name)": 1,
-                    "Redefining name 'k' from outer scope (line 45) (redefined-outer-name)": 1,
-                    "NoneType (invalid-unary-operand-type)": 1,
-                    "Constant name \"result\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1
+                    "Global variable 'max_numbers' undefined at the module level (global-variable-undefined)": 1,
+                    "Constant name \"num_count\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 2,
@@ -1135,29 +1099,24 @@
                         2
                     ],
                     [
-                        "Constant name \"current_fibonacci_generator\" doesn't conform to UPPER_CASE naming style (invalid-name)",
+                        "Global variable 'max_numbers' undefined at the module level (global-variable-undefined)",
                         1
                     ],
                     [
-                        "Using the global statement (global-statement)",
+                        "Constant name \"num_count\" doesn't conform to UPPER_CASE naming style (invalid-name)",
                         1
                     ]
                 ]
             },
             "Global state": {
-                "total_violations": 13,
-                "average_violations_per_line": 0.09229623405393017,
-                "average_violations_per_file": 4.333333333333333,
+                "total_violations": 6,
+                "average_violations_per_line": 0.04847742127153892,
+                "average_violations_per_file": 2.0,
                 "violation_frequencies": {
                     "Missing module docstring (missing-module-docstring)": 3,
-                    "Constant name \"current_fibonacci_generator\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
-                    "Using the global statement (global-statement)": 1,
-                    "Using global for 'current_fibonacci_generator' but no assignment is done (global-variable-not-assigned)": 1,
-                    "Redefining name 'n' from outer scope (line 44) (redefined-outer-name)": 1,
-                    "Redefining name 'k' from outer scope (line 45) (redefined-outer-name)": 1,
-                    "NoneType (invalid-unary-operand-type)": 1,
-                    "Constant name \"result\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
-                    "Trailing whitespace (trailing-whitespace)": 3
+                    "Global variable 'max_numbers' undefined at the module level (global-variable-undefined)": 1,
+                    "Constant name \"num_count\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
+                    "Using open without explicitly specifying an encoding (unspecified-encoding)": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 3,
@@ -1169,31 +1128,26 @@
                         3
                     ],
                     [
-                        "Trailing whitespace (trailing-whitespace)",
-                        3
+                        "Global variable 'max_numbers' undefined at the module level (global-variable-undefined)",
+                        1
                     ],
                     [
-                        "Constant name \"current_fibonacci_generator\" doesn't conform to UPPER_CASE naming style (invalid-name)",
+                        "Constant name \"num_count\" doesn't conform to UPPER_CASE naming style (invalid-name)",
                         1
                     ]
                 ]
             },
             "Hard": {
-                "total_violations": 16,
-                "average_violations_per_line": 0.0894924458107179,
-                "average_violations_per_file": 4.0,
+                "total_violations": 10,
+                "average_violations_per_line": 0.08181261140819965,
+                "average_violations_per_file": 2.5,
                 "violation_frequencies": {
                     "Missing module docstring (missing-module-docstring)": 4,
-                    "Constant name \"current_fibonacci_generator\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
-                    "Using the global statement (global-statement)": 1,
-                    "Using global for 'current_fibonacci_generator' but no assignment is done (global-variable-not-assigned)": 1,
-                    "Redefining name 'n' from outer scope (line 44) (redefined-outer-name)": 1,
-                    "Redefining name 'k' from outer scope (line 45) (redefined-outer-name)": 1,
-                    "NoneType (invalid-unary-operand-type)": 1,
-                    "Constant name \"result\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
-                    "Trailing whitespace (trailing-whitespace)": 3,
-                    "Line too long (115/100) (line-too-long)": 1,
-                    "Redefining name 'k' from outer scope (line 28) (redefined-outer-name)": 1
+                    "Global variable 'max_numbers' undefined at the module level (global-variable-undefined)": 1,
+                    "Constant name \"num_count\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
+                    "Using open without explicitly specifying an encoding (unspecified-encoding)": 1,
+                    "Trailing whitespace (trailing-whitespace)": 2,
+                    "Catching too general exception Exception (broad-exception-caught)": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 4,
@@ -1206,27 +1160,25 @@
                     ],
                     [
                         "Trailing whitespace (trailing-whitespace)",
-                        3
+                        2
                     ],
                     [
-                        "Constant name \"current_fibonacci_generator\" doesn't conform to UPPER_CASE naming style (invalid-name)",
+                        "Global variable 'max_numbers' undefined at the module level (global-variable-undefined)",
                         1
                     ]
                 ]
             },
             "heapq": {
-                "total_violations": 12,
-                "average_violations_per_line": 0.09416602837655469,
-                "average_violations_per_file": 4.0,
+                "total_violations": 9,
+                "average_violations_per_line": 0.10213903743315507,
+                "average_violations_per_file": 3.0,
                 "violation_frequencies": {
                     "Missing module docstring (missing-module-docstring)": 3,
-                    "Redefining name 'n' from outer scope (line 44) (redefined-outer-name)": 1,
-                    "Redefining name 'k' from outer scope (line 45) (redefined-outer-name)": 1,
-                    "NoneType (invalid-unary-operand-type)": 1,
-                    "Constant name \"result\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
-                    "Trailing whitespace (trailing-whitespace)": 3,
-                    "Line too long (115/100) (line-too-long)": 1,
-                    "Redefining name 'k' from outer scope (line 28) (redefined-outer-name)": 1
+                    "Global variable 'max_numbers' undefined at the module level (global-variable-undefined)": 1,
+                    "Constant name \"num_count\" doesn't conform to UPPER_CASE naming style (invalid-name)": 1,
+                    "Using open without explicitly specifying an encoding (unspecified-encoding)": 1,
+                    "Trailing whitespace (trailing-whitespace)": 2,
+                    "Catching too general exception Exception (broad-exception-caught)": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 3,
@@ -1239,67 +1191,67 @@
                     ],
                     [
                         "Trailing whitespace (trailing-whitespace)",
-                        3
+                        2
                     ],
                     [
-                        "Redefining name 'n' from outer scope (line 44) (redefined-outer-name)",
+                        "Global variable 'max_numbers' undefined at the module level (global-variable-undefined)",
                         1
                     ]
                 ]
             },
             "IdiomaticPython": {
-                "total_violations": 7,
-                "average_violations_per_line": 0.09317211948790896,
-                "average_violations_per_file": 3.5,
+                "total_violations": 6,
+                "average_violations_per_line": 0.1090909090909091,
+                "average_violations_per_file": 3.0,
                 "violation_frequencies": {
-                    "Trailing whitespace (trailing-whitespace)": 3,
                     "Missing module docstring (missing-module-docstring)": 2,
-                    "Line too long (115/100) (line-too-long)": 1,
-                    "Redefining name 'k' from outer scope (line 28) (redefined-outer-name)": 1
+                    "Using open without explicitly specifying an encoding (unspecified-encoding)": 1,
+                    "Trailing whitespace (trailing-whitespace)": 2,
+                    "Catching too general exception Exception (broad-exception-caught)": 1
                 },
                 "most_frequent_violation": {
-                    "frequency": 3,
-                    "violation_type": "Trailing whitespace (trailing-whitespace)"
+                    "frequency": 2,
+                    "violation_type": "Missing module docstring (missing-module-docstring)"
                 },
                 "top_violations": [
-                    [
-                        "Trailing whitespace (trailing-whitespace)",
-                        3
-                    ],
                     [
                         "Missing module docstring (missing-module-docstring)",
                         2
                     ],
                     [
-                        "Line too long (115/100) (line-too-long)",
+                        "Trailing whitespace (trailing-whitespace)",
+                        2
+                    ],
+                    [
+                        "Using open without explicitly specifying an encoding (unspecified-encoding)",
                         1
                     ]
                 ]
             },
             "Introspection": {
-                "total_violations": 3,
-                "average_violations_per_line": 0.08108108108108109,
-                "average_violations_per_file": 3.0,
+                "total_violations": 4,
+                "average_violations_per_line": 0.18181818181818182,
+                "average_violations_per_file": 4.0,
                 "violation_frequencies": {
-                    "Line too long (115/100) (line-too-long)": 1,
+                    "Trailing whitespace (trailing-whitespace)": 2,
                     "Missing module docstring (missing-module-docstring)": 1,
-                    "Redefining name 'k' from outer scope (line 28) (redefined-outer-name)": 1
+                    "Catching too general exception Exception (broad-exception-caught)": 1
                 },
                 "most_frequent_violation": {
-                    "frequency": 1,
-                    "violation_type": "Line too long (115/100) (line-too-long)"
+                    "frequency": 2,
+                    "violation_type": "Trailing whitespace (trailing-whitespace)"
                 },
                 "top_violations": [
                     [
-                        "Line too long (115/100) (line-too-long)",
-                        1
+                        "Trailing whitespace (trailing-whitespace)",
+                        2
                     ],
                     [
                         "Missing module docstring (missing-module-docstring)",
                         1
                     ],
                     [
-                        "Redefining name 'k' from outer scope (line 28) (redefined-outer-name)",
+                        "Catching too general exception Exception (broad-exception-caught)",
                         1
                     ]
                 ]
@@ -1754,11 +1706,11 @@
     },
     "radon": {
         "overall": {
-            "average_file_score": 1.9048484848484848,
+            "average_file_score": 1.864047619047619,
             "average_code_block_type_scores": {
-                "function_complexity": 1.9833333333333332,
-                "class_complexity": 2.25,
-                "method_complexity": 1.2648809523809523
+                "function_complexity": 1.925,
+                "class_complexity": 2.0,
+                "method_complexity": 1.1833333333333331
             }
         },
         "by_tag": {
@@ -1769,21 +1721,21 @@
                 }
             },
             "Easy": {
-                "average_file_score": 1.65,
+                "average_file_score": 1.75,
                 "average_code_block_type_scores": {
-                    "function_complexity": 1.65
+                    "function_complexity": 1.75
                 }
             },
             "asyncio": {
-                "average_file_score": 1.0,
+                "average_file_score": 1.3333333333333333,
                 "average_code_block_type_scores": {
-                    "function_complexity": 1.0
+                    "function_complexity": 1.3333333333333333
                 }
             },
             "bytearray": {
-                "average_file_score": 2.0,
+                "average_file_score": 1.6666666666666667,
                 "average_code_block_type_scores": {
-                    "function_complexity": 2.0
+                    "function_complexity": 1.6666666666666667
                 }
             },
             "bytes": {
@@ -1799,15 +1751,15 @@
                 }
             },
             "Comprehension": {
-                "average_file_score": 1.5,
+                "average_file_score": 2.0,
                 "average_code_block_type_scores": {
-                    "function_complexity": 1.5
+                    "function_complexity": 2.0
                 }
             },
             "Concurrency": {
-                "average_file_score": 3.0,
+                "average_file_score": 3.5,
                 "average_code_block_type_scores": {
-                    "function_complexity": 3.0
+                    "function_complexity": 3.5
                 }
             },
             "ContextManager": {
@@ -1835,121 +1787,125 @@
                 }
             },
             "DefaultDict": {
-                "average_file_score": 1.4318181818181817,
+                "average_file_score": 1.4166666666666665,
                 "average_code_block_type_scores": {
-                    "function_complexity": 1.5,
+                    "function_complexity": 1.25,
                     "class_complexity": 2.0,
-                    "method_complexity": 1.1428571428571428
+                    "method_complexity": 1.3333333333333333
                 }
             },
             "Medium": {
-                "average_file_score": 2.3772727272727274,
-                "average_code_block_type_scores": {
-                    "function_complexity": 2.5,
-                    "class_complexity": 2.0,
-                    "method_complexity": 1.0714285714285714
-                }
-            },
-            "DependencyInjection": {
-                "average_file_score": 1.3818181818181818,
+                "average_file_score": 1.7777777777777777,
                 "average_code_block_type_scores": {
                     "function_complexity": 1.75,
                     "class_complexity": 2.0,
-                    "method_complexity": 1.0714285714285714
+                    "method_complexity": 1.1666666666666665
+                }
+            },
+            "DependencyInjection": {
+                "average_file_score": 1.3333333333333333,
+                "average_code_block_type_scores": {
+                    "function_complexity": 1.25,
+                    "class_complexity": 2.0,
+                    "method_complexity": 1.1666666666666665
                 }
             },
             "Deque": {
-                "average_file_score": 3.7,
+                "average_file_score": 1.1666666666666665,
                 "average_code_block_type_scores": {
-                    "function_complexity": 4.0,
+                    "function_complexity": 1.25,
                     "class_complexity": 2.0,
                     "method_complexity": 1.0
                 }
             },
             "dict": {
-                "average_file_score": 3.5,
+                "average_file_score": 1.25,
                 "average_code_block_type_scores": {
-                    "function_complexity": 3.5
+                    "function_complexity": 1.25
                 }
             },
             "frozenset": {
-                "average_file_score": 2.0,
+                "average_file_score": 2.75,
                 "average_code_block_type_scores": {
-                    "function_complexity": 2.0
+                    "function_complexity": 2.75
                 }
             },
             "GarbageCollection": {
-                "average_file_score": 2.5,
+                "average_file_score": 2.7,
                 "average_code_block_type_scores": {
-                    "function_complexity": 2.5
+                    "function_complexity": 2.75,
+                    "class_complexity": 2.0,
+                    "method_complexity": 1.0
                 }
             },
             "Generator": {
-                "average_file_score": 2.083333333333333,
+                "average_file_score": 1.7,
                 "average_code_block_type_scores": {
-                    "function_complexity": 2.25,
-                    "class_complexity": 3.0,
-                    "method_complexity": 1.6666666666666667
+                    "function_complexity": 1.75,
+                    "class_complexity": 2.0,
+                    "method_complexity": 1.0
                 }
             },
             "Global state": {
-                "average_file_score": 1.8888888888888886,
+                "average_file_score": 1.7047619047619047,
                 "average_code_block_type_scores": {
                     "function_complexity": 2.1666666666666665,
-                    "class_complexity": 2.5,
-                    "method_complexity": 1.4583333333333335
+                    "class_complexity": 2.0,
+                    "method_complexity": 1.2
                 }
             },
             "Hard": {
-                "average_file_score": 1.8333333333333333,
+                "average_file_score": 2.2785714285714285,
                 "average_code_block_type_scores": {
-                    "function_complexity": 2.0416666666666665,
-                    "class_complexity": 2.5,
-                    "method_complexity": 1.4583333333333335
+                    "function_complexity": 2.625,
+                    "class_complexity": 2.0,
+                    "method_complexity": 1.2
                 }
             },
             "heapq": {
-                "average_file_score": 1.7777777777777777,
+                "average_file_score": 2.5714285714285716,
                 "average_code_block_type_scores": {
-                    "function_complexity": 2.055555555555556,
-                    "class_complexity": 2.5,
-                    "method_complexity": 1.4583333333333335
+                    "function_complexity": 3.0,
+                    "class_complexity": 2.0,
+                    "method_complexity": 1.4
                 }
             },
             "IdiomaticPython": {
-                "average_file_score": 1.5833333333333335,
+                "average_file_score": 2.857142857142857,
                 "average_code_block_type_scores": {
-                    "function_complexity": 1.8333333333333335,
+                    "function_complexity": 3.5,
                     "class_complexity": 2.0,
-                    "method_complexity": 1.25
+                    "method_complexity": 1.4
                 }
             },
             "Introspection": {
-                "average_file_score": 1.6666666666666667,
+                "average_file_score": 4.0,
                 "average_code_block_type_scores": {
-                    "function_complexity": 1.6666666666666667
+                    "function_complexity": 4.0
                 }
             }
         }
     },
     "pydocstyle": {
         "overall": {
-            "total_violations": 54,
-            "average_violations_per_line": 0.08237273642841375,
-            "average_violations_per_file": 2.7,
+            "total_violations": 53,
+            "average_violations_per_line": 0.08286442527984951,
+            "average_violations_per_file": 2.65,
             "violation_frequencies": {
                 "D100: Missing docstring in public module": 20,
-                "D103: Missing docstring in public function": 7,
-                "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 4,
-                "D200: One-line docstring should fit on one line with quotes (found 3)": 2,
-                "D205: 1 blank line required between summary line and description (found 0)": 2,
+                "D103: Missing docstring in public function": 6,
+                "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 3,
+                "D200: One-line docstring should fit on one line with quotes (found 3)": 3,
+                "D205: 1 blank line required between summary line and description (found 0)": 4,
                 "D401: First line should be in imperative mood (perhaps 'Decorate', not 'Decorator')": 1,
-                "D204: 1 blank line required after class docstring (found 0)": 2,
-                "D107: Missing docstring in __init__": 5,
-                "D102: Missing docstring in public method": 7,
+                "D101: Missing docstring in public class": 2,
+                "D107: Missing docstring in __init__": 3,
+                "D102: Missing docstring in public method": 4,
+                "D400: First line should end with a period (not 'f')": 2,
                 "D401: First line should be in imperative mood; try rephrasing (found 'A')": 2,
-                "D101: Missing docstring in public class": 1,
-                "D400: First line should end with a period (not 'd')": 1
+                "D400: First line should end with a period (not ',')": 1,
+                "D204: 1 blank line required after class docstring (found 0)": 1,
+                "D401: First line should be in imperative mood (perhaps 'Generate', not 'Generator')": 1
             },
             "most_frequent_violation": {
                 "frequency": 20,
@@ -1962,18 +1918,18 @@
                 ],
                 [
                     "D103: Missing docstring in public function",
-                    7
+                    6
                 ],
                 [
-                    "D102: Missing docstring in public method",
-                    7
+                    "D205: 1 blank line required between summary line and description (found 0)",
+                    4
                 ]
             ]
         },
         "by_tag": {
             "list": {
                 "total_violations": 2,
-                "average_violations_per_line": 0.08695652173913043,
+                "average_violations_per_line": 0.08,
                 "average_violations_per_file": 2.0,
                 "violation_frequencies": {
                     "D100: Missing docstring in public module": 1,
@@ -1996,7 +1952,7 @@
             },
             "Easy": {
                 "total_violations": 20,
-                "average_violations_per_line": 0.08750815831400538,
+                "average_violations_per_line": 0.08490729368670545,
                 "average_violations_per_file": 2.0,
                 "violation_frequencies": {
                     "D100: Missing docstring in public module": 10,
@@ -2026,7 +1982,7 @@
             },
             "asyncio": {
                 "total_violations": 2,
-                "average_violations_per_line": 0.07692307692307693,
+                "average_violations_per_line": 0.06666666666666667,
                 "average_violations_per_file": 2.0,
                 "violation_frequencies": {
                     "D100: Missing docstring in public module": 1,
@@ -2049,7 +2005,7 @@
             },
             "bytearray": {
                 "total_violations": 2,
-                "average_violations_per_line": 0.1,
+                "average_violations_per_line": 0.06666666666666667,
                 "average_violations_per_file": 2.0,
                 "violation_frequencies": {
                     "D100: Missing docstring in public module": 1,
@@ -2072,7 +2028,7 @@
             },
             "bytes": {
                 "total_violations": 2,
-                "average_violations_per_line": 0.08333333333333333,
+                "average_violations_per_line": 0.09523809523809523,
                 "average_violations_per_file": 2.0,
                 "violation_frequencies": {
                     "D100: Missing docstring in public module": 1,
@@ -2094,8 +2050,31 @@
                 ]
             },
             "ChainMap": {
+                "total_violations": 2,
+                "average_violations_per_line": 0.08333333333333333,
+                "average_violations_per_file": 2.0,
+                "violation_frequencies": {
+                    "D100: Missing docstring in public module": 1,
+                    "D103: Missing docstring in public function": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 1,
+                    "violation_type": "D100: Missing docstring in public module"
+                },
+                "top_violations": [
+                    [
+                        "D100: Missing docstring in public module",
+                        1
+                    ],
+                    [
+                        "D103: Missing docstring in public function",
+                        1
+                    ]
+                ]
+            },
+            "Comprehension": {
                 "total_violations": 3,
-                "average_violations_per_line": 0.11538461538461539,
+                "average_violations_per_line": 0.1875,
                 "average_violations_per_file": 3.0,
                 "violation_frequencies": {
                     "D100: Missing docstring in public module": 1,
@@ -2121,9 +2100,9 @@
                     ]
                 ]
             },
-            "Comprehension": {
+            "Concurrency": {
                 "total_violations": 2,
-                "average_violations_per_line": 0.125,
+                "average_violations_per_line": 0.07692307692307693,
                 "average_violations_per_file": 2.0,
                 "violation_frequencies": {
                     "D100: Missing docstring in public module": 1,
@@ -2144,32 +2123,9 @@
                     ]
                 ]
             },
-            "Concurrency": {
-                "total_violations": 2,
-                "average_violations_per_line": 0.06896551724137931,
-                "average_violations_per_file": 2.0,
-                "violation_frequencies": {
-                    "D100: Missing docstring in public module": 1,
-                    "D103: Missing docstring in public function": 1
-                },
-                "most_frequent_violation": {
-                    "frequency": 1,
-                    "violation_type": "D100: Missing docstring in public module"
-                },
-                "top_violations": [
-                    [
-                        "D100: Missing docstring in public module",
-                        1
-                    ],
-                    [
-                        "D103: Missing docstring in public function",
-                        1
-                    ]
-                ]
-            },
             "ContextManager": {
                 "total_violations": 1,
-                "average_violations_per_line": 0.03333333333333333,
+                "average_violations_per_line": 0.029411764705882353,
                 "average_violations_per_file": 1.0,
                 "violation_frequencies": {
                     "D100: Missing docstring in public module": 1
@@ -2187,7 +2143,7 @@
             },
             "Coroutine": {
                 "total_violations": 2,
-                "average_violations_per_line": 0.07407407407407407,
+                "average_violations_per_line": 0.08,
                 "average_violations_per_file": 2.0,
                 "violation_frequencies": {
                     "D100: Missing docstring in public module": 1,
@@ -2210,7 +2166,7 @@
             },
             "Counter": {
                 "total_violations": 2,
-                "average_violations_per_line": 0.1111111111111111,
+                "average_violations_per_line": 0.08333333333333333,
                 "average_violations_per_file": 2.0,
                 "violation_frequencies": {
                     "D100: Missing docstring in public module": 1,
@@ -2232,18 +2188,23 @@
                 ]
             },
             "Decorator": {
-                "total_violations": 2,
-                "average_violations_per_line": 0.06451612903225806,
-                "average_violations_per_file": 2.0,
+                "total_violations": 4,
+                "average_violations_per_line": 0.1,
+                "average_violations_per_file": 4.0,
                 "violation_frequencies": {
                     "D100: Missing docstring in public module": 1,
+                    "D200: One-line docstring should fit on one line with quotes (found 3)": 2,
                     "D401: First line should be in imperative mood (perhaps 'Decorate', not 'Decorator')": 1
                 },
                 "most_frequent_violation": {
-                    "frequency": 1,
-                    "violation_type": "D100: Missing docstring in public module"
+                    "frequency": 2,
+                    "violation_type": "D200: One-line docstring should fit on one line with quotes (found 3)"
                 },
                 "top_violations": [
+                    [
+                        "D200: One-line docstring should fit on one line with quotes (found 3)",
+                        2
+                    ],
                     [
                         "D100: Missing docstring in public module",
                         1
@@ -2255,116 +2216,115 @@
                 ]
             },
             "DefaultDict": {
-                "total_violations": 14,
-                "average_violations_per_line": 0.14546561168594035,
-                "average_violations_per_file": 7.0,
+                "total_violations": 10,
+                "average_violations_per_line": 0.13571428571428573,
+                "average_violations_per_file": 5.0,
                 "violation_frequencies": {
                     "D100: Missing docstring in public module": 2,
+                    "D200: One-line docstring should fit on one line with quotes (found 3)": 2,
                     "D401: First line should be in imperative mood (perhaps 'Decorate', not 'Decorator')": 1,
-                    "D204: 1 blank line required after class docstring (found 0)": 2,
-                    "D107: Missing docstring in __init__": 2,
-                    "D102: Missing docstring in public method": 5,
-                    "D401: First line should be in imperative mood; try rephrasing (found 'A')": 1,
+                    "D101: Missing docstring in public class": 1,
+                    "D107: Missing docstring in __init__": 1,
+                    "D102: Missing docstring in public method": 2,
                     "D103: Missing docstring in public function": 1
                 },
                 "most_frequent_violation": {
-                    "frequency": 5,
-                    "violation_type": "D102: Missing docstring in public method"
+                    "frequency": 2,
+                    "violation_type": "D100: Missing docstring in public module"
                 },
                 "top_violations": [
-                    [
-                        "D102: Missing docstring in public method",
-                        5
-                    ],
                     [
                         "D100: Missing docstring in public module",
                         2
                     ],
                     [
-                        "D204: 1 blank line required after class docstring (found 0)",
+                        "D200: One-line docstring should fit on one line with quotes (found 3)",
+                        2
+                    ],
+                    [
+                        "D102: Missing docstring in public method",
                         2
                     ]
                 ]
             },
             "Medium": {
-                "total_violations": 26,
-                "average_violations_per_line": 0.09836689374366658,
-                "average_violations_per_file": 4.333333333333333,
+                "total_violations": 25,
+                "average_violations_per_line": 0.10084564291666488,
+                "average_violations_per_file": 4.166666666666667,
                 "violation_frequencies": {
                     "D100: Missing docstring in public module": 6,
+                    "D200: One-line docstring should fit on one line with quotes (found 3)": 2,
                     "D401: First line should be in imperative mood (perhaps 'Decorate', not 'Decorator')": 1,
-                    "D204: 1 blank line required after class docstring (found 0)": 2,
-                    "D107: Missing docstring in __init__": 3,
-                    "D102: Missing docstring in public method": 7,
+                    "D101: Missing docstring in public class": 2,
+                    "D107: Missing docstring in __init__": 2,
+                    "D102: Missing docstring in public method": 4,
+                    "D103: Missing docstring in public function": 1,
+                    "D205: 1 blank line required between summary line and description (found 0)": 3,
+                    "D400: First line should end with a period (not 'f')": 2,
                     "D401: First line should be in imperative mood; try rephrasing (found 'A')": 1,
-                    "D103: Missing docstring in public function": 2,
-                    "D101: Missing docstring in public class": 1,
-                    "D200: One-line docstring should fit on one line with quotes (found 3)": 1,
-                    "D205: 1 blank line required between summary line and description (found 0)": 1,
-                    "D400: First line should end with a period (not 'd')": 1
+                    "D400: First line should end with a period (not ',')": 1
                 },
                 "most_frequent_violation": {
-                    "frequency": 7,
-                    "violation_type": "D102: Missing docstring in public method"
+                    "frequency": 6,
+                    "violation_type": "D100: Missing docstring in public module"
                 },
                 "top_violations": [
-                    [
-                        "D102: Missing docstring in public method",
-                        7
-                    ],
                     [
                         "D100: Missing docstring in public module",
                         6
                     ],
                     [
-                        "D107: Missing docstring in __init__",
+                        "D102: Missing docstring in public method",
+                        4
+                    ],
+                    [
+                        "D205: 1 blank line required between summary line and description (found 0)",
                         3
                     ]
                 ]
             },
             "DependencyInjection": {
-                "total_violations": 18,
-                "average_violations_per_line": 0.16008254716981132,
-                "average_violations_per_file": 9.0,
+                "total_violations": 11,
+                "average_violations_per_line": 0.13673469387755102,
+                "average_violations_per_file": 5.5,
                 "violation_frequencies": {
                     "D100: Missing docstring in public module": 2,
-                    "D204: 1 blank line required after class docstring (found 0)": 2,
-                    "D107: Missing docstring in __init__": 3,
-                    "D102: Missing docstring in public method": 7,
-                    "D401: First line should be in imperative mood; try rephrasing (found 'A')": 1,
-                    "D103: Missing docstring in public function": 1,
-                    "D101: Missing docstring in public class": 1,
-                    "D200: One-line docstring should fit on one line with quotes (found 3)": 1
+                    "D101: Missing docstring in public class": 2,
+                    "D107: Missing docstring in __init__": 2,
+                    "D102: Missing docstring in public method": 4,
+                    "D103: Missing docstring in public function": 1
                 },
                 "most_frequent_violation": {
-                    "frequency": 7,
+                    "frequency": 4,
                     "violation_type": "D102: Missing docstring in public method"
                 },
                 "top_violations": [
                     [
                         "D102: Missing docstring in public method",
-                        7
-                    ],
-                    [
-                        "D107: Missing docstring in __init__",
-                        3
+                        4
                     ],
                     [
                         "D100: Missing docstring in public module",
+                        2
+                    ],
+                    [
+                        "D101: Missing docstring in public class",
                         2
                     ]
                 ]
             },
             "Deque": {
-                "total_violations": 7,
-                "average_violations_per_line": 0.06158088235294118,
-                "average_violations_per_file": 3.5,
+                "total_violations": 11,
+                "average_violations_per_line": 0.10657596371882086,
+                "average_violations_per_file": 5.5,
                 "violation_frequencies": {
                     "D100: Missing docstring in public module": 2,
                     "D101: Missing docstring in public class": 1,
                     "D107: Missing docstring in __init__": 1,
                     "D102: Missing docstring in public method": 2,
-                    "D200: One-line docstring should fit on one line with quotes (found 3)": 1
+                    "D205: 1 blank line required between summary line and description (found 0)": 2,
+                    "D400: First line should end with a period (not 'f')": 2,
+                    "D401: First line should be in imperative mood; try rephrasing (found 'A')": 1
                 },
                 "most_frequent_violation": {
                     "frequency": 2,
@@ -2380,71 +2340,19 @@
                         2
                     ],
                     [
-                        "D101: Missing docstring in public class",
-                        1
+                        "D205: 1 blank line required between summary line and description (found 0)",
+                        2
                     ]
                 ]
             },
             "dict": {
-                "total_violations": 3,
-                "average_violations_per_line": 0.049188640973630834,
-                "average_violations_per_file": 1.5,
+                "total_violations": 7,
+                "average_violations_per_line": 0.07168458781362007,
+                "average_violations_per_file": 3.5,
                 "violation_frequencies": {
                     "D100: Missing docstring in public module": 2,
-                    "D103: Missing docstring in public function": 1
-                },
-                "most_frequent_violation": {
-                    "frequency": 2,
-                    "violation_type": "D100: Missing docstring in public module"
-                },
-                "top_violations": [
-                    [
-                        "D100: Missing docstring in public module",
-                        2
-                    ],
-                    [
-                        "D103: Missing docstring in public function",
-                        1
-                    ]
-                ]
-            },
-            "frozenset": {
-                "total_violations": 5,
-                "average_violations_per_line": 0.08805418719211822,
-                "average_violations_per_file": 2.5,
-                "violation_frequencies": {
-                    "D100: Missing docstring in public module": 2,
-                    "D103: Missing docstring in public function": 1,
-                    "D205: 1 blank line required between summary line and description (found 0)": 1,
-                    "D400: First line should end with a period (not 'd')": 1
-                },
-                "most_frequent_violation": {
-                    "frequency": 2,
-                    "violation_type": "D100: Missing docstring in public module"
-                },
-                "top_violations": [
-                    [
-                        "D100: Missing docstring in public module",
-                        2
-                    ],
-                    [
-                        "D103: Missing docstring in public function",
-                        1
-                    ],
-                    [
-                        "D205: 1 blank line required between summary line and description (found 0)",
-                        1
-                    ]
-                ]
-            },
-            "GarbageCollection": {
-                "total_violations": 5,
-                "average_violations_per_line": 0.07243935309973046,
-                "average_violations_per_file": 2.5,
-                "violation_frequencies": {
-                    "D100: Missing docstring in public module": 2,
-                    "D205: 1 blank line required between summary line and description (found 0)": 1,
-                    "D400: First line should end with a period (not 'd')": 1,
+                    "D205: 1 blank line required between summary line and description (found 0)": 2,
+                    "D400: First line should end with a period (not 'f')": 2,
                     "D401: First line should be in imperative mood; try rephrasing (found 'A')": 1
                 },
                 "most_frequent_violation": {
@@ -2458,21 +2366,195 @@
                     ],
                     [
                         "D205: 1 blank line required between summary line and description (found 0)",
+                        2
+                    ],
+                    [
+                        "D400: First line should end with a period (not 'f')",
+                        2
+                    ]
+                ]
+            },
+            "frozenset": {
+                "total_violations": 4,
+                "average_violations_per_line": 0.06024667931688805,
+                "average_violations_per_file": 2.0,
+                "violation_frequencies": {
+                    "D100: Missing docstring in public module": 2,
+                    "D205: 1 blank line required between summary line and description (found 0)": 1,
+                    "D400: First line should end with a period (not ',')": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 2,
+                    "violation_type": "D100: Missing docstring in public module"
+                },
+                "top_violations": [
+                    [
+                        "D100: Missing docstring in public module",
+                        2
+                    ],
+                    [
+                        "D205: 1 blank line required between summary line and description (found 0)",
                         1
                     ],
                     [
-                        "D400: First line should end with a period (not 'd')",
+                        "D400: First line should end with a period (not ',')",
+                        1
+                    ]
+                ]
+            },
+            "GarbageCollection": {
+                "total_violations": 6,
+                "average_violations_per_line": 0.07536764705882354,
+                "average_violations_per_file": 3.0,
+                "violation_frequencies": {
+                    "D100: Missing docstring in public module": 2,
+                    "D205: 1 blank line required between summary line and description (found 0)": 1,
+                    "D400: First line should end with a period (not ',')": 1,
+                    "D401: First line should be in imperative mood; try rephrasing (found 'A')": 1,
+                    "D204: 1 blank line required after class docstring (found 0)": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 2,
+                    "violation_type": "D100: Missing docstring in public module"
+                },
+                "top_violations": [
+                    [
+                        "D100: Missing docstring in public module",
+                        2
+                    ],
+                    [
+                        "D205: 1 blank line required between summary line and description (found 0)",
+                        1
+                    ],
+                    [
+                        "D400: First line should end with a period (not ',')",
                         1
                     ]
                 ]
             },
             "Generator": {
-                "total_violations": 4,
-                "average_violations_per_line": 0.038098693759071114,
-                "average_violations_per_file": 2.0,
+                "total_violations": 5,
+                "average_violations_per_line": 0.06066176470588235,
+                "average_violations_per_file": 2.5,
                 "violation_frequencies": {
                     "D100: Missing docstring in public module": 2,
                     "D401: First line should be in imperative mood; try rephrasing (found 'A')": 1,
+                    "D204: 1 blank line required after class docstring (found 0)": 1,
+                    "D401: First line should be in imperative mood (perhaps 'Generate', not 'Generator')": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 2,
+                    "violation_type": "D100: Missing docstring in public module"
+                },
+                "top_violations": [
+                    [
+                        "D100: Missing docstring in public module",
+                        2
+                    ],
+                    [
+                        "D401: First line should be in imperative mood; try rephrasing (found 'A')",
+                        1
+                    ],
+                    [
+                        "D204: 1 blank line required after class docstring (found 0)",
+                        1
+                    ]
+                ]
+            },
+            "Global state": {
+                "total_violations": 7,
+                "average_violations_per_line": 0.05256238859180035,
+                "average_violations_per_file": 2.3333333333333335,
+                "violation_frequencies": {
+                    "D100: Missing docstring in public module": 3,
+                    "D401: First line should be in imperative mood; try rephrasing (found 'A')": 1,
+                    "D204: 1 blank line required after class docstring (found 0)": 1,
+                    "D401: First line should be in imperative mood (perhaps 'Generate', not 'Generator')": 1,
+                    "D107: Missing docstring in __init__": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 3,
+                    "violation_type": "D100: Missing docstring in public module"
+                },
+                "top_violations": [
+                    [
+                        "D100: Missing docstring in public module",
+                        3
+                    ],
+                    [
+                        "D401: First line should be in imperative mood; try rephrasing (found 'A')",
+                        1
+                    ],
+                    [
+                        "D204: 1 blank line required after class docstring (found 0)",
+                        1
+                    ]
+                ]
+            },
+            "Hard": {
+                "total_violations": 8,
+                "average_violations_per_line": 0.05078542780748663,
+                "average_violations_per_file": 2.0,
+                "violation_frequencies": {
+                    "D100: Missing docstring in public module": 4,
+                    "D401: First line should be in imperative mood; try rephrasing (found 'A')": 1,
+                    "D204: 1 blank line required after class docstring (found 0)": 1,
+                    "D401: First line should be in imperative mood (perhaps 'Generate', not 'Generator')": 1,
+                    "D107: Missing docstring in __init__": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 4,
+                    "violation_type": "D100: Missing docstring in public module"
+                },
+                "top_violations": [
+                    [
+                        "D100: Missing docstring in public module",
+                        4
+                    ],
+                    [
+                        "D401: First line should be in imperative mood; try rephrasing (found 'A')",
+                        1
+                    ],
+                    [
+                        "D204: 1 blank line required after class docstring (found 0)",
+                        1
+                    ]
+                ]
+            },
+            "heapq": {
+                "total_violations": 5,
+                "average_violations_per_line": 0.04688057040998217,
+                "average_violations_per_file": 1.6666666666666667,
+                "violation_frequencies": {
+                    "D100: Missing docstring in public module": 3,
+                    "D401: First line should be in imperative mood (perhaps 'Generate', not 'Generator')": 1,
+                    "D107: Missing docstring in __init__": 1
+                },
+                "most_frequent_violation": {
+                    "frequency": 3,
+                    "violation_type": "D100: Missing docstring in public module"
+                },
+                "top_violations": [
+                    [
+                        "D100: Missing docstring in public module",
+                        3
+                    ],
+                    [
+                        "D401: First line should be in imperative mood (perhaps 'Generate', not 'Generator')",
+                        1
+                    ],
+                    [
+                        "D107: Missing docstring in __init__",
+                        1
+                    ]
+                ]
+            },
+            "IdiomaticPython": {
+                "total_violations": 3,
+                "average_violations_per_line": 0.04090909090909091,
+                "average_violations_per_file": 1.5,
+                "violation_frequencies": {
+                    "D100: Missing docstring in public module": 2,
                     "D107: Missing docstring in __init__": 1
                 },
                 "most_frequent_violation": {
@@ -2485,132 +2567,14 @@
                         2
                     ],
                     [
-                        "D401: First line should be in imperative mood; try rephrasing (found 'A')",
-                        1
-                    ],
-                    [
                         "D107: Missing docstring in __init__",
-                        1
-                    ]
-                ]
-            },
-            "Global state": {
-                "total_violations": 7,
-                "average_violations_per_line": 0.05171491864639829,
-                "average_violations_per_file": 2.3333333333333335,
-                "violation_frequencies": {
-                    "D100: Missing docstring in public module": 3,
-                    "D401: First line should be in imperative mood; try rephrasing (found 'A')": 1,
-                    "D107: Missing docstring in __init__": 2,
-                    "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
-                },
-                "most_frequent_violation": {
-                    "frequency": 3,
-                    "violation_type": "D100: Missing docstring in public module"
-                },
-                "top_violations": [
-                    [
-                        "D100: Missing docstring in public module",
-                        3
-                    ],
-                    [
-                        "D107: Missing docstring in __init__",
-                        2
-                    ],
-                    [
-                        "D401: First line should be in imperative mood; try rephrasing (found 'A')",
-                        1
-                    ]
-                ]
-            },
-            "Hard": {
-                "total_violations": 8,
-                "average_violations_per_line": 0.04554294574155547,
-                "average_violations_per_file": 2.0,
-                "violation_frequencies": {
-                    "D100: Missing docstring in public module": 4,
-                    "D401: First line should be in imperative mood; try rephrasing (found 'A')": 1,
-                    "D107: Missing docstring in __init__": 2,
-                    "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
-                },
-                "most_frequent_violation": {
-                    "frequency": 4,
-                    "violation_type": "D100: Missing docstring in public module"
-                },
-                "top_violations": [
-                    [
-                        "D100: Missing docstring in public module",
-                        4
-                    ],
-                    [
-                        "D107: Missing docstring in __init__",
-                        2
-                    ],
-                    [
-                        "D401: First line should be in imperative mood; try rephrasing (found 'A')",
-                        1
-                    ]
-                ]
-            },
-            "heapq": {
-                "total_violations": 6,
-                "average_violations_per_line": 0.04814531130320604,
-                "average_violations_per_file": 2.0,
-                "violation_frequencies": {
-                    "D100: Missing docstring in public module": 3,
-                    "D107: Missing docstring in __init__": 2,
-                    "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
-                },
-                "most_frequent_violation": {
-                    "frequency": 3,
-                    "violation_type": "D100: Missing docstring in public module"
-                },
-                "top_violations": [
-                    [
-                        "D100: Missing docstring in public module",
-                        3
-                    ],
-                    [
-                        "D107: Missing docstring in __init__",
-                        2
-                    ],
-                    [
-                        "D401: First line should be in imperative mood; try rephrasing (found 'Main')",
-                        1
-                    ]
-                ]
-            },
-            "IdiomaticPython": {
-                "total_violations": 4,
-                "average_violations_per_line": 0.05298719772403983,
-                "average_violations_per_file": 2.0,
-                "violation_frequencies": {
-                    "D100: Missing docstring in public module": 2,
-                    "D107: Missing docstring in __init__": 1,
-                    "D401: First line should be in imperative mood; try rephrasing (found 'Main')": 1
-                },
-                "most_frequent_violation": {
-                    "frequency": 2,
-                    "violation_type": "D100: Missing docstring in public module"
-                },
-                "top_violations": [
-                    [
-                        "D100: Missing docstring in public module",
-                        2
-                    ],
-                    [
-                        "D107: Missing docstring in __init__",
-                        1
-                    ],
-                    [
-                        "D401: First line should be in imperative mood; try rephrasing (found 'Main')",
                         1
                     ]
                 ]
             },
             "Introspection": {
                 "total_violations": 1,
-                "average_violations_per_line": 0.02702702702702703,
+                "average_violations_per_line": 0.045454545454545456,
                 "average_violations_per_file": 1.0,
                 "violation_frequencies": {
                     "D100: Missing docstring in public module": 1
@@ -2628,5 +2592,5 @@
             }
         }
     },
-    "output": 1.9048484848484848
+    "output": 1.864047619047619
 }

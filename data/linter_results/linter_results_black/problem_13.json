@@ -1,31 +1,31 @@
 {
     "flake8": {
         "violations": {
-            "E501 line too long (83 > 79 characters)": 1,
-            "E501 line too long (92 > 79 characters)": 1
+            "E302 expected 2 blank lines, found 1": 2,
+            "F821 undefined name 'name'": 2,
+            "E305 expected 2 blank lines after class or function definition, found 1": 1
         },
-        "total_violations": 2,
+        "total_violations": 5,
         "most_frequent_violation": {
-            "violation_type": "E501 line too long (92 > 79 characters)",
-            "frequency": 1
+            "violation_type": "E302 expected 2 blank lines, found 1",
+            "frequency": 2
         },
-        "number_of_lines_in_code": 69
+        "number_of_lines_in_code": 63
     },
     "pylint": {
         "violations": {
             "Missing module docstring (missing-module-docstring)": 1,
-            "Missing class docstring (missing-class-docstring)": 3,
-            "Missing function or method docstring (missing-function-docstring)": 8,
-            "Too few public methods (1/2) (too-few-public-methods)": 1,
-            "Redefining name 'task_queue' from outer scope (line 68) (redefined-outer-name)": 1,
-            "No value for argument 'task_queue' in function call (no-value-for-parameter)": 2
+            "Missing class docstring (missing-class-docstring)": 2,
+            "Missing function or method docstring (missing-function-docstring)": 7,
+            "Undefined variable 'name' (undefined-variable)": 2,
+            "Lambda may not be necessary (unnecessary-lambda)": 1
         },
-        "total_violations": 16,
+        "total_violations": 13,
         "most_frequent_violation": {
             "violation_type": "Missing function or method docstring (missing-function-docstring)",
-            "frequency": 8
+            "frequency": 7
         },
-        "number_of_lines_in_code": 69
+        "number_of_lines_in_code": 63
     },
     "black": {
         "violations": {
@@ -39,23 +39,23 @@
     },
     "radon": {
         "class_complexity": 2.0,
-        "overall_score": 1.2857142857142858,
-        "method_complexity": 1.1111111111111112,
+        "overall_score": 1.3636363636363635,
+        "method_complexity": 1.25,
         "function_complexity": 1.0
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D101: Missing docstring in public class": 3,
-            "D107: Missing docstring in __init__": 3,
+            "D101: Missing docstring in public class": 2,
+            "D107: Missing docstring in __init__": 2,
             "D102: Missing docstring in public method": 6,
-            "D103: Missing docstring in public function": 2
+            "D103: Missing docstring in public function": 1
         },
-        "total_violations": 15,
+        "total_violations": 12,
         "most_frequent_violation": {
             "violation_type": "D102: Missing docstring in public method",
             "frequency": 6
         },
-        "number_of_lines_in_code": 69
+        "number_of_lines_in_code": 63
     }
 }

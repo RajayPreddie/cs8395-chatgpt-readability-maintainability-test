@@ -8,24 +8,22 @@
             "violation_type": "F401 'typing.Dict' imported but unused",
             "frequency": 1
         },
-        "number_of_lines_in_code": 54
+        "number_of_lines_in_code": 45
     },
     "pylint": {
         "violations": {
             "Missing module docstring (missing-module-docstring)": 1,
-            "Missing class docstring (missing-class-docstring)": 3,
-            "Missing function or method docstring (missing-function-docstring)": 7,
-            "Too few public methods (1/2) (too-few-public-methods)": 2,
-            "Unnecessary \"else\" after \"return\", remove the \"else\" and de-indent the code inside it (no-else-return)": 1,
-            "Unused argument 'container' (unused-argument)": 1,
+            "Missing class docstring (missing-class-docstring)": 2,
+            "Missing function or method docstring (missing-function-docstring)": 5,
+            "Too few public methods (1/2) (too-few-public-methods)": 1,
             "Unused Dict imported from typing (unused-import)": 1
         },
-        "total_violations": 16,
+        "total_violations": 10,
         "most_frequent_violation": {
             "violation_type": "Missing function or method docstring (missing-function-docstring)",
-            "frequency": 7
+            "frequency": 5
         },
-        "number_of_lines_in_code": 54
+        "number_of_lines_in_code": 45
     },
     "black": {
         "violations": {
@@ -38,24 +36,24 @@
         }
     },
     "radon": {
-        "method_complexity": 1.4285714285714286,
-        "overall_score": 1.5833333333333333,
-        "class_complexity": 2.3333333333333335,
-        "function_complexity": 1.0
+        "function_complexity": 2.0,
+        "overall_score": 1.3333333333333333,
+        "class_complexity": 2.0,
+        "method_complexity": 1.0
     },
     "pydocstyle": {
         "violations": {
             "D100: Missing docstring in public module": 1,
-            "D101: Missing docstring in public class": 3,
+            "D101: Missing docstring in public class": 2,
             "D107: Missing docstring in __init__": 2,
-            "D102: Missing docstring in public method": 5,
-            "D103: Missing docstring in public function": 2
+            "D102: Missing docstring in public method": 4,
+            "D103: Missing docstring in public function": 1
         },
-        "total_violations": 13,
+        "total_violations": 10,
         "most_frequent_violation": {
             "violation_type": "D102: Missing docstring in public method",
-            "frequency": 5
+            "frequency": 4
         },
-        "number_of_lines_in_code": 54
+        "number_of_lines_in_code": 45
     }
 }
