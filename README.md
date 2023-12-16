@@ -96,8 +96,9 @@ Each score is the Radon average score per file for each linter prompt, providing
 The inspiration for the methodology diffculty levels comes from one of the research 
 presentations I viewed in CS8395.
 
-The following repository of mine helped with the development of this code: 
-[ChatGPT Python Code Execution Comparison](https://github.com/RajayPreddie/cs8395-chatgpt-python-code-execution-comparison)
+The following repositories of mine helped with the development of this code: 
+1. [ChatGPT Python Code Execution Comparison](https://github.com/RajayPreddie/cs8395-chatgpt-python-code-execution-comparison)
+2. [Test ChatGPT Coding Style](https://github.com/RajayPreddie/cs8395-test-chat-gpt-coding-style)
 
 ## Sources
 1. [stackoverflow](https://stackoverflow.com/questions/56875810/new-pull-request-when-one-is-already-opened)
