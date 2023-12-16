@@ -1,5 +1,6 @@
 {
   "name": "ChatGPT Code Readability and Maintainability Tester",
+  "model": "",
   "run_test": "python main.py --linters all",
   "run_score": "",
   "tags": []
