@@ -15,9 +15,19 @@ The keywords are chosen from a list of 100 keywords Each prompt uses one and onl
 **Steps:**
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
-3. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
+3. Set up the environment:
+```
+python3 -m venv venv
+```
+```
+source venv/bin/activate  # Unix/MacOS
+```
+```
+venv\Scripts\activate  # Windows
+```
+4. Install the required dependencies:
+   ```
+   pip3 install -r requirements.txt
    ```
 
 ## Configuration
@@ -26,7 +36,7 @@ Set up the project using `config.json`. This configuration file includes essenti
 ## Usage
 Execute the tool with the following command:
 
-```bash
+```
 python3 main.py --generate_responses --linters [OPTIONS]
 ```
 
@@ -34,12 +44,12 @@ python3 main.py --generate_responses --linters [OPTIONS]
 - `--linters`: Specify which linter prompts to apply. Options include `flake8`, `pylint`, `black`, `radon`, `pydocstyle`, `default`, and `all`. Defaults to `default` when not specified.
 On each run of the tool, all of the linters/tools are used. The --linters argument is
 for speciyfing which linter prompts to use when prompting ChatGPT for python programs.
-- `-- model`: This is here for integrating with the cs8395/test-suite [https://github.com/nkalupahana/cs8395-test-suitecs8395/test-suite]. The input model is not used. The repository utilizes gpt-4-1106-preview.
+- `-- model`: This is here for integrating with the [cs8395/test-suite](https://github.com/nkalupahana/cs8395-test-suite). The input model is not used. The repository utilizes gpt-4-1106-preview.
 
 For example:
 
 ```bash
-python main.py --generate_responses --linters flake8 pylint
+python3 main.py --generate_responses --linters flake8 pylint
 ```
 
 This command generates Python programs using ChatGPT prompts that ask to adhere to flake8 and pylint.
@@ -82,4 +92,19 @@ The `output.json` file provides an overall analysis of code readability and main
 
 Each score is the Radon average score per file for each linter prompt, providing an insight into the readability and maintainability of the code ChatGPT writes based on the linter prompt.
 
+## Acknowledgement
+The inspiration for the methodology diffculty levels comes from one of the research 
+presentations I viewed in CS8395.
 
+The following repository of mine helped with the development of this code: 
+[ChatGPT Python Code Execution Comparison](https://github.com/RajayPreddie/cs8395-chatgpt-python-code-execution-comparison)
+
+## Sources
+1. [stackoverflow](https://stackoverflow.com/questions/56875810/new-pull-request-when-one-is-already-opened)
+## ChatGPT Chat Links:
+1. [ChatLink](https://chat.openai.com/share/9c43608f-52d8-4415-8203-57a693547093)
+2. [ChatLink](https://chat.openai.com/share/cbfa536a-aa16-4024-b7df-bf2bf43df448)
+3. [ChatLink](https://chat.openai.com/share/8216251e-6534-4e45-b0e6-1b085bdc25e3)
+4. [ChatLink] (https://chat.openai.com/share/5a456d75-a3ac-403c-b974-f255f947e5dc)
+5. [ChatLink] (https://chat.openai.com/share/56829880-fc4f-4a9d-8bda-ea17fed2087d)
+5. I utilized many other ChatGPT chats for developing the code.
