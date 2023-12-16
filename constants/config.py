@@ -31,3 +31,6 @@ ARGUMENT_PARSER_LINTERS_CHOICES = LINTER_NAMES + [ARGUMENT_PARSER_LINTERS_ALL_LI
 ARGUMENT_PARSER_LINTERS_N_ARGS = "*"
 ARGUMENT_PARSER_LINTERS_HELP_MESSAGE = ('Specify which linter/tool prompts to run. '
 'Options include flake8, pylint, black, radon, pydocstyle, default, or all.' '"default" uses the default prompt. If not specified, defaults to "default".')
+ARGUMENT_PARSER_MODEL_ARGUMENT = "--model"
+ARGUMENT_PARSER_MODEL_DEFAUT = "gpt-4-1106-preview"
+ARGUMENT_PARSER_MODEL_HELP_MESSAGE = "Specify which model to use for generating responses. Defaults to gpt-4-1106-preview."
