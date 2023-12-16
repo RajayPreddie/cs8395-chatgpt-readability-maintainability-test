@@ -34,7 +34,7 @@ python3 main.py --generate_responses --linters [OPTIONS]
 - `--linters`: Specify which linter prompts to apply. Options include `flake8`, `pylint`, `black`, `radon`, `pydocstyle`, `default`, and `all`. Defaults to `default` when not specified.
 On each run of the tool, all of the linters/tools are used. The --linters argument is
 for speciyfing which linter prompts to use when prompting ChatGPT for python programs.
-- `-- model`: This is here for integrating with the (https://github.com/nkalupahana/cs8395-test-suitecs8395/test-suite)[cs8395/test-suite]. The input model is not used. The repository utilizes gpt-4-1106-preview.
+- `-- model`: This is here for integrating with the (https://github.com/nkalupahana/cs8395-test-suitecs8395/test-suite) [cs8395/test-suite]. The input model is not used. The repository utilizes gpt-4-1106-preview.
 
 For example:
 
