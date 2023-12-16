@@ -9,7 +9,7 @@ The keywords are chosen from a list of 100 keywords Each prompt uses one and onl
 ## Installation
 
 **Prerequisites:**
-- Python 3.8 or higher
+- Python 3.9.6 (if this does not work, try a higher version)
 - pip package manager
 
 **Steps:**
@@ -27,13 +27,14 @@ Set up the project using `config.json`. This configuration file includes essenti
 Execute the tool with the following command:
 
 ```bash
-python main.py --generate_responses --linters [OPTIONS]
+python3 main.py --generate_responses --linters [OPTIONS]
 ```
 
 - `--generate_responses`: Activates the generation of Python programs using ChatGPT.
 - `--linters`: Specify which linter prompts to apply. Options include `flake8`, `pylint`, `black`, `radon`, `pydocstyle`, `default`, and `all`. Defaults to `default` when not specified.
 On each run of the tool, all of the linters/tools are used. The --linters argument is
 for speciyfing which linter prompts to use when prompting ChatGPT for python programs.
+- `-- model`: This is here for integrating with the cs8395/test-suite[https://github.com/nkalupahana/cs8395-test-suite]. The input model is not used. The repository utilizes gpt-4-1106-preview.
 
 For example:
 
