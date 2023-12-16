@@ -106,6 +106,6 @@ The following repositories of mine helped with the development of this code:
 1. [ChatLink](https://chat.openai.com/share/9c43608f-52d8-4415-8203-57a693547093)
 2. [ChatLink](https://chat.openai.com/share/cbfa536a-aa16-4024-b7df-bf2bf43df448)
 3. [ChatLink](https://chat.openai.com/share/8216251e-6534-4e45-b0e6-1b085bdc25e3)
-4. [ChatLink] (https://chat.openai.com/share/5a456d75-a3ac-403c-b974-f255f947e5dc)
-5. [ChatLink] (https://chat.openai.com/share/56829880-fc4f-4a9d-8bda-ea17fed2087d)
+4. [ChatLink](https://chat.openai.com/share/5a456d75-a3ac-403c-b974-f255f947e5dc)
+5. [ChatLink](https://chat.openai.com/share/56829880-fc4f-4a9d-8bda-ea17fed2087d)
 5. I utilized many other ChatGPT chats for developing the code.
