@@ -36,6 +36,7 @@ def createArgs():
   parser.add_argument(config.ARGUMENT_PARSER_LINTERS_ARGUMENT, nargs=config.ARGUMENT_PARSER_LINTERS_N_ARGS, choices=config.ARGUMENT_PARSER_LINTERS_CHOICES,
                       default=[DEFAULT],
                       help=config.ARGUMENT_PARSER_LINTERS_HELP_MESSAGE)
+  parser.add_argument("--model", type=str, default="gpt-4", help="The model to use for generating responses.")
 
   args = parser.parse_args()
 
