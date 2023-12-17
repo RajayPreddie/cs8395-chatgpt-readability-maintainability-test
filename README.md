@@ -124,7 +124,7 @@ The following repositories of mine helped with the development of this code:
 3. [ChatLink](https://chat.openai.com/share/8216251e-6534-4e45-b0e6-1b085bdc25e3)
 4. [ChatLink](https://chat.openai.com/share/5a456d75-a3ac-403c-b974-f255f947e5dc)
 5. [ChatLink](https://chat.openai.com/share/56829880-fc4f-4a9d-8bda-ea17fed2087d)
-5. I utilized many other ChatGPT chats for developing the code.
+6. I utilized many other ChatGPT chats for developing the code.
 
 
 ## License
